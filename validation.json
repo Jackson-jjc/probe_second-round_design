@@ -1,0 +1,43 @@
+{
+  "checked_on": "2026-10-02",
+  "static_checks": {
+    "build": "PASS",
+    "deterministic_rebuild": "PASS",
+    "javascript_syntax": "PASS",
+    "local_links": "PASS",
+    "unique_html_ids": "PASS",
+    "images_have_alt_text": "PASS",
+    "five_concept_images": "PASS",
+    "two_venue_adaptations_per_probe": "PASS"
+  },
+  "counts": {
+    "probes": 5,
+    "concept_images": 5,
+    "interface_screens": 15,
+    "venue_adaptations": 10,
+    "object_candidates": 4,
+    "case_studies": 5
+  },
+  "browser_checks": {
+    "status": "PASS_FOR_LISTED_CHECKS",
+    "desktop_viewport": "1280x720",
+    "probe_routes": "5/5 visible page and matching title after navigation",
+    "desktop_horizontal_overflow": false,
+    "narrow_viewport": "390px iframe (375px content plus scrollbar); viewport override did not apply, fixed-width iframe used",
+    "narrow_probe_horizontal_overflow": "none in all five probes",
+    "expand_all": "9 pages / 6 details, returned to single page successfully",
+    "object_images": "4/4 loaded, visual identity checked",
+    "screenshots": "homepage and probe 02 interface flow visually inspected",
+    "print": "print styles and beforeprint handler present; PDF pagination not verified",
+    "external_image_failure_fallback": "implemented; not network-fault simulated",
+    "case_images": "5/5 loaded and visual identity checked against case descriptions",
+    "proof_of_work": "preview.png"
+  },
+  "limitations": [
+    "Design-only: no AI backend or camera capture implemented.",
+    "GHT candidates are historical loan/exhibition objects; current availability must be confirmed.",
+    "External reference images require network; image rights and high-resolution research assets remain to be arranged.",
+    "Pether identity uses official exhibition context plus Commons/Art UK image archive and opening report; direct Art UK page returned 403."
+  ],
+  "index_sha256": "2b7ee6f6536a302bc1c9d7eaeb02b25990bfca11ca9788f0b95678a3b3d57c9f"
+}
