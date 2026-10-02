@@ -6,7 +6,7 @@ function route() {
   if (location.hash === '#content') return;
   expanded = false;
   document.body.classList.remove('all-view');
-  expandButton.textContent = '展开全部';
+  expandButton.textContent = 'Expand all';
   const requested = location.hash.slice(1) || 'overview';
   const id = pages.some(p => p.id === requested) ? requested : 'overview';
   pages.forEach(p => { p.hidden = p.id !== id; });
@@ -25,7 +25,7 @@ expandButton.addEventListener('click', () => {
   document.body.classList.add('all-view');
   pages.forEach(p => { p.hidden = false; });
   document.querySelectorAll('details').forEach(d => { d.open = true; });
-  expandButton.textContent = '返回单页';
+  expandButton.textContent = 'Return to single page';
   window.scrollTo({top:0, behavior:'instant'});
 });
 let printDetails = [];

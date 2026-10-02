@@ -1,36 +1,61 @@
-# AI × Authenticity · 第二轮五方案设计图册
+# AI × Authenticity · Five Probe Designs
 
-更新：2026-10-02。静态研究设计稿；未接入AI、摄像头或访客数据采集。
+[Open the live design atlas](https://jackson-jjc.github.io/probe_second-round_design/)
 
-![图册首页预览](preview.png)
+English revision: 2 October 2026. These are static research proposals, not a working AI system.
 
-打开 [index.html](index.html)，或本地运行 `python -m http.server 8766 --bind 127.0.0.1` 后访问 `http://127.0.0.1:8766/`。无需安装前端依赖。直接打开文件同样可用；官方图片外链需要联网。
+![English atlas preview](preview.png)
 
-五项：01藏品细节侦探镜；02把领子折出来（GHT改为布片形状探索）；03只改这一处；04两个人的一张展签；05送你一个细节。每项含场景概念图、中文三屏流程、THG与GHT对象适配、真实案例、摄像头方案、输入输出和研究分析。
+## Five activities
 
-正式研究问题仍为一主两次：人机互动如何塑造真实性体验；访客依托什么形成这种体验；如何维持或修订理解。
+1. **Ask About a Detail:** Choose a detail, ask AI about it, then write what you think.
+2. **Make a Shape:** Make a shape with cloth or paper, photograph it, and tell AI what it missed about making it.
+3. **Change One Detail:** Ask AI to change one detail in an object photo, then decide whether the result still feels connected to the object.
+4. **Write a Label Together:** Write one line each about an object, let AI combine them, then decide what the shared label should say.
+5. **Share a Detail:** Choose an object detail for a friend, let AI help word your message, then see how your friend responds.
 
-## 对象状态
+Each page includes a design image, three screen sketches, a task for each target venue, a real museum example, camera and AI roles, and evidence to record.
 
-- Tudor House & Garden：官方馆藏亮点中的人物造型皮革酒壶、绘鸟玻璃片。
-- God’s House Tower：Pether家族2019–2020借展路线中的具名候选《God’s House Tower by Moonlight》（Abraham Pether）、《Everyone Involved》的2024纺织壁挂展览。两项均有官方场地关系证据，但不称为GHT永久馆藏或当前在展对象。单件、编号与研究可用性仍需确认。
-- 皮革、玻璃不是纺织品。沿用既有设计的对象范围；如研究必须严格限定纺织品，THG仍需另选对象。
+## Research questions
 
-## 文件
+**How do human–AI interactions shape visitors’ experiences of authenticity in museums and heritage sites?**
 
-- `design_data.json` / `research_details.json`：五个基础方案及研究细节（THG基础任务）。
-- `venue_designs.json`：两馆对象、逐项适配、摄像头和案例来源。
-- `build_atlas.py`：标准库构建脚本，生成HTML、文字稿和对象来源索引；不读私人研究资料，不联网。
-- `styles.css` / `app.js`：响应式、键盘导航、展开全部、打印与外链图片失败提示。
-- `assets/concept-01.png` 至 `concept-05.png`：五张内置image_gen生成的场景概念图。
-- `image_prompts.json`：实际生成提示词和05修订提示。
-- `DESIGN_NOTES.md`：完整文字稿。
-- `validation.json`：交付检查结果。
+- What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
+- How do visitors maintain or revise their understandings of authenticity through interaction with AI?
 
-修改数据后运行 `python build_atlas.py`。兼容入口 `python build_book.py` 执行同一构建。生成文件可直接作为静态站点根目录；本次推送Git仓库不等于已开启GitHub Pages。
+Full questions replace shorthand codes throughout the atlas. Plain-English explanations accompany them on the Research questions page.
 
-## 图像及数据
+## Objects and textiles
 
-AI场景图不代表真实藏品形态、真实场馆照片或已实施界面。真实对象和案例照片外链自官方网页；Pether画作另有Art UK图像地址、Commons转载档案及开幕报道的来源链，均标明来源；未将第三方照片打包进仓库。高清图、摄影及生成改作的正式使用条件需另行落实。页面不含真实参与者数据、API密钥、追踪统计或自动采集。
+The target venues are **Tudor House & Garden** and **God’s House Tower**, Southampton.
 
-核查日期2026-10-02；全部互动例句为设计示例，时间与制作难度未实测。
+- Tudor House: the Leather Jug and Bird Glass Panes are named official collection highlights. They are not textiles.
+- GHT: the fabric wall hangings in Ian Giles’s *Everyone Involved* are the preferred textile candidate for four probes. The 2024 exhibition is verified, but GHT ownership and current access are not. One hanging must be selected with the venue and artist.
+- Abraham Pether’s *God’s House Tower by Moonlight* is a historical loan candidate for image editing, not a GHT-owned collection object.
+- No Chinese textile at either target venue was verified in the public records checked. This is not proof that none exists. A British–Chinese pair remains pending; no object from another museum has been substituted. See [the search record](collection_search.json).
+
+## Open and rebuild
+
+Open `index.html` directly, or run `python -m http.server 8766 --bind 127.0.0.1` from this directory and open `http://127.0.0.1:8766/`. No front-end dependencies are needed. Source photographs need internet access.
+
+After editing the data, run `python build_atlas.py`. The compatibility command `python build_book.py` runs the same builder. It uses only the Python standard library and generates `index.html`, `DESIGN_NOTES.md` and `collection_sources.json`.
+
+GitHub Pages serves the root of `main`. A successful push should trigger publication; check the Pages build before reporting a new version as live.
+
+## Files
+
+- `design_data.json`: short descriptions, steps and museum cases.
+- `research_details.json`: full questions, methods, materials and limits.
+- `venue_designs.json`: object records, venue tasks, camera plans and source images.
+- `collection_search.json`: textile search scope, findings and remaining gaps.
+- `styles.css` / `app.js`: responsive layout, page navigation, expand-all view, print support and image fallbacks.
+- `assets/concept-01.png` to `assets/concept-05.png`: generated design sketches.
+- `image_prompts.json`: original image-generation prompts.
+- `DESIGN_NOTES.md`: full English notes.
+- `validation.json`: checks performed for this revision.
+
+## Image and study limits
+
+Concept sketches do not establish an object’s appearance or material and do not show a working system. Some insets show earlier possible object choices; current task cards define the venue versions. Source photographs remain on their original websites with credits and links. Third-party photographs are not bundled in the repository.
+
+Confirm object records, access, fact cards and image-use terms before a study. The atlas does not open a camera, call AI, track visitors or contain participant data. Example responses and timings are design suggestions, not measured results.

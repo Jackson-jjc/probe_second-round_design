@@ -1,43 +1,35 @@
 {
-  "checked_on": "2026-10-02",
+  "revision": "English atlas, 2026-10-02",
   "static_checks": {
-    "build": "PASS",
-    "deterministic_rebuild": "PASS",
-    "javascript_syntax": "PASS",
-    "local_links": "PASS",
-    "unique_html_ids": "PASS",
-    "images_have_alt_text": "PASS",
-    "five_concept_images": "PASS",
-    "two_venue_adaptations_per_probe": "PASS"
-  },
-  "counts": {
+    "english_text_files": 13,
+    "chinese_characters": 0,
+    "question_shorthand_codes": 0,
+    "pages": 9,
     "probes": 5,
-    "concept_images": 5,
-    "interface_screens": 15,
     "venue_adaptations": 10,
-    "object_candidates": 4,
-    "case_studies": 5
+    "full_subquestions_on_probe_pages": 10,
+    "local_links": "passed",
+    "unique_ids": "passed",
+    "all_image_alt_text": "passed",
+    "repeatable_build": "passed",
+    "javascript_syntax": "passed"
   },
   "browser_checks": {
-    "status": "PASS_FOR_LISTED_CHECKS",
-    "desktop_viewport": "1280x720",
-    "probe_routes": "5/5 visible page and matching title after navigation",
-    "desktop_horizontal_overflow": false,
-    "narrow_viewport": "390px iframe (375px content plus scrollbar); viewport override did not apply, fixed-width iframe used",
-    "narrow_probe_horizontal_overflow": "none in all five probes",
-    "expand_all": "9 pages / 6 details, returned to single page successfully",
-    "object_images": "4/4 loaded, visual identity checked",
-    "screenshots": "homepage and probe 02 interface flow visually inspected",
-    "print": "print styles and beforeprint handler present; PDF pagination not verified",
-    "external_image_failure_fallback": "implemented; not network-fault simulated",
-    "case_images": "5/5 loaded and visual identity checked against case descriptions",
-    "proof_of_work": "preview.png"
+    "desktop_content_width": 1265,
+    "desktop_routes": "All nine routes inspected; no document overflow.",
+    "narrow_frame_width": 390,
+    "narrow_content_width": 375,
+    "narrow_routes": "All nine routes rendered at their own hash; no document overflow. Tables and navigation scroll inside their containers.",
+    "expand_all": "9 visible pages",
+    "return_to_single_page": "1 visible page",
+    "visual_review": "English homepage and narrow layout inspected.",
+    "preview": "preview.png"
   },
-  "limitations": [
-    "Design-only: no AI backend or camera capture implemented.",
-    "GHT candidates are historical loan/exhibition objects; current availability must be confirmed.",
-    "External reference images require network; image rights and high-resolution research assets remain to be arranged.",
-    "Pether identity uses official exhibition context plus Commons/Art UK image archive and opening report; direct Art UK page returned 403."
-  ],
-  "index_sha256": "2b7ee6f6536a302bc1c9d7eaeb02b25990bfca11ca9788f0b95678a3b3d57c9f"
+  "scope": "Design atlas only. No live AI, camera or participant study was tested.",
+  "known_limits": [
+    "External source images require internet and may fail; fallback text and source links remain.",
+    "No verified Chinese textile pair at the two target venues.",
+    "GHT past exhibition candidates are not confirmed GHT-owned collections.",
+    "Generated concept insets may show earlier candidates; current task cards define the venue versions."
+  ]
 }

@@ -1,97 +1,218 @@
 [
   {
-    "id":"01",
-    "focus":"当AI解释一个藏品细节时，访客会依据什么保留或改变自己对这件物品的理解？",
-    "rqmap":"主要支持SQ1（真实性体验的依据），同时通过前后解释支持SQ2（理解的维持或修订）。",
-    "tension":"我看见的细节、馆方提供的记录、AI给出的解释，可能相互支持，也可能不一致。",
-    "choose":"适合先做第一个原型；希望以最低操作负担，获得围绕具体物件的解释过程。",
-    "notchoose":"如果主要想研究触觉、共同创作或熟人关系，本方案提供的材料较少。",
-    "difficulty":"低：选点、文字输入、一次有依据的问答。",
-    "materials":["数字材料：皮革酒壶完整图1张，领口／裙面等清晰细节2–3处；保留完整图入口。","事实卡：馆方确认的名称、材料、用途和来源信息；将未确定之处单列，附资料出处。","现场物料：平板1台、桌椅、简短活动说明；不需要AR眼镜或实物文物。","记录内容：同一会话内的问题、选择位置、AI回答、最终注释和理由。"],
-    "screens":[{"title":"A 细节选择页","content":"左侧放大图，右侧只有“我想问……”输入框；点击一点即可，不要求精准圈图。","controls":"放大／提交问题"},{"title":"B 线索页","content":"原细节持续可见；AI答案不超过80字，旁边有“依据”入口；不做连续聊天。","controls":"看依据／继续"},{"title":"C 我的注释页","content":"保留原想法、修改、暂不判断三个选择，加一句自己的解释。","controls":"保存注释／跳过理由"}],
-    "timing":["约1分钟：介绍活动，访客看图，说最初注意到什么。","约2分钟：选细节并输入问题。","约1–2分钟：阅读AI回答，可查看依据。","约2–3分钟：留下自己的注释，研究者追问理由。"],
-    "host":"先让人自由选细节。若不知道问什么，只提示“你想多了解哪一处”，不提供标准问题或暗示AI会说错。最后请其指着自己的注释解释，不要求改变看法。",
-    "ai_contract":"输入＝对象图／选点＋问题＋固定事实卡；输出＝一条简短回答＋支持它的资料条目＋未确定之处。AI不能以制作者或历史人物的口吻虚构第一手经历。",
-    "evidence":[["选点＋最初问题","他最初依托的是外观、制作还是用途等线索","点击位置本身不能说明真实性判断。"],["AI原回答＋是否查看依据","人的判断发生在什么信息之后","查看依据不等于信任依据。"],["最终注释＋理由","哪些理解保持、增加或被撤回","若只是记住一个事实，不自动编码为真实性体验变化。"]],
-    "analysis":"以一个被点选的细节为单位，串起“原先说法→AI回应→人的最终说法”。先分析具体依据与理由，再比较访客是否把它描述为与物件、过去或制作者更有联系。",
-    "output_fields":"对象标识｜选点｜我的问题｜AI回答及依据｜我的最终注释｜为什么这样写",
-    "pilot":"能否在清晰图像上自选细节；模型是否保留资料中的不确定性；不改想法的参与者是否也能留下有意义的理由。",
-    "limits":"模型答错可能把活动变成知识纠错；应在分析中标记事实错误引发的反应，区别于对真实性的协商。"
+    "id": "01",
+    "focus": "What makes a visitor keep or change a view after AI explains an object detail?",
+    "questions": [
+      "What do visitors draw on to experience authenticity in AI-mediated heritage encounters?",
+      "How do visitors maintain or revise their understandings of authenticity through interaction with AI?"
+    ],
+    "question_connection": "Record the evidence a visitor starts with, then the reasons for keeping or changing a view.",
+    "tension": "What I see, what the museum records and what AI says may differ.",
+    "materials": [
+      "One tablet, the approved object image and a venue-checked fact card.",
+      "A place to sit, a short task card and a way to record the actual interaction."
+    ],
+    "timing": [
+      "1 minute: introduce the object and task.",
+      "2–4 minutes: choose, make or write before AI.",
+      "1–2 minutes: review one AI response.",
+      "2–3 minutes: make a decision and explain it."
+    ],
+    "host": "Start with what the visitor notices. Do not suggest that AI should be trusted or rejected. Read back any words recorded on a visitor’s behalf. Let people skip a reason, keep different views or stop.",
+    "ai_contract": "Input: object photo, selected detail, visitor question and checked fact card. Output: one answer of up to 60 words, a source reference and any uncertainty. Do not invent the maker’s thoughts.",
+    "evidence": [
+      [
+        "Starting choice and own words",
+        "What the visitor draws on before AI",
+        "A selected detail alone does not explain authenticity."
+      ],
+      [
+        "Actual AI input and output",
+        "What the visitor is responding to",
+        "Reading or accepting output does not prove trust or connection."
+      ],
+      [
+        "Final choice, revisions and stated reasons",
+        "What stays, changes or remains open",
+        "Liking, accuracy and time spent are not measures of authenticity on their own."
+      ]
+    ],
+    "analysis": "Follow one chosen detail from first view to AI answer to final view. Code the reasons given before asking whether the visitor describes a changed link to the object or its past.",
+    "output_fields": "Detail, question, AI answer with source, final note and reason.",
+    "pilot": "Can people choose a clear detail? Does AI preserve source uncertainty? Can a person who keeps their first view explain why?",
+    "limits": "A factual mistake may turn the activity into error correction. Mark this separately from a change in felt connection."
   },
   {
-    "id":"02",
-    "focus":"当动手产生的材料感受与AI的视觉解释不同，访客如何理解自己与藏品之间的联系？",
-    "rqmap":"主要支持SQ1（身体与材料经验能否成为依据），并观察这些经验如何补充或修正AI解释，支持SQ2。",
-    "tension":"AI主要看见轮廓，人还感受到软硬、支撑、阻力和失败；二者不一定描述同一种经验。",
-    "choose":"适合希望保留布料与动手趣味、减少连续打字的场景。",
-    "notchoose":"若现场不能摆放材料、拍照，或不能为动手过程留出时间，优先选01或05。",
-    "difficulty":"低至中：普通材料＋一次拍照＋视觉模型。",
-    "materials":["数字材料：酒壶完整图和一张适合折形观察的服饰细节图；在高清图确认后确定领口是否合适。","实体材料：每人1条普通棉布、1张纸，桌面工作垫；可重复使用，不需要针、线或历史工艺工具。","设备：平板及其摄像头；拍摄范围仅需桌面作品。","说明卡：明确这是借形状进行现代材料尝试，不是复原酒壶材料或历史制作过程。"],
-    "screens":[{"title":"A 看图与动手","content":"屏幕固定显示一个细节；提示“试着做出你注意到的形状”。折好后拍一张照片。","controls":"拍照／重拍"},{"title":"B 说感受并看回应","content":"输入或由研究者代录一句做时的感受。原图与作品并排；AI只说一处对应／差异和一个追问。","controls":"请AI看看"},{"title":"C 纠正AI","content":"选择“说中了／只说中一部分／没说中”，再说出原因；可以改摆一次并记录。","controls":"保存我的回应／结束"}],
-    "timing":["约1分钟：看图与材料说明。","约3分钟：自由折形，说明哪里容易或困难。","约1–2分钟：拍照、输入感受、读取AI回应。","约3–4分钟：指出AI看见与漏掉的东西，结束回看。"],
-    "host":"不示范一个标准成品，也不评价谁折得像。可以帮忙持平板、拍照或逐字代录；若参与者不便操作，可让其口头指导研究者，并将这种参与方式记入记录。",
-    "ai_contract":"输入＝馆藏细节图＋参与者作品照＋其材料感受；输出＝一条可见对应／差异＋一个开放追问。不要从照片宣称测得柔软度、重量或古代材料，也不要把普通棉布说成原物替身。",
-    "evidence":[["作品照＋原始材料感受","手部操作引出了哪些对象理解","照片不能替代触觉原话。"],["AI观察＋参与者纠正","哪些感受被视觉解释漏掉或重新命名","不能把外观相似程度当作历史真实性指标。"],["动手后的对象描述","动手是否改变了人与对象的关系","新鲜感和手工成就感可能独立于真实性。"]],
-    "analysis":"比较同一参与者的制作感受、AI对作品的描述和人的纠正；关注“像”“能做出来”“理解制作难度”等说法是否指向不同依据。记录研究者协助，避免将协助效果归于AI。",
-    "output_fields":"对象细节｜材料选择｜手工作品照｜做时的感受｜AI的观察｜我想补充或纠正的地方",
-    "pilot":"照片是否足以辨认折形；任务是否像手工比赛；访客能否谈到操作经验而不仅说“好玩”。",
-    "limits":"这不是原材料触摸实验，也不能证明参与者体验了历史制作者的真实劳动。若细节不适合折形，应换一个有依据的形态，不强行做领子。"
+    "id": "02",
+    "focus": "How does the feel of making something affect a visitor’s response to what AI sees?",
+    "questions": [
+      "What do visitors draw on to experience authenticity in AI-mediated heritage encounters?",
+      "How do visitors maintain or revise their understandings of authenticity through interaction with AI?"
+    ],
+    "question_connection": "Record how touch and making support a connection, then how the visitor corrects AI’s account.",
+    "tension": "What a camera sees may differ from what the hands feel.",
+    "materials": [
+      "One tablet, the approved object image and a venue-checked fact card.",
+      "A place to sit, a short task card and a way to record the actual interaction.",
+      "Ordinary cloth or paper and a clear tabletop; a fixed camera stand is optional."
+    ],
+    "timing": [
+      "1 minute: introduce the object and task.",
+      "2–4 minutes: choose, make or write before AI.",
+      "1–2 minutes: review one AI response.",
+      "2–3 minutes: make a decision and explain it."
+    ],
+    "host": "Start with what the visitor notices. Do not suggest that AI should be trusted or rejected. Read back any words recorded on a visitor’s behalf. Let people skip a reason, keep different views or stop.",
+    "ai_contract": "Input: photo of the made shape, reference detail, visitor’s touch note and fact card. Output: up to 60 words comparing visible form and noting what the photo cannot show.",
+    "evidence": [
+      [
+        "Starting choice and own words",
+        "What the visitor draws on before AI",
+        "A selected detail alone does not explain authenticity."
+      ],
+      [
+        "Actual AI input and output",
+        "What the visitor is responding to",
+        "Reading or accepting output does not prove trust or connection."
+      ],
+      [
+        "Final choice, revisions and stated reasons",
+        "What stays, changes or remains open",
+        "Liking, accuracy and time spent are not measures of authenticity on their own."
+      ]
+    ],
+    "analysis": "Follow one making session. Compare what the visitor says about touch before AI with what they add or correct after AI. Keep visible similarity separate from felt connection.",
+    "output_fields": "Made shape, photo, touch note, AI comparison and visitor correction.",
+    "pilot": "Can the camera capture folds clearly? Do people describe touch before reading AI? Is there time to correct the comparison?",
+    "limits": "Cloth and paper do not reproduce the historic object’s material or the artist’s process. Skill and comfort with making may shape the response."
   },
   {
-    "id":"03",
-    "focus":"当AI把个人想法加入藏品图像，访客认为哪些联系仍被保留，哪些已经改变？",
-    "rqmap":"主要支持SQ2（改作后的区分、维持与重估），并从“必须保留什么”的输入支持SQ1。",
-    "tension":"一张新作可以更贴近个人表达，却与历史对象的样貌拉开距离；也可能同时保留两种联系。",
-    "choose":"适合想观察AI图像改作、个人表达与真实性边界，且希望有明显视觉产物的场景。",
-    "notchoose":"若只能拿到低清图、图像改作使用条件不明，或现场网络不稳定，不建议优先实施。",
-    "difficulty":"中：图像编辑接口、预设区域及等待处理。",
-    "materials":["数字材料：馆方选定的一片绘鸟玻璃片高清图、完整对象说明、2–3个可编辑区域。","创作输入：一条想改变的要求和一条想保留的细节；可纯审美，不要求私人回忆。","设备：平板和可用网络；原图、生成图在同一屏幕并排。","来源标识：原图、AI当代改作分开标注；保存模型生成的实际版本，不自动替它修饰到完美。"],
-    "screens":[{"title":"A 改作指令","content":"点击一个预设局部；填写“想改……”与“想保留……”。","controls":"生成一个版本"},{"title":"B 原图与新作","content":"并列两图，明确标注AI改作；保持同样的缩放与尺寸，便于看差别。","controls":"放大查看／继续"},{"title":"C 我的取舍","content":"在结果中点选想保留或拒绝的位置，写一句它与原物的关系；允许拒绝全部。","controls":"保留／拒绝／暂不确定＋保存理由"}],
-    "timing":["约1分钟：看原图，说明自己重视的细节。","约2分钟：选择区域，写改动与保留要求。","约1–3分钟：一次生成与查看，具体等待需实测。","约3–4分钟：指出得到／失去之处，解释最终取舍。"],
-    "host":"邀请个人化表达，但不提示“哪张更真实”。生成等待时让人继续看原图，不追加任务。模型没守住要求也保留这一输出作为过程材料，不让研究者偷偷修成理想结果。",
-    "ai_contract":"输入＝经确认可用的对象图＋区域遮罩＋人的改动与保留要求；输出＝一张当代改作。区域外可由程序保留原图，区域内遵循程度由人检查；不声称能严格锁定所有指定细节。",
-    "evidence":[["改动／保留要求","生成前参与者把什么看作关键","要求可能是审美偏好，不必然属于真实性。"],["生成结果＋点选位置","AI实际改变了什么，人注意到了什么","必须记录模型越界或失败，不能只保存成功结果。"],["保留／拒绝及关系解释","个人表达与原物依据如何被区分或同时保留","不能用“更喜欢哪张”替代研究问题。"]],
-    "analysis":"对照生成前的不可改之处与生成后的判断，追踪参与者如何命名原物、数字副本与个人新作之间的关系。将“模型没有按要求画”与“即使画对了也不认可这种改作”分开分析。",
-    "output_fields":"原图来源｜局部区域｜想改／想保留｜实际生成图｜保留／拒绝的位置｜我如何理解它与原物的关系",
-    "pilot":"图像等待是否打断兴趣；是否能看清局部变化；参与者能否区分历史图像依据和当代创作。",
-    "limits":"它不是修复实验；没有残损证据时不称为补全或复原。若研究必须聚焦纺织品，需要更换为已确证的场馆纺织对象。"
+    "id": "03",
+    "focus": "Where does a visitor draw the line between a link to the past and a new personal work?",
+    "questions": [
+      "What do visitors draw on to experience authenticity in AI-mediated heritage encounters?",
+      "How do visitors maintain or revise their understandings of authenticity through interaction with AI?"
+    ],
+    "question_connection": "Record which features matter, then how the visitor keeps or changes a boundary after the edit.",
+    "tension": "A pleasing new image may weaken its link to the historical object.",
+    "materials": [
+      "One tablet, the approved object image and a venue-checked fact card.",
+      "A place to sit, a short task card and a way to record the actual interaction."
+    ],
+    "timing": [
+      "1 minute: introduce the object and task.",
+      "2–4 minutes: choose, make or write before AI.",
+      "1–2 minutes: review one AI response.",
+      "2–3 minutes: make a decision and explain it."
+    ],
+    "host": "Start with what the visitor notices. Do not suggest that AI should be trusted or rejected. Read back any words recorded on a visitor’s behalf. Let people skip a reason, keep different views or stop.",
+    "ai_contract": "Input: approved image, marked area, change request and keep rule. Output: one edited image, labelled as new work. Use image editing with a mask and restore pixels outside it in code; a text request alone cannot guarantee this.",
+    "evidence": [
+      [
+        "Starting choice and own words",
+        "What the visitor draws on before AI",
+        "A selected detail alone does not explain authenticity."
+      ],
+      [
+        "Actual AI input and output",
+        "What the visitor is responding to",
+        "Reading or accepting output does not prove trust or connection."
+      ],
+      [
+        "Final choice, revisions and stated reasons",
+        "What stays, changes or remains open",
+        "Liking, accuracy and time spent are not measures of authenticity on their own."
+      ]
+    ],
+    "analysis": "Follow one edit decision. Compare the initial keep rule with the visitor’s final boundary between a historical object and a personal image. Include unchanged or uncertain views.",
+    "output_fields": "Original, mask, prompt, AI edit, keep/reject decision and reason.",
+    "pilot": "Does the mask hold? Are all outside pixels unchanged? Do visitors distinguish the original object photo from the new image?",
+    "limits": "Image quality and model failure can affect a decision. Rejecting a poor image does not by itself reveal a view of authenticity."
   },
   {
-    "id":"04",
-    "focus":"当AI把两个人的理解写成一张展签，他们愿意保留谁的声音，又会怎样处理不一致？",
-    "rqmap":"主要支持SQ2（共同解释中的协商），也通过各自援引的对象线索与经历支持SQ1。",
-    "tension":"AI流畅、统一的展签语气，可能让个人感受像共同结论，也可能帮助两种声音清楚并存。",
-    "choose":"适合招募两人结伴参与，重点观察讨论、修改和不达成一致的过程。",
-    "notchoose":"若访客多为单独参观、停留很短，或不能记录讨论，只靠最终展签会损失关键过程。",
-    "difficulty":"低：同机轮流输入、一次合写、直接改字。",
-    "materials":["数字材料：皮革酒壶图和统一事实卡；双方看到同一份资料。","输入页：甲乙独立输入，第二位输入前不显示第一位文字；不用两台设备。","编辑页：一张短展签草稿，保留两份原话用于对照；支持手动删改。","研究记录：保留草稿与最终版本；可在同意后录讨论，未录音时由研究者作过程笔记并标记。"],
-    "screens":[{"title":"A 各自一句","content":"甲乙各写最值得别人注意的一点，提交后暂隐藏；都完成才显示。","controls":"提交并交给对方"},{"title":"B AI展签草稿","content":"上方两份原话，下方AI短展签；事实卡入口固定可见。","controls":"开始一起修改"},{"title":"C 共同定稿","content":"可编辑文本框；不愿合并时直接并排保留原话，结束前两人各表达是否认可。","controls":"共同保留／保留不同意见"}],
-    "timing":["约1分钟：共同看图与任务说明。","约2分钟：轮流独立输入。","约1分钟：AI合写并阅读。","约4–6分钟：一起修改，分别说出愿意／不愿保留的句子。"],
-    "host":"提醒先独立写，随后开放讨论。不替两人裁决谁懂历史，也不要求妥协；若一人主导，可请另一人单独说出是否认可，但不把沉默自动解释为反对。",
-    "ai_contract":"输入＝同一对象事实卡＋甲乙原话；输出＝不超过80字的展签草稿，区分资料事实与个人解读。不得把“我联想到”改成“历史上就是”，也不得抹去两人不同侧重。",
-    "evidence":[["两份独立原话","进入AI合写前的不同关注点","不能用国籍或年龄直接解释这种差别。"],["AI草稿及删改轨迹","哪些声音被合并、弱化、变得权威","仅比较最终文本无法知道是谁推动了改动。"],["讨论＋双方最终回应","如何达成共识或维持差异","两个人是一段共同互动，不当成两个独立样本。"]],
-    "analysis":"以一对参与者的一次展签修改为单位，将删改位置与当时的解释对应。关注他们引用了对象证据、个人感受还是对对方的理解；把文风润色与实质意义改变区别开来。",
-    "output_fields":"甲原话｜乙原话｜AI展签｜修改位置及理由｜最终文本｜双方各自是否认可",
-    "pilot":"独立输入是否真正独立；讨论是否只纠正文法；不达成一致时界面能否顺利结束。",
-    "limits":"语言熟练度、同伴关系及一方主导都可能影响结果。它能揭示协商过程，不能独自证明AI提高了公众策展质量。"
+    "id": "04",
+    "focus": "Whose words and meanings survive when AI brings two views together?",
+    "questions": [
+      "What do visitors draw on to experience authenticity in AI-mediated heritage encounters?",
+      "How do visitors maintain or revise their understandings of authenticity through interaction with AI?"
+    ],
+    "question_connection": "Record each person’s starting meaning, then how both respond to the shared wording.",
+    "tension": "One smooth label may hide two different views.",
+    "materials": [
+      "One tablet, the approved object image and a venue-checked fact card.",
+      "A place to sit, a short task card and a way to record the actual interaction."
+    ],
+    "timing": [
+      "1 minute: introduce the object and task.",
+      "2–4 minutes: choose, make or write before AI.",
+      "1–2 minutes: review one AI response.",
+      "2–3 minutes: make a decision and explain it."
+    ],
+    "host": "Start with what the visitor notices. Do not suggest that AI should be trusted or rejected. Read back any words recorded on a visitor’s behalf. Let people skip a reason, keep different views or stop.",
+    "ai_contract": "Input: two separate visitor lines and a checked fact card. Output: one label of up to 60 words. Preserve different views and avoid invented agreement. People make all later edits.",
+    "evidence": [
+      [
+        "Starting choice and own words",
+        "What the visitor draws on before AI",
+        "A selected detail alone does not explain authenticity."
+      ],
+      [
+        "Actual AI input and output",
+        "What the visitor is responding to",
+        "Reading or accepting output does not prove trust or connection."
+      ],
+      [
+        "Final choice, revisions and stated reasons",
+        "What stays, changes or remains open",
+        "Liking, accuracy and time spent are not measures of authenticity on their own."
+      ]
+    ],
+    "analysis": "Use the pair’s discussion as the unit. Track words from each first line through the AI draft and final choice; connect any loss or change of voice to the participants’ reasons.",
+    "output_fields": "Two first lines, AI draft, each person’s edits and final label or two labels.",
+    "pilot": "Can each person write privately first? Are both voices visible? Can they keep two views without feeling they failed?",
+    "limits": "Agreement may reflect politeness or one person taking charge. Keep both people’s separate texts and choices."
   },
   {
-    "id":"05",
-    "focus":"当AI帮助一个人邀请同伴观看藏品时，个人心意与对象意义怎样被保留、改变或错过？",
-    "rqmap":"主要支持SQ1（人际联系是否成为体验依据），通过原留言、AI改写与对方回应支持SQ2。",
-    "tension":"AI可以让邀请更容易表达，却也可能把人的具体心意改成谁都能说的通用文案。",
-    "choose":"适合朋友、伴侣或家人一起参观，希望互动自然、文本短、能互相回应的场景。",
-    "notchoose":"若只能招募独自参观者，本方案的熟人联系切口不成立；不让AI充当收礼者。",
-    "difficulty":"低：点选、一次改写、递交同一台平板。",
-    "materials":["数字材料：一片选定的绘鸟玻璃片图和事实卡；允许选整体或一点。","留言输入：一个“为什么想让对方看这里”的文本框；不要求姓名或私人照片。","传递界面：甲先看改写并确认，再把平板递给乙；不需要账号、二维码或外部发送。","收礼界面：乙看对象和最终邀请后写一句回应，再显示标明来源的原话与AI改写供简短回看。"],
-    "screens":[{"title":"A 选细节，留一句","content":"甲点一个细节，写下为什么想到同伴。两人一开始都知道活动包含AI改写。","controls":"请AI整理成邀请"},{"title":"B 留下自己的声音","content":"原留言与AI版本并排，甲可用回原话或直接改字；确认后交平板。","controls":"用AI版本／用回原话／手动修改"},{"title":"C 乙看后回应","content":"乙先看最终邀请与藏品并回应；随后可查看清楚标注的原话和改写，讨论像谁在说话。","controls":"回复一句／跳过／回看两个版本"}],
-    "timing":["约1分钟：说明两人角色与AI改写。","约2分钟：甲选细节并写留言。","约1–2分钟：生成、甲选择或手改、递交。","约2–3分钟：乙回应，双方回看一次。"],
-    "host":"允许只谈共同兴趣，不追问私密经历。原话和改写的来源始终可辨，不将活动做成“猜是不是AI写的”骗局。乙不认同或不想回应也可以结束。",
-    "ai_contract":"输入＝所选对象细节＋甲的留言；输出＝一句面向乙的观看邀请。保留甲实际表达的联系，不添加共同回忆、感情强度或未经支持的对象故事。",
-    "evidence":[["甲的选点及原留言","这个对象为何被选来联系某个人","不凭人际关系推断真实性。"],["改写＋甲的取舍","AI如何改变了人的声音与观看方向","原话被选中同样是有效结果。"],["乙的回应＋版本回看","对方是否接住心意，如何重新看对象","喜欢礼物或被感动不等于觉得对象更真实。"]],
-    "analysis":"追踪“甲意图表达什么→AI如何转述→甲如何选择→乙实际接收到什么”。同时看对象意义和人的声音是否被保留，不只评价文案好不好听。",
-    "output_fields":"对象细节｜甲原留言｜AI邀请｜甲确认版本｜乙的回应｜双方对声音来源的回看",
-    "pilot":"甲乙是否能自然传递平板；乙的回应是否仍围绕藏品；甲是否能轻松用回原话。",
-    "limits":"熟人关系可能比AI更影响体验，且先看AI改写可能影响后续回看。该顺序支持过程探索，不构成盲测或独立的AI因果比较。"
+    "id": "05",
+    "focus": "Does AI help a personal message keep the connection its sender intended?",
+    "questions": [
+      "What do visitors draw on to experience authenticity in AI-mediated heritage encounters?",
+      "How do visitors maintain or revise their understandings of authenticity through interaction with AI?"
+    ],
+    "question_connection": "Record the sender’s personal link, then how AI wording and the recipient’s reply affect it.",
+    "tension": "Clearer wording may lose the sender’s own voice.",
+    "materials": [
+      "One tablet, the approved object image and a venue-checked fact card.",
+      "A place to sit, a short task card and a way to record the actual interaction."
+    ],
+    "timing": [
+      "1 minute: introduce the object and task.",
+      "2–4 minutes: choose, make or write before AI.",
+      "1–2 minutes: review one AI response.",
+      "2–3 minutes: make a decision and explain it."
+    ],
+    "host": "Start with what the visitor notices. Do not suggest that AI should be trusted or rejected. Read back any words recorded on a visitor’s behalf. Let people skip a reason, keep different views or stop.",
+    "ai_contract": "Input: the sender’s words and, only if needed, a checked fact card. Output: one viewing invitation of up to 40 words. Do not invent memories, feelings or historical claims.",
+    "evidence": [
+      [
+        "Starting choice and own words",
+        "What the visitor draws on before AI",
+        "A selected detail alone does not explain authenticity."
+      ],
+      [
+        "Actual AI input and output",
+        "What the visitor is responding to",
+        "Reading or accepting output does not prove trust or connection."
+      ],
+      [
+        "Final choice, revisions and stated reasons",
+        "What stays, changes or remains open",
+        "Liking, accuracy and time spent are not measures of authenticity on their own."
+      ]
+    ],
+    "analysis": "Follow one exchange from sender’s intention to recipient’s reply. Compare the three text versions and both accounts; do not assume that accepting AI means the message felt authentic.",
+    "output_fields": "Selected detail, first message, AI draft, chosen message and reply.",
+    "pilot": "Does the sender have a real choice of wording? Can the recipient reply before comparing versions? Is the shared device cleared afterwards?",
+    "limits": "The relationship between the pair may matter more than the AI rewrite. Record it broadly without collecting private details."
   }
 ]

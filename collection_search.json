@@ -1,0 +1,39 @@
+{
+  "checked_on": "2026-10-02",
+  "scope": "Tudor House & Garden and God’s House Tower, Southampton only.",
+  "preference": "Textiles first; ideally one British and one Chinese object, each with a verified relationship to a target venue.",
+  "finding": "No Chinese textile at either target venue was verified in the public pages checked. This is a search limit, not proof that none exists. The atlas does not claim a British–Chinese pair.",
+  "strict_ownership": "A past GHT exhibition does not meet a strict requirement for GHT-owned collections. The textile route is a conditional venue-linked candidate, pending owner and access confirmation.",
+  "queries": [
+    "site:tudorhouseandgarden.com Chinese textile silk costume collection",
+    "site:tudorhouseandgarden.com silk",
+    "site:tudorhouseandgarden.com Chinese",
+    "Tudor House Southampton embroidery collection",
+    "site:godshousetower.org.uk Chinese textile silk collection",
+    "God’s House Tower Chinese artist"
+  ],
+  "sources": [
+    {
+      "title": "Tudor House collection highlights",
+      "url": "https://tudorhouseandgarden.com/explore/highlights/",
+      "finding": "Named leather and glass objects; no verified Chinese textile in this record."
+    },
+    {
+      "title": "Southampton collection display at Tudor House",
+      "url": "https://tudorhouseandgarden.com/exhibitions/southampton-collections-exhibition/",
+      "finding": "General museum and archive display; insufficient for naming a Chinese textile."
+    },
+    {
+      "title": "Everyone Involved",
+      "url": "https://godshousetower.org.uk/eventer/exhibition-everyone-involved/",
+      "finding": "Verified textile exhibition at GHT in 2024; not proof of GHT ownership."
+    },
+    {
+      "title": "knit the walls: final exhibition",
+      "url": "https://godshousetower.org.uk/eventer/knit-the-walls-the-finale/",
+      "finding": "Further locally made textile exhibition at GHT in 2022; retained as an alternative, not a Chinese textile or confirmed GHT holding."
+    }
+  ],
+  "excluded": "Other museums named Tudor House, city-wide collections without a target-venue link, workshop props and non-target museum objects were not substituted.",
+  "next_step": "Ask each venue for one named textile record, origin, owner, current access and image-use terms; any British–Chinese comparison stays pending until both records are confirmed."
+}

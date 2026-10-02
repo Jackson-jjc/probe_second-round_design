@@ -1,214 +1,183 @@
 {
-  "verified_on": "2026-10-02",
   "objects": {
     "THG-LJ": {
       "venue": "Tudor House & Garden",
-      "name": "人物造型皮革酒壶",
-      "english": "Leather Jug",
-      "status": "官网馆藏亮点",
-      "medium": "皮革器物 · 服饰造型",
-      "fact": "馆方将它描述为伊丽莎白时代女士造型的皮革酒壶；裙面有压印纹样，领口等处的皮革种类仍有不确定性。",
-      "limit": "服饰造型不等于纺织品。编号、研究用高清图与使用条件待确认；不把造型说成伊丽莎白一世本人。",
+      "name": "Leather Jug",
+      "english": "A jug shaped like a dressed figure",
+      "status": "Official collection highlight",
+      "medium": "Leather; shaped to look like clothing",
+      "fact": "The museum describes a leather jug shaped like an Elizabethan woman. Its skirt has raised patterns; some leather types remain uncertain.",
+      "limit": "This is leather, not a textile. Neither the figure’s identity nor a British place of manufacture is established here. Confirm its record number and image use with the museum.",
       "url": "https://tudorhouseandgarden.com/explore/highlights/",
       "image": "https://tudorhouseandgarden.com/wp-content/uploads/sites/2/2023/01/Wine-flaggon-Queen-Elizabeth-e1675069963548.jpg",
-      "credit": "Tudor House & Garden 官方对象图；版权归原权利人。"
+      "credit": "Image: Tudor House & Garden official website. Rights remain with the rights holders."
     },
     "THG-GP": {
       "venue": "Tudor House & Garden",
-      "name": "绘鸟玻璃片",
-      "english": "Glass Panes",
-      "status": "官网馆藏亮点",
-      "medium": "装饰玻璃 · 拟人鸟形",
-      "fact": "这组绘鸟玻璃片在库房中被发现；馆方提出它们可能来自宴会厅旧窗。",
-      "limit": "旧窗来源是推测。实施前选定一片、确认编号与高清图；鸟的历史身份不能由模型补写。",
+      "name": "Bird Glass Panes",
+      "english": "Decorated glass from the museum stores",
+      "status": "Official collection highlight",
+      "medium": "Painted glass",
+      "fact": "The museum suggests these bird-decorated panes may have come from the old Banqueting Hall windows.",
+      "limit": "That origin is a suggestion, not a confirmed fact. Select one pane and confirm its record number. Glass is not a textile.",
       "url": "https://tudorhouseandgarden.com/explore/highlights/",
       "image": "https://tudorhouseandgarden.com/wp-content/uploads/sites/2/2023/02/Tudor-glass-windows-e1675939638746.jpg",
-      "credit": "Tudor House & Garden 官方对象图；版权归原权利人。"
+      "credit": "Image: Tudor House & Garden official website. Rights remain with the rights holders."
     },
     "GHT-MP": {
       "venue": "God’s House Tower",
-      "name": "《月光下的God’s House Tower》",
-      "english": "Abraham Pether · God’s House Tower by Moonlight",
-      "status": "Pether 历史借展路线 · 非 GHT 永久馆藏",
-      "medium": "布面油画 · 塔楼与海岸",
-      "fact": "选用 Abraham Pether 的这幅塔楼月夜画作为具名候选。GHT官网确认Pether家族借展组；2019年开幕报道具体提及这幅作品，图片档案列藏方为 Hampshire County Council’s Fine Art Collection。",
-      "limit": "图片档案列编号 FA1991.28（须向藏方复核）；本轮未直接读取到 Art UK 条目。GHT展览关系与当前可用性分开：不声称仍在展，研究图像和借用条件待确认。",
+      "name": "God’s House Tower by Moonlight",
+      "english": "Abraham Pether",
+      "status": "Past loan exhibition; not owned by GHT",
+      "medium": "Oil painting",
+      "fact": "GHT records a Pether family loan display in 2019–2020. An opening report names this painting; its image record names Hampshire County Council as the collection.",
+      "limit": "Record FA1991.28 needs confirmation with the owner. Current display and image access are unconfirmed. The Art UK record itself could not be opened; see the linked image record and report.",
       "url": "https://godshousetower.org.uk/about/news/the-moonlight-pethers-have-arrived/",
       "image": "https://d3d00swyhr67nd.cloudfront.net/w1200h1200/collection/HMP/HMCMS/HMP_HMCMS_FA1991_28-001.jpg",
-      "credit": "Abraham Pether；Photo credit: Hampshire County Council’s Fine Art Collection / Art UK。图片地址与题名由Wikimedia Commons转载档案核对。",
+      "credit": "Image: Hampshire County Council’s Fine Art Collection / Art UK; matched to the Commons record.",
       "additional_sources": [
         {
-          "label": "单件题名、编号与图像档案（Commons转载Art UK）",
+          "label": "Image, title and record number: Commons / Art UK",
           "url": "https://commons.wikimedia.org/wiki/File:Abraham_Pether_(1756-1812)_-_God%27s_House_Tower_by_Moonlight_-_FA1991.28_-_Hampshire_County_Council.jpg"
         },
         {
-          "label": "2019年开幕报道：点名此画与GHT展览的关系",
+          "label": "2019 opening report naming this painting",
           "url": "https://www.theartnewspaper.com/2019/10/14/southamptons-new-art-space-takes-over-tower-of-700-year-old-city-gateway"
         }
       ]
     },
     "GHT-EI": {
       "venue": "God’s House Tower",
-      "name": "《Everyone Involved》纺织壁挂",
-      "english": "Ian Giles · Everyone Involved",
-      "status": "2024 历史展览 · 非已核实 GHT 馆藏",
-      "medium": "旧布与找到的纺织材料 · 手绘图像",
-      "fact": "Ian Giles 的2024年展览包含以旧布和找到的纺织材料制作的壁挂；官网说明作品展后将进入 Southampton City Art Gallery 收藏。",
-      "limit": "该说明不证明各壁挂组件已经入藏，也不证明目前仍在 GHT。选择哪件组件、照片授权与现场可用性需馆方及艺术家确认。",
+      "name": "Everyone Involved: fabric wall hangings",
+      "english": "Ian Giles",
+      "status": "Shown at GHT in 2024; ownership not confirmed at GHT",
+      "medium": "Vintage and found fabric with painted images",
+      "fact": "The 2024 exhibition included fabric wall hangings. The venue announced a later move of the work to Southampton City Art Gallery.",
+      "limit": "Preferred textile option. Choose one hanging with the venue and artist. Past display does not establish GHT ownership or current access. A confirmed Chinese textile remains an open gap.",
       "url": "https://godshousetower.org.uk/eventer/exhibition-everyone-involved/",
       "image": "https://godshousetower.org.uk/wp-content/uploads/LS-Everyone-Involved-launch-9-scaled.jpg",
-      "credit": "God’s House Tower 官方展览照片；作品 Ian Giles，照片版权归原权利人。"
+      "credit": "Image: God’s House Tower official website. Rights remain with the rights holders. Artwork: Ian Giles."
     }
   },
   "probes": {
     "01": {
-      "short": "从我看见的，到我相信的",
-      "lens": "细节与证据",
-      "camera_label": "摄像头可选 · 拍一处细节",
-      "camera": "基础版直接在官方照片上选点。现场允许拍摄且对象在展时，改为后置摄像头取景→访客确认对象→裁出细节→提交一次。使用预先选定的对象事实卡，不做全馆自动识别；反光或模糊时回到官方图。",
-      "camera_data": "只在按下快门后保留所选细节；预览不上传，裁剪后确认才送给视觉模型。记录拍摄／图库模式、模糊与失败情况，避免把摄影差异误当成AI效果。",
+      "lens": "Details and evidence",
+      "camera_label": "Optional camera: a detail",
+      "camera": "Use the approved object photo by default. If the object is on display and photography is allowed, take one rear-camera photo, confirm the object, then crop a detail. Use a fixed fact card, not automatic object recognition. Return to the approved photo if the shot is blurred or reflects light.",
+      "camera_data": "The proposed system sends only confirmed input. Record the input mode, failures and any help given. The atlas itself does not open a camera, call AI or collect visitor data.",
       "adaptations": [
         {
           "object": "THG-LJ",
-          "detail": "领口起伏、裙面压印纹样",
-          "task": "先看对象图再选一处；例如询问“它看起来像布，为什么是皮革？”AI给资料线索，访客写自己的最终理解。",
-          "question": "看起来像衣服，与知道它是酒壶，这两种依据怎样改变你的理解？",
-          "boundary": "摄影输入只能说明你选了哪里；不能据此认定皮革种类或年代。"
-        },
-        {
-          "object": "GHT-MP",
-          "detail": "塔楼与水面的关系、月光或船只",
-          "task": "使用本页所列 Abraham Pether 画作的获准数字图；访客问“画里为什么水离塔这么近？”把画面观察与已核实的场地资料并排。",
-          "question": "画面和你所知道的这处场地，分别让你相信了什么？",
-          "boundary": "画作不是历史现场照片；有出处的场地信息与画家的表现要分开。当前用数字资料，不能预设原画仍在展。"
-        }
-      ],
-      "screen_notes": [
-        "选点或确认拍摄；先留下最初理解",
-        "一次回答；资料出处与不确定处可展开",
-        "保留／修订／不判断；写出自己的依据"
-      ],
-      "case_note": "Look Closer提供主动观察细节的交互参考，Talk to the Art提供有策展资料的问答参考。新增的手机快照是本项目适配；并不声称原案例采用相同拍照流程。",
-      "case_image": "https://web-drupal-cms-prod.clevelandart.org/sites/default/files/inline-images/2026-07-22_DB_ArtLens_Crash_party_054.jpg"
-    },
-    "02": {
-      "short": "AI看见了形状，手还感到了什么？",
-      "lens": "身体与材料",
-      "camera_label": "摄像头核心 · 拍桌面作品",
-      "camera": "优先用固定俯拍摄像头，或研究者协助持平板拍摄。先自由折形／拼摆，再按快门取一张作品照，确认后与藏品细节及材料感受一起提交。持续预览用于取景，AI只回应一次，不需要实时手势追踪。",
-      "camera_data": "镜头只覆盖工作垫，避开脸和旁人。保留确认的作品照与材料感受原话；不录整段视频，不从照片推断重量、触感或古代材料。不能拍摄时可由参与者选择退出该方案。",
-      "adaptations": [
-        {
-          "object": "THG-LJ",
-          "detail": "把领口轮廓折出来",
-          "task": "用普通棉布或纸做出领口的一处起伏；拍照并说一句“哪里难做”。AI描述一处视觉对应，访客指出它遗漏的手感。",
-          "question": "你的手感，还是AI说的“像”，更影响你理解这件物品？为什么？",
-          "boundary": "普通布纸不是原物材料；这是形状探索，不是历史工艺复原。高清图若不足以看清领口，换为馆方确认可见的边缘。"
+          "detail": "The collar or raised skirt pattern.",
+          "task": "Ask about the gap between the clothing-like form and the leather material.",
+          "question": "What do you use to decide what this detail means?",
+          "boundary": "A photo cannot establish a leather type, date or maker’s intention."
         },
         {
           "object": "GHT-EI",
-          "detail": "把一处布边、层叠或色块关系摆出来",
-          "task": "GHT版将任务改为“把形状做出来”：看一件经确认的壁挂组件，用普通布片摆出一处层叠关系；拍照、描述阻力，再回应AI。",
-          "question": "你对材料的感受，如何与你理解这件当代作品的表达联系起来？",
-          "boundary": "不做领子、不临摹档案人物，也不推测参与者身份。需保留作品的社会历史背景；未落实作品／图像可用性前仅为条件适配。"
+          "detail": "One fabric edge or painted detail on one agreed wall hanging.",
+          "task": "Ask about what can be seen, then compare the reply with a checked record for that hanging.",
+          "question": "Do the material and its known story lead you to the same view?",
+          "boundary": "Use an approved digital image unless current access is confirmed; do not invent the fabric’s earlier owner."
         }
       ],
-      "screen_notes": [
-        "看细节，做一个形状，拍一张照片",
-        "原细节＋我的作品＋做时的感受 → AI",
-        "说中／部分说中／没说中；补上手感"
-      ],
-      "case_note": "Art Morph把摄像头中的日常材料转为馆藏启发的实时生成图像。本方案借用“实物操作进入AI”，改成一次视觉比较与追问，让手感和视觉解释的差别留下来。",
-      "case_image": "https://web-drupal-cms-prod.clevelandart.org/sites/default/files/inline-images/Art_Morph_02.png"
+      "case_note": "Borrow close looking and source-based questions. A visitor-confirmed snapshot and a final personal note are additions in this proposal.",
+      "case_image": "https://web-drupal-cms-prod.clevelandart.org/sites/default/files/inline-images/2026-07-22_DB_ArtLens_Crash_party_054.jpg"
     },
-    "03": {
-      "short": "改得更像我，还像这件物品吗？",
-      "lens": "原物与个人改作",
-      "camera_label": "不需要摄像头 · 固定原图",
-      "camera": "采用经确认可用于改作的固定数字图。摄像头会增加光线、透视和反光差异，因此本方案不加拍摄；同一原图、同一尺寸、同一遮罩更容易讨论究竟改了什么。",
-      "camera_data": "保留原图版本、遮罩、实际提示、原始生成结果和最终合成图。遮罩外由程序保留原图；人仍检查区域内指令是否遵守。生成失败如实显示。",
-      "adaptations": [
-        {
-          "object": "THG-GP",
-          "detail": "鸟周围一小块背景",
-          "task": "只改一块背景色，同时指定“保留鸟的姿态”。原图和一次生成的当代改作并排，访客圈出得到和失去的内容。",
-          "question": "更贴近你的表达，与更接近旧物，是否是同一件事？",
-          "boundary": "不把AI新图标为历史修复；生成图中的玻璃纹理也不能成为原物证据。"
-        },
-        {
-          "object": "GHT-MP",
-          "detail": "月夜画中的一块天空或水面",
-          "task": "确认这幅画的可编辑区域后，访客要求只改一块天空颜色并保留塔楼轮廓；把个人城市记忆与画面关系说清。",
-          "question": "换了光线以后，它仍在表达同一处场地吗？你依据什么判断？",
-          "boundary": "局部改作不代表重建历史海岸；须先落实原图及衍生使用条件。不能把概念插图当这组画中的某一幅。"
-        }
-      ],
-      "screen_notes": [
-        "想改什么＋一定保留什么；选择遮罩",
-        "一次生成；原图与AI当代改作并排",
-        "圈出得到／失去；可拒绝整个版本"
-      ],
-      "case_note": "Extend the Art根据访客提示向画框外扩展图像。本方案将扩展改成局部编辑，固定原图并留下“不能变”的事前声明；这种修改是本项目的研究设计。",
-      "case_image": "https://web-drupal-cms-prod.clevelandart.org/sites/default/files/2024-05/extend%20the%20art%20screenshot.jpg"
-    },
-    "04": {
-      "short": "一张展签里，谁的声音留下了？",
-      "lens": "协商与作者声音",
-      "camera_label": "不需要摄像头 · 两句原话",
-      "camera": "两个人先独立看同一张对象图，再轮流输入原话。这里的关键输入是人的解释而非身体外观；一台平板就能完成，不增加镜头。",
-      "camera_data": "保存甲乙独立输入、一次合写草稿、手动修改、修改理由和双方分别的最终认可。讨论录音是另行同意的研究记录，不是模型输入。",
+    "02": {
+      "lens": "Making and touch",
+      "camera_label": "Camera: your made shape",
+      "camera": "Use a tablet or an overhead camera aimed at the work surface. Photograph only the visitor’s made shape. Preview, crop and confirm before sending one image. No continuous filming or body tracking is needed. If the camera fails, record that session as a text-only variant.",
+      "camera_data": "The proposed system sends only confirmed input. Record the input mode, failures and any help given. The atlas itself does not open a camera, call AI or collect visitor data.",
       "adaptations": [
         {
           "object": "THG-LJ",
-          "detail": "服饰形象与器物表面",
-          "task": "甲乙分别说出最值得注意的一点。AI试写一张短展签；两人修改，也可把原话并排保留。",
-          "question": "你愿意为哪一句署名？哪一句把个人感受写成了物件事实？",
-          "boundary": "不因表面看起来旧就认定痕迹年代；“我联想到”保留为个人理解。"
+          "detail": "The collar’s folds, viewed in an approved detail photo.",
+          "task": "Make a loose shape using paper or ordinary cloth, then compare its form with the jug.",
+          "question": "What did making reveal that looking alone did not?",
+          "boundary": "This is a response to a leather form, not a textile replica or a test of historic craft skill."
         },
         {
-          "object": "GHT-MP",
-          "detail": "画中的历史场地与今天的城市经验",
-          "task": "一人可能注意画面气氛，另一人关注城市变化；AI合写后，二人分别检查自己的声音和对象依据是否仍在。",
-          "question": "展签可以同时保留地方记忆与陌生访客的观看方式吗？",
-          "boundary": "不按本地／外地或国籍预设观点；两人不同意时可以结束，不能强制共识。"
+          "object": "GHT-EI",
+          "detail": "The shapes made by fabric edges in one agreed wall hanging.",
+          "task": "Arrange or fold loose cloth into a new shape inspired by the detail; photograph it and describe its feel.",
+          "question": "Which part of the experience was missing from AI’s visual comparison?",
+          "boundary": "Use modern loose cloth, without tracing archive cartoons; do not claim the making repeats the artist’s process."
         }
       ],
-      "screen_notes": [
-        "甲原话＋乙原话（彼此暂不可见）",
-        "两份输入共同进入AI → 一张草稿",
-        "两人划改；分别认可，或保留两种声音"
-      ],
-      "case_note": "Nasher让ChatGPT参与展览选件与墙文、展签生成；它是机构策展实验。本方案将作者关系转为两位访客与AI，研究原话如何在合写和修订中变化。",
-      "case_image": "https://nasher.duke.edu/wp-content/uploads/2023/06/web-nasher-chatgpt-quinby07-370x250.jpg"
+      "case_note": "Borrow the link between physical making and camera input. Here AI compares once instead of producing a live stream, and the visitor explains what touch adds.",
+      "case_image": "https://web-drupal-cms-prod.clevelandart.org/sites/default/files/inline-images/Art_Morph_02.png"
     },
-    "05": {
-      "short": "借AI说一句话，对方还听见我吗？",
-      "lens": "人际联系与个人声音",
-      "camera_label": "摄像头可选 · 我为你取景",
-      "camera": "基础版在官方图上选一点。允许摄影且对象可见时，甲用后置摄像头拍一个想给乙看的细节，裁剪并确认，再写自己的留言。AI只改写文字，照片传递甲的取景；不必送进视觉模型。",
-      "camera_data": "甲确认的局部图和留言作为礼物卡；本地递交同一台平板，不外发。原话与AI改写来源可辨。用图库和现场拍摄者分别记录，摄影方式不作为真实性评分。",
+    "03": {
+      "lens": "Change and limits",
+      "camera_label": "No camera needed",
+      "camera": "Use an approved high-quality object image. A live camera would add changing light and angle without helping the question about local edits.",
+      "camera_data": "The proposed system sends only confirmed input. Record the input mode, failures and any help given. The atlas itself does not open a camera, call AI or collect visitor data.",
       "adaptations": [
         {
           "object": "THG-GP",
-          "detail": "一只鸟的姿态或拟人动作",
-          "task": "甲拍摄／点选细节，说“为什么想到你”；确认AI邀请后递给乙。乙看图回应，再共同回看原话和改写。",
-          "question": "对方感受到的是你的具体心意，还是一句任何人都能发出的邀请？",
-          "boundary": "不推断共同经历；对象的历史身份只使用事实卡中有依据的内容。"
+          "detail": "One small area of a single bird-decorated pane.",
+          "task": "Change one colour while keeping the bird’s outline and the rest of the image fixed.",
+          "question": "When does this become your new image rather than an account of the old object?",
+          "boundary": "The new image is not a restoration. Confirm image editing rights before implementation."
         },
         {
           "object": "GHT-MP",
-          "detail": "月光、船影或塔楼的一处",
-          "task": "在确认可用的画作数字图中，甲选一处联想到同伴的细节，再走相同的改写、确认、递交与回应流程。",
-          "question": "人的邀请是否改变了你观看这幅画与这处场地的方式？",
-          "boundary": "原画不在展时只能用已获准的数字图，不能设计成现场拍原画。可另在馆方同意后拍建筑细节，但那属于另一刺激条件。"
+          "detail": "A small patch of sky or water in the Pether painting.",
+          "task": "Ask for one change while keeping the tower and all unmarked areas fixed.",
+          "question": "What must stay for the picture to keep its link to this place?",
+          "boundary": "Historical loan candidate; current access is unconfirmed. A painting is not a record of exactly how the site looked."
         }
       ],
-      "screen_notes": [
-        "甲取景／选点＋自己的留言",
-        "原话 ⇄ AI邀请；甲选用或手改",
-        "递给乙 → 回应 → 回看声音来源"
+      "case_note": "Borrow a visible change to an art image. Here the visitor marks a small area inside the image and states what must stay.",
+      "case_image": "https://web-drupal-cms-prod.clevelandart.org/sites/default/files/2024-05/extend%20the%20art%20screenshot.jpg"
+    },
+    "04": {
+      "lens": "Two voices",
+      "camera_label": "No camera needed",
+      "camera": "Use the same approved object photo for both people. Text and discussion provide the evidence; a camera is not needed.",
+      "camera_data": "The proposed system sends only confirmed input. Record the input mode, failures and any help given. The atlas itself does not open a camera, call AI or collect visitor data.",
+      "adaptations": [
+        {
+          "object": "THG-LJ",
+          "detail": "The whole jug, with its collar and skirt visible.",
+          "task": "Each visitor writes a line; compare both with the shared AI label.",
+          "question": "Did the shared words keep what mattered to each of you?",
+          "boundary": "Personal readings should remain distinct from sourced information about the object."
+        },
+        {
+          "object": "GHT-EI",
+          "detail": "The same agreed wall hanging for both visitors.",
+          "task": "Each visitor writes about one visible feature or its documented context; then review the shared label.",
+          "question": "Did AI keep your different connections to the work?",
+          "boundary": "Do not ask visitors to disclose identities or treat them as speaking for a community."
+        }
       ],
-      "case_note": "GIFT在Brighton Museum迭代，让人拍摄藏品并录下送给他人的信息；原案例不是生成式AI。本方案保留为他人选择的动机，增加一次可拒绝的AI改写，并缩短为现场递交。",
+      "case_note": "Borrow a draft that people can review. Move the task to two visitors and preserve their separate words and disagreement.",
+      "case_image": "https://nasher.duke.edu/wp-content/uploads/2023/06/web-nasher-chatgpt-quinby07-370x250.jpg"
+    },
+    "05": {
+      "lens": "Personal connection",
+      "camera_label": "Optional camera: a detail",
+      "camera": "Use an approved photo, or take one rear-camera photo where allowed. The chosen image can stay on the device while only the message text goes to AI. Pass the tablet; no email, social account or external sending is required.",
+      "camera_data": "The proposed system sends only confirmed input. Record the input mode, failures and any help given. The atlas itself does not open a camera, call AI or collect visitor data.",
+      "adaptations": [
+        {
+          "object": "THG-GP",
+          "detail": "One bird or small painted detail on a selected pane.",
+          "task": "Choose it for a companion, write a message and compare the recipient’s reply with the intended meaning.",
+          "question": "Was the connection in the object, your words or your shared memory?",
+          "boundary": "A personal memory is the visitor’s account, not evidence about the glass."
+        },
+        {
+          "object": "GHT-EI",
+          "detail": "One colour, fabric edge or painted detail from the agreed wall hanging.",
+          "task": "Choose a detail for someone you know; keep the original message beside the AI rewrite.",
+          "question": "Did the rewritten words still sound like the sender?",
+          "boundary": "No invented memory or personal identity; an approved digital image is the default."
+        }
+      ],
+      "case_note": "Borrow choosing an object for another person. Add one optional AI rewrite and compare the sender’s meaning with the recipient’s response.",
       "case_image": "https://www.blasttheory.co.uk/wp-content/uploads/2018/06/QZ8A2886-625x450.jpg"
     }
   }
