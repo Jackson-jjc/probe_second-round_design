@@ -1,35 +1,21 @@
 {
-  "revision": "English atlas, 2026-10-02",
-  "static_checks": {
-    "english_text_files": 13,
-    "chinese_characters": 0,
-    "question_shorthand_codes": 0,
-    "pages": 9,
-    "probes": 5,
-    "venue_adaptations": 10,
-    "full_subquestions_on_probe_pages": 10,
-    "local_links": "passed",
-    "unique_ids": "passed",
-    "all_image_alt_text": "passed",
-    "repeatable_build": "passed",
-    "javascript_syntax": "passed"
+  "revision": "Purpose, clear questions and reading layout, 2026-10-09",
+  "content": {
+    "language": "English",
+    "homepage_purpose": "Why use these probes? plus definitions of probe and authenticity.",
+    "homepage_questions": "One main question and two full supporting questions. Wording is consistent on probe pages and in notes.",
+    "homepage_flow": "Purpose, questions, how the activities help, five one-sentence summaries.",
+    "page_detail": "Full questions and recording details can be expanded; AI inputs and outputs have separate headings."
   },
-  "browser_checks": {
-    "desktop_content_width": 1265,
-    "desktop_routes": "All nine routes inspected; no document overflow.",
-    "narrow_frame_width": 390,
-    "narrow_content_width": 375,
-    "narrow_routes": "All nine routes rendered at their own hash; no document overflow. Tables and navigation scroll inside their containers.",
-    "expand_all": "9 visible pages",
-    "return_to_single_page": "1 visible page",
-    "visual_review": "English homepage and narrow layout inspected.",
-    "preview": "preview.png"
+  "checks": {
+    "build": "Repeatable output; local links and IDs valid.",
+    "javascript": "node --check passed.",
+    "desktop": "All 9 routes checked at 1265px content width; no document overflow.",
+    "narrow_layout": "Overview, probe 02 and Research questions checked in 390px frames, 375px content width; no document overflow.",
+    "question_link": "Opens homepage questions with heading below the sticky header.",
+    "expand_all": "9 visible pages. Return shows 1 page and restores earlier detail states.",
+    "fonts": "Body 16px; notes, cards and tables increased for reading."
   },
-  "scope": "Design atlas only. No live AI, camera or participant study was tested.",
-  "known_limits": [
-    "External source images require internet and may fail; fallback text and source links remain.",
-    "No verified Chinese textile pair at the two target venues.",
-    "GHT past exhibition candidates are not confirmed GHT-owned collections.",
-    "Generated concept insets may show earlier candidates; current task cards define the venue versions."
-  ]
+  "scope": "Static design pages; no live AI or visitor-study data tested.",
+  "existing_source_check_date": "2026-10-02"
 }

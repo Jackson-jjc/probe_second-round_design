@@ -1,28 +1,36 @@
 # AI × Authenticity: Five Probe Designs
 
-English revision: 2 October 2026. Static research proposals.
+Updated 9 October 2026. Research design proposals.
 
 [Open the atlas](index.html)
+
+## Why use these probes?
+
+These five probes help us explore how visitors experience authenticity when AI is part of a museum visit. We want to understand what that experience is based on and how it stays the same or changes during an activity.
+
+A probe is a short activity that gives visitors something to try, respond to and talk about. Here, visitors look, make, change, write or share, then explain their own view after one AI response.
+
+Here, authenticity means a visitor’s sense of a real or meaningful connection with an object, its history, the place or other people. We ask visitors what feels authentic to them and why.
 
 ## Research questions
 
 ### Main question
 
-How do human–AI interactions shape visitors’ experiences of authenticity in museums and heritage sites?
+How does interacting with AI shape visitors’ experiences of authenticity in museums and heritage sites?
 
-How does interacting with AI affect a visitor’s sense of a real connection with an object, its past or other people?
+We explore how visitors describe their connection with objects, history, places and people when they use AI.
 
-### What visitors draw on
+### What the feeling is based on
 
-What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
+What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
 
-What helps visitors feel a real connection when AI is part of the visit?
+We look at the details, facts, memories, feelings and relationships they point to.
 
 ### What stays or changes
 
-How do visitors maintain or revise their understandings of authenticity through interaction with AI?
+How do visitors keep or change their understanding of authenticity as they interact with AI?
 
-How do visitors keep or change their understanding of what feels authentic when they interact with AI?
+We follow what visitors accept, question, change or leave open, and ask why.
 
 ## Object selection
 
@@ -78,9 +86,9 @@ Preferred textile option. Choose one hanging with the venue and artist. Past dis
 
 ### Connection to the research questions
 
-What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
+What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
 
-How do visitors maintain or revise their understandings of authenticity through interaction with AI?
+How do visitors keep or change their understanding of authenticity as they interact with AI?
 
 Record the evidence a visitor starts with, then the reasons for keeping or changing a view.
 
@@ -133,7 +141,7 @@ Input: object photo, selected detail, visitor question and checked fact card. Ou
 
 [Cleveland Museum of Art: Look Closer / Talk to the Art](https://www.clevelandart.org/digital-innovations/investigate)
 
-Look Closer supports close looking through AR; Talk to the Art answers visitor questions using museum material. AR alone is not generative AI.
+Look Closer supports close looking through AR; Talk to the Art answers visitor questions using museum material. AR alone is not AI that creates text or images.
 
 Borrow close looking and source-based questions. A visitor-confirmed snapshot and a final personal note are additions in this proposal.
 
@@ -143,7 +151,7 @@ Borrow close looking and source-based questions. A visitor-confirmed snapshot an
 - Actual AI input and output / What the visitor is responding to / Reading or accepting output does not prove trust or connection.
 - Final choice, revisions and stated reasons / What stays, changes or remains open / Liking, accuracy and time spent are not measures of authenticity on their own.
 
-Follow one chosen detail from first view to AI answer to final view. Code the reasons given before asking whether the visitor describes a changed link to the object or its past.
+Follow one chosen detail from first view to AI answer to final view. Group the reasons given before asking whether the visitor describes a changed link to the object or its past.
 
 **Follow-up:** What, if anything, made you feel closer to or further from this object? What led you to that view?
 
@@ -172,9 +180,9 @@ Start with what the visitor notices. Do not suggest that AI should be trusted or
 
 ### Connection to the research questions
 
-What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
+What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
 
-How do visitors maintain or revise their understandings of authenticity through interaction with AI?
+How do visitors keep or change their understanding of authenticity as they interact with AI?
 
 Record how touch and making support a connection, then how the visitor corrects AI’s account.
 
@@ -267,9 +275,9 @@ Start with what the visitor notices. Do not suggest that AI should be trusted or
 
 ### Connection to the research questions
 
-What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
+What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
 
-How do visitors maintain or revise their understandings of authenticity through interaction with AI?
+How do visitors keep or change their understanding of authenticity as they interact with AI?
 
 Record which features matter, then how the visitor keeps or changes a boundary after the edit.
 
@@ -283,7 +291,7 @@ Record which features matter, then how the visitor keeps or changes a boundary a
 2. **Compare two images.** View the original next to one AI edit. The original remains clearly labelled and available.
    - AI: Generate within the marked area; the app restores all pixels outside it from the original.
    - Example: Original object photo / New AI image
-   - Record: Prompt, mask, original image and generated image.
+   - Record: Change request, marked area, original image and generated image.
 
 3. **Decide what it means.** Keep, reject or set aside the edit; say what still links it to the object and what has changed.
    - AI: No further call.
@@ -314,9 +322,9 @@ No camera needed. Use an approved high-quality object image. A live camera would
 
 The proposed system sends only confirmed input. Record the input mode, failures and any help given. The atlas itself does not open a camera, call AI or collect visitor data.
 
-Input: approved image, marked area, change request and keep rule. Output: one edited image, labelled as new work. Use image editing with a mask and restore pixels outside it in code; a text request alone cannot guarantee this.
+Input: the object photo, the marked area, a change request and a rule for what must stay. Output: one new image, clearly labelled as an AI edit. Keep the original image outside the marked area.
 
-**Output:** Original, mask, prompt, AI edit, keep/reject decision and reason.
+**Output:** Original, mask, prompt, AI edit, decision to keep or reject the image and reason.
 
 ### Museum example
 
@@ -336,18 +344,18 @@ Follow one edit decision. Compare the initial keep rule with the visitor’s fin
 
 **Follow-up:** Which part must stay for this image to keep a meaningful link to the object, and why?
 
-**Limit:** Image quality and model failure can affect a decision. Rejecting a poor image does not by itself reveal a view of authenticity.
+**Limit:** Image quality and AI failure can affect a decision. Rejecting a poor image does not by itself reveal a view of authenticity.
 
 ### Implementation
 
 - One tablet, the approved object image and a venue-checked fact card.
 - A place to sit, a short task card and a way to record the actual interaction.
 
-A mask editor, one image-edit request, pixel restoration outside the mask and side-by-side views.
+A tool for marking the area to change, one image-edit request, keeping the original image outside the marked area and side-by-side views.
 
 Start with what the visitor notices. Do not suggest that AI should be trusted or rejected. Read back any words recorded on a visitor’s behalf. Let people skip a reason, keep different views or stop.
 
-**First trial:** Does the mask hold? Are all outside pixels unchanged? Do visitors distinguish the original object photo from the new image?
+**First trial:** Does the edit stay within the marked area? Are all outside pixels unchanged? Do visitors distinguish the original object photo from the new image?
 
 ## 04. Write a Label Together
 
@@ -361,9 +369,9 @@ Start with what the visitor notices. Do not suggest that AI should be trusted or
 
 ### Connection to the research questions
 
-What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
+What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
 
-How do visitors maintain or revise their understandings of authenticity through interaction with AI?
+How do visitors keep or change their understanding of authenticity as they interact with AI?
 
 Record each person’s starting meaning, then how both respond to the shared wording.
 
@@ -426,7 +434,7 @@ Borrow a draft that people can review. Move the task to two visitors and preserv
 - Actual AI input and output / What the visitor is responding to / Reading or accepting output does not prove trust or connection.
 - Final choice, revisions and stated reasons / What stays, changes or remains open / Liking, accuracy and time spent are not measures of authenticity on their own.
 
-Use the pair’s discussion as the unit. Track words from each first line through the AI draft and final choice; connect any loss or change of voice to the participants’ reasons.
+Use the pair’s discussion as the unit. Follow the words from each first line through the AI draft and final choice; connect any loss or change of voice to the participants’ reasons.
 
 **Follow-up:** Which words still feel like yours? Does sharing this label change your connection with the object?
 
@@ -455,9 +463,9 @@ Start with what the visitor notices. Do not suggest that AI should be trusted or
 
 ### Connection to the research questions
 
-What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
+What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
 
-How do visitors maintain or revise their understandings of authenticity through interaction with AI?
+How do visitors keep or change their understanding of authenticity as they interact with AI?
 
 Record the sender’s personal link, then how AI wording and the recipient’s reply affect it.
 
@@ -510,7 +518,7 @@ Input: the sender’s words and, only if needed, a checked fact card. Output: on
 
 [Brighton Museum / Blast Theory: GIFT](https://www.blasttheory.co.uk/projects/gift/)
 
-GIFT invites visitors to choose museum objects and create personal gifts using photos and voice messages. It is not a generative AI project.
+GIFT invites visitors to choose museum objects and create personal gifts using photos and voice messages. It is not a AI that creates text or images project.
 
 Borrow choosing an object for another person. Add one optional AI rewrite and compare the sender’s meaning with the recipient’s response.
 

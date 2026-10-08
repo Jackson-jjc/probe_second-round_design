@@ -35,7 +35,7 @@
     ],
     "case": "Cleveland Museum of Art: Look Closer / Talk to the Art",
     "caseUrl": "https://www.clevelandart.org/digital-innovations/investigate",
-    "caseFact": "Look Closer supports close looking through AR; Talk to the Art answers visitor questions using museum material. AR alone is not generative AI.",
+    "caseFact": "Look Closer supports close looking through AR; Talk to the Art answers visitor questions using museum material. AR alone is not AI that creates text or images.",
     "invite": "Choose a point on the object photo and write one question. Record your first view before seeing AI.",
     "followup": "What, if anything, made you feel closer to or further from this object? What led you to that view?",
     "build": "A photo viewer, point selection, one sourced AI answer and a saved final note."
@@ -103,7 +103,7 @@
         "human": "View the original next to one AI edit. The original remains clearly labelled and available.",
         "example": "Original object photo / New AI image",
         "ai": "Generate within the marked area; the app restores all pixels outside it from the original.",
-        "data": "Prompt, mask, original image and generated image.",
+        "data": "Change request, marked area, original image and generated image.",
         "controls": "See original / See change"
       },
       {
@@ -120,7 +120,7 @@
     "caseFact": "Extend the Art lets visitors use AI to extend an image beyond its frame.",
     "invite": "On a digital photo, mark one small area to change and name something that must stay.",
     "followup": "Which part must stay for this image to keep a meaningful link to the object, and why?",
-    "build": "A mask editor, one image-edit request, pixel restoration outside the mask and side-by-side views."
+    "build": "A tool for marking the area to change, one image-edit request, keeping the original image outside the marked area and side-by-side views."
   },
   {
     "id": "04",
@@ -199,7 +199,7 @@
     ],
     "case": "Brighton Museum / Blast Theory: GIFT",
     "caseUrl": "https://www.blasttheory.co.uk/projects/gift/",
-    "caseFact": "GIFT invites visitors to choose museum objects and create personal gifts using photos and voice messages. It is not a generative AI project.",
+    "caseFact": "GIFT invites visitors to choose museum objects and create personal gifts using photos and voice messages. It is not a AI that creates text or images project.",
     "invite": "Choose a detail and write why this person came to mind. Keep the first message.",
     "followup": "What reached the recipient, and what changed along the way? Where did the personal connection come from?",
     "build": "A detail picker, three saved text versions and a hand-over screen for the reply."

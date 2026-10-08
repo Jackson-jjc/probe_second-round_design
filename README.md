@@ -2,9 +2,15 @@
 
 [Open the live design atlas](https://jackson-jjc.github.io/probe_second-round_design/)
 
-English revision: 2 October 2026. These are static research proposals, not a working AI system.
+Updated 9 October 2026. These are static research proposals, not a working AI system.
 
 ![English atlas preview](preview.png)
+
+## Why use these probes?
+
+These five probes are short activities that help us explore how visitors experience authenticity when AI is part of a museum visit. We want to understand what that feeling is based on and how it stays the same or changes during an activity.
+
+A probe gives visitors something to try, respond to and talk about. Here, authenticity means a real or meaningful connection with an object, its history, a place or other people. The homepage explains this purpose and shows all three research questions before the five activities.
 
 ## Five activities
 
@@ -18,10 +24,10 @@ Each page includes a design image, three screen sketches, a task for each target
 
 ## Research questions
 
-**How do human–AI interactions shape visitors’ experiences of authenticity in museums and heritage sites?**
+**How does interacting with AI shape visitors’ experiences of authenticity in museums and heritage sites?**
 
-- What do visitors draw on to experience authenticity in AI-mediated heritage encounters?
-- How do visitors maintain or revise their understandings of authenticity through interaction with AI?
+- What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
+- How do visitors keep or change their understanding of authenticity as they interact with AI?
 
 Full questions replace shorthand codes throughout the atlas. Plain-English explanations accompany them on the Research questions page.
 

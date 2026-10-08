@@ -7,3 +7,42 @@
 
 /* English text: allow long questions to wrap without widening the layout. */
 body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.75}.full-question{font-weight:600;border-left:2px solid var(--gold);padding-left:14px}.brand,nav,.hero>*{min-width:0}.actions{flex-wrap:wrap}.screen,.panel,.object-card{overflow-wrap:break-word}nav{max-width:100%}@media(max-width:700px){.toolbar{align-items:flex-start;gap:8px}.toolbar>div{display:flex;flex-wrap:wrap;justify-content:flex-end}.toolbar button{margin-left:6px}.brand span{max-width:130px}.hero h1{font-size:36px}.page-top{flex-wrap:wrap}}
+
+/* Reading layout: short lines, readable notes and clear section spacing. */
+body{font-size:16px;line-height:1.75}
+main{max-width:1180px}
+nav a{font-size:13px}
+.hero{grid-template-columns:1fr 1fr;gap:40px;padding-top:24px}
+.hero h1{font-size:clamp(36px,4vw,50px);line-height:1.2}
+.hero .lead{font-size:20px;line-height:1.65;max-width:40ch}
+.hero-image{transform:none}
+.lead{line-height:1.65;max-width:62ch}
+.small,figcaption{font-size:14px;line-height:1.65}
+.page>p,.reading-copy,.focus>p{max-width:72ch}
+.purpose-block{display:grid;grid-template-columns:1.1fr 1fr;gap:42px;padding:30px 32px;background:var(--green);border-left:3px solid var(--gold);margin:10px 0 44px}
+.purpose-block h2{margin:8px 0 14px}
+.purpose-block h3{margin:24px 0 14px}
+.purpose-block p{margin-bottom:0;max-width:58ch}
+.rq-grid h3{font-size:21px;line-height:1.5;max-width:58ch}
+.rq-grid article{padding:28px}
+.rq-grid p{font-size:15px;line-height:1.7;max-width:68ch;margin-bottom:0}
+.section-heading{margin:48px 0 24px}
+.section-heading p{font-size:16px;max-width:72ch}
+.design-card p,.object-copy>p,.adaptation p,.case-study article,.implementation{font-size:16px}
+.design-card .small{font-size:13px;display:block;padding-right:14px}
+.object-copy>.small,.adaptation .small{font-size:14px}
+.screen-body p,.sample{font-size:15px;line-height:1.7}
+.screen-bar,.screen-foot,.mock-button{font-size:13px}
+.mini-label,.eyebrow{font-size:12px;letter-spacing:1px}
+.tags span,.status{font-size:13px}
+.focus p{font-size:16px}
+.focus h2{line-height:1.5;max-width:64ch}
+.question-details{border-top:1px solid #bcc8b7;margin-top:20px;padding-top:16px}
+summary{line-height:1.6;cursor:pointer;font-weight:600}
+details p{max-width:72ch}
+table{font-size:15px;line-height:1.7}
+.panel>p,.case-study p{max-width:65ch}
+footer{font-size:14px}
+@media(max-width:900px){.hero{gap:24px}.purpose-block{gap:25px}}
+@media(max-width:700px){body{font-size:16px}.hero{grid-template-columns:1fr}.hero h1{font-size:36px}.hero .lead{font-size:18px}.purpose-block{grid-template-columns:1fr;gap:24px;padding:24px 22px}.purpose-block h3{margin-top:0}.rq-grid article{padding:22px}.rq-grid h3{font-size:20px}.section-heading{margin-top:36px}.small,figcaption{font-size:13px}.concept figcaption{font-size:13px}.page-top{font-size:13px}.toolbar>span{max-width:140px;font-size:11px}.toolbar button{font-size:12px}.brand span{font-size:11px}.screen-foot{font-size:13px}}
+@media print{body{font-size:11px}main{max-width:none}.purpose-block{padding:15px;gap:20px}.rq-grid h3{font-size:15px}.rq-grid p,.small,figcaption,.section-heading p,.design-card p,.object-copy>p,.adaptation p,.case-study article,.implementation,.focus p,.screen-body p,.sample{font-size:11px}.screen-foot,.screen-bar,.mock-button{font-size:10px}table{font-size:10px}}
