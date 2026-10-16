@@ -1,0 +1,52 @@
+{
+  "headers": [
+    "Probe and what people do",
+    "What we want to learn",
+    "Theory in everyday words",
+    "Where speculation enters",
+    "Feedback and making it easy to join",
+    "Decision and its basis"
+  ],
+  "rows": [
+    [
+      "<b>01 · Ask About a Detail</b><p>Choose part of an object image. Say what you notice. Ask AI one question, then say what you think after its answer.</p><p><b>We collect:</b> the chosen detail, question, actual answer and any change in the visitor’s explanation.</p>",
+      "<b>After an AI answer, what does a visitor use to decide what to believe about an object?</b><p>We look for reasons, such as a visible detail, a museum source or personal knowledge. We also ask when the person checks or rejects the answer.</p>",
+      "A connection to an object can come from its history, appearance or a personal memory. These are different reasons. We keep them separate when reading the visitor’s account. This uses relational authenticity and the difference between looking alike and having a real source link. [1] [2]",
+      "",
+      "The researcher found this fairly ordinary. It has a low entry burden, but a blank question box can still be hard to use. Offer a few details to choose from and allow a short spoken question. A person can use the source card without AI.",
+      "<b>Keep as an introduction.</b><p>Museum AI question-and-answer systems already exist. This could still help visitors begin A or B. We would need a more specific task to make it a separate study.</p><p>Basis: a heritage-agent attitudes study and Cleveland’s Talk to the Art. These establish prior work, not results for our probe. [13] [23]</p>"
+    ],
+    [
+      "<b>02 · Make with AI</b><p>Early version: make a fabric shape, then check AI’s written account. New A: arrange three fabric pieces, generate an image, move a piece after seeing it, then compare the next image.</p><p><b>We collect:</b> the source detail, both layouts, both actual AI outputs, movements, choices and brief reasons.</p>",
+      "<b>What makes an AI-transformed design feel connected to its heritage source?</b><p>We follow one moment when the visitor keeps, changes or rejects a result. We ask what detail mattered and why. The HCI question is whether physical action gives the person useful control over AI’s next response.</p>",
+      "Relational authenticity helps us ask how the visitor connects a new result to the source work. Looking similar, knowing the maker’s history and having made something yourself are separate grounds. We do not decide in advance which ground must matter. [1] [2]",
+      "",
+      "The supervisor saw 2 as closer to authenticity and asked for broad participation. The researcher suggested a take-away card. The latest feedback found overlap with B. New A removes required writing and puts AI inside the making process. Visitors can sit, point or direct a helper.",
+      "<b>Develop as new A.</b><p>Art Morph already links physical materials to generated art. Our question follows the visitor’s actions and reasons about a particular source object. A pilot must show both a usable action-response loop and meaningful source-related accounts.</p><p>Basis: Art Morph, embodied art generation, Huayao making and ZOMA. The last is currently read at abstract level. [22] [29] [30] [12] [7]</p>"
+    ],
+    [
+      "<b>03 · Change One Detail</b><p>Select an area of an image, tell AI what may change, then compare the changed version with the source.</p><p><b>We collect:</b> selected area, instruction, actual image and reasons for keeping or rejecting it.</p>",
+      "<b>Which changes still feel connected to the object, and which changes lose that connection?</b><p>We need to hear why a change matters. Choosing the prettier picture does not by itself answer this question. The HCI issue is how people set and check limits for generation.</p>",
+      "The difference between resemblance and a real source link helps us separate “looks like it” from “still carries something important from it”. We also record personal preference on its own. [2] [5]",
+      "",
+      "The researcher questioned its purpose beyond enjoyable editing and felt the audience might be narrower. The supervisor’s clothing idea could give it a future use. For now, typing change instructions may add effort without producing different evidence from A.",
+      "<b>Pause as a separate probe.</b><p>New A now includes two visual responses guided by material action. Keep Probe 3 only if a clear different use emerges, such as adapting a particular detail to clothing.</p><p>Basis: TwistLens, Gen-Diaolou and Cleveland’s Extend the Art show that image transformation already has precedents. [5] [14] [24]</p>"
+    ],
+    [
+      "<b>04 · Write a Label Together</b><p>Early version: two people write a line each and AI joins them into a label. In B, their original words stay visible, a real reply is added and people can keep different views.</p><p><b>We collect:</b> both original messages, translation, reply, clarification and the final versions each person accepts.</p>",
+      "<b>When AI helps people describe the same object, whose meaning is kept and what gets lost?</b><p>A clear shared sentence may leave out a difference that matters. We examine how the two people notice and deal with that difference. They do not have to agree.</p>",
+      "Authentication means a process through which an account comes to be accepted. We ask who accepts a museum explanation and on what grounds. Research on AI writing also helps us check whether a person still recognises their voice. [17] [3]",
+      "",
+      "The supervisor found labels welcoming and saw a cross-cultural direction. The researcher saw overlap with 5 and a community-message format. B allows one person to reply to a consented earlier message, so two friends do not have to arrive together.",
+      "<b>Merge with 5 as B.</b><p>Keep the shared object and the question of whose words remain. Add a real reply and a chance to clarify. Save this exchange before the optional postcard stage.</p><p>Basis: language-control research, cultural-detail research and museum AI text. [8] [9] [25]</p>"
+    ],
+    [
+      "<b>05 · Share a Detail</b><p>Describe an object detail to another visitor. Read their real reply and clarify. In the revised B, choose approved words for an illustrated postcard after this exchange.</p><p><b>We collect:</b> the exchange first, then the postcard inputs, actual image, preview decision and delivery choice as a separate record.</p>",
+      "<b>Does the other visitor understand what the sender meant, and does the postcard keep that meaning?</b><p>These are two separate checks. A nice image may still change the description. An email arriving does not tell us whether the people understood one another.</p>",
+      "Relational authenticity helps us follow how the object connects people. Personal voice helps us ask whether the author recognises the description. We keep historical accuracy, translation, understanding and image approval separate. [1] [3] [16]",
+      "",
+      "The researcher suggested combining 4 and 5 and considered AI expressions. The latest request adds a postcard that combines the object and the visitor’s description. People can choose a plain card, download without email or finish without a card. AI emoji remain a later option.",
+      "<b>Merge with 4 as B.</b><p>Start with one short real exchange. Afterwards, offer one optional generated postcard and preview. Email delivery will need a private service in the study system. This public design website collects no addresses.</p><p>Basis: GIFT and museum data souvenirs support personal keepsakes. They do not establish an effect from our AI postcard. [15] [26]</p>"
+    ]
+  ]
+}

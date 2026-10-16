@@ -1,0 +1,60 @@
+<div class="implementation" id="a-design">
+  <h3>The station and the two rounds</h3>
+  <p><b>You communicate by moving fabric.</b> AI responds with an image while you are making. You can then change the fabric in response to that image. A short conversation happens afterwards so we can understand your choices. Writing a personal explanation is not the task.</p>
+  <figure class="design-figure storyboard">
+    <a href="assets/design/a-material-storyboard.png" target="_blank" rel="noopener"><img src="assets/design/a-material-storyboard.png" alt="Four illustrated views of a visitor arranging fabric, seeing a generated textile image, moving a piece and comparing two results" width="2056" height="765"></a>
+    <figcaption>AI-generated concept illustration. The artwork-like card and patterns are invented placeholders. This is not a photograph of a study, a target-venue object or evidence that the model will follow every movement.</figcaption>
+  </figure>
+  <ol class="story-captions">
+    <li><b>Arrange.</b> Put three pieces on a mat. Choose the starting point yourself.</li>
+    <li><b>See.</b> Take a snapshot. Compare AI’s result with your layout and the source.</li>
+    <li><b>Respond.</b> Move a piece because of what you saw, or decide to keep the result.</li>
+    <li><b>Compare.</b> See both rounds. Point to what matters and explain briefly.</li>
+  </ol>
+  <p><b>At the table:</b> a mat, three or four large fabric pieces, an overhead camera and a screen. The screen has three clearly named areas: Source work, Your layout and AI response. A large Generate button lets the visitor choose when to take each turn. Start with two rounds. Waiting time must be tested.</p>
+
+  <h3 id="a-object">A real object with its background</h3>
+  <p>The current textile candidate is a wall hanging from Ian Giles’s <i>Everyone Involved</i>, exhibited at God’s House Tower in 2024. Its use of found and vintage fabrics belongs to a work about LGBTQIA+ history and creative life. The venue says the work would enter Southampton City Art Gallery’s collection. One hanging, image permissions and the chosen detail still need agreement. [28]</p>
+  <p>Show the whole work, the selected crop, the artist and a short checked background together. Do not turn it into an anonymous “British traditional pattern”. A visitor may respond to a fabric relationship or gap without being asked to disclose personal identity. Tudor House needs a confirmed textile reference or permission to host this GHT-associated digital reference with its actual source named.</p>
+
+  <h3 id="a-turns">What each turn gives us</h3>
+  <figure class="design-figure">
+    <a href="assets/design/a-data-flow.svg" target="_blank" rel="noopener"><img src="assets/design/a-data-flow.svg" alt="Data sequence showing fixed source S, physical layouts L1 and L2, actual generated images G1 and G2 and a visitor reason" width="1440" height="700"></a>
+    <figcaption>The source stays fixed. Each layout and AI output is saved as a separate item. A movement alone does not tell us why the visitor made it.</figcaption>
+  </figure>
+  <div class="turn-grid">
+    <article><span class="eyebrow">BEFORE GENERATION</span><h4>Choose a detail</h4><p><b>Person:</b> points to an edge, overlap or other detail. They may say what drew their attention.</p><p><b>AI:</b> has not responded yet.</p><p><b>Data:</b> source ID, fact-card version, selected area and any first comment. This gives us the person’s starting reference.</p></article>
+    <article><span class="eyebrow">ROUND 1</span><h4>Layout L1 → image G1</h4><p><b>Person:</b> arranges the fabric and presses Generate.</p><p><b>AI:</b> receives the source crop and a photo of L1. It returns one new image, G1, using the layout as a guide.</p><p><b>Data:</b> L1, the actual request, G1, time taken and any help or failure.</p></article>
+    <article><span class="eyebrow">ROUND 2</span><h4>Layout L2 → image G2</h4><p><b>Person:</b> moves a piece after seeing G1. They can instead keep G1 or stop.</p><p><b>AI:</b> receives the same source and the new layout. It returns G2 using the same prompt template and settings.</p><p><b>Data:</b> the change from L1 to L2, what prompted it, G2 and the keep, change or stop decision. A second round is never forced.</p></article>
+    <article><span class="eyebrow">SHORT REPLAY</span><h4>Point and explain</h4><p><b>Person:</b> points to a change across the source, layouts and outputs.</p><p><b>Researcher:</b> asks “What made you move that?” and “What still connects to the source?”</p><p><b>Data:</b> the pointed area and brief explanation. Record the future-scenario response separately.</p></article>
+  </div>
+
+  <h3 id="a-authenticity">Where authenticity becomes a research question</h3>
+  <p><b>We ask what makes a connection feel real or meaningful to the visitor.</b> The generated image has a known digital source, but the visitor may accept, doubt or ignore its connection to the work. A pleasing picture and a correct source credit are useful observations. Each answers a different question. [1] [2]</p>
+  <div class="authenticity-grid">
+    <article><h4>Appearance</h4><p>Does the person point to a recognisable detail, shape or relationship? Example question: “Which part makes you connect these images?” Similarity can matter, but it does not prove shared history.</p></article>
+    <article><h4>Making and material</h4><p>Does an overlap, fold or gap matter because of what they did or noticed in the source? New cloth is ordinary activity material. Touching it does not recreate the source work’s past.</p></article>
+    <article><h4>Maker and history</h4><p>Does the person refer to the artist, the work’s background or a known use of fabric? Keep checked historical information separate from the visitor’s own association. AI must not invent an archival story.</p></article>
+    <article><h4>Personal connection</h4><p>Does the result bring the source closer to their own life, or make it feel less connected? Ask them to explain. Feeling that “I made this” concerns authorship and may or may not involve the heritage source.</p></article>
+  </div>
+  <p><b>These are starting points for analysis.</b> Participants may give other reasons. We do not turn the four areas into a total authenticity score. We first ask open questions and only follow up on a reason the person has introduced.</p>
+  <details><summary>A concrete example of an authenticity-related episode</summary><p><b>Invented example to explain the design, not participant data.</b> A visitor chooses an overlap in the source and leaves a narrow space between two fabric pieces. G1 fills that space. The visitor moves the pieces farther apart, and G2 leaves it open. They explain: “That space is what made me think of the original. Without it, I liked the picture but lost that connection.”</p><p>The useful evidence is the chosen source detail, both layouts, both actual outputs and this reason. A comment such as “blue is nicer” would show preference. “The model ignored my move” would show an interaction problem. Neither comment alone supports a claim about authenticity. Do not deliberately create a wrong response to make this episode happen.</p></details>
+
+  <h3 id="a-art-morph">What is already in Art Morph, and what we could add</h3>
+  <p>Art Morph already lets museum visitors move everyday materials under a camera and see generated art inspired by the collection. Its official description names real-time generation and a collection-adapted SDXL Turbo model. The developer describes images changing with gestures. We therefore cannot claim that physical materials, a museum setting or AI visual feedback are our invention. [22] [29]</p>
+  <div class="comparison-pairs">
+    <article><h4>Interaction form</h4><p><b>Art Morph documents:</b> material arrangements become collection-inspired generated images.</p><p><b>Our design uses:</b> two deliberate turns, with one named source and both layouts and outputs visible. This makes the sequence easier to discuss and record. Slower snapshots are a practical choice, not a new technique.</p></article>
+    <article><h4>The question being investigated</h4><p><b>The public Art Morph pages describe:</b> creative interaction with the collection. They do not report an evaluation of how visitors judge authenticity.</p><p><b>Our candidate study asks:</b> which details and relationships visitors use to maintain or change a connection to one source work while making with AI. The public pages cannot tell us whether unpublished Art Morph evaluation covers this question.</p></article>
+    <article><h4>The evidence needed</h4><p><b>A generated image can show:</b> a visual outcome.</p><p><b>Our analysis also needs:</b> the starting source detail, the movement made after G1, G2 and the visitor’s reason. This can show how a reason changes during interaction. A final satisfaction rating would miss that process.</p></article>
+    <article><h4>The possible contribution</h4><p>A small study could explain when visitors welcome an AI change, correct it or treat it as a separate creation, and what each response rests on. It could guide how museums show sources and visitor contributions in changing displays. These are claims to establish through data and wider comparison.</p></article>
+  </div>
+  <p>Published work also covers body-based image generation in public art settings, and CHI 2025’s A(I)Cam used a tangible camera and printed generated images to support reflection. These are close precedents for the interaction form. The Huayao work helps us notice reasons that emerge during making. This targeted comparison does not establish that the proposed authenticity question is untouched. [30] [31] [12]</p>
+
+  <details><summary>Smallest build and first checks</summary>
+    <p><b>AI input:</b> the fixed, permitted source crop and a tabletop photo. Use an image-conditioned generation model. A fixed instruction asks it to use the arrangement as a guide and produce a contemporary visitor response. Do not request a historical reconstruction or add guessed symbols.</p>
+    <p><b>Keep steady:</b> the source crop, prompt template, model version, output size and generation strength. Keep the seed fixed if the service supports it. Save all actual settings. Random image differences can still occur, so do not assume every output change was caused by the visitor’s move.</p>
+    <p><b>Check action and response first:</b> test moving one large piece while keeping the rest steady. Check whether a visitor can see a useful relationship in the output. If the model repeatedly ignores layouts, try stronger structural guidance before conducting the authenticity study. Log unsuccessful attempts and facilitator help.</p>
+    <p><b>First walkthroughs:</b> start with the existing planning estimate of 4–6 people for usability. This is not the final research sample. Ask whether they understand the turns, can decline AI and can explain a specific connection or lack of connection. Only then decide a study scale.</p>
+    <p><b>Research record:</b> use a session code. Keep selected snapshots, event times, model and prompt versions, actual outputs, pointed regions and consented short explanations. A still-image sequence is the starting method. Continuous hand video is optional and needs a separate study decision. Keep email addresses out of this record.</p>
+  </details>
+</div>

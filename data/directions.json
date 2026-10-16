@@ -2,87 +2,92 @@
   {
     "id": "a",
     "letter": "A",
-    "title": "My Making Card",
+    "title": "Make with AI",
     "origin": "Developed from Probe 2",
-    "focus": "Making & authenticity",
+    "focus": "Material action & authenticity",
     "time": "8–12 minutes",
-    "sentence": "Try a simple material action, then decide whether AI describes your experience in words you recognize.",
-    "rq": "How do visitors form or revise a sense of authenticity through hands-on making and AI interpretation?",
-    "purpose": "A visitor may think AI described the shape correctly but missed what making it felt like. This activity follows the reasons behind that distinction and its connection to the heritage object.",
+    "sentence": "Arrange ordinary fabric, see an AI image respond, then change the fabric to guide its next response.",
+    "rq": "What makes an AI-transformed design feel connected to its heritage source?",
+    "purpose": "We follow the visitor’s actions and reasons. A result may look similar yet lose something that matters. A visibly different result may still carry a connection the visitor values. Neither outcome is required.",
     "steps": [
       [
-        "Notice a detail",
-        "Look at an approved object image, one detail and a short checked fact card. Say or write what you notice before AI offers an explanation."
+        "Choose a source detail",
+        "See one approved textile image and its short background. Point to a detail you want to work with. No written interpretation is required."
       ],
       [
-        "Try one material action",
-        "Fold, arrange or layer ordinary cloth or paper in response to the detail. Say one thing the action made you feel or think. It is a response to the object, not a historical replica."
+        "Arrange three pieces",
+        "Place, overlap or fold ordinary fabric on a mat in response to the detail. You may point and direct a helper."
       ],
       [
-        "Choose assistance",
-        "Ask AI to help record the experience, or write it yourself. A researcher can help photograph the tabletop arrangement or enter your words. Neither face nor body photography is required."
+        "Ask AI to respond",
+        "Press Generate when ready. A camera takes one tabletop image. AI receives this layout and the fixed source crop, then returns one new visual response."
       ],
       [
-        "Review the account",
-        "See your original words beside AI’s visual observation and experience note. Keep, change or delete a sentence. You can simply say “That is not what I meant”."
+        "Move after looking",
+        "See the source, your layout and the AI result together. Move one piece if you want a different response. You may also keep the result or stop."
       ],
       [
-        "Make the card",
-        "Keep one object detail, a making photo or diagram, your approved sentence and the object source. Mark AI involvement. Both routes receive an A6 or digital card."
+        "Compare the next response",
+        "Generate once more if you changed the layout. Compare the two rounds. Point to a change that matters and say briefly why."
       ],
       [
-        "Reflect, then speculate",
-        "First ask which part best represents the experience and how it relates to the object. Then introduce the future scenario below. Mark ordinary activity and speculative discussion separately."
+        "Reflect and take away",
+        "Discuss what still connects to the source and what has changed. Then try the clearly labelled future-display scenario. Keep a visual record with source credit and AI involvement."
       ]
     ],
-    "ai": "A correctable visual-comparison and recording assistant. It receives the approved object image, checked fact card, making image and the visitor’s own description. It returns one visual observation and one experience note. Touch and emotion must come from the visitor’s input, not be inferred from a photograph.",
-    "noai": "The visitor records their own sentence and still completes the same card. A non-AI route reveals choices and reasons. Because people choose their route, it is not a randomized test of AI’s effects.",
+    "ai": "A visual partner during making. It transforms a visitor’s tabletop arrangement using one fixed heritage image as a reference. The visitor changes the arrangement after seeing the result. AI does not write an account of how the visitor felt.",
+    "noai": "Make and adjust the physical arrangement, compare it directly with the source and keep a labelled collage record. Record why AI was declined. This route supports participation and is not the same interaction or a randomized control condition.",
     "theory": [
       [
-        "Relational authenticity",
-        "Trace connections among the person, object, making, history and personal experience. Do not reduce authenticity to a correct fact or an attractive image.",
+        "Connections between people and objects",
+        "Relational authenticity asks how a connection becomes meaningful through objects, people, making and history. We follow the connections visitors themselves describe.",
         [
           1
         ]
       ],
       [
-        "Resemblance and provenance",
-        "Separate a similar-looking form from an evidenced connection to the source object. Ordinary cloth does not acquire the object’s historical material status.",
+        "Looking alike and having a real link",
+        "A similar shape is one possible reason. A known maker, source or history is another. Record these reasons separately. New cloth and generated pixels do not become original heritage material.",
         [
           2
         ]
       ],
       [
-        "Authentic personal expression",
-        "Ask whether the participant recognizes and endorses the AI-assisted account. The AI’s factual accuracy and the person’s sense of being represented are related but distinct judgments.",
+        "Action and response",
+        "We examine whether a visitor can see how their material action affects AI, guide the next image and decide when the result no longer fits the source. Embodied generation already has published precedents.",
         [
-          3
+          22,
+          29,
+          30
         ]
       ]
     ],
-    "future": "Imagine a future museum that retains the AI-written card as the default lasting record of your making. If only one version were carried forward, whose account should represent the experience? You may keep AI wording, replace it with your account, or reject this recording rule.",
-    "speculation": "The changed arrangement concerns which account becomes the lasting record. Mark the existing card as a future-scenario prop for this discussion. The actual activity retains the participant-approved version. Do not claim the museum has adopted the fictional rule or that ordinary cloth has become a historical object.",
+    "future": "Imagine a future museum where a textile’s digital display keeps changing with each visitor’s fabric arrangement and AI response. A label calls every new result “the same work, still changing”. After your own two rounds, would you keep that label, rename the display as a visitor response, or keep the original work separate?",
+    "speculation": "After the ordinary task, place the two actual outputs beside a clearly fictional future-display label. The changed rule is that a continually remade image is presented as the continuing work. The participant may accept, change or reject that rule. The real source image stays unchanged and credited. The generated result is labelled as a visitor response.",
     "quotenums": [
-      8,
+      1,
+      3,
       4,
       5,
-      10
+      8,
+      10,
+      11
     ],
-    "record": "Object and fact-card versions, the first observation, the material action and any assistance, participant wording, actual AI input and output, accepted or rejected text, edits and reasons, the final account, and the choice to use or decline AI. Record photo, research-retention and take-away preferences separately.",
-    "analysis": "Use a reasoned acceptance, correction or rejection as an episode. Follow the grounds the visitor invokes, the AI account, the response and the resulting record. Distinguish visual errors, a poor account of experience, a mistaken source claim and aesthetic preference. Include cases with no change.",
-    "value": "The candidate knowledge gain is how visitors authorize, contest or revise an AI account of their own short making experience, and what that reveals about their connection with the object. It is not the first use of AI with cloth or of a printed museum souvenir.",
-    "setup": "One approved digital object and fact card, pre-cut cloth or paper, a tablet or laptop, a tabletop photo option, a constrained multimodal AI prompt and a card template. Printing is optional. Card layout needs no second generative model.",
-    "broad": "No sewing, drawing, prompting or personal device is required. Visitors can arrange shapes, point or direct another person. Permit speech, writing and researcher transcription. A failed camera or printer should not stop participation.",
-    "checkpoint": "If the activity only produces “fun” or “AI has no sense of touch”, revise the prompts. We need specific accounts of making, the source object and why an AI description does or does not fit.",
+    "record": "Record the source and chosen detail, layout photos L1 and L2, actual outputs G1 and G2, the order and reason for a movement, what the participant points to, short explanations, decisions to keep or stop, and answers to the separate future scenario. Record model settings, waiting time, failed responses and researcher help. A camera log alone cannot explain the visitor’s reason.",
+    "analysis": "Read a complete episode: source detail → first layout → AI response → visitor movement or decision to keep → next response → reason linked to the source. Separate liking an image, controlling AI, feeling authorship and claiming a heritage connection. Retain disagreement, no change, helpful surprises, indifference and non-AI choices.",
+    "value": "The candidate contribution is an account of how visitors maintain or change their grounds for a connection to one named heritage object during material interaction with AI. The interaction technique has close precedents. A contribution would need evidence from the action sequence and the visitor’s reasons.",
+    "setup": "One approved source crop and fact card, three or four easy-to-grasp fabric pieces, a neutral mat, an overhead camera, one screen and one image-to-image generation service. Start with two snapshots. Keep the source crop and generation settings fixed. No live projection, sewing, custom model training or automatic movement recognition is required.",
+    "broad": "Offer seated access, large fabric pieces, pointing and a helper who follows the visitor’s directions. No typing, drawing, sewing or personal phone is needed. A visitor can decline photographs and use a researcher-drawn layout. Explain whether that route sends the drawing to AI. A person may decline AI entirely.",
+    "checkpoint": "First check whether visitors notice a relationship between their movement and AI’s response. If the model ignores layout, fix the prototype before drawing conclusions about authenticity. If accounts only concern colour preference or novelty, revise the source detail and reflection prompts.",
     "refs": [
       1,
       2,
-      3,
       6,
       7,
       12,
-      15,
-      22
+      22,
+      29,
+      30
     ]
   },
   {
@@ -91,38 +96,38 @@
     "title": "One Object, Two Interpretations",
     "origin": "Combines Probes 4 and 5",
     "focus": "Cross-language exchange",
-    "time": "6–10 minutes per turn",
-    "sentence": "Explain a detail in your own language, read another visitor’s reply through optional AI translation, then clarify what you meant.",
+    "time": "6–10 minutes per turn, plus an optional postcard",
+    "sentence": "Exchange and clarify a real interpretation across languages, then turn your approved description into an optional illustrated postcard.",
     "rq": "How do visitors retain and negotiate their understanding of a shared heritage object in AI-assisted cross-language exchanges?",
     "purpose": "The question is whether translated wording remains faithful to a person’s interpretation, how another person understands it, and how different readings can coexist. People do not have to agree on one interpretation.",
     "steps": [
       [
-        "Share the same reference",
-        "Use the same approved image, detail numbers and fact-card version at both locations. A single physical object need not travel. This studies exchange around digital material."
+        "See the same object",
+        "Use the same approved image, numbered detail and fact card. Different locations can share the digital reference."
       ],
       [
-        "Explain in your own language",
-        "Choose a detail and say “I notice…” or “It reminds me of…”. Keep the original wording. A short sentence or pointing with researcher transcription is enough."
+        "Describe one detail",
+        "Say or write a short observation or association in your own language. Keep the original wording."
       ],
       [
-        "Choose language support",
-        "Use AI translation, express the message yourself or request human language support. Keep original and translated wording together and name the provider. Showing unreadable text is not a completed non-AI exchange."
+        "Translate and receive a reply",
+        "Choose AI translation, your own language skills or study-team support. Another real visitor identifies the detail and replies. AI does not play the other visitor."
       ],
       [
-        "Receive a real reply",
-        "Another participant identifies the detail and says “I understand you to mean…” or asks a question. Messages may come from consenting earlier visitors. AI must not impersonate a remote participant."
+        "Clarify what you meant",
+        "Confirm, add to or correct the reply. Keep different interpretations where people disagree. Save the completed exchange before generating a postcard."
       ],
       [
-        "Confirm or clarify",
-        "The sender accepts, adds, corrects or keeps a different interpretation. A brief clarification in their own language can update the translation. Do not require editing an unfamiliar foreign language."
+        "Create and preview a postcard",
+        "Choose your own approved description and request one illustrated card, or choose a plain card. AI generates a separate response image. The source thumbnail and your exact words are added by a fixed layout."
       ],
       [
-        "Keep the conversation",
-        "Keep both original messages, identified translations and the reply on a conversation card. Reflect on meaning changes, then discuss the future scenario. An unmatched message remains pending, not a completed two-way exchange."
+        "Choose how to receive it",
+        "Approve the preview. Download it or request a one-off email from the future study service. Email is optional and separate from study participation. No email is sent by this design website."
       ]
     ],
-    "ai": "A translation and wording-clarification assistant. It aims to preserve personal meaning and uncertainty. It does not invent cultural symbolism, speak for a national culture or merge different views into one authoritative interpretation. One concise translation is the default.",
-    "noai": "Participants can write directly or use human translation provided by the study team. Record the provider and time required. Back-translation may help a person check, but it does not prove accuracy. The recipient’s actual response supplies the evidence of understanding.",
+    "ai": "First, a translation and clarification assistant during a real exchange. Afterwards, an optional image generator makes a postcard illustration from the selected object detail and the participant’s approved description. These are two separate stages with separate records.",
+    "noai": "Use direct language skills or study-team translation, then receive a plain card containing the unchanged source thumbnail and approved words. People may use translation but decline image generation, or choose the image without email delivery. Record these choices separately.",
     "theory": [
       [
         "Relational authenticity",
@@ -142,7 +147,7 @@
       ],
       [
         "Agency and cultural expression",
-        "Translation control may carry communication costs. Fluent suggestions can weaken cultural detail. These findings guide what to observe, rather than predict the museum result.",
+        "Being able to change a translation can help people express themselves. It can also make a conversation take more effort. AI writing suggestions may remove cultural details. These findings help us choose what to observe.",
         [
           8,
           9,
@@ -159,12 +164,12 @@
       12,
       13
     ],
-    "record": "Shared object and detail ID, fact-card version, original wording, translation provider, actual model and prompt version, AI choice and reason, sent text, the recipient’s stated understanding, reply, clarification and final parallel texts. Record language familiarity and relevant experience without using nationality as a substitute for cultural viewpoint.",
-    "analysis": "Follow a specific expression through wording, translation, reception and repair. Examine references, colour words, tone, memories and symbolic claims. Historical truth, translation fit, author endorsement and recipient understanding are separate judgments, not one authenticity score. An accurately understood disagreement is not automatically failure.",
-    "value": "The candidate contribution follows a complete expression–translation–reception–clarification sequence around one heritage reference. Moving an existing translator to two countries or adding an object is not sufficient novelty on its own.",
-    "setup": "One approved digital object, a checked fact card, detail numbers, short messages, optional translation, a small consented message pool and a card template. Start with different-language speakers at one site, then coordinate exchange across locations. A full social network is unnecessary.",
-    "broad": "People can come alone and reply asynchronously. They do not need to know the recipient or be online together. Permit short text, speech and transcription. Keep actual language differences separate from differences between sites.",
-    "checkpoint": "If the activity only records whether translation is correct, make the shared detail and the real reply more explicit. Without an actual reply, the data can address expression and translation but not two-way negotiation.",
+    "record": "Save the source detail, original message, translation and provider, actual reply and clarification as the exchange record. Separately save the selected postcard text, image input and output, preview acceptance or rejection, and delivery choice. Email addresses belong in a restricted delivery system, not the research transcript or AI prompt.",
+    "analysis": "First analyse how one expression travels through translation, reception and clarification. Then examine whether the optional image represents the participant’s approved meaning. A postcard cannot replace an actual reply, and liking the image cannot prove that the exchange preserved meaning.",
+    "value": "The candidate contribution follows how meaning changes through a real cross-language exchange around one heritage reference. The postcard makes one approved interpretation tangible and may reveal another change when words become an image. Image generation and email delivery are participation features with existing precedents.",
+    "setup": "One approved object, detail numbers, a short message interface, optional translation, a small pool of consented real messages and a postcard template. Add one image-generation request after the exchange and a private server-side email service for a future study deployment. This public website only explains the design.",
+    "broad": "People can come alone and reply asynchronously. Permit speech, short text, pointing and transcription. Offer a plain postcard and a local download. An email address, an AI image and agreement with the other visitor are not required.",
+    "checkpoint": "If there is no real reply, mark the exchange as pending. If postcard generation changes the meaning, let the participant reject the image or choose the plain card. Do not treat image satisfaction, email receipt or a successful translation as one authenticity score.",
     "refs": [
       1,
       3,

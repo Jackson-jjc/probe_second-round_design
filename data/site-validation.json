@@ -1,43 +1,49 @@
 {
   "checked": "2026-10-16",
   "language": "en",
-  "five_probe_rows": 5,
   "continuous_tables": 1,
+  "five_probe_rows": 5,
   "directions": 2,
   "original_passages": 13,
   "paper_figures": 4,
-  "numeric_references": 28,
+  "design_figures": 4,
+  "book_figure_files": 6,
+  "book_figures_in_table": 6,
+  "numeric_references": 31,
   "viewports": [
     {
-      "w": 1440,
-      "doc": 1440
+      "width": 1440,
+      "scrollWidth": 1440
     },
     {
-      "w": 1024,
-      "doc": 1024
+      "width": 1024,
+      "scrollWidth": 1024
     },
     {
-      "w": 768,
-      "doc": 768
+      "width": 768,
+      "scrollWidth": 768
     },
     {
-      "w": 390,
-      "doc": 390
+      "width": 390,
+      "scrollWidth": 390
     },
     {
-      "w": 360,
-      "doc": 360
+      "width": 360,
+      "scrollWidth": 360
     }
   ],
   "browser_errors": [],
   "local_resource_failures": [],
   "checks": [
-    "quote open/close",
-    "direct passage links",
-    "numeric reference navigation",
-    "English-only current page",
-    "no semicolons in prose",
-    "no private local paths",
+    "source and loop diagrams",
+    "A authenticity and Art Morph sections",
+    "B postcard and email design",
+    "five plain-language case analyses",
+    "book screenshots and enlargement",
+    "original passage deep links and controls",
+    "numeric references",
+    "English direct wording without semicolons",
+    "no data or address collection",
     "no horizontal overflow",
     "historical atlas routing"
   ]

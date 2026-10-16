@@ -1,10 +1,10 @@
 # Numeric references
 
-Search cut-off 14 October 2026. Original passages and figures checked 16 October 2026. Focused evidence synthesis, not a systematic review.
+Main search cut-off 14 October 2026. Targeted material-interaction and practice checks added 16 October 2026. Original passages and figures checked 16 October 2026. Focused evidence synthesis, not a systematic review.
 
 1. Jones, S. (2010). Negotiating Authentic Objects and Authentic Selves: Beyond the Deconstruction of Authenticity. Journal of Material Culture. [Source](https://doi.org/10.1177/1359183510364074)
 
-   Reading scope: Classical theory. Relevant abstract and discussion passages were checked, rather than claiming a new full reading.
+   Reading scope: Classical theory. Relevant abstract and discussion passages were checked. A new full reading is not claimed.
 
 2. Grayson, K., & Martinec, R. (2004). Consumer Perceptions of Iconicity and Indexicality and Their Influence on Assessments of Authentic Market Offerings. Journal of Consumer Research. [Source](https://doi.org/10.1086/422109)
 
@@ -72,7 +72,7 @@ Search cut-off 14 October 2026. Original passages and figures checked 16 October
 
 18. Miller, H., et al. (2016). “Blissfully Happy” or “Ready to Fight”: Varying Interpretations of Emoji. ICWSM, 10(1), 259–268. [Source](https://doi.org/10.1609/icwsm.v10i1.14757)
 
-   Reading scope: Conference paper. Interpretation differences inform an optional extension. The cited conference year is 2016, rather than the website migration year.
+   Reading scope: Conference paper. Interpretation differences inform an optional extension. The cited conference year is 2016. The later website date reflects migration.
 
 19. Wang, H., Qiu, T., Li, J., Lu, Z., & Ma, Y. (2025). HarmonyCut: Supporting Creative Chinese Paper-cutting Design with Form and Connotation Harmony. CHI 2025. [Source](https://doi.org/10.1145/3706598.3714159)
 
@@ -84,7 +84,7 @@ Search cut-off 14 October 2026. Original passages and figures checked 16 October
 
 21. Dunne, A., & Raby, F. (2013). Speculative Everything: Design, Fiction, and Social Dreaming. MIT Press. [Source](https://mitpress.mit.edu/9780262019842/speculative-everything/)
 
-   Reading scope: Method book. Thirteen complete sentences checked against printed pages in Chapters 1, 3, 6 and 9. The Statistical Clock, The Islanders, Plant Fiction, United Micro Kingdoms and Huggable Atomic Mushrooms inform the case comparisons. Cases guide reasoning rather than validate the museum probes. Footnote markers omitted.
+   Reading scope: Method book. Thirteen complete sentences checked against printed pages in Chapters 1, 3, 6 and 9. The Statistical Clock, The Islanders, Plant Fiction, United Micro Kingdoms and Huggable Atomic Mushrooms inform the case comparisons. Cases help explain our design choices. They do not validate the probes. Six credited screenshots preserve the original figures and captions, including Digicars on p. 176 and Biocar on p. 180. Footnote markers omitted.
 
 22. Cleveland Museum of Art. Create: Art Morph and Endless Threads. [Source](https://www.clevelandart.org/digital-innovations/create)
 
@@ -113,5 +113,17 @@ Search cut-off 14 October 2026. Original passages and figures checked 16 October
 28. God’s House Tower. Everyone Involved: Ian Giles. [Source](https://godshousetower.org.uk/eventer/exhibition-everyone-involved/)
 
    Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+
+29. Dpt. Art Morph: an interactive installation for the Cleveland Museum of Art, with Design I/O. [Source](https://dpt.co/en/projects/art-morph/)
+
+   Reading scope: Developer project description checked 16 October 2026. Documents camera capture of physical materials and changing generated images. No visitor-authenticity evaluation is claimed.
+
+30. Oppenlaender, J., Johnston, H., Silvennoinen, J., & Barranha, H. (2025). Artworks Reimagined: Exploring Human–AI Co-Creation through Body Prompting. PACM HCI, 9(4), EICS012. DOI 10.1145/3734189. [Source](https://oulurepo.oulu.fi/handle/10024/57694)
+
+   Reading scope: University repository metadata and abstract checked 16 October 2026. Published PACM HCI EICS paper, not a CHI paper. Abstract describes body prompting, public deployment and 79 visitor interviews. Used for the existing interaction form, not as proof about heritage authenticity.
+
+31. Page, R., & See, S. (2025). Creative Reflections on Image-Making with Artificial Intelligence: Interactions with a Provocative Camera. CHI 2025. DOI 10.1145/3706598.3713529. [Source](https://research.monash.edu/en/publications/creative-reflections-on-image-making-with-artificial-intelligence/)
+
+   Reading scope: University publication record and abstract checked 16 October 2026. Describes a tangible generative camera, instant prints and reflection with 15 creative practitioners. Used for the research form. No full-text or museum-effect claim.
 
 Paper image licences and original figure numbers are in [the figure credits](../data/figure-credits.json). Figure crops do not change their content. Related Huayao studies are not independent replications. ZOMA and the empathy paper are used at abstract level.

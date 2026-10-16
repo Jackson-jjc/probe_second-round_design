@@ -1,0 +1,45 @@
+<div class="implementation" id="b-design">
+  <h3>Talk first, make the postcard afterwards</h3>
+  <p><b>B connects two people through one object.</b> AI helps with language during their exchange. Once they have replied and clarified, a participant can choose one of their own approved descriptions for a postcard. The image stage is optional. A postcard made before a reply is a personal response card, not a record of a completed exchange.</p>
+  <figure class="design-figure">
+    <a href="assets/design/b-postcard-flow.svg" target="_blank" rel="noopener"><img src="assets/design/b-postcard-flow.svg" alt="Six-step diagram: shared source, two real visitors exchange messages, clarification, an illustrated postcard preview and optional download or email" width="1440" height="820"></a>
+    <figcaption>Design diagram. Example words, patterns and the card are invented. The public website does not generate a visitor image or send email.</figcaption>
+  </figure>
+  <div class="turn-grid">
+    <article><span class="eyebrow">1 / REAL EXCHANGE</span><h4>Keep each person’s meaning</h4><p>Both visitors see the same source and detail number. One describes it. The other replies through optional translation. The sender can clarify. Keep the originals, translations and real reply together. [8] [9]</p></article>
+    <article><span class="eyebrow">2 / CHOOSE THE INPUT</span><h4>Use approved words</h4><p>Ask the participant to select their own final sentence. The illustration receives the permitted source crop and that sentence. Another person’s words or name are included only if that person agreed. A one-person card is always possible.</p></article>
+    <article><span class="eyebrow">3 / GENERATE AND PREVIEW</span><h4>Check the image separately</h4><p>Generate one response illustration. Ask “Does this picture fit what you meant?” The person can accept it, remove it or choose the plain card. A retry is optional and recorded. Do not rewrite their approved sentence during image generation.</p></article>
+    <article><span class="eyebrow">4 / RECEIVE THE CARD</span><h4>Download or one-off email</h4><p>Let the person approve the exact preview, then choose download or a private email request. Email is not shared with the other participant or sent to the image model. The future study system sends only after that visitor requests it.</p></article>
+  </div>
+
+  <h3 id="b-postcard">What the postcard contains</h3>
+  <figure class="design-figure postcard-figure">
+    <a href="assets/design/b-postcard-preview.svg" target="_blank" rel="noopener"><img src="assets/design/b-postcard-preview.svg" alt="Postcard layout with an unchanged source-thumbnail area, an AI-response illustration area, the visitor’s exact approved words and source credit" width="1400" height="900"></a>
+    <figcaption>Layout sketch with invented example content. The source area is a placeholder. The waves are a drawn example of an AI illustration area, not an actual generated visitor result.</figcaption>
+  </figure>
+  <p><b>Three parts stay visibly separate:</b> a small unchanged source thumbnail with artist and object credit, the visitor’s exact approved words with an identified translation, and a larger area labelled “AI illustration of my response”. A fixed layout adds the text and credits after generation, so the image model does not redraw names or rewrite the sentence.</p>
+  <p>The image should connect the permitted source detail with the approved description. For example, if the visitor says a repeated shape reminds them of waves, the illustration can explore that association. The card must identify it as the visitor’s response. It does not claim that the artist intended waves or that the source has a historical sea meaning.</p>
+  <p>A plain version uses the unchanged source thumbnail and approved words with no generated illustration. Credit text and the AI label remain readable in the saved PNG or PDF. The souvenir does not need to show the complete research transcript. GIFT and museum data souvenirs provide precedents for a personal take-away. They do not establish a new effect from this postcard. [15] [26]</p>
+
+  <h3 id="b-authenticity">What authenticity means in this stage</h3>
+  <p>The person has already chosen words they accept. The new question is whether an image still expresses that meaning and how it connects to the named object. We keep four judgments separate: whether a source fact is correct, whether a translation fits, whether the other person understands, and whether the author accepts the postcard image. An attractive card may pass one check and fail another. [1] [3]</p>
+  <p>This keeps B different from A. In A, moving material guides the next AI image and we follow its connection to the source. In B, a real person receives and responds to another person’s meaning. The postcard comes afterwards and helps them keep or share one approved response.</p>
+
+  <h3 id="b-email">Email receipt in the future study system</h3>
+  <ol class="delivery-flow">
+    <li><b>Approve the card.</b> Show the exact file that will be delivered. Offer “Download”, “Email me this card” and “Finish without a card”.</li>
+    <li><b>Enter an address privately.</b> Only the visitor who requests delivery supplies an address. They confirm the address and request this one message. Do not ask them to enter the other participant’s address.</li>
+    <li><b>Send from a private service.</b> A server sends the approved PNG or PDF, or a private expiring link if needed. Email-provider credentials stay on that server. A static GitHub Pages site cannot securely provide this service on its own.</li>
+    <li><b>Show the actual status.</b> Distinguish queued, sent and failed. Provider acceptance does not prove that a person received or opened the message. A failure leaves the download option available.</li>
+    <li><b>Keep delivery separate.</b> Research records contain the session code and delivery choice. A restricted delivery store holds the address and delivery job. Delete that address after the delivery and agreed support period set in the study plan. Do not use it for other contact or put it in AI prompts, public links or research exports.</li>
+  </ol>
+  <p class="small"><b>Current status:</b> this is a design specification. This public page has no address field, no active model connection and no mail service. A study deployment still needs image permission, model access, private delivery configuration and a tested failure path. No messages have been sent.</p>
+
+  <details><summary>Data to collect and questions for a first trial</summary>
+    <p><b>Exchange record:</b> source and detail ID, language familiarity, original words, translation provider and actual output, real reply, clarification and final accepted meanings. Save pending exchanges as pending.</p>
+    <p><b>Postcard record:</b> the exact selected sentence, source-crop version, any permission to use another person’s words, actual generation input and image, preview acceptance, rejection or retry, and the final card version. Keep this after-exchange stage separate in time and analysis.</p>
+    <p><b>Delivery record:</b> optional choice and job status under a session code. Email addresses remain outside the analysis dataset. Do not add tracking pixels or infer engagement from message opening.</p>
+    <p><b>Useful prompts:</b> “What did the other person understand?” “Did the picture add something you did not mean?” “Which part connects the card to the object?” “Would you prefer the plain card?” Ask about the future display rule after these questions.</p>
+    <p><b>First trial:</b> test the exchange before adding generation. Then check whether the postcard is easy to preview, whether declining the image or email feels acceptable, and whether a delivery failure blocks completion. Do not judge the exchange by postcard satisfaction.</p>
+  </details>
+</div>

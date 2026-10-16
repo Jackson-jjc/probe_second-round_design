@@ -7,13 +7,17 @@
     "chapter": 3,
     "pages": "35–36",
     "quote": "What would have to change for a need like this to emerge?",
-    "description": "The clock in Do You Want to Replace the Existing Normal? reports fatalities by transport category. The authors imagine demand for an everyday object that reminds people of mortality. The question concerns the values and needs of that world, not a novel clock display.",
-    "gap": "The current task offers AI answers, but no different museum arrangement. Checking accuracy alone investigates information use rather than a speculative alternative.",
-    "world": "An imagined museum gives the AI’s first interpretation default visibility. A visitor’s alternative can challenge it, but must be deliberately retained.",
-    "prop": "After the ordinary task, show a clearly fictional first-interpretation record with the AI version marked as the default. Ask what a museum would have to value for this rule to make sense and whether the visitor would keep it.",
-    "tension": "Convenient orientation versus the visitor’s freedom to set the interpretive starting point.",
-    "selection": "Keep 1 as an introduction. An authority-focused revision is possible, but it adds a separate question and is not needed for the first A/B trial.",
-    "limit": "The clock is an analogy for questioning a need or default. It does not prove that AI-first museum interpretation is harmful or unprecedented."
+    "description": "The Statistical Clock is an imagined household clock that reports deaths in different kinds of transport. It takes information people may avoid and puts it into an ordinary daily object. The designers ask what kind of life would make someone want this clock. The clock helps people discuss that life.",
+    "gap": "At present, the visitor asks a question and AI answers it. This can show whether an answer helps. It does not yet let the visitor try a different rule for how a museum gives explanations. For example, the visitor never has to decide what happens when the AI answer is always shown first.",
+    "world": "Imagine a museum that always shows an AI explanation before any other account. A visitor can add a different reading, but must ask for it to be kept.",
+    "prop": "After the normal question task, show a clearly fictional display record marked “AI explanation shown first”. Ask what this helps, what it makes harder, and whether the visitor would keep or change the rule.",
+    "tension": "A quick starting explanation can help a new visitor. It can also make other starting points less easy to notice.",
+    "selection": "Keep this as a short introduction. A separate study could examine AI going first. The first A and B trials already have more focused tasks.",
+    "limit": "The clock gives us a way to ask about a daily rule. It does not show that putting AI first is always harmful.",
+    "relation": "We borrow the clock’s way of making an everyday rule noticeable. In Probe 1, a small display record could show what changes when AI always supplies the first explanation. The subject changes from daily reminders of death to the starting point of a museum visit.",
+    "images": [
+      "clock.png"
+    ]
   },
   {
     "probe": "02",
@@ -23,13 +27,17 @@
     "chapter": 6,
     "pages": "92–93",
     "quote": "It is the emphasis on transporting the imagination that distinguishes them from other object types including products, prototypes, and models.",
-    "description": "The book describes drawings, objects, models and found bones attributed to a fictional traveller’s observations of an imaginary island. A small object invites viewers to imagine the wider world it belongs to. It is not simply an unusual object to own.",
-    "gap": "Handling cloth, using AI and printing a card are still ordinary activity features. None by itself changes the arrangement through which a visit is represented.",
-    "world": "An imagined museum treats the AI-written card as the default lasting record of the visitor’s making. The visitor must decide whose account should represent that experience.",
-    "prop": "Use the existing card, clearly labelled as a future-scenario prop, and ask which account would remain if only one were carried forward. The visitor may keep AI wording, replace it or reject the rule.",
-    "tension": "An orderly institutional record versus first-person authority over lived experience.",
-    "selection": "Prioritize A conditionally. The same card already produced by the activity can make a broader recording rule discussable with little extra effort. The speculative question concerns representation, not whether the cloth becomes historical.",
-    "limit": "The Islanders informs how a small prop can suggest a world. It does not validate an AI card or show that visitors will interpret the scenario as intended."
+    "description": "In Charles Avery’s The Islanders, drawings, objects, models and found bones appear to come from a traveller’s visit to an invented island. Viewers use these small clues to imagine a larger place and its way of life. A small physical thing can therefore help someone think about a world they cannot directly visit.",
+    "gap": "The earlier Probe 2 ended with AI writing about a finished fabric action. That made it close to B, which also asks whether AI preserves someone’s meaning. The visitor’s hand movement did not guide AI during making. Printing a card added a keepsake, but left this interaction problem unresolved.",
+    "world": "Imagine a future museum where every visitor can keep remaking a textile’s digital display with AI. The museum calls the changing result “the same work, still changing”.",
+    "prop": "First complete the two-round fabric and AI activity. Then place its two results beside that clearly fictional label. Ask whether these should be called the same work, visitor responses, or separate new creations. Participants can propose another answer.",
+    "tension": "A changing display lets people take part. It may also blur the difference between the source work, the visitor’s action and AI’s additions.",
+    "selection": "Develop the new A around material action and visual response. Keep B around people exchanging meaning. Test whether visitors can connect a particular movement and image change to something they value in the source.",
+    "limit": "The Islanders helps us design a small prop for imagining a museum. It does not prove that this future display or our new A will work.",
+    "relation": "The book shows how a small thing can suggest a larger world. New A uses the visitor’s two actual images and a fictional museum label to make a future exhibition imaginable. We also use Plant Fiction’s clear marking of an imagined version. Neither case says that ordinary fabric becomes an original heritage object.",
+    "images": [
+      "islanders.png"
+    ]
   },
   {
     "probe": "03",
@@ -39,13 +47,17 @@
     "chapter": 6,
     "pages": "94–95",
     "quote": "There is a very important difference between inviting viewers to “make-believe” and asking them to “believe.”",
-    "description": "Troika’s fictitious plants combine plausible-looking images with short accounts of their roles in a near-future London. The project signals fiction while making a specific environmental arrangement imaginable. It is not presented as a factual plant discovery.",
-    "gap": "Changing a colour or outline supplies a visual alternative, but does not yet identify which heritage value or interpretive arrangement is at stake.",
-    "world": "A possible later version imagines a museum that adapts a pattern according to a stated contemporary priority. A short fictional label identifies that priority and what the adaptation leaves behind.",
-    "prop": "Compare the approved source and one clearly labelled imagined adaptation. Ask what should remain recognisable and why. Keep historical facts separate, and do not describe the variant as a restoration.",
-    "tension": "Contemporary reuse versus continuity with a source, its context and its meaning.",
-    "selection": "Pause the standalone probe. First specify a meaningful adaptation and its contextual stakes. More attractive editing or a printed card does not resolve this gap.",
-    "limit": "Plant Fiction supports framing and legibility of the fiction. It does not make an arbitrary image edit speculative, historically defensible or ethically appropriate."
+    "description": "Troika’s Plant Fiction presents invented plants with plausible images and short texts about how they might be used in a near-future London. The plants belong to a made-up situation. The project tells viewers that it is fiction, so they can explore the situation without being told a false discovery has occurred. One example, Selfeater, is imagined to break down its own material to help make fuel. Its picture and short story let viewers think about that future use.",
+    "gap": "In the early Probe 3, a visitor changes a colour or shape. We could learn which image they prefer. We would still need to know why that change matters for this particular object and what future use is being imagined.",
+    "world": "Imagine a museum that regularly adapts a textile pattern for a new use chosen by visitors. Each version says what it changes and what it leaves out.",
+    "prop": "Show the source beside one clearly labelled imagined adaptation. Give the adaptation a specific use. Ask which detail should remain and why. Keep this short, with no complex editing tools.",
+    "tension": "A new use can make a pattern useful to someone today. It may also remove a detail that connects it to its maker or past.",
+    "selection": "Pause Probe 3 as a separate activity. New A already examines visual changes, with physical action guiding two AI responses. A separate image editor would add similar work unless it has a different, clear purpose.",
+    "limit": "The plant case helps us explain an imagined version. It cannot provide historical evidence for a changed pattern.",
+    "relation": "Like the plant images and their short descriptions, a changed heritage image needs a clear situation. A possible version could show a pattern adapted for a stated present-day use. The original and the invented adaptation must be easy to tell apart.",
+    "images": [
+      "plant-fiction.png"
+    ]
   },
   {
     "probe": "04",
@@ -55,13 +67,18 @@
     "chapter": 9,
     "pages": "173–174",
     "quote": "Each vehicle would embody different ideologies, values, priorities, and belief systems—essentially alternative worldviews.",
-    "description": "Different vehicles make alternative arrangements of everyday life and their trade-offs available for comparison. The comparison works because the objects embody different priorities. Four unusual vehicle designs alone would not communicate that argument.",
-    "gap": "Two languages or two opinions are not yet a different institutional arrangement. A jointly written label may even hide the disagreement the probe needs to investigate.",
-    "world": "After a real exchange, imagine that a museum shows the AI translation as the public default while filing the originals separately. Visitors consider who may authorize that visibility rule.",
-    "prop": "Use one existing conversation card plus a fictional display-rule strip. Participants can keep the default, require original and translation together, or refuse the proposed rule. These are discussion choices, not implemented publishing permissions.",
-    "tension": "Cross-language readability versus control over which voices and differences remain visible.",
-    "selection": "Merge with 5 as B. 4 supplies the public interpretation question, while 5 adds a real recipient and a chance to correct understanding. A stated visibility rule gives the merged activity a more concrete speculative focus.",
-    "limit": "A difference of language is not a proxy for one of the book’s political systems. The transferable principle is making priorities and trade-offs visible, not classifying visitors into cultural types."
+    "description": "United Micro Kingdoms imagines several different societies and designs a vehicle for each one. Each vehicle shows choices about how people travel and live together. Looking at them helps viewers compare what each society makes easier and what it gives up. The pictured Digicars belong to a made-up society where software manages travel and road prices. The Biocar belongs to a society built around biotechnology. These two images show how different choices can shape everyday travel.",
+    "gap": "The early Probe 4 asks two people to write a label and lets AI join their words. A single smooth label can hide where they disagree. It also asks both people to be available together. We need a way to keep their different meanings visible and let a person join alone.",
+    "world": "Imagine a museum where only the AI translation is shown to the next visitor. Original messages are saved separately and are not on the main display.",
+    "prop": "After a real exchange, put a clearly fictional display-rule strip beside the card. Let participants keep that rule, ask for both versions, or suggest another rule. The real study continues to show the originals and translations together.",
+    "tension": "One translated version can be quick to read. Showing both versions can keep a person’s own voice and visible differences.",
+    "selection": "Merge 4 with 5 as B. Probe 4 supplies the question about a shared display. Probe 5 adds a real reply that shows how another person understood it.",
+    "limit": "We borrow a way of comparing choices. We do not sort Chinese and British visitors into the book’s invented societies.",
+    "relation": "The book makes different social choices visible through vehicles. B can make a museum’s choice visible through a display card: does the next visitor see the original words, an AI translation, or both? This is a choice about what people get to read.",
+    "images": [
+      "digicars.png",
+      "biocar.png"
+    ]
   },
   {
     "probe": "05",
@@ -71,12 +88,16 @@
     "chapter": 3,
     "pages": "40–42",
     "quote": "It is through its demeanor that one starts to wonder just how serious it is.",
-    "description": "The soft, huggable mushroom forms refer to nuclear tests. The book describes a tension between their inviting material presence and what they represent. Their critical force is not equivalent to being cute, soft or amusing.",
-    "gap": "Gifting or making a message warmer is not automatically speculative. Optional emoji can make an exchange pleasant without raising a question about what that representation retains or changes.",
-    "world": "Within B’s imagined museum arrangement, an AI bridge message may make another person’s account easier or friendlier to read. Ask who can authorize that reframing when it changes hesitation, tone or a difficult personal association.",
-    "prop": "Keep the original wording, AI wording and a real recipient’s reply on the same card. Discuss a meaningful difference and whether a future museum may retain the reworded version as the default. Do not require a disagreement or introduce a misleading historical claim.",
-    "tension": "Ease and warmth of communication versus fidelity to the sender’s tone and the object’s context.",
-    "selection": "Merge with 4. The real recipient makes a representation’s consequence discussable. Keep generated expressions as a later branch, rather than treating visual play as the source of speculation.",
-    "limit": "The book’s deliberately conflicting material form is a methodological analogy. It is not evidence that emoji communicate universally or that heritage messages should be made shocking."
+    "description": "Huggable Atomic Mushrooms are soft objects shaped like clouds from nuclear tests. Their friendly feel sits beside a frightening subject. This makes viewers ask why an inviting object presents that subject in this way. Their meaning comes from this relationship between form and subject.",
+    "gap": "The early Probe 5 lets a visitor send a message and perhaps add a friendly AI image or emoji. That can be enjoyable. We still need to see whether another person understands the message and whether the friendly version changes something the sender wanted to keep.",
+    "world": "Within B’s imagined museum, AI makes visitor messages easy to read and attractive to share. Visitors decide whether the nicer-looking version can stand for what they meant.",
+    "prop": "Complete the real reply and clarification first. Then preview a postcard with the source credit, approved words and a separately labelled AI illustration. Ask whether the picture fits. For the future-display discussion, ask whether that version could speak for the person on a museum wall.",
+    "tension": "A welcoming picture can encourage sharing. It can also soften or replace a meaning that mattered to its author.",
+    "selection": "Merge with 4 as B. Add the optional postcard after the exchange. Offer a plain card and optional email delivery. Keep AI emoji as a later idea so the first trial stays simple.",
+    "limit": "This comparison does not require shocking images. It does not show that emojis have the same meaning for everyone. The postcard is not proof that two people understood each other.",
+    "relation": "We borrow the question about how a friendly form changes a subject. In B, an attractive postcard might make an exchange easier to remember, but its picture might also change a serious, uncertain or personal description. We can compare the person’s approved words with the image they accept or reject.",
+    "images": [
+      "mushrooms.png"
+    ]
   }
 ]

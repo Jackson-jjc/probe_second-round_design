@@ -2,7 +2,7 @@
 
 ## Five starting points
 
-Ask, make, change, co-write and share. The earlier atlas explains all five initial designs. It remains available as the starting point, rather than the current recommendation.
+Ask, make, change, co-write and share. The earlier atlas explains all five initial designs. It remains available as the starting point. A and B are the current recommendations.
 
 ## Concept feedback · 9 Oct 2026
 
@@ -15,6 +15,10 @@ Broaden participation, make AI’s role explicit, explore links with clothing an
 ## Two directions · 14–16 Oct 2026
 
 Develop 2 as A, focused on making and authenticity. Merge 4 and 5 as B, focused on cross-language interpretation. Add a clearer activity, a real AI role, participant input, a take-away record and an explicit speculative discussion.
+
+## Interaction revision · 16 Oct 2026
+
+The earlier A asked people to check AI writing, which overlapped with B. New A puts AI inside a two-round material interaction. B adds an optional illustrated postcard and a separate email choice after a real exchange. The five-probe table now explains each case and design choice in everyday words.
 
 ## Selection criterion
 
