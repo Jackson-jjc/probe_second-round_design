@@ -18,10 +18,12 @@ Both use an approved digital heritage reference and real participant input. AI h
 1. **[Iteration](docs/ITERATION.md)** explains the feedback, broad-participation criterion and selection decisions.
 2. **[Five-probe evaluation and initial selection table](docs/COMPARISON.md)** keeps all five activities, questions, theories, speculative elements, feedback and decisions in one continuous comparison.
 3. **[A](docs/PROBE_A.md)** and **[B](docs/PROBE_B.md)** give the full activity, AI role, set-up, theory, participant input, data, analysis and revision criteria.
-4. **[Speculation](docs/SPECULATION.md)** contains seven verified original sentences from Dunne and Raby, printed page numbers and the exact design reasoning they support.
+4. **[Speculation](docs/SPECULATION.md)** contains thirteen verified original sentences from Dunne and Raby, printed page numbers and the exact design reasoning they support. Five book cases are tied directly to the five table rows. Each row states its present gap, different arrangement, discussion prop, trade-off and consequence for selection.
 5. **[Numeric references](docs/SOURCES.md)** identify scholarly and official practice sources. References use **[1], [2], [3]**, with no letter prefixes.
 
 The website additionally shows four original paper figures from the Huayao making work, the AI Pattern Merchant and machine-translation research. Each has an original figure number, author credit, source and licence. Findings, our design inferences and transfer limits are distinguished.
+
+The [detailed Huayao evidence and reasoning for A](docs/EVIDENCE_FOR_A.md) explains what the original study did, how its findings support specific design choices, the change in AI role, an illustrative analysis episode and what A still needs to establish. On the website, this is expanded inside the Huayao case, with a direct link from A’s theory section.
 
 ## Objects and implementation
 

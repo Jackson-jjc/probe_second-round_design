@@ -50,11 +50,11 @@ No sewing, drawing, prompting or personal device is required. Visitors can arran
 
 ## Speculative scenario
 
-Imagine that future museums give every visitor an AI-written making card, and this becomes the main record through which other people understand that visit. Which parts may AI describe for you, and which should remain yours to say?
+Imagine a future museum that retains the AI-written card as the default lasting record of your making. If only one version were carried forward, whose account should represent the experience? You may keep AI wording, replace it with your account, or reject this recording rule.
 
 ## Where speculation enters
 
-The change being discussed is who may record and represent lived experience. The card is a prop for that arrangement. Cloth, AI and printing are not in themselves the speculative element. Visitors can prefer a self-written account or reject the proposed arrangement entirely.
+The changed arrangement concerns which account becomes the lasting record. Mark the existing card as a future-scenario prop for this discussion. The actual activity retains the participant-approved version. Do not claim the museum has adopted the fictional rule or that ordinary cloth has become a historical object.
 
 ## Participant input and data
 
@@ -71,5 +71,8 @@ The candidate knowledge gain is how visitors authorize, contest or revise an AI 
 ## Revision criterion
 
 If the activity only produces “fun” or “AI has no sense of touch”, revise the prompts. We need specific accounts of making, the source object and why an AI description does or does not fit.
+
+[Detailed Huayao evidence and reasoning for A](EVIDENCE_FOR_A.md)
+
 
 [Original speculation passages](SPECULATION.md) · [Numeric references](SOURCES.md)

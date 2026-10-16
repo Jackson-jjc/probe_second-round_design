@@ -68,5 +68,80 @@
     "meaning": "Speculation opens discussion of alternatives rather than merely evaluating a product feature.",
     "application": "B asks whether different interpretations should remain side by side and who decides what is kept. A asks whether an AI account can represent a lived experience. The book does not itself propose AI museum cards or multilingual labels.",
     "reference": 21
+  },
+  {
+    "number": 8,
+    "title": "An alternative must open a gap with the present",
+    "chapter": 3,
+    "pages": "35",
+    "original": "It is the gap between reality as we know it and the different idea of reality referred to in the critical design proposal that creates the space for discussion.",
+    "meaning": "A proposal opens discussion by making another arrangement available. Improving a feature within an unchanged arrangement is not sufficient on its own.",
+    "application": "For each probe, identify the present default, the changed rule, the prop that makes it visible and the choice left to participants. Use this to explain selection and revision, not to score the probes with a universal scale.",
+    "reference": 21
+  },
+  {
+    "number": 9,
+    "title": "The Statistical Clock · reasoning for Probe 01",
+    "chapter": 3,
+    "pages": "35–36",
+    "original": "What would have to change for a need like this to emerge?",
+    "reference": 21,
+    "case_title": "The Statistical Clock",
+    "creator": "Dunne & Raby with Michael Anastassiades",
+    "case_description": "The clock in Do You Want to Replace the Existing Normal? reports fatalities by transport category. The authors imagine demand for an everyday object that reminds people of mortality. The question concerns the values and needs of that world, not a novel clock display.",
+    "meaning": "The current task offers AI answers, but no different museum arrangement. Checking accuracy alone investigates information use rather than a speculative alternative. The book case supplies a methodological comparison, not evidence of the probe’s effectiveness.",
+    "application": "After the ordinary task, show a clearly fictional first-interpretation record with the AI version marked as the default. Ask what a museum would have to value for this rule to make sense and whether the visitor would keep it. Keep 1 as an introduction. An authority-focused revision is possible, but it adds a separate question and is not needed for the first A/B trial. The clock is an analogy for questioning a need or default. It does not prove that AI-first museum interpretation is harmful or unprecedented."
+  },
+  {
+    "number": 10,
+    "title": "The Islanders · reasoning for Probe 02",
+    "chapter": 6,
+    "pages": "92–93",
+    "original": "It is the emphasis on transporting the imagination that distinguishes them from other object types including products, prototypes, and models.",
+    "reference": 21,
+    "case_title": "The Islanders",
+    "creator": "Charles Avery, discussed by Dunne & Raby",
+    "case_description": "The book describes drawings, objects, models and found bones attributed to a fictional traveller’s observations of an imaginary island. A small object invites viewers to imagine the wider world it belongs to. It is not simply an unusual object to own.",
+    "meaning": "Handling cloth, using AI and printing a card are still ordinary activity features. None by itself changes the arrangement through which a visit is represented. The book case supplies a methodological comparison, not evidence of the probe’s effectiveness.",
+    "application": "Use the existing card, clearly labelled as a future-scenario prop, and ask which account would remain if only one were carried forward. The visitor may keep AI wording, replace it or reject the rule. Prioritize A conditionally. The same card already produced by the activity can make a broader recording rule discussable with little extra effort. The speculative question concerns representation, not whether the cloth becomes historical. The Islanders informs how a small prop can suggest a world. It does not validate an AI card or show that visitors will interpret the scenario as intended."
+  },
+  {
+    "number": 11,
+    "title": "Plant Fiction · reasoning for Probe 03",
+    "chapter": 6,
+    "pages": "94–95",
+    "original": "There is a very important difference between inviting viewers to “make-believe” and asking them to “believe.”",
+    "reference": 21,
+    "case_title": "Plant Fiction",
+    "creator": "Troika, discussed by Dunne & Raby",
+    "case_description": "Troika’s fictitious plants combine plausible-looking images with short accounts of their roles in a near-future London. The project signals fiction while making a specific environmental arrangement imaginable. It is not presented as a factual plant discovery.",
+    "meaning": "Changing a colour or outline supplies a visual alternative, but does not yet identify which heritage value or interpretive arrangement is at stake. The book case supplies a methodological comparison, not evidence of the probe’s effectiveness.",
+    "application": "Compare the approved source and one clearly labelled imagined adaptation. Ask what should remain recognisable and why. Keep historical facts separate, and do not describe the variant as a restoration. Pause the standalone probe. First specify a meaningful adaptation and its contextual stakes. More attractive editing or a printed card does not resolve this gap. Plant Fiction supports framing and legibility of the fiction. It does not make an arbitrary image edit speculative, historically defensible or ethically appropriate."
+  },
+  {
+    "number": 12,
+    "title": "United Micro Kingdoms · reasoning for Probe 04",
+    "chapter": 9,
+    "pages": "173–174",
+    "original": "Each vehicle would embody different ideologies, values, priorities, and belief systems—essentially alternative worldviews.",
+    "reference": 21,
+    "case_title": "United Micro Kingdoms",
+    "creator": "Dunne & Raby",
+    "case_description": "Different vehicles make alternative arrangements of everyday life and their trade-offs available for comparison. The comparison works because the objects embody different priorities. Four unusual vehicle designs alone would not communicate that argument.",
+    "meaning": "Two languages or two opinions are not yet a different institutional arrangement. A jointly written label may even hide the disagreement the probe needs to investigate. The book case supplies a methodological comparison, not evidence of the probe’s effectiveness.",
+    "application": "Use one existing conversation card plus a fictional display-rule strip. Participants can keep the default, require original and translation together, or refuse the proposed rule. These are discussion choices, not implemented publishing permissions. Merge with 5 as B. 4 supplies the public interpretation question, while 5 adds a real recipient and a chance to correct understanding. A stated visibility rule gives the merged activity a more concrete speculative focus. A difference of language is not a proxy for one of the book’s political systems. The transferable principle is making priorities and trade-offs visible, not classifying visitors into cultural types."
+  },
+  {
+    "number": 13,
+    "title": "Huggable Atomic Mushrooms · reasoning for Probe 05",
+    "chapter": 3,
+    "pages": "40–42",
+    "original": "It is through its demeanor that one starts to wonder just how serious it is.",
+    "reference": 21,
+    "case_title": "Huggable Atomic Mushrooms",
+    "creator": "Dunne & Raby with Michael Anastassiades",
+    "case_description": "The soft, huggable mushroom forms refer to nuclear tests. The book describes a tension between their inviting material presence and what they represent. Their critical force is not equivalent to being cute, soft or amusing.",
+    "meaning": "Gifting or making a message warmer is not automatically speculative. Optional emoji can make an exchange pleasant without raising a question about what that representation retains or changes. The book case supplies a methodological comparison, not evidence of the probe’s effectiveness.",
+    "application": "Keep the original wording, AI wording and a real recipient’s reply on the same card. Discuss a meaningful difference and whether a future museum may retain the reworded version as the default. Do not require a disagreement or introduce a misleading historical claim. Merge with 4. The real recipient makes a representation’s consequence discussable. Keep generated expressions as a later branch, rather than treating visual play as the source of speculation. The book’s deliberately conflicting material form is a methodological analogy. It is not evidence that emoji communicate universally or that heritage messages should be made shocking."
   }
 ]

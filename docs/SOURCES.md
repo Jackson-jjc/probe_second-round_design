@@ -84,7 +84,7 @@ Search cut-off 14 October 2026. Original passages and figures checked 16 October
 
 21. Dunne, A., & Raby, F. (2013). Speculative Everything: Design, Fiction, and Social Dreaming. MIT Press. [Source](https://mitpress.mit.edu/9780262019842/speculative-everything/)
 
-   Reading scope: Method book. Seven complete sentences checked against the supplied printed pages in Chapters 1, 6 and 9. Footnote markers omitted.
+   Reading scope: Method book. Thirteen complete sentences checked against printed pages in Chapters 1, 3, 6 and 9. The Statistical Clock, The Islanders, Plant Fiction, United Micro Kingdoms and Huggable Atomic Mushrooms inform the case comparisons. Cases guide reasoning rather than validate the museum probes. Footnote markers omitted.
 
 22. Cleveland Museum of Art. Create: Art Morph and Endless Threads. [Source](https://www.clevelandart.org/digital-innovations/create)
 

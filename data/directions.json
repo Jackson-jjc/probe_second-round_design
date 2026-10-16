@@ -60,14 +60,13 @@
         ]
       ]
     ],
-    "future": "Imagine that future museums give every visitor an AI-written making card, and this becomes the main record through which other people understand that visit. Which parts may AI describe for you, and which should remain yours to say?",
-    "speculation": "The change being discussed is who may record and represent lived experience. The card is a prop for that arrangement. Cloth, AI and printing are not in themselves the speculative element. Visitors can prefer a self-written account or reject the proposed arrangement entirely.",
+    "future": "Imagine a future museum that retains the AI-written card as the default lasting record of your making. If only one version were carried forward, whose account should represent the experience? You may keep AI wording, replace it with your account, or reject this recording rule.",
+    "speculation": "The changed arrangement concerns which account becomes the lasting record. Mark the existing card as a future-scenario prop for this discussion. The actual activity retains the participant-approved version. Do not claim the museum has adopted the fictional rule or that ordinary cloth has become a historical object.",
     "quotenums": [
-      1,
-      3,
+      8,
       4,
       5,
-      6
+      10
     ],
     "record": "Object and fact-card versions, the first observation, the material action and any assistance, participant wording, actual AI input and output, accepted or rejected text, edits and reasons, the final account, and the choice to use or decline AI. Record photo, research-retention and take-away preferences separately.",
     "analysis": "Use a reasoned acceptance, correction or rejection as an episode. Follow the grounds the visitor invokes, the AI account, the response and the resulting record. Distinguish visual errors, a poor account of experience, a mistaken source claim and aesthetic preference. Include cases with no change.",
@@ -151,14 +150,14 @@
         ]
       ]
     ],
-    "future": "Imagine a future museum where the same object keeps visitor interpretations from different places and languages. AI makes them readable to one another. Who should decide which versions stay, which are changed, and whether any should be merged?",
-    "speculation": "The alternative arrangement is a museum retaining parallel visitor interpretations. The conversation card makes this arrangement visible. Participants may prefer separate institutional facts and visitor comments, decline AI co-writing, or reject the future arrangement. Consensus is not the required ending.",
+    "future": "After the real exchange, imagine that a future museum displays the AI translation by default to the next visitor and files the originals separately. Who may authorize that rule? Would you keep it, require original and translation together, or refuse the proposed arrangement?",
+    "speculation": "The changed arrangement concerns which voice becomes visible to later visitors. One clearly fictional display-rule strip beside the existing conversation card is enough to discuss it. In the real activity, originals and translations stay visible together. This discussion does not publish messages, alter venue permissions or require consensus.",
     "quotenums": [
-      1,
-      2,
+      8,
       5,
       6,
-      7
+      12,
+      13
     ],
     "record": "Shared object and detail ID, fact-card version, original wording, translation provider, actual model and prompt version, AI choice and reason, sent text, the recipient’s stated understanding, reply, clarification and final parallel texts. Record language familiarity and relevant experience without using nationality as a substitute for cultural viewpoint.",
     "analysis": "Follow a specific expression through wording, translation, reception and repair. Examine references, colour words, tone, memories and symbolic claims. Historical truth, translation fit, author endorsement and recipient understanding are separate judgments, not one authenticity score. An accurately understood disagreement is not automatically failure.",

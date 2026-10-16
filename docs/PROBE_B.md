@@ -50,11 +50,11 @@ People can come alone and reply asynchronously. They do not need to know the rec
 
 ## Speculative scenario
 
-Imagine a future museum where the same object keeps visitor interpretations from different places and languages. AI makes them readable to one another. Who should decide which versions stay, which are changed, and whether any should be merged?
+After the real exchange, imagine that a future museum displays the AI translation by default to the next visitor and files the originals separately. Who may authorize that rule? Would you keep it, require original and translation together, or refuse the proposed arrangement?
 
 ## Where speculation enters
 
-The alternative arrangement is a museum retaining parallel visitor interpretations. The conversation card makes this arrangement visible. Participants may prefer separate institutional facts and visitor comments, decline AI co-writing, or reject the future arrangement. Consensus is not the required ending.
+The changed arrangement concerns which voice becomes visible to later visitors. One clearly fictional display-rule strip beside the existing conversation card is enough to discuss it. In the real activity, originals and translations stay visible together. This discussion does not publish messages, alter venue permissions or require consensus.
 
 ## Participant input and data
 
