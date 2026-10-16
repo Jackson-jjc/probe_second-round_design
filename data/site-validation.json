@@ -1,0 +1,44 @@
+{
+  "checked": "2026-10-16",
+  "language": "en",
+  "five_probe_rows": 5,
+  "continuous_tables": 1,
+  "directions": 2,
+  "original_passages": 7,
+  "paper_figures": 4,
+  "numeric_references": 28,
+  "viewports": [
+    {
+      "w": 1440,
+      "doc": 1440
+    },
+    {
+      "w": 1024,
+      "doc": 1024
+    },
+    {
+      "w": 768,
+      "doc": 768
+    },
+    {
+      "w": 390,
+      "doc": 390
+    },
+    {
+      "w": 360,
+      "doc": 360
+    }
+  ],
+  "browser_errors": [],
+  "local_resource_failures": [],
+  "checks": [
+    "quote open/close",
+    "direct passage links",
+    "numeric reference navigation",
+    "English-only current page",
+    "no semicolons in prose",
+    "no private local paths",
+    "no horizontal overflow",
+    "historical atlas routing"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "headers": [
+    "Probe and activity",
+    "Research question and HCI issue",
+    "How theory enters",
+    "Where speculation enters",
+    "Feedback and broad participation",
+    "Decision and evidence"
+  ],
+  "rows": [
+    [
+      "<b>01 · Ask About a Detail</b><p>Select an object detail, write an initial interpretation, ask AI, then explain again.</p><p><b>Input:</b> a detail, question and personal interpretation.</p>",
+      "<b>What do visitors rely on when judging an object’s authenticity, and how do those grounds change after AI responds?</b><p>HCI: interpretive authority, visible sources, and when visitors check or reject an explanation.</p>",
+      "Relational authenticity examines connections with objects, histories and personal experience. Iconicity and indexicality distinguish resemblance from an evidenced connection. A credible answer is not automatically an authentic experience. <a class=\"citation\" href=\"#ref-1\" aria-label=\"Reference 1\">[1]</a> <a class=\"citation\" href=\"#ref-2\" aria-label=\"Reference 2\">[2]</a>",
+      "<q>For us futures are not a destination or something to be strived for but a medium to aid imaginative thought—to speculate with.</q><p>Dunne & Raby, p. 3. <a class=\"citation\" href=\"#ref-21\" aria-label=\"Reference 21\">[21]</a></p><p>The possible arrangement is AI becoming a visitor’s first interpreter. The initial question-and-answer task does not yet make that arrangement explicit.</p>",
+      "Feedback: rather ordinary. Low entry burden, although free questions can still be difficult without prior knowledge. Offer a detail choice and a short prompt. Allow participation without AI.",
+      "<b>Retain as an introduction.</b><p>AI question-and-answer deployments already exist. Studying the visitor’s grounds for judgment remains possible, but the interaction form offers limited novelty.</p><a class=\"citation\" href=\"#ref-13\" aria-label=\"Reference 13\">[13]</a> <a class=\"citation\" href=\"#ref-23\" aria-label=\"Reference 23\">[23]</a>"
+    ],
+    [
+      "<b>02 · Make a Shape</b><p>Respond to a detail using ordinary cloth or paper, describe making, review AI’s account and correct it.</p><p><b>Input:</b> an observation, a material action and a first-person description.</p>",
+      "<b>How do visitors form or revise a sense of authenticity through hands-on making and AI interpretation?</b><p>HCI: the difference between a visual account and a lived experience, and who confirms the description.</p>",
+      "Relational authenticity traces connections between the visitor, making and the heritage object. Authenticity in AI co-writing helps examine whether an AI-assisted record still expresses the person’s experience. <a class=\"citation\" href=\"#ref-1\" aria-label=\"Reference 1\">[1]</a> <a class=\"citation\" href=\"#ref-3\" aria-label=\"Reference 3\">[3]</a>",
+      "<q>For some, the term prop means a fake object, something that doesn’t work, but in the context of a speculative design, a prop can be a fully working prototype or not.</q><p>Dunne & Raby, p. 92. <a class=\"citation\" href=\"#ref-21\" aria-label=\"Reference 21\">[21]</a></p><p>A working card becomes a discussion prop for a future museum that records people’s making through AI. Printing alone is insufficient.</p>",
+      "Supervisor: 2 is closer to authenticity and should be broadly usable. Feedback: offer something to take away. No sewing skill is required. Visitors may arrange, point or direct assistance, and decline AI.",
+      "<b>Develop as Direction A.</b><p>The process can produce explanations and corrections. Cloth plus AI and printed souvenirs already have precedents. The candidate contribution concerns how visitors authorize or revise an AI account of their own making.</p><a class=\"citation\" href=\"#ref-3\" aria-label=\"Reference 3\">[3]</a> <a class=\"citation\" href=\"#ref-6\" aria-label=\"Reference 6\">[6]</a> <a class=\"citation\" href=\"#ref-7\" aria-label=\"Reference 7\">[7]</a> <a class=\"citation\" href=\"#ref-12\" aria-label=\"Reference 12\">[12]</a> <a class=\"citation\" href=\"#ref-15\" aria-label=\"Reference 15\">[15]</a> <a class=\"citation\" href=\"#ref-22\" aria-label=\"Reference 22\">[22]</a>"
+    ],
+    [
+      "<b>03 · Change One Detail</b><p>Circle a region, state what may change and what must remain, then compare an AI variant with the original.</p><p><b>Input:</b> a selection, constraints and reasons for accepting or rejecting changes.</p>",
+      "<b>Which changes retain a meaningful connection with an object, and which break it for the visitor?</b><p>HCI: control over generation, preservation constraints and creative attribution.</p>",
+      "Distinguish “I like it”, “it looks similar” and “it is still connected to the original”. Aesthetic preference alone does not answer an authenticity question. <a class=\"citation\" href=\"#ref-2\" aria-label=\"Reference 2\">[2]</a> <a class=\"citation\" href=\"#ref-5\" aria-label=\"Reference 5\">[5]</a>",
+      "<q>They help us think about alternative possibilities—they challenge the ideals, values, and beliefs of our society embodied in material culture.</q><p>Dunne & Raby, p. 90. <a class=\"citation\" href=\"#ref-21\" aria-label=\"Reference 21\">[21]</a></p><p>A variant makes a different detail visible. It needs a question about the connection or value being changed. An image variation is not automatically a historical counterfactual.</p>",
+      "Feedback: the purpose and participant benefit are unclear, beyond enjoyable editing. Clothing interaction could become a later variant. Prompting and image editing may add unnecessary effort.",
+      "<b>Pause as a standalone probe.</b><p>Revisit only with a concrete interpretive task. Image transformation and extension already have precedents. Adding a printed card does not resolve the research gap.</p><a class=\"citation\" href=\"#ref-5\" aria-label=\"Reference 5\">[5]</a> <a class=\"citation\" href=\"#ref-14\" aria-label=\"Reference 14\">[14]</a> <a class=\"citation\" href=\"#ref-24\" aria-label=\"Reference 24\">[24]</a>"
+    ],
+    [
+      "<b>04 · Write a Label Together</b><p>Two people each write a line, AI combines them, then both revise the result or retain different versions.</p><p><b>Input:</b> original wording, discussion, edits and reasons.</p>",
+      "<b>When AI organizes different interpretations, how do visitors decide whose meaning is retained and which differences should remain?</b><p>HCI: voice in a shared text and the possibility of artificial consensus.</p>",
+      "Authentication examines how an interpretation gains recognition. AI co-writing adds attention to personal voice and whether the shared wording is endorsed. <a class=\"citation\" href=\"#ref-3\" aria-label=\"Reference 3\">[3]</a> <a class=\"citation\" href=\"#ref-17\" aria-label=\"Reference 17\">[17]</a>",
+      "<q>This form of design thrives on imagination and aims to open up new perspectives on what are sometimes called wicked problems, to create spaces for discussion and debate about alternative ways of being, and to inspire and encourage people’s imaginations to flow freely.</q><p>Dunne & Raby, p. 2. <a class=\"citation\" href=\"#ref-21\" aria-label=\"Reference 21\">[21]</a></p><p>Imagine a museum retaining different visitor interpretations rather than one merged label. Parallel texts make interpretive authority discussable.</p>",
+      "Supervisor: accessible or community-friendly, with a stronger cross-cultural emphasis. Feedback: resembles community content and overlaps with 5. Remove the need for two people to arrive together and co-write synchronously.",
+      "<b>Merge with 5 as Direction B.</b><p>Follow a real expression through translation, reception and clarification around the same object. AI curation and interpersonal museum communication are precedents, rather than proof of this design’s effect.</p><a class=\"citation\" href=\"#ref-8\" aria-label=\"Reference 8\">[8]</a> <a class=\"citation\" href=\"#ref-9\" aria-label=\"Reference 9\">[9]</a> <a class=\"citation\" href=\"#ref-25\" aria-label=\"Reference 25\">[25]</a> <a class=\"citation\" href=\"#ref-26\" aria-label=\"Reference 26\">[26]</a>"
+    ],
+    [
+      "<b>05 · Share a Detail</b><p>Send an object-related message, review AI’s rewording, receive a reply and reflect on what was understood.</p><p><b>Input:</b> an original message, chosen wording, reply and clarification.</p>",
+      "<b>After AI rewords a message, how do sender and recipient judge whether its meaning and personal expression remain?</b><p>HCI: expression control, recipient understanding and repair during communication.</p>",
+      "Relational authenticity examines how an object connects people. Personal voice concerns whether the author recognizes their meaning in the output. Fluency is not equivalent to authenticity. <a class=\"citation\" href=\"#ref-1\" aria-label=\"Reference 1\">[1]</a> <a class=\"citation\" href=\"#ref-3\" aria-label=\"Reference 3\">[3]</a> <a class=\"citation\" href=\"#ref-16\" aria-label=\"Reference 16\">[16]</a>",
+      "<q>We view people as free agents, not necessarily rational, but free to make up their own minds.</q><p>Dunne & Raby, p. 161. <a class=\"citation\" href=\"#ref-21\" aria-label=\"Reference 21\">[21]</a></p><p>After merging with 4, ask whether AI may speak for someone and which interpretations a future museum should retain. Visitors may reject rewording and keep disagreements. Gifting alone is not speculation.</p>",
+      "Feedback: combine with 4 and consider optional AI-generated expressions. Requiring a friend narrows participation. B lets a person respond to another real visitor without knowing them. Emoji are a later option, not a universal language. <a class=\"citation\" href=\"#ref-18\" aria-label=\"Reference 18\">[18]</a>",
+      "<b>Merge with 4 as Direction B.</b><p>Asynchronous exchange may broaden participation, but this remains to be tested. Follow both the sender’s intention and the recipient’s actual understanding.</p><a class=\"citation\" href=\"#ref-3\" aria-label=\"Reference 3\">[3]</a> <a class=\"citation\" href=\"#ref-9\" aria-label=\"Reference 9\">[9]</a> <a class=\"citation\" href=\"#ref-10\" aria-label=\"Reference 10\">[10]</a> <a class=\"citation\" href=\"#ref-26\" aria-label=\"Reference 26\">[26]</a>"
+    ]
+  ]
+}

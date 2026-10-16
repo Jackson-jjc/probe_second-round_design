@@ -1,53 +1,67 @@
-const pages = [...document.querySelectorAll('.page')];
-const navLinks = [...document.querySelectorAll('nav a')];
-const expandButton = document.getElementById('all');
-let expanded = false;
-let detailsBeforeExpand = [];
-function route() {
-  if (location.hash === '#content') return;
-  if (expanded) detailsBeforeExpand.forEach(([detail, open]) => { detail.open = open; });
-  detailsBeforeExpand = [];
-  expanded = false;
-  document.body.classList.remove('all-view');
-  expandButton.textContent = 'Expand all';
-  const requested = location.hash.slice(1) || 'overview';
-  const target = document.getElementById(requested);
-  const owner = target?.closest('.page');
-  const id = owner?.id || 'overview';
-  pages.forEach(p => { p.hidden = p.id !== id; });
-  navLinks.forEach(a => { if (a.hash === '#' + id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
-  if (target && owner && target !== owner) {
-    requestAnimationFrame(() => target.scrollIntoView({block: 'start', behavior: 'instant'}));
-  } else {
-    window.scrollTo({top: 0, behavior: 'instant'});
-  }
+// Progressive enhancement only. The research text and ordinary navigation work without JavaScript.
+const quotes = [...document.querySelectorAll('details.quote')];
+const quoteToggle = document.getElementById('quote-toggle');
+function updateQuoteButton() {
+  quoteToggle.textContent = quotes.every(q => q.open) ? 'Close all original passages' : 'Open all original passages';
 }
-window.addEventListener('hashchange', route);
-// Clicking the current hash must also leave the expanded mode.
-document.addEventListener('click', event => {
-  const a = event.target.closest('a[href^="#"]');
-  if (a && a.hash === location.hash && document.getElementById(a.hash.slice(1))?.closest('.page')) route();
+quoteToggle.addEventListener('click', () => {
+  const open = !quotes.every(q => q.open);
+  quotes.forEach(q => { q.open = open; });
+  updateQuoteButton();
 });
-expandButton.addEventListener('click', () => {
-  if (expanded) { route(); return; }
-  expanded = true;
-  document.body.classList.add('all-view');
-  pages.forEach(p => { p.hidden = false; });
-  detailsBeforeExpand = [...document.querySelectorAll('details')].map(d => [d, d.open]);
-  document.querySelectorAll('details').forEach(d => { d.open = true; });
-  expandButton.textContent = 'Return to single page';
-  window.scrollTo({top:0, behavior:'instant'});
-});
-let printDetails = [];
+quotes.forEach(q => q.addEventListener('toggle', updateQuoteButton));
+function revealAnchor() {
+  if (/^#p0[1-5]$/.test(location.hash)) {
+    location.replace('archive/initial-five/index.html' + location.hash);
+    return;
+  }
+  const legacy = {'#collections':'#objects','#references':'#sources','#research':'#overview'};
+  if (legacy[location.hash]) { location.replace(legacy[location.hash]); return; }
+  let target;
+  try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+  if (!target) return;
+  const detail = target.closest('details');
+  if (detail) detail.open = true;
+  if (detail) requestAnimationFrame(() => target.scrollIntoView({block:'start'}));
+}
+window.addEventListener('hashchange', revealAnchor);
+revealAnchor();
+let printState = [];
 window.addEventListener('beforeprint', () => {
-  printDetails = [...document.querySelectorAll('details')].map(d => [d,d.open]);
-  printDetails.forEach(([d]) => { d.open = true; });
+  printState = [...document.querySelectorAll('details')].map(d => [d,d.open]);
+  printState.forEach(([d]) => { d.open = true; });
 });
-window.addEventListener('afterprint', () => { printDetails.forEach(([d,open]) => { d.open = open; }); });
+window.addEventListener('afterprint', () => {
+  printState.forEach(([d,open]) => { d.open = open; });
+  updateQuoteButton();
+});
 document.getElementById('print').addEventListener('click', () => window.print());
-document.querySelectorAll('.reference-photo img').forEach(img => {
-  const fallback = () => { img.hidden = true; img.nextElementSibling.hidden = false; };
+const links = [...document.querySelectorAll('nav a')];
+const sections = [...document.querySelectorAll('main>section')];
+let scrollFrame = false;
+function markSection() {
+  const edge = document.querySelector('.site-header').getBoundingClientRect().height + 32;
+  const active = sections.filter(s => s.getBoundingClientRect().top <= edge).pop();
+  links.forEach(a => {
+    if (active && a.hash === '#' + active.id) a.setAttribute('aria-current','location');
+    else a.removeAttribute('aria-current');
+  });
+  scrollFrame = false;
+}
+window.addEventListener('scroll', () => {
+  if (!scrollFrame) { scrollFrame = true; requestAnimationFrame(markSection); }
+},{passive:true});
+window.addEventListener('resize', markSection);
+markSection();
+document.querySelectorAll('.venue-photo img').forEach(img => {
+  const fallback = () => {
+    img.hidden = true;
+    if (img.parentElement.querySelector('.image-fallback')) return;
+    const note = document.createElement('p');
+    note.className = 'image-fallback';
+    note.textContent = 'The source image is unavailable. Open the official exhibition record in reference [28] to view it.';
+    img.insertAdjacentElement('afterend',note);
+  };
   img.addEventListener('error', fallback);
   if (img.complete && img.naturalWidth === 0) fallback();
 });
-route();

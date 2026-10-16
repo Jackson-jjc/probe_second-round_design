@@ -1,0 +1,72 @@
+[
+  {
+    "number": 1,
+    "title": "Use possible futures to understand the present",
+    "chapter": 1,
+    "pages": "2–3",
+    "original": "What we are interested in, though, is the idea of possible futures and using them as tools to better understand the present and to discuss the kind of future people want, and, of course, ones people do not want.",
+    "meaning": "A possible future helps people examine present choices. It is not a prediction.",
+    "application": "A asks who may record a visitor’s experience. B asks whose interpretations a museum should retain. These proposed arrangements are ours, rather than examples from the book.",
+    "reference": 21
+  },
+  {
+    "number": 2,
+    "title": "A future is a medium for thinking",
+    "chapter": 1,
+    "pages": "3",
+    "original": "For us futures are not a destination or something to be strived for but a medium to aid imaginative thought—to speculate with.",
+    "meaning": "The purpose is to think through an arrangement, rather than demonstrate the preferred future.",
+    "application": "After the ordinary activity, explicitly introduce a future museum arrangement. Ask what it would change, what visitors would keep, and what they would refuse. A routine AI task alone is not enough.",
+    "reference": 21
+  },
+  {
+    "number": 3,
+    "title": "A prop makes another possibility discussable",
+    "chapter": 6,
+    "pages": "90",
+    "original": "They help us think about alternative possibilities—they challenge the ideals, values, and beliefs of our society embodied in material culture.",
+    "meaning": "The object supports reflection on the values embodied in a possible arrangement.",
+    "application": "A’s experience card makes a different way of recording a visit visible. B’s parallel conversation card makes a different way of retaining interpretations visible. A souvenir or image edit alone does not establish this function.",
+    "reference": 21
+  },
+  {
+    "number": 4,
+    "title": "A prop can actually work",
+    "chapter": 6,
+    "pages": "92",
+    "original": "For some, the term prop means a fake object, something that doesn’t work, but in the context of a speculative design, a prop can be a fully working prototype or not.",
+    "meaning": "Working technology is compatible with a speculative prop. Functionality is not the deciding criterion.",
+    "application": "Run the actual AI in A and B, retain its real outputs and visitor changes, and use the resulting card to discuss the alternative arrangement. This does not make every working AI prototype speculative.",
+    "reference": 21
+  },
+  {
+    "number": 5,
+    "title": "Leave space for people’s own interpretations",
+    "chapter": 6,
+    "pages": "93",
+    "original": "Prefigurative futures (or pre-enactments?) also use props to transport viewers’ imagination but, whereas in this role they are bringing a specific future to the present so that it can be partially experienced in advance, user-tested, or prepared for, we are more interested in using props to transport viewers’ imagination into a thought experiment, or what-if, and allow enough room for them to make their own interpretations.",
+    "meaning": "Participants should interpret a thought experiment rather than rehearse a future already decided by the researcher.",
+    "application": "A permits approval, correction, rejection or indifference. B permits disagreement after mutual understanding. Do not require visitors to conclude that AI damages authenticity. Applying the prop idea to digital cards is our methodological transfer.",
+    "reference": 21
+  },
+  {
+    "number": 6,
+    "title": "People may make their own judgments",
+    "chapter": 9,
+    "pages": "161",
+    "original": "We view people as free agents, not necessarily rational, but free to make up their own minds.",
+    "meaning": "This is a commitment to participants’ freedom to judge and choose.",
+    "application": "Both directions allow a non-AI route. Visitors can reject wording or reject the future arrangement. Receiving a card does not depend on using AI. This principle does not establish universal accessibility or a causal comparison between self-selected routes.",
+    "reference": 21
+  },
+  {
+    "number": 7,
+    "title": "Create a space for discussion",
+    "chapter": 1,
+    "pages": "2",
+    "original": "This form of design thrives on imagination and aims to open up new perspectives on what are sometimes called wicked problems, to create spaces for discussion and debate about alternative ways of being, and to inspire and encourage people’s imaginations to flow freely.",
+    "meaning": "Speculation opens discussion of alternatives rather than merely evaluating a product feature.",
+    "application": "B asks whether different interpretations should remain side by side and who decides what is kept. A asks whether an AI account can represent a lived experience. The book does not itself propose AI museum cards or multilingual labels.",
+    "reference": 21
+  }
+]

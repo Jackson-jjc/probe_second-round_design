@@ -1,67 +1,63 @@
-# AI × Authenticity · Five Probe Designs
+# AI & Authenticity · Two Probe Directions
 
-[Open the live design atlas](https://jackson-jjc.github.io/probe_second-round_design/)
+**[Read the current research design site](https://jackson-jjc.github.io/probe_second-round_design/)**
 
-Updated 9 October 2026. These are static research proposals, not a working AI system.
+Updated **16 October 2026**. The website is in English. It explains how five initial museum activities became two focused directions, what visitors would do, what each direction could investigate and why it is worth a small trial.
 
-![English atlas preview](preview.png)
+## Start here
 
-## Why use these probes?
+| Direction | What a visitor does | Research focus |
+| --- | --- | --- |
+| **[A · My Making Card](docs/PROBE_A.md)** | Try a simple material action, then keep or correct AI’s account of the experience | Making, lived experience and authenticity |
+| **[B · One Object, Two Interpretations](docs/PROBE_B.md)** | Explain a detail, exchange a real reply through optional translation, then clarify meaning | Personal interpretation and cross-language exchange |
 
-These five probes are short activities that help us explore how visitors experience authenticity when AI is part of a museum visit. We want to understand what that feeling is based on and how it stays the same or changes during an activity.
+Both use an approved digital heritage reference and real participant input. AI has a defined role, and visitors can complete a non-AI route. The card is something to take away and a record to discuss. The new activities have not yet been tested.
 
-A probe gives visitors something to try, respond to and talk about. Here, authenticity means a real or meaningful connection with an object, its history, a place or other people. The homepage explains this purpose and shows all three research questions before the five activities.
+## Follow the reasoning
 
-## Five activities
+1. **[Iteration](docs/ITERATION.md)** explains the feedback, broad-participation criterion and selection decisions.
+2. **[Five-probe evaluation and initial selection table](docs/COMPARISON.md)** keeps all five activities, questions, theories, speculative elements, feedback and decisions in one continuous comparison.
+3. **[A](docs/PROBE_A.md)** and **[B](docs/PROBE_B.md)** give the full activity, AI role, set-up, theory, participant input, data, analysis and revision criteria.
+4. **[Speculation](docs/SPECULATION.md)** contains seven verified original sentences from Dunne and Raby, printed page numbers and the exact design reasoning they support.
+5. **[Numeric references](docs/SOURCES.md)** identify scholarly and official practice sources. References use **[1], [2], [3]**, with no letter prefixes.
 
-1. **Ask About a Detail:** Choose a detail, ask AI about it, then write what you think.
-2. **Make a Shape:** Make a shape with cloth or paper, photograph it, and tell AI what it missed about making it.
-3. **Change One Detail:** Ask AI to change one detail in an object photo, then decide whether the result still feels connected to the object.
-4. **Write a Label Together:** Write one line each about an object, let AI combine them, then decide what the shared label should say.
-5. **Share a Detail:** Choose an object detail for a friend, let AI help word your message, then see how your friend responds.
+The website additionally shows four original paper figures from the Huayao making work, the AI Pattern Merchant and machine-translation research. Each has an original figure number, author credit, source and licence. Findings, our design inferences and transfer limits are distinguished.
 
-Each page includes a design image, three screen sketches, a task for each target venue, a real museum example, camera and AI roles, and evidence to record.
+## Objects and implementation
 
-## Research questions
+Target venues: **Tudor House & Garden** and **God’s House Tower**, Southampton. Use digital images rather than handling original objects. Ordinary cloth or paper is an activity material.
 
-**How does interacting with AI shape visitors’ experiences of authenticity in museums and heritage sites?**
+The preferred textile candidate is Ian Giles’s *Everyone Involved*, exhibited at GHT in 2024. The venue states that the work would enter Southampton City Art Gallery’s collection afterwards. GHT ownership, current display and image permission are not assumed. One hanging and its context still need confirmation.
 
-- What do visitors rely on for a sense of authenticity during a museum or heritage visit that involves AI?
-- How do visitors keep or change their understanding of authenticity as they interact with AI?
+Tudor House’s Leather Jug is leather, not a textile. A strictly textile-led study needs a confirmed textile reference or permission to use the GHT-associated digital material at that location with its actual source named. A verified British–Chinese textile pair at the two venues has not been established. B can share one digital object across languages.
 
-Full questions replace shorthand codes throughout the atlas. Plain-English explanations accompany them on the Research questions page.
+## Repository map
 
-## Objects and textiles
+- `index.html` is the current website.
+- `build_site.py` builds the website and readable notes using the Python standard library.
+- `styles.css` and `app.js` provide the responsive layout, original-passage controls, anchor navigation and printing.
+- `data/` contains the two directions, one five-probe comparison, numeric references, original quotations and figure credits.
+- `docs/` contains readable research notes for GitHub.
+- `assets/research/` contains four credited paper-figure crops.
+- `archive/initial-five/` keeps the self-contained early five-probe atlas. **It is a historical design version, not the current recommendation.**
 
-The target venues are **Tudor House & Garden** and **God’s House Tower**, Southampton.
+## Build and preview
 
-- Tudor House: the Leather Jug and Bird Glass Panes are named official collection highlights. They are not textiles.
-- GHT: the fabric wall hangings in Ian Giles’s *Everyone Involved* are the preferred textile candidate for four probes. The 2024 exhibition is verified, but GHT ownership and current access are not. One hanging must be selected with the venue and artist.
-- Abraham Pether’s *God’s House Tower by Moonlight* is a historical loan candidate for image editing, not a GHT-owned collection object.
-- No Chinese textile at either target venue was verified in the public records checked. This is not proof that none exists. A British–Chinese pair remains pending; no object from another museum has been substituted. See [the search record](collection_search.json).
+```text
+python build_site.py
+python -m http.server 8766 --bind 127.0.0.1
+```
 
-## Open and rebuild
+Open `http://127.0.0.1:8766/`. The current site is also readable by opening `index.html` directly. No frontend dependency or AI service is required. The optional venue photograph loads from the official source website and has a fallback.
 
-Open `index.html` directly, or run `python -m http.server 8766 --bind 127.0.0.1` from this directory and open `http://127.0.0.1:8766/`. No front-end dependencies are needed. Source photographs need internet access.
+GitHub Pages serves the root of `main`. Check its publication status after a push before calling a version live.
 
-After editing the data, run `python build_atlas.py`. The compatibility command `python build_book.py` runs the same builder. It uses only the Python standard library and generates `index.html`, `DESIGN_NOTES.md` and `collection_sources.json`.
+## Evidence and assets
 
-GitHub Pages serves the root of `main`. A successful push should trigger publication; check the Pages build before reporting a new version as live.
+Literature search cut-off: **14 October 2026**. Original passages and figures checked: **16 October 2026**. This is a focused design-oriented synthesis, not a systematic review or a claim that the ideas are unprecedented.
 
-## Files
+The associated Huayao papers are not independent replications. The CHI extended abstract is labelled as such. ZOMA and the empathy study are used at abstract level. Other papers and real museum implementations inform the design without proving outcomes for A or B.
 
-- `design_data.json`: short descriptions, steps and museum cases.
-- `research_details.json`: full questions, methods, materials and limits.
-- `venue_designs.json`: object records, venue tasks, camera plans and source images.
-- `collection_search.json`: textile search scope, findings and remaining gaps.
-- `styles.css` / `app.js`: responsive layout, page navigation, expand-all view, print support and image fallbacks.
-- `assets/concept-01.png` to `assets/concept-05.png`: generated design sketches.
-- `image_prompts.json`: original image-generation prompts.
-- `DESIGN_NOTES.md`: full English notes.
-- `validation.json`: checks performed for this revision.
+Paper figures retain their individual **CC BY 4.0** or **CC BY-NC 4.0** licences. See [figure credits](data/figure-credits.json). Cropping removes surrounding prose without changing figure content. The project is an academic research design presentation. Brief attributed book quotations support critical discussion. Full papers, book chapters, raw interview records, private drafts and visitor data are not included.
 
-## Image and study limits
-
-Concept sketches do not establish an object’s appearance or material and do not show a working system. Some insets show earlier possible object choices; current task cards define the venue versions. Source photographs remain on their original websites with credits and links. Third-party photographs are not bundled in the repository.
-
-Confirm object records, access, fact cards and image-use terms before a study. The atlas does not open a camera, call AI, track visitors or contain participant data. Example responses and timings are design suggestions, not measured results.
+The page illustrates proposed activities. It does not open a camera, call an AI model, collect visitor data or contain analytics. Example card wording and timings are design suggestions.

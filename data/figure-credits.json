@@ -1,0 +1,46 @@
+[
+  {
+    "file": "huayao_making.png",
+    "authors": "Bryan-Kinns et al.",
+    "year": 2026,
+    "title": "Preliminary Explorations of Generative AI and the Embodied Embroidery of Huayao Intangible Cultural Heritage",
+    "figure": 5,
+    "doi": "https://doi.org/10.1145/3772363.3798663",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_pdf": "https://ualresearchonline.arts.ac.uk/id/eprint/26277/1/chiea26-450.pdf"
+  },
+  {
+    "file": "merchant_setup.png",
+    "authors": "Hao Li, Duoduo Zhang, Siqi Chen and Nick Bryan-Kinns",
+    "year": 2026,
+    "title": "The In-situ AI Pattern Merchant: A Speculative Intervention in Huayao Embroidery Futures",
+    "figure": 4,
+    "doi": "https://doi.org/10.21606/drs.2026.1403",
+    "license": "CC BY-NC 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "source_pdf": "https://ualresearchonline.arts.ac.uk/id/eprint/26279/1/ready-3.pdf"
+  },
+  {
+    "file": "merchant_stall.png",
+    "authors": "Hao Li, Duoduo Zhang, Siqi Chen and Nick Bryan-Kinns",
+    "year": 2026,
+    "title": "The In-situ AI Pattern Merchant: A Speculative Intervention in Huayao Embroidery Futures",
+    "figure": 12,
+    "doi": "https://doi.org/10.21606/drs.2026.1403",
+    "license": "CC BY-NC 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "source_pdf": "https://ualresearchonline.arts.ac.uk/id/eprint/26279/1/ready-3.pdf"
+  },
+  {
+    "file": "translation_control.png",
+    "authors": "Yimin Xiao et al.",
+    "year": 2025,
+    "title": "Sustaining Human Agency, Attending to Its Cost: An Investigation into Generative AI Design for Non-Native Speakers’ Language Use",
+    "figure": 2,
+    "doi": "https://doi.org/10.1145/3706598.3713626",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_pdf": "https://www.terpconnect.umd.edu/~gegao/paper/Xiao%20et%20al_CHI%202025_Sustaining%20Human%20Agency%2C%20Attending%20to%20Its%20Cost.pdf"
+  }
+]
