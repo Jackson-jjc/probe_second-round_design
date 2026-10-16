@@ -1,0 +1,9 @@
+{
+  "target": "A sleeve cuff or bag corner",
+  "frame": "A fixed tabletop window, about 20 × 20 cm as an initial size to test",
+  "capture": "The visitor checks the local preview and presses Capture. Crop to the selected window before model input or storage.",
+  "fallback": "Offer a plain fabric cuff or bag panel, a prepared item photograph or a simple outline. Record the input route.",
+  "a": "A captures C1, then C2 after a visitor-led fold or repositioning.",
+  "b": "B uses one approved crop C as the canvas for a postcard that develops through a real conversation.",
+  "record": "Keep source IDs, crop versions, actual AI inputs and outputs, actions or messages, and consented short reasons under a session code."
+}

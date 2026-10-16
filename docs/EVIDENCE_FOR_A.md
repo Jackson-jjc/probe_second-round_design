@@ -1,25 +1,25 @@
 # Evidence for the current A
 
-The current A is **Make with AI**. The earlier version asked AI to write a making record, which overlapped with B’s meaning-checking task. The current activity puts AI inside the making process.
+Version 2026-10-16-cuff-bag.
 
-## What the closest practice already does
+A uses a local cuff or bag crop at a fixed tabletop station. One physical adjustment guides its next AI preview. The source work, actual crops and generated responses remain visible.
 
-Art Morph documents a camera-based loop in which materials become generated art inspired by a museum collection. Physical input, collection-inspired generation and visual feedback already exist. [22] [29]
+## The interaction precedents
 
-Artworks Reimagined also studies embodied image generation in a public setting. The university record identifies it as PACM HCI EICS, 2025. A(I)Cam is a CHI 2025 tangible generative-camera precedent. Both are used here at abstract level. [30] [31]
+Art Morph connects physical materials with collection-inspired generated images. Body-prompting research and A(I)Cam add public and reflective embodied-generation forms. These supply practical starting points. [22] [29] [30] [31]
 
-## What the Huayao work helps us notice
+## The research method we take forward
 
-Eight experienced embroiderers chose and adjusted generated images. The six-month process included generation and actual embroidery. The authors describe reasons grounded in local knowledge, composition and making. Their discussion suggests that making helped reveal judgments that an image alone might not show. This is a preliminary CHI extended abstract. It does not establish effects for ordinary museum visitors. [12]
+The Huayao embroidery study followed eight experienced practitioners as they selected and changed generated images through making. Participants gave reasons linked to local knowledge, composition and practical embroidery. The CHI EA paper describes how making brought further judgments into view. [12]
 
-The methodological transfer is to follow a change and ask why it matters. A museum visitor’s two short fabric arrangements do not reproduce the expertise or cultural situation of Huayao embroidery.
+A takes forward the practice of following a change and its reason. Its setting is a brief museum encounter with a personal item. Track S → C1 → G1 → physical action → C2 → G2 → the visitor’s reason.
 
-## What the proposed study needs to establish
+## The authenticity question
 
-Follow one complete episode: chosen source detail → layout L1 → actual response G1 → visitor movement or decision to keep → layout L2 and actual G2 when requested → the visitor’s reason.
+What makes an AI-adapted pattern on a personal item feel connected to its heritage source? Examine recognisable details, material actions, the maker’s context and a place in the visitor’s own life. Follow the grounds participants introduce. [1] [2]
 
-Separate visual preference, control of AI, personal authorship and a claimed heritage connection. A useful reason might refer to a source detail, material relationship, artist’s background or personal memory. Do not assume that every movement concerns authenticity.
+## The possible contribution
 
-The candidate contribution is an account of how visitors maintain or change their grounds for connecting an AI response to one named heritage work during material interaction. Two rounds, cloth and a take-away are design choices. Their combination is not enough to establish novelty.
+The study could explain how people maintain or change their grounds for a source connection as an AI adaptation enters everyday use. Their actions, actual outputs and explanations provide the evidence. A wider literature comparison and the visitor study will establish the contribution.
 
 [Current illustrated activity](PROBE_A.md) · [Numeric references](SOURCES.md)

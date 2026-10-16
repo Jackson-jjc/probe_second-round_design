@@ -48,7 +48,7 @@ Main search cut-off 14 October 2026. Targeted material-interaction and practice 
 
 12. Bryan-Kinns, N., et al. (2026). Preliminary Explorations of Generative AI and the Embodied Embroidery of Huayao Intangible Cultural Heritage. CHI EA 2026. [Source](https://doi.org/10.1145/3772363.3798663)
 
-   Reading scope: CHI extended abstract, not a CHI full paper. Making methods, results and discussion, with original Figure 5.
+   Reading scope: CHI EA extended abstract. Making methods, results and discussion, with original Figure 5.
 
 13. Kist, C., & Moshfeghi, Y. (2026). To Bot or Not? Conversational Agents and Authentic Heritage Experiences. CHI EA 2026. [Source](https://doi.org/10.1145/3772363.3798924)
 
@@ -56,7 +56,7 @@ Main search cut-off 14 October 2026. Targeted material-interaction and practice 
 
 14. Han, L., et al. (2026). Gen-Diaolou: An Integrated AI-Assisted Interactive System for Diachronic Understanding and Preservation of the Kaiping Diaolou. CHI 2026. [Source](https://doi.org/10.1145/3772318.3790720)
 
-   Reading scope: CHI full paper. Abstract, discussion and limitations on learning and preservation. Not a direct authenticity result.
+   Reading scope: CHI full paper. Abstract, discussion and limitations on learning and preservation. Used for the learning and preservation task.
 
 15. Petrelli, D., Marshall, M. T., O’Brien, S., McEntaggart, P., & Gwilt, I. (2017). Tangible data souvenirs as a bridge between a physical museum visit and online digital experience. Personal and Ubiquitous Computing, 21, 281–295. [Source](https://doi.org/10.1007/s00779-016-0993-x)
 
@@ -68,7 +68,7 @@ Main search cut-off 14 October 2026. Targeted material-interaction and practice 
 
 17. Cohen, E., & Cohen, S. A. (2012). Authentication: Hot and cool. Annals of Tourism Research, 39(3), 1295–1314. [Source](https://doi.org/10.1016/j.annals.2012.03.004)
 
-   Reading scope: Classical authentication theory, carried forward from the review with a PDF concept check. Hot and cool do not correspond simply to human and AI.
+   Reading scope: Classical authentication theory, carried forward from the review with a PDF concept check. The hot/cool distinction concerns processes of authentication.
 
 18. Miller, H., et al. (2016). “Blissfully Happy” or “Ready to Fight”: Varying Interpretations of Emoji. ICWSM, 10(1), 259–268. [Source](https://doi.org/10.1609/icwsm.v10i1.14757)
 
@@ -84,46 +84,46 @@ Main search cut-off 14 October 2026. Targeted material-interaction and practice 
 
 21. Dunne, A., & Raby, F. (2013). Speculative Everything: Design, Fiction, and Social Dreaming. MIT Press. [Source](https://mitpress.mit.edu/9780262019842/speculative-everything/)
 
-   Reading scope: Method book. Thirteen complete sentences checked against printed pages in Chapters 1, 3, 6 and 9. The Statistical Clock, The Islanders, Plant Fiction, United Micro Kingdoms and Huggable Atomic Mushrooms inform the case comparisons. Cases help explain our design choices. They do not validate the probes. Six credited screenshots preserve the original figures and captions, including Digicars on p. 176 and Biocar on p. 180. Footnote markers omitted.
+   Reading scope: Method book. Thirteen complete sentences checked against printed pages in Chapters 1, 3, 6 and 9. The Statistical Clock, The Islanders, Plant Fiction, United Micro Kingdoms and Huggable Atomic Mushrooms inform the case comparisons. Cases help explain our design choices. Their role here is to explain the design choices. Six credited screenshots preserve the original figures and captions, including Digicars on p. 176 and Biocar on p. 180. Footnote markers omitted.
 
 22. Cleveland Museum of Art. Create: Art Morph and Endless Threads. [Source](https://www.clevelandart.org/digital-innovations/create)
 
-   Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+   Reading scope: Official implementation or collection/exhibition record. Documents the interaction form or venue relationship.
 
 23. Cleveland Museum of Art. Investigate: Talk to the Art. [Source](https://www.clevelandart.org/digital-innovations/investigate)
 
-   Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+   Reading scope: Official implementation or collection/exhibition record. Documents the interaction form or venue relationship.
 
 24. Cleveland Museum of Art. Extend the Art. [Source](https://www.clevelandart.org/ai-tools-overview)
 
-   Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+   Reading scope: Official implementation or collection/exhibition record. Documents the interaction form or venue relationship.
 
 25. Nasher Museum. Act as if you are a curator. [Source](https://nasher.duke.edu/exhibitions/act-as-if-you-are-a-curator-an-ai-generated-exhibition/)
 
-   Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+   Reading scope: Official implementation or collection/exhibition record. Documents the interaction form or venue relationship.
 
 26. Blast Theory. GIFT: public museum prototype at Brighton Museum. [Source](https://www.blasttheory.co.uk/projects/gift/)
 
-   Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+   Reading scope: Official implementation or collection/exhibition record. Documents the interaction form or venue relationship.
 
 27. Tudor House & Garden. Collection Highlights. [Source](https://tudorhouseandgarden.com/explore/highlights/)
 
-   Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+   Reading scope: Official implementation or collection/exhibition record. Documents the interaction form or venue relationship.
 
 28. God’s House Tower. Everyone Involved: Ian Giles. [Source](https://godshousetower.org.uk/eventer/exhibition-everyone-involved/)
 
-   Reading scope: Official implementation or collection/exhibition record. Used to establish the documented form or venue relationship, not an effect on A or B.
+   Reading scope: Official implementation or collection/exhibition record. Documents the interaction form or venue relationship.
 
 29. Dpt. Art Morph: an interactive installation for the Cleveland Museum of Art, with Design I/O. [Source](https://dpt.co/en/projects/art-morph/)
 
-   Reading scope: Developer project description checked 16 October 2026. Documents camera capture of physical materials and changing generated images. No visitor-authenticity evaluation is claimed.
+   Reading scope: Developer project description checked 16 October 2026. Documents camera capture of physical materials and changing generated images. Used for the documented interaction form.
 
 30. Oppenlaender, J., Johnston, H., Silvennoinen, J., & Barranha, H. (2025). Artworks Reimagined: Exploring Human–AI Co-Creation through Body Prompting. PACM HCI, 9(4), EICS012. DOI 10.1145/3734189. [Source](https://oulurepo.oulu.fi/handle/10024/57694)
 
-   Reading scope: University repository metadata and abstract checked 16 October 2026. Published PACM HCI EICS paper, not a CHI paper. Abstract describes body prompting, public deployment and 79 visitor interviews. Used for the existing interaction form, not as proof about heritage authenticity.
+   Reading scope: University repository metadata and abstract checked 16 October 2026. Published PACM HCI EICS paper, published through EICS. Abstract describes body prompting, public deployment and 79 visitor interviews. Used for the documented body-prompting interaction.
 
 31. Page, R., & See, S. (2025). Creative Reflections on Image-Making with Artificial Intelligence: Interactions with a Provocative Camera. CHI 2025. DOI 10.1145/3706598.3713529. [Source](https://research.monash.edu/en/publications/creative-reflections-on-image-making-with-artificial-intelligence/)
 
-   Reading scope: University publication record and abstract checked 16 October 2026. Describes a tangible generative camera, instant prints and reflection with 15 creative practitioners. Used for the research form. No full-text or museum-effect claim.
+   Reading scope: University publication record and abstract checked 16 October 2026. Describes a tangible generative camera, instant prints and reflection with 15 creative practitioners. Used for the research form. Used for the described research form.
 
 Paper image licences and original figure numbers are in [the figure credits](../data/figure-credits.json). Figure crops do not change their content. Related Huayao studies are not independent replications. ZOMA and the empathy paper are used at abstract level.
