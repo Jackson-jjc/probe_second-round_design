@@ -1,16 +1,42 @@
 {
-  "checked": "2026-10-16",
+  "version": "2026-10-21-ethics117392-stage1",
+  "checked": "2026-10-21",
   "language": "en",
-  "continuous_tables": 1,
+  "protocol": "ERGO 117392 V1.0, 21 October 2026",
   "five_probe_rows": 5,
-  "directions": 2,
   "original_passages": 13,
+  "book_figures": 6,
   "paper_figures": 4,
   "design_figures": 4,
-  "book_figure_files": 6,
-  "book_figures_in_table": 6,
-  "numeric_references": 31,
-  "viewports": [
+  "questions": 4,
+  "forms": 0,
+  "diagramChecks": [
+    {
+      "file": "a-stage1-storyboard.svg",
+      "width": 1440,
+      "height": 760,
+      "outside": []
+    },
+    {
+      "file": "a-data-flow.svg",
+      "width": 1440,
+      "height": 780,
+      "outside": []
+    },
+    {
+      "file": "b-postcard-flow.svg",
+      "width": 1440,
+      "height": 780,
+      "outside": []
+    },
+    {
+      "file": "b-postcard-preview.svg",
+      "width": 1440,
+      "height": 820,
+      "outside": []
+    }
+  ],
+  "geometry": [
     {
       "width": 1440,
       "scrollWidth": 1440
@@ -35,16 +61,14 @@
   "browser_errors": [],
   "local_resource_failures": [],
   "checks": [
-    "source and loop diagrams",
-    "A authenticity and Art Morph sections",
-    "B postcard and email design",
-    "five plain-language case analyses",
-    "book screenshots and enlargement",
-    "original passage deep links and controls",
-    "numeric references",
-    "English direct wording without semicolons",
-    "no data or address collection",
-    "no horizontal overflow",
-    "historical atlas routing"
+    "exact submitted questionnaire wording",
+    "first-stage sample, duration and manual simulation",
+    "postcards and own-card paper copies",
+    "retained and excluded data",
+    "no old image codes or old trial counts",
+    "13 original passage controls",
+    "all internal anchors",
+    "responsive desktop and mobile layout",
+    "legacy storyboard URL now shows the corrected first-stage diagram"
   ]
 }

@@ -1,0 +1,51 @@
+{
+  "protocol": "ERGO 117392",
+  "version": "V1.0",
+  "date": "21-10-2026",
+  "participants": "10–15 ECS staff or students aged 18 or over",
+  "duration": "10–15 minutes total",
+  "sequence": [
+    "Information and tick consent",
+    "A, about three minutes",
+    "B, about three minutes",
+    "Four optional questionnaire questions",
+    "Check anonymous drafts and submit",
+    "Optional printed copies of own cards without others’ replies"
+  ],
+  "ai": "Prepared and checked before sessions. Researcher manually switches examples and assembles cards.",
+  "data": [
+    "Consent tick and questionnaire answers",
+    "A selected source-detail and prepared-image references",
+    "B original text, replies, clarifications, source/image references and reply links"
+  ],
+  "excluded": [
+    "Names",
+    "Signatures",
+    "Contact details",
+    "Demographics",
+    "Photographs",
+    "Screenshots",
+    "Audio",
+    "Video",
+    "Observation notes",
+    "Interaction logs",
+    "A physical arrangements"
+  ],
+  "questions": [
+    "Which prototype should we develop further for a museum experience? Tick one.",
+    "A: As you arranged materials and compared the source with AI cuff/bag previews, what kept or changed what felt authentic? Why?",
+    "B: How did your words, the AI image and others' replies affect what you expressed or understood across cultural perspectives?",
+    "Why did you choose that option, and what would you improve, including the postcard wall or take-away?"
+  ],
+  "q1_options": [
+    "A",
+    "B",
+    "Both equally",
+    "Neither",
+    "Not sure"
+  ],
+  "storage": "Local wall restricted to study participants. Locked paper forms and University-approved secure UK digital storage.",
+  "retention": "At least 10 years after collection or publication, whichever is later, then review disposal.",
+  "withdrawal": "Skip or discard drafts before submission. Submitted anonymous cards and forms cannot be located for removal.",
+  "museum_stage": "Later museum fieldwork requires a separate detailed plan."
+}

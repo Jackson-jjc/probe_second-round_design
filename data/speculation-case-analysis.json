@@ -8,16 +8,13 @@
     "pages": "35–36",
     "quote": "What would have to change for a need like this to emerge?",
     "description": "The Statistical Clock is an imagined household clock that reports deaths in different kinds of transport. It takes information people may avoid and puts it into an ordinary daily object. The designers ask what kind of life would make someone want this clock. The clock helps people discuss that life.",
-    "world": "Imagine a museum that always shows an AI explanation before any other account. A visitor can add a different reading, but must ask for it to be kept.",
-    "prop": "After the normal question task, show a clearly fictional display record marked “AI explanation shown first”. Ask what this helps, what it makes harder, and whether the visitor would keep or change the rule.",
-    "tension": "A quick starting explanation can help a new visitor. It can also make other starting points less easy to notice.",
     "selection": "Keep 1 as a short introduction. A future standalone version could focus on who sets the starting point of interpretation.",
-    "relation": "The clock makes daily reminders visible. Probe 1 can make the rule “AI speaks first” visible through a small museum display card. The question then concerns how that rule shapes the start of a visit.",
+    "relation": "The clock turns a daily information rule into a visible object. Probe 1 similarly suggests making the order of AI and visitor explanations visible. This remains a possible future variant.",
     "images": [
       "clock.png"
     ],
     "lesson": "Put a familiar rule into a small, visible object so people can discuss how that rule shapes daily life.",
-    "change": "After the normal question task, place the AI answer at the top of a clearly imagined museum display card. Put the visitor’s own explanation beside it. Ask what changes when the AI version always goes first."
+    "change": "A later Probe 1 could compare a fictional display that puts AI first with one that puts the visitor’s words first. The current first-stage test concentrates on A and B."
   },
   {
     "probe": "02",
@@ -28,16 +25,13 @@
     "pages": "92–93",
     "quote": "It is the emphasis on transporting the imagination that distinguishes them from other object types including products, prototypes, and models.",
     "description": "In Charles Avery’s The Islanders, drawings, objects, models and found bones appear to come from a traveller’s visit to an invented island. Viewers use these small clues to imagine a larger place and its way of life. A small physical thing can therefore help someone think about an imagined world.",
-    "world": "Imagine a museum that shares a textile work as changing digital patterns for visitors’ own cuffs and bags. Its label says “Each version continues the original work”. Looking at your two previews, what would you keep, change or rename in that museum?",
-    "prop": "The two actual previews and the clearly fictional label make this future museum concrete. Visitors can discuss how personal use carries a source forward, what should remain recognisable and how the artist and source should be credited. Their own answer guides the discussion.",
-    "tension": "A changing display lets people take part. It may also blur the difference between the source work, the visitor’s action and AI’s additions.",
-    "selection": "Develop A around the local material action and its two visual responses. The future label helps visitors connect their experience with a wider question about how a museum work can continue through personal use.",
-    "relation": "The island’s objects make an invented place imaginable. A uses the cuff or bag preview and a future museum label to suggest a museum where heritage patterns keep entering everyday belongings.",
+    "selection": "Develop A as material exploration with prepared everyday-item adaptations. This first-stage study asks for written authenticity reflections and selected-example references. Later work can examine a working AI response.",
+    "relation": "The island’s objects suggest a larger world. A’s prepared cuff/bag examples and postcard suggest an everyday setting where a heritage pattern travels into someone’s life.",
     "images": [
       "islanders.png"
     ],
     "lesson": "A small object can help people imagine the larger world in which it belongs.",
-    "change": "Complete A’s two local captures. Show the two actual previews beside a fictional label saying “Each version continues the original work”. Ask what kind of connection the wearable or everyday version carries forward."
+    "change": "In first-stage A, connect the source detail, sample arrangement and everyday-item effect clearly. Question 2 asks what kept or changed what felt authentic. A fictional future museum label remains a later design possibility."
   },
   {
     "probe": "03",
@@ -48,16 +42,13 @@
     "pages": "94–95",
     "quote": "There is a very important difference between inviting viewers to “make-believe” and asking them to “believe.”",
     "description": "Troika’s Plant Fiction presents invented plants with plausible images and short texts about how they might be used in a near-future London. The plants belong to a made-up situation. The project tells viewers that it is fiction, so they can explore the situation without being told a false discovery has occurred. One example, Selfeater, is imagined to break down its own material to help make fuel. Its picture and short story let viewers think about that future use.",
-    "world": "Imagine a museum that regularly adapts a textile pattern for a new use chosen by visitors. Each version says what it changes and what it leaves out.",
-    "prop": "Show the source beside one clearly labelled imagined adaptation. Give the adaptation a specific use. Ask which detail should remain and why. Keep this short, with no complex editing tools.",
-    "tension": "A new use can make a pattern useful to someone today. It may also remove a detail that connects it to its maker or past.",
-    "selection": "Keep 3 as a possible focused variant. A already uses a local item and visual changes. A separate Probe 3 would need its own use or research question.",
-    "relation": "Plant Fiction explains what its invented plants would do in future London. Probe 3 needs an equally clear purpose for its changed pattern. Adapting one detail to a cuff or bag gives the change a concrete everyday use.",
+    "selection": "Keep the visual-change idea inside A. A separate Probe 3 would need a distinct purpose or research question.",
+    "relation": "Plant Fiction gives its imagined plants a clear use. A’s cuff or bag picture gives a pattern adaptation a similarly concrete everyday use.",
     "images": [
       "plant-fiction.png"
     ],
     "lesson": "Give an imagined image a clear setting and purpose, so viewers can explore the proposed future.",
-    "change": "Show the source, one local-item adaptation and a short label describing its imagined use. Ask which source detail the person wants to carry into that use and why."
+    "change": "Show the source alongside the prepared everyday-item effect in A. Let the participant compare examples and select a postcard. This gives the image-change idea a purpose within A."
   },
   {
     "probe": "04",
@@ -68,17 +59,14 @@
     "pages": "173–174",
     "quote": "Each vehicle would embody different ideologies, values, priorities, and belief systems—essentially alternative worldviews.",
     "description": "United Micro Kingdoms imagines several different societies and designs a vehicle for each one. Each vehicle shows choices about how people travel and live together. Looking at them helps viewers compare what each society makes easier and what it gives up. The pictured Digicars belong to a made-up society where software manages travel and road prices. The Biocar belongs to a society built around biotechnology. These two images show how different choices can shape everyday travel.",
-    "world": "Imagine a future museum that shows the final AI-assisted postcards as visitors’ interpretations of an object. Which parts of your developing card should the next visitor see: the final version, the earlier draft and reply, or both?",
-    "prop": "Use the actual draft, real reply and final card beside a fictional future-display label. Participants decide how a museum should show a meaning that developed through conversation, and whose words or images should remain visible. The real source and each contributor remain identified.",
-    "tension": "One translated version can be quick to read. Showing both versions can keep a person’s own voice and visible differences.",
-    "selection": "Combine 4 and 5 as B. A single postcard develops through the conversation and then becomes its take-away. The comparison of versions supports discussion about a future museum display.",
-    "relation": "The vehicles show different ways of organising travel and everyday life. B’s first draft, reply and final postcard show choices about whose interpretation becomes visible. The same card makes those choices easy to point to.",
+    "selection": "Combine 4 and 5 as B. A single local postcard carries original words, a prepared image and replies. It also becomes a take-away copy.",
+    "relation": "The vehicles embody choices about shared life. A postcard wall similarly makes a choice about whose interpretations become visible. B keeps original words and replies together.",
     "images": [
       "digicars.png",
       "biocar.png"
     ],
     "lesson": "Make different choices visible through objects people can compare.",
-    "change": "Keep draft P1, the real reply and final P2 together. After the exchange, use a fictional museum display label and ask whether visitors should see P2 alone or the conversation that shaped it."
+    "change": "In first-stage B, keep the source, original text and chosen image on one postcard. Let later participants read submitted cards and reply. Further discussion of a future museum display belongs to later development."
   },
   {
     "probe": "05",
@@ -89,15 +77,12 @@
     "pages": "40–42",
     "quote": "It is through its demeanor that one starts to wonder just how serious it is.",
     "description": "Huggable Atomic Mushrooms are soft objects shaped like clouds from nuclear tests. Their friendly feel sits beside a frightening subject. This makes viewers ask why an inviting object presents that subject in this way. Their meaning comes from this relationship between form and subject.",
-    "world": "Within B’s imagined museum, AI makes visitor messages easy to read and attractive to share. Visitors decide whether the nicer-looking version can stand for what they meant.",
-    "prop": "Use the actual first draft, recipient reply and final card to discuss how a friendly form changes an account. A visitor can keep an uncertain or serious tone when that matters to them.",
-    "tension": "A welcoming picture can encourage sharing. It can also soften or replace a meaning that mattered to its author.",
-    "selection": "Combine 5 with 4. Personal meaning, the real reply, visual clarification and the final postcard now form one continuous activity.",
-    "relation": "The soft mushroom form changes how viewers meet the subject of nuclear tests. In B, a friendly pattern preview can also change the tone of a personal account. The recipient’s real response shows what the draft conveyed.",
+    "selection": "Combine 5 with 4. Expression, replies and an optional own-card copy form one simple activity.",
+    "relation": "The soft mushroom form affects how viewers encounter its serious subject. B similarly lets us ask how a friendly AI image changes the tone of a person’s interpretation.",
     "images": [
       "mushrooms.png"
     ],
     "lesson": "The way an object looks and feels can change how its subject is understood.",
-    "change": "Let the recipient respond to the first postcard, including its image. The sender then keeps or clarifies its words and picture on the same card. Ask which version expresses the intended connection to the object."
+    "change": "Let participants choose a prepared image to accompany their exact words. Read replies and questionnaire Question 3 to understand what that combination conveyed."
   }
 ]

@@ -5,56 +5,56 @@
     "title": "Make with AI on My Cuff or Bag",
     "origin": "Developed from Probe 2",
     "focus": "Material action & authenticity",
-    "time": "8–12 minutes",
-    "sentence": "Choose a cuff or bag corner, see an AI pattern preview, then fold or reposition the fabric to guide its next response.",
-    "rq": "What makes an AI-adapted pattern on a personal item feel connected to its heritage source?",
-    "purpose": "We follow how a pattern moves from a named source work into someone’s everyday life. A visitor can value a familiar shape, a material relationship, the artist’s story or a personal memory. Their actions and reasons show which connection matters.",
+    "time": "About 3 minutes in this test",
+    "sentence": "Choose a source detail, arrange materials, compare prepared AI effects on a cuff or bag picture, then select a postcard.",
+    "rq": "During material arrangement and AI cuff/bag previews, how do participants maintain or revise their sense of authenticity?",
+    "purpose": "A connects three things: a detail from a named heritage object, a material arrangement, and an AI adaptation shown on an everyday-item picture. The questionnaire asks what kept or changed what felt authentic, and why.",
     "steps": [
       [
-        "Choose a source and item",
-        "Look at the named textile work and its background. Point to one detail, then choose a sleeve cuff or bag corner. A plain study item is available."
+        "Choose a source detail",
+        "Look at the object image and checked information. Choose a line, shape or other detail to explore."
       ],
       [
-        "Frame one local area",
-        "Place the item inside the fixed tabletop window. Check the crop preview, then press Capture. Only this selected crop C1 enters the image request and study record."
+        "Arrange materials",
+        "Use paper, shapes, fabric or simple objects to interpret the detail. Help is available."
       ],
       [
-        "See the first response",
-        "AI uses the source detail and C1 to propose a digital pattern adaptation G1 on the local item. The screen keeps the source, captured crop and generated preview visible together."
+        "View a prepared example",
+        "The researcher shows the closest prepared example linking a sample layout and source detail to an AI effect on a cuff or bag picture."
       ],
       [
-        "Respond with an action",
-        "Fold the cuff, flatten a bag edge or reposition the fabric after seeing G1. Capture C2 in the same window when ready. You can also keep G1."
+        "Adjust and compare",
+        "Change the arrangement and compare another prepared example. These images illustrate sample layouts."
       ],
       [
-        "Compare and choose",
-        "AI responds to C2 as G2. Compare the two previews and point to a change that matters. Explain briefly what connects it to the source or your own life."
+        "Choose your postcard",
+        "Select a card showing the source and preferred effect. The anonymous card joins the shared local wall after submission."
       ],
       [
-        "Discuss and keep a record",
-        "Use the previews and a fictional future label to discuss changing museum works. Keep a visual record with source credit and your selected version."
+        "Reflect and keep a copy",
+        "Answer the optional authenticity question. You may take a printed copy of your own postcard."
       ]
     ],
-    "ai": "A visual partner during the local material action. It proposes a pattern adaptation for the captured cuff or bag area, using a fixed source detail. The visitor’s next fold or position becomes its next input. Added patterns appear in digital previews.",
-    "noai": "Compare the source with the selected local item, try a fold or position and keep a source-labelled local-item record. Record the visitor’s choice and reason. This route contributes accounts of participation and source connection.",
+    "ai": "AI creates the example adaptations before the session. The researcher checks them, then manually switches between prepared examples during the activity. Participants are told how the simulation works. The example is matched to a sample layout and source detail.",
+    "noai": "Participants can skip an activity or question, stop, or discard drafts before submission. A separate non-AI comparison condition is a possible future study design.",
     "theory": [
       [
         "Connections between people and objects",
-        "Relational authenticity asks how a connection becomes meaningful through objects, people, making and history. We follow the connections visitors themselves describe.",
+        "Relational authenticity draws attention to connections among people, objects, making and history. In this test, the participant’s written reflection explains which connection mattered.",
         [
           1
         ]
       ],
       [
         "Looking alike and having a real link",
-        "A similar shape is one possible reason. A known maker, source or history gives another kind of link. The personal item and original work each retain their own materials and histories.",
+        "A similar shape and knowledge of a maker or history offer different grounds for authenticity. The questionnaire invites participants to describe the grounds they use.",
         [
           2
         ]
       ],
       [
         "Action and response",
-        "We examine whether a visitor can see how their material action affects AI, guide the next image and decide when the result no longer fits the source. Embodied generation already has published precedents.",
+        "Embodied-generation precedents motivate the material activity. Prepared examples let this first-stage study explore how people understand the idea and what they want to change.",
         [
           22,
           29,
@@ -62,8 +62,8 @@
         ]
       ]
     ],
-    "future": "Imagine a museum that shares a textile work as changing digital patterns for visitors’ own cuffs and bags. Its label says “Each version continues the original work”. Looking at your two previews, what would you keep, change or rename in that museum?",
-    "speculation": "The two actual previews and the clearly fictional label make this future museum concrete. Visitors can discuss how personal use carries a source forward, what should remain recognisable and how the artist and source should be credited. Their own answer guides the discussion.",
+    "future": "Design possibility for later development: a museum shares changing textile patterns for everyday cuffs and bags. What connections to the source would people want to keep visible?",
+    "speculation": "The book cases help us imagine this arrangement and decide what the examples should communicate. The submitted first-stage protocol uses material exploration, postcard selection and the questionnaire. A separate future-label discussion would belong to a later plan.",
     "quotenums": [
       1,
       3,
@@ -73,12 +73,12 @@
       10,
       11
     ],
-    "record": "Save source S and its selected detail, item type and capture route, approved crops C1 and C2, actual previews G1 and G2, the action between them, pointed regions, brief reasons and keep or stop decisions. Record model settings, timing, help and failures. Keep future-scenario answers as a separate part of the session.",
-    "analysis": "Follow S → C1 → G1 → action → C2 → G2 → reason. Read how the visitor relates a change to the source and the personal item. Analyse visual preference, useful control, authorship and source connection as separate judgments. Include choices to keep, stop or use another input route.",
-    "value": "The candidate contribution is an account of how visitors maintain or change their grounds for a connection to one named heritage object during material interaction with AI. The interaction technique has close precedents. A contribution would need evidence from the action sequence and the visitor’s reasons.",
-    "setup": "One permitted source detail and fact card, a fixed camera, a small tabletop window, one screen and one image-conditioned generation service. Visitors choose a cuff or bag corner. A plain study cuff or bag panel provides an alternative. Begin with two deliberate captures.",
-    "broad": "Offer seated access, a plain study item and a helper who follows the visitor’s directions. People can point, speak or select a prepared outline. Explain and record the chosen capture route. AI use remains a choice.",
-    "checkpoint": "First establish that visitors can see a useful relationship between their local action and the next preview. Then examine whether their reasons refer to the source work, its context, the item or personal experience. Use pilot observations to improve structural guidance and reflection prompts.",
+    "record": "Keep the selected source-detail and prepared-image references for the submitted A card. The written evidence comes from the anonymous questionnaire. Physical arrangements, photographs, observation notes and interaction logs are outside this first-stage data collection.",
+    "analysis": "Read the authenticity reflections alongside the selected source and example references. Summarise reasons about resemblance, source context, material exploration and personal connection. Compare development preferences and suggestions across the two activities.",
+    "value": "This development study helps choose which direction to refine. A later study could examine how source-related judgments develop during a working AI interaction. The current written reflections help identify useful questions and design choices.",
+    "setup": "Source images and information for the agreed objects, simple arranging materials, checked prepared AI examples, a screen, a local postcard wall and optional printing.",
+    "broad": "No museum or AI expertise is required. Simple materials and researcher help support participation. First-stage recruitment is restricted to adult ECS staff and students who can understand the study information and give consent.",
+    "checkpoint": "Use questionnaire reasons and selected-example references to identify unclear steps, meaningful source connections and useful improvements. Record suggestions through the questionnaire.",
     "refs": [
       1,
       2,
@@ -95,43 +95,43 @@
     "letter": "B",
     "title": "One Object, Two Interpretations",
     "origin": "Combines Probes 4 and 5",
-    "focus": "Cross-language exchange",
-    "time": "6–10 minutes per turn, plus an optional postcard",
-    "sentence": "Start a postcard on a cuff or bag corner, exchange it with a real visitor across languages, then clarify and keep the version that grows from the conversation.",
-    "rq": "How do visitors retain and negotiate their understanding of a shared heritage object in AI-assisted cross-language exchanges?",
-    "purpose": "The postcard is the shared object of the conversation from the first draft. One person expresses a connection between a heritage detail and a personal item. A real recipient responds to that draft. The sender clarifies and updates the same card, which becomes the take-away.",
+    "focus": "Expression & cross-cultural understanding",
+    "time": "About 3 minutes in this test",
+    "sentence": "Write your interpretation, choose a prepared AI image, and place both on one postcard. Read earlier cards and add a reply or clarification.",
+    "rq": "During AI-mediated cross-cultural exchange, how do participants maintain, question or clarify their meaning through others' responses?",
+    "purpose": "B brings the source, a person’s exact words and an AI image into one shared postcard. Earlier participants’ cards give later participants something specific to respond to. Anonymous cards and replies accumulate on the same local wall used by A.",
     "steps": [
       [
-        "Choose the source and local item",
-        "Use the same named work, numbered detail and fact card. Choose a cuff or bag corner and approve one local crop C in the shared capture window. A prepared item or outline is available."
+        "Read the source and earlier cards",
+        "Look at the object information and submitted postcards already on the local wall. Prepared starter notes are clearly labelled."
       ],
       [
-        "Say what you want to express",
-        "In your own language, say one short sentence linking the source detail with the item or an association. Check the words before AI uses them."
+        "Write in your own words",
+        "Express an interpretation in any language and choose a prepared AI image. Typing help is available."
       ],
       [
-        "Build and share draft P1",
-        "AI translates the sentence and proposes a pattern preview for C. A fixed layout keeps the source, original words, translation and AI preview together. Approve what the real recipient may see."
+        "Make one postcard",
+        "The researcher manually places your exact words, source reference and chosen image together in one whiteboard postcard."
       ],
       [
-        "Receive a real reply",
-        "The recipient sees P1 and the shared source. They point to a detail, explain their understanding or ask a question. The reply can come from an available partner or a consented earlier exchange."
+        "Reply or clarify",
+        "Read another card and add a reply, or clarify a meaning. People can keep different interpretations."
       ],
       [
-        "Clarify the same postcard",
-        "Accept the reply, clarify the meaning or keep different readings. Update the words on the same card and request one revised image if useful. Keep P1, the reply and the final version P2 linked."
+        "Check and submit",
+        "Check drafts with the researcher for identifying details. Submitted anonymous cards remain for later participants to read."
       ],
       [
-        "Keep the conversation’s result",
-        "Preview P2 with the chosen words, source credit and AI label. Discuss the future display rule, then choose download or optional one-off email. A card awaiting a real reply is labelled Draft awaiting reply."
+        "Reflect and keep your card",
+        "Answer the optional cross-cultural question. You may take a printed copy of your own card without other people’s replies."
       ]
     ],
-    "ai": "A language and image assistant around one developing postcard. It translates the visitor’s checked sentence and proposes a pattern adaptation on the approved cuff or bag crop. After the real reply, it can help express a clarification and update that same preview. Each person’s voice stays identified.",
-    "noai": "Use direct language skills or study-team translation and a plain postcard showing the source, local-item reference and checked words. The real reply and clarification still develop that same card. Choose translation, image generation and delivery separately.",
+    "ai": "AI images and labelled multilingual starter notes and example translations are prepared before sessions. The researcher assembles the cards manually. Participants’ original words are kept as written and are not sent to AI services.",
+    "noai": "Participants may skip the activity, a reply or a questionnaire question, and discard drafts before submission. The current study uses prepared AI content to explore the concept.",
     "theory": [
       [
         "Relational authenticity",
-        "Follow how the object, a person’s experience and the other visitor become connected through exchange.",
+        "Relational authenticity helps us consider how an object connects people and experiences. B’s submitted text and replies give a first account of these connections.",
         [
           1,
           16
@@ -139,7 +139,7 @@
       ],
       [
         "Personal voice and recognition",
-        "Separate the sender’s endorsement of wording, the recipient’s understanding, historical accuracy and the recognition of an interpretation.",
+        "Personal voice and recognition help us distinguish what someone wanted to express from how another person responded. Their original words stay visible on the postcard.",
         [
           3,
           17
@@ -147,7 +147,7 @@
       ],
       [
         "Agency and cultural expression",
-        "Being able to change a translation can help people express themselves. It can also make a conversation take more effort. AI writing suggestions may remove cultural details. These findings help us choose what to observe.",
+        "Research on language agency and cultural detail motivates keeping original words and allowing clarification. Prepared multilingual examples introduce the wider design idea. Participants’ live text remains unchanged by AI.",
         [
           8,
           9,
@@ -155,8 +155,8 @@
         ]
       ]
     ],
-    "future": "Imagine a future museum that shows the final AI-assisted postcards as visitors’ interpretations of an object. Which parts of your developing card should the next visitor see: the final version, the earlier draft and reply, or both?",
-    "speculation": "Use the actual draft, real reply and final card beside a fictional future-display label. Participants decide how a museum should show a meaning that developed through conversation, and whose words or images should remain visible. The real source and each contributor remain identified.",
+    "future": "Design possibility for later development: a museum displays visitor interpretations together with the replies that helped shape them. Whose words should appear, and what should a later visitor see?",
+    "speculation": "The shared postcard offers a concrete object for imagining how visitor interpretations might be displayed in a museum. The first-stage protocol collects submitted cards and questionnaire responses. Further speculative discussions would need their own planned questions.",
     "quotenums": [
       8,
       5,
@@ -164,12 +164,12 @@
       12,
       13
     ],
-    "record": "Follow one card ID through source S, local crop C and its sharing choice, initial words M1, identified translation, actual draft P1, real reply R, clarification M2 and final P2. Retain accepted and declined image changes. Delivery choice and job status use a separate restricted record.",
-    "analysis": "Follow how a particular source detail and meaning travel through the first draft, the recipient’s response and the sender’s clarification. Examine words and images together. Distinguish source accuracy, translation fit, recipient understanding, author approval and personal connection.",
-    "value": "The candidate contribution is an account of how a source-related personal meaning develops through a multilingual conversation around one AI-assisted visual postcard. Its draft and revision show how people recognise, question and clarify each other’s interpretations. The final card keeps the outcome of that same process.",
-    "setup": "Use the same fixed capture station as A. Add a short-message interface, a real reply channel or consented reply pool and one postcard template. Start with one draft image and one optional revision. A private delivery service can send the final card in the study deployment.",
-    "broad": "Allow speech, short text, pointing, a prepared item and study-team language support. Visitors can arrive alone and receive a reply later. Keep the same card ID across turns. Plain cards, downloads and finishing without email are available choices.",
-    "checkpoint": "Check that a recipient replies to the actual source-linked draft. Follow whether the sender’s clarification changes the words, image or their stated connection to the work. Keep pending replies visible as pending. Test the full draft–reply–clarification–receipt journey.",
+    "record": "Keep submitted original postcard text, replies and clarifications with source-detail, prepared-image and reply references. Keep questionnaire answers separately from the wall. Prepared AI starter notes are labelled and excluded from participant data.",
+    "analysis": "Summarise themes in the questionnaire and submitted card text about expression, understanding, clarification, AI images and the shared wall. Use the reply relationships to read exchanges in context. Participants’ language choices provide context without assigning national identities.",
+    "value": "The study helps refine a postcard activity for cultural expression and exchange. Original text and replies show what people chose to say in this setting. A later working system could examine live translation and generation with a separately specified procedure.",
+    "setup": "One local digital postcard wall on study equipment, source images and information, prepared AI images, labelled starter notes, manual card assembly and optional printing.",
+    "broad": "Use any language for postcard text. Researcher help is available for entering exact words. Adult ECS staff or students can join individually and respond to an earlier submitted card. The first-stage study requires no account or personal device.",
+    "checkpoint": "Use the card text, replies and questionnaire to identify where the image supports expression, where an interpretation invites clarification, and how to improve the activity and shared wall.",
     "refs": [
       1,
       3,

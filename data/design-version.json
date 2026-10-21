@@ -1,10 +1,13 @@
 {
-  "id": "2026-10-16-cuff-bag",
-  "updated": "2026-10-16",
-  "shared_target": "One sleeve cuff or bag corner inside a fixed tabletop capture window",
-  "a_loop": "Source S → crop C1 → preview G1 → physical adjustment → crop C2 → preview G2 → reason",
-  "b_loop": "Source S + crop C → own message M1 → postcard draft P1 → real reply R → clarification M2 and optional picture update → final postcard P2 → optional receipt",
+  "id": "2026-10-21-ethics117392-stage1",
+  "updated": "2026-10-21",
+  "protocol": "ERGO 117392",
+  "protocol_version": "V1.0",
+  "protocol_date": "21-10-2026",
+  "status": "First-stage development study. Recruitment begins after ethics approval.",
+  "shared_result": "Anonymous postcards from A and B on one local study wall, with optional printed copies of own cards",
+  "a_loop": "Source detail → material arrangement → prepared AI cuff/bag example → adjust and compare → choose postcard",
+  "b_loop": "Source → original words and prepared AI image → one postcard → replies or clarification → shared wall",
   "meeting_date": "2026-10-02",
-  "interview_date": "2026-10-09",
-  "status": "Research designs. AI and mail services are planned for the study deployment."
+  "interview_date": "2026-10-09"
 }
