@@ -1,18 +1,18 @@
 {
-  "version": "2026-10-21-ethics117392-stage1",
-  "checked": "2026-10-21",
+  "version": "2026-10-22-concepts-and-round1",
+  "checked": "2026-10-22",
   "language": "en",
-  "protocol": "ERGO 117392 V1.0, 21 October 2026",
+  "protocol": "ERGO 117392 V1.0, 22 October 2026",
   "five_probe_rows": 5,
   "original_passages": 13,
   "book_figures": 6,
   "paper_figures": 4,
-  "design_figures": 4,
+  "design_figures": 5,
   "questions": 4,
   "forms": 0,
   "diagramChecks": [
     {
-      "file": "a-stage1-storyboard.svg",
+      "file": "a-concept-storyboard.svg",
       "width": 1440,
       "height": 760,
       "outside": []
@@ -31,6 +31,12 @@
     },
     {
       "file": "b-postcard-preview.svg",
+      "width": 1440,
+      "height": 820,
+      "outside": []
+    },
+    {
+      "file": "round1-overview.svg",
       "width": 1440,
       "height": 820,
       "outside": []
@@ -61,6 +67,8 @@
   "browser_errors": [],
   "local_resource_failures": [],
   "checks": [
+    "working concepts restored before the separate Round 1 section",
+    "latest optional A caption and full B conversation retained",
     "exact submitted questionnaire wording",
     "first-stage sample, duration and manual simulation",
     "postcards and own-card paper copies",
@@ -69,6 +77,6 @@
     "13 original passage controls",
     "all internal anchors",
     "responsive desktop and mobile layout",
-    "legacy storyboard URL now shows the corrected first-stage diagram"
+    "legacy storyboard URL now shows the corrected working-concept diagram"
   ]
 }

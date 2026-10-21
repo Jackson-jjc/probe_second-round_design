@@ -9,7 +9,7 @@
   ],
   "rows": [
     [
-      "<b>01 · Ask About a Detail</b><p>Starting idea: choose an object detail, ask AI a question and discuss its answer.</p><p><b>Current status:</b> retained as background for introducing an object. The first-stage test runs A and B.</p>",
+      "<b>01 · Ask About a Detail</b><p>Choose part of an object image. Say what you notice. Ask AI one question, then say what you think after its answer.</p><p><b>Possible concept evidence:</b> the chosen detail, question, actual answer and any change in the visitor’s explanation.</p>",
       "<b>After an AI answer, what does a visitor use to decide what to believe about an object?</b><p>We look for reasons, such as a visible detail, a museum source or personal knowledge. We also ask when the person checks or rejects the answer.</p>",
       "A connection to an object can come from its history, appearance or a personal memory. These are different reasons. We keep them separate when reading the visitor’s account. This uses relational authenticity and the difference between looking alike and having a real source link. [1] [2]",
       "",
@@ -17,36 +17,36 @@
       "<b>Keep as an introduction.</b><p>Museum AI questions can help visitors begin A or B. A separate study could focus on how the order of explanations shapes their understanding.</p><p>Basis: heritage-agent attitudes and Cleveland’s Talk to the Art. [13] [23]</p>"
     ],
     [
-      "<b>02 · Make with AI on My Cuff or Bag</b><p>Current A: source detail → material arrangement → prepared AI cuff/bag example → adjust and compare → choose a postcard.</p><p><b>First-stage data:</b> selected source/image references and questionnaire reflections.</p>",
-      "<b>During material arrangement and AI cuff/bag previews, how do participants maintain or revise their sense of authenticity?</b><p>The written response explains what kept or changed what felt authentic and why.</p>",
+      "<b>02 · Make with AI on My Cuff or Bag</b><p>Selected as A. The working concept links a source pattern, an approved local photograph, an AI preview and a physical adjustment that guides the next preview.</p><p><b>Round 1:</b> explore this idea through textile-based arrangement and prepared AI examples. See the separate round plan.</p>",
+      "<b>How do people maintain or revise their understandings of authenticity through interaction with AI and cultural heritage?</b><p>The cuff or bag is an interaction form. The research concerns what people understand as authentic, and how that understanding develops through the encounter.</p>",
       "Relational authenticity helps us ask how the visitor connects a new result to the source work. Looking similar, knowing the maker’s history and having made something yourself are separate grounds. Follow the grounds the visitor introduces. [1] [2]",
       "",
-      "The 2 October meeting connected Probe 2 with authenticity and clothing. The 9 October interview suggested a take-away and choice about AI. The 21 October protocol uses simple materials, manually switched AI examples and an optional printed postcard. Activities and questions may be skipped.",
-      "<b>Develop as A.</b><p>Art Morph and embodied-generation studies motivate material exploration. The first-stage study uses prepared examples to help select and refine the direction.</p><p>Basis: Art Morph, embodied generation, Huayao making and ZOMA. [22] [29] [30] [12] [7]</p>"
+      "The 2 October meeting connected Probe 2 with authenticity and clothing. The 9 October interview suggested a take-away and choice about AI. The current design uses a cuff or bag corner in one fixed capture window. A plain study item and pointing offer other ways to join.",
+      "<b>Develop as A.</b><p>Art Morph supplies a close material-and-AI precedent. Our study follows how source-related reasons develop when visitors guide a pattern onto a personal item through two local actions.</p><p>Basis: Art Morph, embodied generation, Huayao making and ZOMA. [22] [29] [30] [12] [7]</p>"
     ],
     [
-      "<b>03 · Change One Detail</b><p>Starting idea: choose a part of an image, propose a change and compare it with the source.</p><p><b>Current status:</b> its visual-comparison idea is incorporated into A.</p>",
+      "<b>03 · Change One Detail</b><p>Select an area of an image, tell AI what may change, then compare the changed version with the source.</p><p><b>Possible concept evidence:</b> selected area, instruction, actual image and reasons for keeping or rejecting it.</p>",
       "<b>Which changes still feel connected to the object, and which changes lose that connection?</b><p>We need to hear why a change matters. Ask what the preferred picture carries from the source. The HCI issue is how people set and check limits for generation.</p>",
       "The difference between resemblance and a real source link helps us separate “looks like it” from “still carries something important from it”. We also record personal preference on its own. [2] [5]",
       "",
-      "The 9 October interview questioned the purpose of changing an image. Clothing gives the adaptation an everyday use. The current A compares prepared cuff/bag effects after material exploration.",
-      "<b>Pause as a separate probe.</b><p>A already combines an everyday use with visual comparison. A separate image-change activity would need another clear question.</p><p>Basis: TwistLens, Gen-Diaolou and Cleveland’s Extend the Art. [5] [14] [24]</p>"
+      "The 9 October interview questioned the purpose of changing an image. The 2 October meeting’s clothing idea supplies a possible use. The current A brings that use into a two-round material interaction.",
+      "<b>Pause as a separate probe.</b><p>New A now includes two visual responses guided by material action. Keep Probe 3 only if a clear different use emerges, such as adapting a particular detail to clothing.</p><p>Basis: TwistLens, Gen-Diaolou and Cleveland’s Extend the Art show that image transformation already has precedents. [5] [14] [24]</p>"
     ],
     [
-      "<b>04 · Write a Label Together</b><p>Starting idea: combine two interpretations in a label. Current B keeps a person’s own words, source and prepared AI image on one postcard, with replies or clarification.</p><p><b>First-stage data:</b> submitted text, replies, clarifications, source/image references and reply links.</p>",
-      "<b>How do people maintain, question or clarify their meaning through others’ responses?</b><p>B keeps exact words visible. The current test uses prepared AI images and manual card assembly. Later development could add live language assistance.</p>",
+      "<b>04 · Write a Label Together</b><p>Selected together with 5 as B. Original interpretations, AI language/image assistance, real replies and clarification form an exchange. A related postcard carries its outcome.</p><p><b>Round 1:</b> original-language messages and replies stay visible, with postcards made from selected messages and prepared images.</p>",
+      "<b>How do people express and negotiate their understanding of a shared heritage object through AI-mediated cross-cultural exchange?</b><p>Follow what a person expresses, what another person understands and how they clarify or retain different interpretations.</p>",
       "Authentication means a process through which an account comes to be accepted. We ask who accepts a museum explanation and on what grounds. Research on AI writing also helps us check whether a person still recognises their voice. [17] [3]",
       "",
-      "The 2 October meeting connected 4 and 5 with multilingual exchange. The 9 October interview saw overlap. The local wall allows an individual participant to respond to an earlier anonymous postcard.",
-      "<b>Combine with 5 as B.</b><p>One postcard brings together expression, an image and a reply. Questionnaire responses help us decide how to develop the activity.</p><p>Basis: language control, cultural detail and museum AI text. [8] [9] [25]</p>"
+      "The 2 October meeting connected 4 and 5 with multilingual exchange. The 9 October interview saw overlap between them. A shared postcard lets a person reply to an earlier visitor, while the source, crop and card stay linked.",
+      "<b>Combine with 5 as B.</b><p>The card develops through a real reply and clarification. The final version is the record people can keep.</p><p>Basis: language control, cultural detail and museum AI text. [8] [9] [25]</p>"
     ],
     [
-      "<b>05 · Share a Detail</b><p>Starting idea: use an object to express something to another person. Current B combines original words with a prepared AI image, then makes room for replies and clarification.</p><p><b>Shared result:</b> anonymous A and B postcards on a local wall. Participants may keep a printed copy of their own card.</p>",
-      "<b>How do a person’s words, an AI image and others’ replies affect expression and understanding across cultural perspectives?</b><p>Use B’s written reflection and submitted exchanges to refine the concept.</p>",
+      "<b>05 · Share a Detail</b><p>Combined with 4 as B. A source-related meaning is shared, answered and clarified. The conversation remains visible, with a connected postcard people can keep.</p><p><b>Round 1:</b> the message area and postcard area share one local whiteboard.</p>",
+      "<b>How does a personal meaning develop when another visitor responds to the postcard?</b><p>We compare what the sender meant, what the recipient understood and what the sender clarifies. Words and the pattern preview are part of the same exchange.</p>",
       "Relational authenticity helps us follow how the object connects people. Personal voice helps us ask whether the author recognises the description. We keep historical accuracy, translation, understanding and image approval separate. [1] [3] [16]",
       "",
-      "The 9 October interview suggested merging 4 and 5 and offering a take-away. The first-stage study uses one shared local postcard wall. Own-card paper copies exclude others’ replies and require no contact details.",
-      "<b>Combine with 4 as B.</b><p>The card is both the expression people respond to and a result they can keep. A and B share this outcome in the submitted protocol.</p><p>GIFT and museum data souvenirs provide precedents. [15] [26]</p>"
+      "The 9 October feedback suggested merging 4 and 5 and giving people a take-away. The concept keeps exchange and its postcard connected. Round 1 offers own-card paper copies, with no contact collection.",
+      "<b>Combine with 4 as B.</b><p>The interaction centres on cross-cultural expression and response. The postcard carries a chosen message from that interaction. Round 1 is the first low-fidelity exploration of this direction.</p><p>GIFT and museum data souvenirs provide precedents. [15] [26]</p>"
     ]
   ]
 }

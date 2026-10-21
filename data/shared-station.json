@@ -1,10 +1,8 @@
 {
-  "stage": "First-stage low-fidelity study",
-  "a_materials": "Source-detail images, paper, shapes, fabric or simple objects, and prepared AI effects on cuff/bag pictures",
-  "b_materials": "A local digital postcard wall, source information, prepared AI images and original participant words",
-  "researcher": "Manually switch prepared examples and assemble postcards",
-  "shared_result": "Both anonymous postcards join the same local study wall",
-  "takeaway": "Optional printed copies of own cards without others’ replies",
-  "input": "Material exploration in A and original words, image choices and optional replies in B",
-  "data": "Questionnaire, card text and existing source/image references as specified in the protocol"
+  "scope": "Working probe concepts",
+  "shared_input": "Named digital heritage sources and real participant input",
+  "A": "Physical action and live AI visual response around one cuff or bag area",
+  "B": "Cross-cultural conversation with AI language/image assistance and a related postcard",
+  "round1": "Prepared examples, manual simulation and one local whiteboard with separate conversation and postcard areas",
+  "round1_reference": "data/study-plan.json"
 }

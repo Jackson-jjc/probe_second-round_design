@@ -20,13 +20,17 @@ Develop Probe 2 as A and combine 4 and 5 as B. Review the literature and the boo
 
 Use a sleeve cuff or bag corner at one small capture station. A follows physical action and AI response. B develops one postcard through description, a real reply and clarification. The final card carries that exchange forward.
 
-## First-stage study · 21 Oct 2026
+## Round 1 plan · 21–22 Oct 2026
 
-Align the immediate test with ERGO 117392 V1.0: 10–15 adult ECS staff or students, two low-fidelity activities and an anonymous questionnaire. AI content is prepared in advance. Both postcards join a local wall, with optional printed copies of own cards. The earlier camera and live-generation concept becomes a later development possibility.
+Prepare low-fidelity prototypes of A and B for ERGO 117392. Use prepared AI examples, manual simulation, anonymous feedback and a local whiteboard. The protocol specifies this prototype round. A and B remain the working probe concepts.
+
+## Clarify the design levels · 22 Oct 2026
+
+Present the five-to-two selection, the two concepts and their first prototype round separately. Use Round 1 feedback to improve the directions, develop further iterations and later choose which direction to pursue.
 
 ## Selection criterion
 
-Reduce barriers of knowledge, language, manual skill, arriving alone and willingness to use AI. The first-stage questionnaire helps identify useful participation improvements.
+Reduce barriers of knowledge, language, manual skill, arriving alone and willingness to use AI. Prototype feedback helps identify useful participation improvements.
 
 Keep 1 as an introduction. Develop 2 as A. Pause 3. Merge 4 and 5 as B.
 

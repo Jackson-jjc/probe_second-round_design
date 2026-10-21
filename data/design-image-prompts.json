@@ -1,5 +1,13 @@
 {
-  "current_visuals": "Code-authored editable SVG diagrams showing the submitted first-stage procedure",
-  "previous_image": "The AI-generated hand storyboard was replaced on 21 October because it made the actions and stage unclear. Its original version is retained in Git history.",
-  "current_asset": "assets/design/a-stage1-storyboard.svg"
+  "current_visuals": "Editable code-authored diagrams, with working concepts and Round 1 clearly labelled.",
+  "concept_diagrams": [
+    "assets/design/a-concept-storyboard.svg",
+    "assets/design/a-data-flow.svg",
+    "assets/design/b-postcard-flow.svg",
+    "assets/design/b-postcard-preview.svg"
+  ],
+  "round1_diagrams": [
+    "assets/design/round1-overview.svg"
+  ],
+  "previous_image": "The ambiguous generated hand illustration was replaced by a clear concept diagram. The old raster URL renders the corrected concept steps."
 }

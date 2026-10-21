@@ -1,13 +1,10 @@
 {
-  "id": "2026-10-21-ethics117392-stage1",
-  "updated": "2026-10-21",
-  "protocol": "ERGO 117392",
-  "protocol_version": "V1.0",
-  "protocol_date": "21-10-2026",
-  "status": "First-stage development study. Recruitment begins after ethics approval.",
-  "shared_result": "Anonymous postcards from A and B on one local study wall, with optional printed copies of own cards",
-  "a_loop": "Source detail → material arrangement → prepared AI cuff/bag example → adjust and compare → choose postcard",
-  "b_loop": "Source → original words and prepared AI image → one postcard → replies or clarification → shared wall",
+  "id": "2026-10-22-concepts-and-round1",
+  "updated": "2026-10-22",
+  "concept_origin": "Five ideas selected into A and B, developed through the 2 October meeting and 9 October feedback",
+  "concept_status": "Two working probe concepts under iterative development",
+  "round1": "Low-fidelity prototypes exploring A and B. ERGO 117392, V1.0, 22-10-2026.",
+  "next": "Refine, develop further iterations and choose the direction to pursue",
   "meeting_date": "2026-10-02",
   "interview_date": "2026-10-09"
 }

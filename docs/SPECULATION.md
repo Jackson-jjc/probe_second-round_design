@@ -12,7 +12,7 @@ Chapter 1, pp. 2–3.
 
 **The idea we take from it.** A possible future helps people examine present choices and discuss how they want to live.
 
-**How it changes the activity.** A’s prepared everyday-item examples and B’s postcard wall make possible museum arrangements concrete. The first-stage questionnaire helps refine these directions.
+**How it changes the activity.** A imagines a museum work continuing through personal-item patterns. B imagines a museum displaying postcards that grow through conversations. The possible futures help visitors examine their own interaction.
 
 ## Passage 2 · A future is a medium for thinking
 
@@ -24,7 +24,7 @@ Chapter 1, pp. 3.
 
 **The idea we take from it.** A possible future lets people think about a way of living and decide what they want to keep or change.
 
-**How it changes the activity.** Use the imagined museum as a design tool. The current test gathers feedback through the submitted activities and four questionnaire questions. A separate future-scenario interview can be planned later.
+**How it changes the activity.** After the ordinary activity, introduce a future museum arrangement. Ask what it would change and what visitors would keep, alter or refuse. This discussion connects the small AI task to choices about museum life.
 
 ## Passage 3 · A prop makes another possibility discussable
 
@@ -36,7 +36,7 @@ Chapter 6, pp. 90.
 
 **The idea we take from it.** The object supports reflection on the values embodied in a possible arrangement.
 
-**How it changes the activity.** A uses its chosen postcard and B uses its words, image and replies as concrete design props. These help us think about the museum arrangements described above.
+**How it changes the activity.** A uses its local-item previews and a future label. B uses the draft, reply and final postcard. Each small prop gives people something concrete to point to when they discuss a museum’s choices.
 
 ## Passage 4 · A prop can actually work
 
@@ -48,7 +48,7 @@ Chapter 6, pp. 92.
 
 **The idea we take from it.** A working prototype can serve as a prop for an imagined situation. Its role is to make that situation available for discussion.
 
-**How it changes the activity.** A future working AI system could also serve as a speculative prop. The first-stage study uses openly explained manual simulation and prepared AI content.
+**How it changes the activity.** Run the actual image and translation functions during the study. Use their outputs as props for the later, clearly introduced future scenario.
 
 ## Passage 5 · Leave space for people’s own interpretations
 
@@ -60,7 +60,7 @@ Chapter 6, pp. 93.
 
 **The idea we take from it.** Participants can give their own answers to an imagined situation. The researcher should leave those answers open.
 
-**How it changes the activity.** Let participants choose, clarify, disagree, skip or discard drafts before submitting. Their own interpretations can guide development.
+**How it changes the activity.** Visitors can accept, alter or stop an AI preview. They can keep different interpretations after understanding one another. Their choices shape the discussion.
 
 ## Passage 6 · People may make their own judgments
 
@@ -72,7 +72,7 @@ Chapter 9, pp. 161.
 
 **The idea we take from it.** This is a commitment to participants’ freedom to judge and choose.
 
-**How it changes the activity.** Make participation voluntary. The current study allows people to skip activities or questions and choose whether to keep a printed copy of their own card.
+**How it changes the activity.** People can choose the AI route, a prepared input, a plain card and their receipt method. Pilot sessions reveal which routes need further support.
 
 ## Passage 7 · Create a space for discussion
 
@@ -84,7 +84,7 @@ Chapter 1, pp. 2.
 
 **The idea we take from it.** Speculation opens a discussion about how life could be different. A feature test needs this wider question to become part of that discussion.
 
-**How it changes the activity.** A wider museum discussion could grow from these two prototypes. The current study first collects development preferences, authenticity reflections and cultural-expression feedback.
+**How it changes the activity.** A discusses how personal use carries a work forward. B discusses how a museum can show a meaning that developed between people. Both invite alternative answers.
 
 ## Passage 8 · An alternative must open a gap with the present
 
@@ -96,7 +96,7 @@ Chapter 3, pp. 35.
 
 **The idea we take from it.** A proposal opens discussion by making another arrangement available. Its fictional rule gives participants a concrete alternative to compare with their present experience.
 
-**How it changes the activity.** Explain the present activity, the imagined museum arrangement and the concrete object that makes it understandable. Keep this design reasoning distinct from the first-stage questionnaire.
+**How it changes the activity.** For each probe, explain the current activity, the future museum rule, the prop that makes it visible and the choice left to participants. This sequence explains why we select and revise a direction.
 
 ## Passage 9 · The Statistical Clock · reasoning for Probe 01
 
@@ -106,9 +106,9 @@ Dunne & Raby with Michael Anastassiades. The Statistical Clock is an imagined ho
 
 Chapter 3, pp. 35–36.
 
-**The idea we take from it.** Put a familiar rule into a small, visible object so people can discuss how that rule shapes daily life. The clock turns a daily information rule into a visible object. Probe 1 similarly suggests making the order of AI and visitor explanations visible. This remains a possible future variant.
+**The idea we take from it.** Put a familiar rule into a small, visible object so people can discuss how that rule shapes daily life. The clock makes daily reminders visible. Probe 1 can make the rule “AI speaks first” visible through a small museum display card. The question then concerns how that rule shapes the start of a visit.
 
-**How it changes the activity.** A later Probe 1 could compare a fictional display that puts AI first with one that puts the visitor’s words first. The current first-stage test concentrates on A and B. Keep 1 as a short introduction. A future standalone version could focus on who sets the starting point of interpretation.
+**How it changes the activity.** After the normal question task, place the AI answer at the top of a clearly imagined museum display card. Put the visitor’s own explanation beside it. Ask what changes when the AI version always goes first. Keep 1 as a short introduction. A future standalone version could focus on who sets the starting point of interpretation.
 
 ## Passage 10 · The Islanders · reasoning for Probe 02
 
@@ -118,9 +118,9 @@ Charles Avery, discussed by Dunne & Raby. In Charles Avery’s The Islanders, dr
 
 Chapter 6, pp. 92–93.
 
-**The idea we take from it.** A small object can help people imagine the larger world in which it belongs. The island’s objects suggest a larger world. A’s prepared cuff/bag examples and postcard suggest an everyday setting where a heritage pattern travels into someone’s life.
+**The idea we take from it.** A small object can help people imagine the larger world in which it belongs. The island’s objects make an invented place imaginable. A uses the cuff or bag preview and a future museum label to suggest a museum where heritage patterns keep entering everyday belongings.
 
-**How it changes the activity.** In first-stage A, connect the source detail, sample arrangement and everyday-item effect clearly. Question 2 asks what kept or changed what felt authentic. A fictional future museum label remains a later design possibility. Develop A as material exploration with prepared everyday-item adaptations. This first-stage study asks for written authenticity reflections and selected-example references. Later work can examine a working AI response.
+**How it changes the activity.** Complete A’s two local captures. Show the two actual previews beside a fictional label saying “Each version continues the original work”. Ask what kind of connection the wearable or everyday version carries forward. Develop A around the local material action and its two visual responses. The future label helps visitors connect their experience with a wider question about how a museum work can continue through personal use.
 
 ## Passage 11 · Plant Fiction · reasoning for Probe 03
 
@@ -130,9 +130,9 @@ Troika, discussed by Dunne & Raby. Troika’s Plant Fiction presents invented pl
 
 Chapter 6, pp. 94–95.
 
-**The idea we take from it.** Give an imagined image a clear setting and purpose, so viewers can explore the proposed future. Plant Fiction gives its imagined plants a clear use. A’s cuff or bag picture gives a pattern adaptation a similarly concrete everyday use.
+**The idea we take from it.** Give an imagined image a clear setting and purpose, so viewers can explore the proposed future. Plant Fiction explains what its invented plants would do in future London. Probe 3 needs an equally clear purpose for its changed pattern. Adapting one detail to a cuff or bag gives the change a concrete everyday use.
 
-**How it changes the activity.** Show the source alongside the prepared everyday-item effect in A. Let the participant compare examples and select a postcard. This gives the image-change idea a purpose within A. Keep the visual-change idea inside A. A separate Probe 3 would need a distinct purpose or research question.
+**How it changes the activity.** Show the source, one local-item adaptation and a short label describing its imagined use. Ask which source detail the person wants to carry into that use and why. Keep 3 as a possible focused variant. A already uses a local item and visual changes. A separate Probe 3 would need its own use or research question.
 
 ## Passage 12 · United Micro Kingdoms · reasoning for Probe 04
 
@@ -142,9 +142,9 @@ Dunne & Raby. United Micro Kingdoms imagines several different societies and des
 
 Chapter 9, pp. 173–174.
 
-**The idea we take from it.** Make different choices visible through objects people can compare. The vehicles embody choices about shared life. A postcard wall similarly makes a choice about whose interpretations become visible. B keeps original words and replies together.
+**The idea we take from it.** Make different choices visible through objects people can compare. The vehicles show different ways of organising travel and everyday life. B’s first draft, reply and final postcard show choices about whose interpretation becomes visible. The same card makes those choices easy to point to.
 
-**How it changes the activity.** In first-stage B, keep the source, original text and chosen image on one postcard. Let later participants read submitted cards and reply. Further discussion of a future museum display belongs to later development. Combine 4 and 5 as B. A single local postcard carries original words, a prepared image and replies. It also becomes a take-away copy.
+**How it changes the activity.** Keep the draft postcard, the real reply and the final postcard together. After the exchange, use a fictional museum display label and ask whether visitors should see the final postcard alone or the conversation that shaped it. Combine 4 and 5 as B. Keep the conversation visible and use its related postcard as a concrete prop for discussing interpretation and display. Round 1 begins with a local message area and prepared-image cards.
 
 ## Passage 13 · Huggable Atomic Mushrooms · reasoning for Probe 05
 
@@ -154,8 +154,8 @@ Dunne & Raby with Michael Anastassiades. Huggable Atomic Mushrooms are soft obje
 
 Chapter 3, pp. 40–42.
 
-**The idea we take from it.** The way an object looks and feels can change how its subject is understood. The soft mushroom form affects how viewers encounter its serious subject. B similarly lets us ask how a friendly AI image changes the tone of a person’s interpretation.
+**The idea we take from it.** The way an object looks and feels can change how its subject is understood. The soft mushroom form changes how viewers meet the subject of nuclear tests. In B, a friendly pattern preview can also change the tone of a personal account. The recipient’s real response shows what the draft conveyed.
 
-**How it changes the activity.** Let participants choose a prepared image to accompany their exact words. Read replies and questionnaire Question 3 to understand what that combination conveyed. Combine 5 with 4. Expression, replies and an optional own-card copy form one simple activity.
+**How it changes the activity.** Let the recipient respond to the first postcard, including its image. The sender then keeps or clarifies its words and picture on the same card. Ask which version expresses the intended connection to the object. Combine 4 and 5 as B. Keep the conversation visible and use its related postcard as a concrete prop for discussing interpretation and display. Round 1 begins with a local message area and prepared-image cards.
 
 [Numeric references](SOURCES.md)

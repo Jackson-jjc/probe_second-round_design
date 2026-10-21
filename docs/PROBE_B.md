@@ -1,103 +1,100 @@
 # Direction B · One Object, Two Interpretations
 
-Combines Probes 4 and 5. About 3 minutes in this test is an estimate.
+Combines Probes 4 and 5. Working concept under iterative development. See [Round 1](FIRST_STAGE_TEST.md) for the first low-fidelity implementation.
 
-Write your interpretation, choose a prepared AI image, and place both on one postcard. Read earlier cards and add a reply or clarification.
+Exchange interpretations of the same object across languages, clarify the meaning, and develop a postcard that carries the exchange forward.
 
 ## Research question
 
-During AI-mediated cross-cultural exchange, how do participants maintain, question or clarify their meaning through others' responses?
+How do people express and negotiate their understanding of a shared heritage object through AI-mediated cross-cultural exchange?
 
-B brings the source, a person’s exact words and an AI image into one shared postcard. Earlier participants’ cards give later participants something specific to respond to. Anonymous cards and replies accumulate on the same local wall used by A.
+B explores expression and negotiation across cultural perspectives. The shared object anchors the conversation. AI offers language and image assistance, while original messages, real replies and clarifications remain visible. A related postcard develops from the exchange.
 
-## First-stage participant activity
+## Intended probe interaction
 
-1. **Read the source and earlier cards.** Look at the object information and submitted postcards already on the local wall. Prepared starter notes are clearly labelled.
+1. **Share one named object.** Use the same object image, selected detail and checked information. An approved cuff or bag photograph can provide a personal visual setting.
 
-2. **Write in your own words.** Express an interpretation in any language and choose a prepared AI image. Typing help is available.
+2. **Express an interpretation.** Write or say what the object means to you in your own language. Check the original words.
 
-3. **Make one postcard.** The researcher manually places your exact words, source reference and chosen image together in one whiteboard postcard.
+3. **Develop and share a draft.** AI assists with translation and a source-related image preview. Original words, labelled translation and source remain visible.
 
-4. **Reply or clarify.** Read another card and add a reply, or clarify a meaning. People can keep different interpretations.
+4. **Receive a real response.** Another person reads the source and interpretation, then replies, asks a question or offers a different reading.
 
-5. **Check and submit.** Check drafts with the researcher for identifying details. Submitted anonymous cards remain for later participants to read.
+5. **Clarify and update.** Keep the conversation visible. Clarify the words and, when useful, revise the associated image and postcard. Different interpretations can remain.
 
-6. **Reflect and keep your card.** Answer the optional cross-cultural question. You may take a printed copy of your own card without other people’s replies.
+6. **Keep a connected postcard.** Choose the postcard linked to the exchange. The concept includes download or optional email delivery, with the delivery method to be specified for a later study.
 
 ## AI’s role
 
-AI images and labelled multilingual starter notes and example translations are prepared before sessions. The researcher assembles the cards manually. Participants’ original words are kept as written and are not sent to AI services.
+In the working concept, AI bridges languages and helps visualise an interpretation. It can assist a translation or image revision after a real response. People check their own expression and retain the original messages and conversation.
 
 ## Participation choices
 
-Participants may skip the activity, a reply or a questionnaire question, and discard drafts before submission. The current study uses prepared AI content to explore the concept.
+Use direct language skills or study-team translation and a plain postcard showing the source, local-item reference and checked words. The real reply and clarification still develop that same card. Choose translation, image generation and delivery separately.
 
 ## Smallest working set-up
 
-One local digital postcard wall on study equipment, source images and information, prepared AI images, labelled starter notes, manual card assembly and optional printing.
+A shared digital source, a conversation interface, language and image assistance, a real reply channel and a linked postcard view. A local cuff/bag image can use the same small capture station as A. The implementation and delivery method will develop through later iterations.
 
 ## Broad participation
 
-Use any language for postcard text. Researcher help is available for entering exact words. Adult ECS staff or students can join individually and respond to an earlier submitted card. The first-stage study requires no account or personal device.
+The concept supports different languages, individual participation, help with input and a plain-card route. Round 1 starts with adult ECS staff and students, using prepared content and a local whiteboard.
 
 ## Theory and HCI
 
-**Relational authenticity.** Relational authenticity helps us consider how an object connects people and experiences. B’s submitted text and replies give a first account of these connections. [1] [16]
+**Relational authenticity.** Follow how the object, a person’s experience and the other visitor become connected through exchange. [1] [16]
 
-**Personal voice and recognition.** Personal voice and recognition help us distinguish what someone wanted to express from how another person responded. Their original words stay visible on the postcard. [3] [17]
+**Personal voice and recognition.** Separate the sender’s endorsement of wording, the recipient’s understanding, historical accuracy and the recognition of an interpretation. [3] [17]
 
-**Agency and cultural expression.** Research on language agency and cultural detail motivates keeping original words and allowing clarification. Prepared multilingual examples introduce the wider design idea. Participants’ live text remains unchanged by AI. [8] [9] [10]
+**Agency and cultural expression.** Being able to change a translation can help people express themselves. It can also make a conversation take more effort. AI writing suggestions may remove cultural details. These findings help us choose what to observe. [8] [9] [10]
 
-## Speculative direction for later development
+## Speculation in the probe concept
 
-Design possibility for later development: a museum displays visitor interpretations together with the replies that helped shape them. Whose words should appear, and what should a later visitor see?
+Imagine a future museum that shows the final AI-assisted postcards as visitors’ interpretations of an object. Which parts of your developing card should the next visitor see: the final version, the earlier draft and reply, or both?
 
 ## Where speculation enters
 
-The shared postcard offers a concrete object for imagining how visitor interpretations might be displayed in a museum. The first-stage protocol collects submitted cards and questionnaire responses. Further speculative discussions would need their own planned questions.
+Use the actual draft, real reply and final card beside a fictional future-display label. Participants decide how a museum should show a meaning that developed through conversation, and whose words or images should remain visible. The real source and each contributor remain identified.
 
 ## Participant input and data
 
-Keep submitted original postcard text, replies and clarifications with source-detail, prepared-image and reply references. Keep questionnaire answers separately from the wall. Prepared AI starter notes are labelled and excluded from participant data.
+A later working-prototype study could link original messages, translations, real replies, clarifications and related postcard versions. Approved local photographs and delivery choices would need their own specified handling. Round 1 collects the anonymous text and existing-image references listed in its protocol.
 
 ## Analysis
 
-Summarise themes in the questionnaire and submitted card text about expression, understanding, clarification, AI images and the shared wall. Use the reply relationships to read exchanges in context. Participants’ language choices provide context without assigning national identities.
+The working concept asks how meanings travel through expression, AI assistance, another person’s reply and clarification. Round 1 uses original messages, reply relationships, related postcards and questionnaire reflections to refine that activity.
 
 ## Candidate contribution
 
-The study helps refine a postcard activity for cultural expression and exchange. Original text and replies show what people chose to say in this setting. A later working system could examine live translation and generation with a separately specified procedure.
+The candidate contribution is an account of how a source-related personal meaning develops through a multilingual conversation around one AI-assisted visual postcard. Its draft and revision show how people recognise, question and clarify each other’s interpretations. The final card keeps the outcome of that same process.
 
 ## Revision criterion
 
-Use the card text, replies and questionnaire to identify where the image supports expression, where an interpretation invites clarification, and how to improve the activity and shared wall.
+Use Round 1 to improve the conversation and postcard relationship. Later iterations can test live language and image assistance and specify the study procedure.
 
-## Illustrated first-stage guide
+## Working concept guide
 
-### One postcard carries the exchange
+### The working B concept
 
-Write an interpretation in any language, choose a prepared AI image and see them together on one local whiteboard postcard. The researcher copies your words exactly and assembles the card manually. You can read earlier submitted cards, reply or clarify a meaning. The activity takes about three minutes.
+AI helps people express and negotiate interpretations of the same object across languages and cultural perspectives. Original messages, real responses and clarifications remain visible. A related visual postcard carries a selected interpretation from the exchange.
 
-![Read the source and earlier cards, write original words, select a prepared AI image, assemble one postcard, reply or clarify, then submit to the shared wall](../assets/design/b-postcard-flow.svg)Prepared AI images accompany participant words. Replies come from participants. Submitted cards remain on the local study wall.
+![Working B concept: interpret the source, use AI language and image assistance, receive a real reply, clarify and keep a related postcard](../assets/design/b-postcard-flow.svg)The exchange and postcard are connected. The conversation remains available alongside its related visual outcome.
 
-### What one card contains
+### A postcard grows from the exchange
 
-![A sample local wall shows an A card with source and selected cuff effect, and a B card with source, exact participant words, a prepared AI image and a linked reply](../assets/design/b-postcard-preview.svg)Layout example with invented wording and patterns. Actual submitted A and B cards share one local wall. Only a participant’s own card goes on their optional paper copy.
-B postcard: source reference + original words + selected prepared AI image. Replies and clarifications are linked to the relevant card. The original words remain unchanged by AI. The researcher offers typing help when requested.
+Use one selected message as the link between conversation and postcard. AI can assist a translation or image preview. After another person responds, the author can clarify the meaning and revise the associated card. Original words, translations and source information remain identified.
 
-Prepared multilingual starters: these are clearly labelled examples, with checked example translations. They introduce the exchange and are excluded from participant data. Live translation of participant text belongs to a later development plan.
+![Full conversation alongside a related postcard with an Image column and a Text column](../assets/design/b-postcard-preview.svg)Illustrative layout with invented messages and patterns. The card links to a message. The full conversation remains visible alongside it.
 
-### Expression and cultural understanding
+### What B investigates
 
-Question 3 asks: “B: How did your words, the AI image and others’ replies affect what you expressed or understood across cultural perspectives?”
+B focuses on cross-cultural expression, understanding and negotiation. A person may recognise their own voice, encounter a different interpretation or clarify a detail. Relational authenticity and work on personal voice help distinguish these experiences from historical accuracy and translation fluency. [1] [3] [8] [9] [17]
 
-The submitted words, replies and questionnaire reflections help us understand whether the image supports expression and what invites clarification. Personal voice, another person’s interpretation and source context provide distinct starting points for analysis. [1] [3] [8] [9] [17]
+### Keeping the outcome
 
-### A shared wall and an own-card copy
+The working concept includes a personal postcard people can retain after the exchange. Download or optional email delivery can be developed with an appropriate later procedure. Round 1 offers paper copies of participants’ own cards and collects no contacts. [15] [26]
 
-After checking drafts for identifying details, participants can submit their anonymous cards. A and B cards join the same local wall for later study participants. Questionnaire answers stay private. The wall runs on study equipment and requires no account.
-
-Participants may take a printed copy of their own cards, excluding other people’s replies. This take-away is part of the activity’s result. Contact details are outside the study. [15] [26]
+First prototype round: see the local conversation and prepared-image postcard used in Round 1 →
 
 
 [Original speculation passages](SPECULATION.md) · [Numeric references](SOURCES.md)

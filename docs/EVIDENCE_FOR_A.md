@@ -1,11 +1,9 @@
-# Huayao evidence and the first-stage A
+# Research evidence, the A concept and Round 1
 
-The CHI 2026 extended abstract describes eight experienced embroiderers, a six-month four-stage process, image selection and embroidery making. Participants adjusted generated images for familiar motifs, animal forms, line density and practical embroidery. The source paper and its original Figure 5 appear on the website [12].
+Huayao research describes how experienced embroiderers select, reject and modify generated images for practical and cultural reasons [12]. Art Morph links physical materials and generated art [22,29]. Body Prompting and A(I)Cam add embodied-generation precedents [30,31]. The original figures and source details appear on the website.
 
-The design lesson is to connect an example and a reason. In first-stage A, participants arrange materials and compare prepared AI effects on everyday-item pictures. Question 2 asks what kept or changed what felt authentic. Selected source/image references provide context for the written reflection.
+The working A concept uses these precedents to examine how an action, AI response and source-related reason develop together. Its research question concerns understandings of authenticity. The cuff or bag is an interaction form.
 
-The experienced-embroiderer study and this short ECS development study have different purposes and data. The current study gathers anonymous questionnaire reflections and choices. A later working-AI study could specify how to record action sequences and model responses.
+Round 1 is the first low-fidelity exploration of A. It uses textile-based material arrangement and prepared effects. The optional caption asks what the participant kept or changed from the source and why. The questionnaire privately reflects on authenticity. These records help refine the activity and questions. Later iterations can develop the working action-and-response loop and its research method.
 
-The AI Pattern Merchant adds a social-setting precedent [11]. Art Morph connects materials and generated images [22,29]. Body Prompting and A(I)Cam add embodied-generation examples [30,31]. These motivate the interaction idea. The first-stage study helps choose and refine a direction.
-
-[Current test](FIRST_STAGE_TEST.md) · [A](PROBE_A.md) · [Sources](SOURCES.md)
+[A concept](PROBE_A.md) · [Round 1](FIRST_STAGE_TEST.md) · [Sources](SOURCES.md)

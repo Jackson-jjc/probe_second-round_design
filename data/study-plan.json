@@ -1,13 +1,13 @@
 {
   "protocol": "ERGO 117392",
   "version": "V1.0",
-  "date": "21-10-2026",
+  "date": "22-10-2026",
   "participants": "10–15 ECS staff or students aged 18 or over",
   "duration": "10–15 minutes total",
   "sequence": [
     "Information and tick consent",
-    "A, about three minutes",
-    "B, about three minutes",
+    "Round 1 A, about three minutes: textile-based arrangement, prepared examples, chosen postcard and optional caption",
+    "Round 1 B, about three minutes: full message/reply history and a related postcard made from a selected message",
     "Four optional questionnaire questions",
     "Check anonymous drafts and submit",
     "Optional printed copies of own cards without others’ replies"
@@ -15,8 +15,8 @@
   "ai": "Prepared and checked before sessions. Researcher manually switches examples and assembles cards.",
   "data": [
     "Consent tick and questionnaire answers",
-    "A selected source-detail and prepared-image references",
-    "B original text, replies, clarifications, source/image references and reply links"
+    "A optional one-sentence caption and selected source/prepared-image references",
+    "B original messages, replies, clarifications, reply relationships and links between messages, sources, images and derived postcards"
   ],
   "excluded": [
     "Names",
@@ -33,9 +33,9 @@
   ],
   "questions": [
     "Which prototype should we develop further for a museum experience? Tick one.",
-    "A: As you arranged materials and compared the source with AI cuff/bag previews, what kept or changed what felt authentic? Why?",
-    "B: How did your words, the AI image and others' replies affect what you expressed or understood across cultural perspectives?",
-    "Why did you choose that option, and what would you improve, including the postcard wall or take-away?"
+    "A: How did working from the textile object and comparing AI examples shape or change your understanding of authenticity? Why?",
+    "B: How did earlier messages, replies and the AI image affect what you expressed or understood across cultural perspectives?",
+    "Why your choice in Q1, and what would you improve in the activities, wall or take-away cards?"
   ],
   "q1_options": [
     "A",
@@ -47,5 +47,11 @@
   "storage": "Local wall restricted to study participants. Locked paper forms and University-approved secure UK digital storage.",
   "retention": "At least 10 years after collection or publication, whichever is later, then review disposal.",
   "withdrawal": "Skip or discard drafts before submission. Submitted anonymous cards and forms cannot be located for removal.",
-  "museum_stage": "Later museum fieldwork requires a separate detailed plan."
+  "museum_stage": "Later museum fieldwork requires a separate detailed plan.",
+  "round": "Round 1 · low-fidelity prototypes",
+  "relation": "The first prototype round explores the two working concepts. Its limited implementation and data plan apply to this round.",
+  "research_questions": {
+    "A": "How do people maintain or revise their understandings of authenticity through interaction with AI and cultural heritage?",
+    "B": "How do people express and negotiate their understanding of a shared heritage object through AI-mediated cross-cultural exchange?"
+  }
 }
