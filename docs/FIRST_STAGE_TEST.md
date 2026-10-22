@@ -1,6 +1,6 @@
 # Round 1 · Low-fidelity prototypes
 
-02 / ROUND 1 · LOW-FIDELITY PROTOTYPESThe first prototype round explores both conceptsA and B are the working probe directions above. Round 1 uses simple materials and prepared examples to gather feedback, refine both directions and support later selection. Its procedure follows ERGO 117392, V1.0, 22 October 2026.
+02 / ROUND 1 · LOW-FIDELITY PROTOTYPESThe first prototype round explores both conceptsA and B are the working probe directions above. Round 1 uses simple materials and prepared examples to gather feedback, refine both directions and support later selection. A retains making, comparing and explaining. B retains expression, real replies and a connected postcard. Prepared AI content and manual facilitation make these activities possible in the first round. Its procedure follows ERGO 117392, V1.0, 22 October 2026.
 
 10–15 adultsECS staff or students aged 18 or over. Recruitment begins after ethics approval.
 
@@ -18,15 +18,15 @@ A · CONCEPT TO ROUND 1
 
 ### Explore authenticity through material arrangement
 
-Concept: material action shapes an AI adaptation and the person’s understanding of authenticity.
+Concept: a person assembles materials, approves a photograph, sees AI combine it with the textile source, then rearranges and compares another response.
 
-Round 1: work from the provided textile image and information. Arrange paper, shapes, fabric or simple objects to express an understanding of it. Compare prepared AI cuff/bag examples, adjust and choose a postcard.
+Round 1: work from the provided textile image and information. Arrange paper, shapes, fabric or simple objects to express an understanding of it. The researcher selects the closest prepared AI cuff/bag example. Adjust the arrangement, compare prepared examples and choose a postcard.
 
 Optional card sentence: “What did you keep or change from the textile source, and why?” Any language is welcome. The researcher can enter the exact words. Question 2 privately reflects on the whole activity.
 
 What this helps us refine: the source-to-arrangement-to-adaptation relationship, what people understand as authentic, and which examples or prompts need improvement.
 
-For later iterations: develop and examine the live AI response to an actual material action.
+For later iterations: photograph the participant’s actual arrangement and examine how live AI responds to a change in that input.
 
 B · CONCEPT TO ROUND 1
 
@@ -40,7 +40,25 @@ Conversation and card: both stay on the same local whiteboard in separate areas.
 
 What this helps us refine: how earlier messages, replies and images support expression, understanding and clarification, and how the postcard relates to the conversation.
 
-For later iterations: develop and examine live language and image assistance.
+For later iterations: develop live language and image assistance and explore digital or hybrid paper-board formats. A printer can be considered at that later stage.
+
+### How each first prototype maps to the full concept
+
+### A · The same making activity
+
+- Source and arrangement: the person reads the textile reference and actually assembles materials in both versions.
+- Photograph and AI response: the full concept sends an approved arrangement photo with the source to AI. Round 1 uses the closest pre-prepared example selected by the researcher. Participants’ arrangements are not photographed.
+- Adjust and compare: the full concept produces a new response to a new photo. Round 1 lets the person adjust and compare prepared alternatives.
+- Explain and keep: Round 1 uses the optional card sentence, private questionnaire and selected postcard. These help refine the full interaction.
+
+### B · The same conversation and related card
+
+- Expression and real replies: people contribute to a visible conversation in both versions. Round 1 retains the full original-language history on the local whiteboard.
+- Language and image help: the full concept responds to participant input with AI assistance. Round 1 uses checked images and labelled multilingual starters prepared in advance. Participant messages stay outside AI services.
+- Postcard: the full concept can revise an image after clarification. In Round 1, a selected original message and prepared image are combined manually.
+- Keep the result: Round 1 allows optional own-card paper copies. Digital delivery, a physical conversation board and an integrated printer are options for later development.
+
+What this round helps us decide: whether the activities are understandable and worthwhile, what participants draw on when discussing authenticity or cultural understanding, and which direction to develop next. Later iterations examine live AI responsiveness and language assistance.
 
 ### Round 1 A · What the table could look like
 
@@ -50,7 +68,7 @@ For later iterations: develop and examine live language and image assistance.
 
 ### Round 1 B · What the local whiteboard could look like
 
-![A Round 1 local whiteboard keeps full original-language messages and replies next to postcards derived from selected messages and prepared AI images](../assets/design/round1-b-mockup.png)AI-generated illustrative mockup. Round 1 B: the researcher combines a selected original message and prepared image. The full thread remains in its own area. Own-card paper copies exclude other people’s replies. The textile patterns and messages are invented. Click to enlarge.- Read earlier original-language messages and add a comment or reply.
+![A Round 1 local whiteboard keeps full original-language messages and replies next to postcards derived from selected messages and prepared AI images](../assets/design/round1-b-mockup.png)AI-generated illustrative mockup. Round 1 B: the researcher combines a selected original message and prepared image. The full thread remains in its own area. The paper card illustrates a possible own-card copy. Instant printing is a later implementation option. Own-card copies exclude other people’s replies. The textile patterns and messages are invented. Click to enlarge.- Read earlier original-language messages and add a comment or reply.
 - Choose one message and a prepared image for a related postcard.
 - Keep both areas visible and give private questionnaire feedback.
 Open the Round 1 process overview![Round 1: A material arrangement and optional caption, B full conversation and a related postcard, anonymous feedback and optional own-card paper copies](../assets/design/round1-overview.svg)Round 1 only. Prepared content and manual simulation explore the two probe concepts. Participants’ original words remain outside AI services.

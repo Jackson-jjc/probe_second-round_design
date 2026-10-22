@@ -1,83 +1,16 @@
 {
-  "version": "2026-10-23-visual-clarity",
-  "checked": "2026-10-23",
-  "language": "en",
-  "protocol": "ERGO 117392 V1.0, 22 October 2026",
-  "five_probe_rows": 5,
-  "original_passages": 13,
-  "book_figures": 6,
-  "paper_figures": 4,
-  "design_figures": 8,
-  "ai_mockups": 4,
-  "questions": 4,
-  "forms": 0,
-  "diagramChecks": [
-    {
-      "file": "a-concept-storyboard.svg",
-      "width": 1440,
-      "height": 760,
-      "outside": []
-    },
-    {
-      "file": "a-data-flow.svg",
-      "width": 1440,
-      "height": 780,
-      "outside": []
-    },
-    {
-      "file": "b-postcard-flow.svg",
-      "width": 1440,
-      "height": 780,
-      "outside": []
-    },
-    {
-      "file": "b-postcard-preview.svg",
-      "width": 1440,
-      "height": 820,
-      "outside": []
-    },
-    {
-      "file": "round1-overview.svg",
-      "width": 1440,
-      "height": 820,
-      "outside": []
-    }
+  "version": "2026-10-23-full-concepts",
+  "tables": 1,
+  "rows": 5,
+  "quotes": 13,
+  "mockups": 5,
+  "protocol_questions_exact": true,
+  "anchors": true,
+  "viewport_widths": [
+    1440,
+    768,
+    390,
+    360
   ],
-  "geometry": [
-    {
-      "width": 1440,
-      "scrollWidth": 1440
-    },
-    {
-      "width": 1024,
-      "scrollWidth": 1024
-    },
-    {
-      "width": 768,
-      "scrollWidth": 768
-    },
-    {
-      "width": 390,
-      "scrollWidth": 390
-    },
-    {
-      "width": 360,
-      "scrollWidth": 360
-    }
-  ],
-  "browser_errors": [],
-  "local_resource_failures": [],
-  "checks": [
-    "working concepts restored before the separate Round 1 section",
-    "latest optional A caption and full B conversation retained",
-    "exact submitted questionnaire wording",
-    "first-stage sample, duration and manual simulation",
-    "postcards and own-card paper copies",
-    "retained and excluded data",
-    "no old image codes or old trial counts",
-    "13 original passage controls",
-    "all internal anchors",
-    "responsive desktop and mobile layout",
-    "legacy storyboard URL now shows the corrected AI concept mockup"
-  ]
+  "errors": []
 }

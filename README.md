@@ -2,13 +2,13 @@
 
 [Read the research design website](https://jackson-jjc.github.io/probe_second-round_design/)
 
-Version **2026-10-23-visual-clarity**. Five starting ideas led to two working probe concepts. Round 1 is their first low-fidelity exploration. Feedback will refine the directions, support further iterations and inform eventual selection.
+Version **2026-10-23-full-concepts**. Five starting ideas led to two working probe concepts. Round 1 is their first low-fidelity exploration. Feedback will refine the directions, support further iterations and inform eventual selection.
 
 ## The two working concepts
 
-**[A · Make with AI on My Cuff or Bag](docs/PROBE_A.md)** investigates: How do people maintain or revise their understandings of authenticity through interaction with AI and cultural heritage? The intended interaction links a source pattern, an approved local photograph, a live AI preview and a physical adjustment that guides the next preview. A cuff or bag is one presentation form.
+**[A · Make with AI on My Cuff or Bag](docs/PROBE_A.md)** investigates: How do people maintain or revise their understandings of authenticity through interaction with AI and cultural heritage? The intended interaction begins with assembling ordinary materials. An approved photograph of the arrangement and a named textile reference enter AI together. The person rearranges, photographs again and compares the response. A cuff or bag is one presentation form.
 
-**[B · One Object, Two Interpretations](docs/PROBE_B.md)** investigates: How do people express and negotiate their understanding of a shared heritage object through AI-mediated cross-cultural exchange? AI language and image assistance support expression, real replies and clarification. The conversation stays visible alongside related postcards.
+**[B · One Object, Two Interpretations](docs/PROBE_B.md)** investigates: How do people express and negotiate their understanding of a shared heritage object through AI-mediated cross-cultural exchange? AI language and image assistance support expression, real replies and clarification. The conversation stays visible alongside related postcards. Digital interfaces and paper boards with a small AI screen are two implementation options. Integrated printing is a possible later addition.
 
 These are developing concepts. The website distinguishes their intended AI interactions and possible future research records from the implementation and collection limits of each prototype round. Diagram labels use ordinary step names.
 
@@ -39,6 +39,6 @@ Build with `python build_site.py`. Preview with `python -m http.server 8767 --bi
 
 ## Visual mockups · 23 October 2026
 
-Four built-in image_gen illustrations show the working A and B concepts and their distinct Round 1 setups. Textile motifs, messages and interface details in these images are invented for explanation. Existing research and book figures remain unchanged. The corrected A picture keeps the physical cuff plain and adds the pattern only in screen previews.
+Five built-in image_gen illustrations show the working A and B concepts and their distinct Round 1 setups. Textile motifs, messages and interface details in these images are invented for explanation. Existing research and book figures remain unchanged. The A picture now shows material assembly, approved photography, both AI inputs and a second response. B also has a hybrid paper-board illustration with a separately labelled later printer option.
 
-Current assets: `assets/design/a-concept-mockup.png`, `assets/design/b-concept-mockup.png`, `assets/design/round1-a-mockup.png` and `assets/design/round1-b-mockup.png`. The existing storyboard URL also shows the corrected A mockup. Plain-language flow diagrams remain available in expandable sections. [Prompts and correction instructions](data/design-image-prompts.json).
+Current assets: `assets/design/a-concept-mockup.png`, `assets/design/b-concept-mockup.png`, `assets/design/round1-a-mockup.png` `assets/design/round1-b-mockup.png` and `assets/design/b-hybrid-mockup.png`. The existing storyboard URL also shows the corrected A mockup. Plain-language flow diagrams remain available in expandable sections. [Prompts and correction instructions](data/design-image-prompts.json).

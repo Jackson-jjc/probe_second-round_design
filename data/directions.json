@@ -6,37 +6,37 @@
     "origin": "Developed from Probe 2",
     "focus": "Material action & authenticity",
     "time": "Working concept · timing to develop",
-    "sentence": "Explore a source pattern on a cuff or bag, respond to the AI preview with a material action, then compare what changes.",
+    "sentence": "Arrange materials, photograph your composition, and let AI combine it with a textile source. Rearrange and compare the next response.",
     "rq": "How do people maintain or revise their understandings of authenticity through interaction with AI and cultural heritage?",
-    "purpose": "A explores how material actions and AI image responses affect a person’s understanding of authenticity. A named textile object supplies the source. The cuff or bag is one everyday way to encounter its patterns.",
+    "purpose": "A explores how people maintain or change their understanding of authenticity while making with AI and a named textile source. People express an interpretation by assembling ordinary materials. A cuff or bag provides an everyday setting for the digital result.",
     "steps": [
       [
-        "Choose a source and item",
-        "Read the textile object’s information and select a detail. Choose a cuff or bag area, with a study item available."
+        "Look at the textile source",
+        "Read the named object’s image and checked background. Choose a detail you want to work with."
       ],
       [
-        "Approve a small photograph",
-        "Place the chosen area in the fixed tabletop window. Check and approve the local photograph."
+        "Make your own arrangement",
+        "Place, overlap, join or fold ordinary fabric, paper strips and shapes on a small tabletop mat. Use the arrangement to express something you see or understand in the textile."
       ],
       [
-        "See AI’s first preview",
-        "AI combines the source detail and approved photograph to propose a digital pattern preview."
+        "Photograph the arrangement",
+        "Check the camera preview and approve a photograph of your composition. This photograph is the input that carries your material choices to AI."
       ],
       [
-        "Make a physical response",
-        "Fold, flatten or reposition the material after seeing the preview. Approve another local photograph, or keep the current result."
+        "See AI combine both inputs",
+        "AI uses the named textile reference and your approved arrangement photograph to propose an adaptation. View it on a cuff or bag image. Keep the source, arrangement photo and AI result visible together."
       ],
       [
-        "Compare and explain",
-        "Compare the two actual previews. Point to a change and explain what it carries from the source or your own experience."
+        "Rearrange and get another response",
+        "Move, separate, overlap or fold the materials after seeing the result. Approve a new photograph. AI uses the same source and this new input to produce the next version. Compare the two results, or keep the first."
       ],
       [
-        "Reflect and keep the result",
-        "Discuss the clearly labelled future museum arrangement and keep a source-credited visual record."
+        "Explain and keep a result",
+        "Point to what connects the result to the textile and what carries your own interpretation. Discuss the proposed future museum label and keep a source-credited visual record."
       ]
     ],
-    "ai": "In the working concept, AI adapts a named source pattern to an approved local cuff or bag photograph. The person’s next fold or position change becomes the next input. The source, photograph and AI preview remain visible together.",
-    "noai": "The concept includes a route using the source and local item without generation. The person can keep a plain source-labelled record. Round 1 separately permits skipping or discarding drafts under its submitted protocol.",
+    "ai": "AI is a visual partner responding to a person’s material composition. It combines two inputs: the named textile reference and an approved photograph of the person’s arrangement. Rearranging and photographing again guides the next response. The digital cuff or bag is a presentation setting for that response.",
+    "noai": "People can explore the source and make a material composition without generation, then keep a source-labelled record. Round 1 separately allows skipping activities and discarding drafts under its submitted protocol.",
     "theory": [
       [
         "Connections between people and objects",
@@ -54,7 +54,7 @@
       ],
       [
         "Action and response",
-        "We examine whether a visitor can see how their material action affects AI, guide the next image and decide when the result no longer fits the source. Embodied generation already has published precedents.",
+        "Follow how a person expresses an interpretation with materials, sees how AI handles it and changes the next input. Ask how they judge the resulting connection to the textile. Art Morph and embodied-generation studies provide close interaction precedents.",
         [
           22,
           29,
@@ -62,7 +62,7 @@
         ]
       ]
     ],
-    "future": "Imagine a museum that shares a textile work as changing digital patterns for visitors’ own cuffs and bags. Its label says “Each version continues the original work”. Looking at your two previews, what would you keep, change or rename in that museum?",
+    "future": "Imagine a museum that lets visitors assemble materials and use AI to carry a textile work into everyday patterns. Its label says “Each version continues the original work”. Looking at your arrangement and the two previews, what would you keep, change or rename in that museum?",
     "speculation": "The two actual previews and the clearly fictional label make this future museum concrete. Visitors can discuss how personal use carries a source forward, what should remain recognisable and how the artist and source should be credited. Their own answer guides the discussion.",
     "quotenums": [
       1,
@@ -73,11 +73,11 @@
       10,
       11
     ],
-    "record": "For a later working-prototype study, a proposed record could link the source, approved photographs, AI previews, physical adjustments and participant explanations. The collection method would be specified in that study’s protocol. Round 1 uses the smaller, separate data set described below.",
-    "analysis": "The working-prototype research would follow how people connect their actions, AI responses, the source work and their own experience. Round 1 first gathers written authenticity reflections, optional captions and source/image choices.",
+    "record": "For a later study of the full interaction, a proposed record could link the source, approved arrangement photographs, actual AI outputs, material changes and participant explanations. That later protocol would specify collection and storage. Round 1 retains the separate anonymous data listed below.",
+    "analysis": "Follow how a person’s arrangement, AI’s interpretation and the next material change affect what they see as connected to the source. Round 1 gathers questionnaire reflections, optional captions and source/image choices to refine this activity.",
     "value": "The candidate contribution is an account of how visitors maintain or change their grounds for a connection to one named heritage object during material interaction with AI. The interaction technique has close precedents. A contribution would need evidence from the action sequence and the visitor’s reasons.",
-    "setup": "One permitted source detail and fact card, a fixed camera, a small tabletop window, one screen and one image-conditioned generation service. Visitors choose a cuff or bag corner. A plain study cuff or bag panel provides an alternative. Begin with two deliberate captures.",
-    "broad": "Offer seated access, a plain study item and a helper who follows the visitor’s directions. People can point, speak or select a prepared outline. Explain and record the chosen capture route. AI use remains a choice.",
+    "setup": "A permitted textile reference and fact card, ordinary fabric and paper pieces, a small tabletop mat, a fixed camera and one screen with an image-generation service. A prepared cuff or bag image can provide the output setting. Photograph the arrangement itself. A personal-item photograph is an optional later input choice.",
+    "broad": "Offer seated access, large easy-to-handle pieces, prepared outlines and a helper who follows the participant’s directions. People can arrange, point or describe a placement. A prepared everyday-item image supports participation without using a personal item.",
     "checkpoint": "Use Round 1 feedback to refine the task, examples and research prompts. Later iterations can test the live action-and-response loop and choose a detailed study method.",
     "refs": [
       1,
@@ -99,34 +99,34 @@
     "time": "Working concept · timing to develop",
     "sentence": "Exchange interpretations of the same object across languages, clarify the meaning, and develop a postcard that carries the exchange forward.",
     "rq": "How do people express and negotiate their understanding of a shared heritage object through AI-mediated cross-cultural exchange?",
-    "purpose": "B explores expression and negotiation across cultural perspectives. The shared object anchors the conversation. AI offers language and image assistance, while original messages, real replies and clarifications remain visible. A related postcard develops from the exchange.",
+    "purpose": "B explores expression, understanding and negotiation around one shared heritage object. People contribute interpretations, receive real replies and clarify meaning with AI language and image assistance. A related postcard develops from the conversation. The exchange can use a digital interface or paper notes with a small AI screen.",
     "steps": [
       [
         "Share one named object",
-        "Use the same object image, selected detail and checked information. An approved cuff or bag photograph can provide a personal visual setting."
+        "Use the same named object image, selected detail and checked information. Display them on a screen or on a physical board."
       ],
       [
         "Express an interpretation",
-        "Write or say what the object means to you in your own language. Check the original words."
+        "Write or say what the object means to you in your own language. Use a message field or a paper note. Check the original words before any AI assistance."
       ],
       [
         "Develop and share a draft",
-        "AI assists with translation and a source-related image preview. Original words, labelled translation and source remain visible."
+        "AI assists with a translation and a source-related image preview. Check the wording and image. Keep original words and labelled assistance together on screen or on adjacent paper notes."
       ],
       [
         "Receive a real response",
-        "Another person reads the source and interpretation, then replies, asks a question or offers a different reading."
+        "Another person reads the source and your interpretation, then replies or asks a question. They may use the interface or add a connected paper note. Different cultural perspectives can meet in one place."
       ],
       [
         "Clarify and update",
-        "Keep the conversation visible. Clarify the words and, when useful, revise the associated image and postcard. Different interpretations can remain."
+        "Keep the conversation visible. Clarify your meaning after the reply and, when useful, revise the associated image. Select your own message to connect the exchange to a postcard. Different interpretations can remain."
       ],
       [
         "Keep a connected postcard",
-        "Choose the postcard linked to the exchange. The concept includes download or optional email delivery, with the delivery method to be specified for a later study."
+        "Keep a visual postcard linked to the source and your selected message. Later implementation options include a digital copy and a printed postcard. A printer is a possible future addition. Delivery arrangements will be specified for that stage."
       ]
     ],
-    "ai": "In the working concept, AI bridges languages and helps visualise an interpretation. It can assist a translation or image revision after a real response. People check their own expression and retain the original messages and conversation.",
+    "ai": "AI bridges languages and helps visualise an interpretation. People check suggested translations and images, receive a real human reply and clarify their meaning. This role can work through a digital interface or a small screen beside a physical conversation board.",
     "noai": "Use direct language skills or study-team translation and a plain postcard showing the source, local-item reference and checked words. The real reply and clarification still develop that same card. Choose translation, image generation and delivery separately.",
     "theory": [
       [
@@ -167,8 +167,8 @@
     "record": "A later working-prototype study could link original messages, translations, real replies, clarifications and related postcard versions. Approved local photographs and delivery choices would need their own specified handling. Round 1 collects the anonymous text and existing-image references listed in its protocol.",
     "analysis": "The working concept asks how meanings travel through expression, AI assistance, another person’s reply and clarification. Round 1 uses original messages, reply relationships, related postcards and questionnaire reflections to refine that activity.",
     "value": "The candidate contribution is an account of how a source-related personal meaning develops through a multilingual conversation around one AI-assisted visual postcard. Its draft and revision show how people recognise, question and clarify each other’s interpretations. The final card keeps the outcome of that same process.",
-    "setup": "A shared digital source, a conversation interface, language and image assistance, a real reply channel and a linked postcard view. A local cuff/bag image can use the same small capture station as A. The implementation and delivery method will develop through later iterations.",
-    "broad": "The concept supports different languages, individual participation, help with input and a plain-card route. Round 1 starts with adult ECS staff and students, using prepared content and a local whiteboard.",
+    "setup": "Two implementation options share the same interaction: a digital conversation interface, or a physical board with paper messages and a small AI-assistance screen. In the hybrid option, the participant or facilitator enters the chosen words for AI, the participant checks the result, and the original note stays visible. A cuff/bag image can be an optional visual setting. A printer may be added in a later version.",
+    "broad": "Offer paper or digital expression, different languages, help with input and participation without a personal device. People can respond to an earlier contribution or a person present. A later digital version can retain a paper entry route.",
     "checkpoint": "Use Round 1 to improve the conversation and postcard relationship. Later iterations can test live language and image assistance and specify the study procedure.",
     "refs": [
       1,

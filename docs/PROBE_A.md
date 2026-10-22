@@ -2,43 +2,43 @@
 
 Developed from Probe 2. Working concept under iterative development. See [Round 1](FIRST_STAGE_TEST.md) for the first low-fidelity implementation.
 
-Explore a source pattern on a cuff or bag, respond to the AI preview with a material action, then compare what changes.
+Arrange materials, photograph your composition, and let AI combine it with a textile source. Rearrange and compare the next response.
 
 ## Research question
 
 How do people maintain or revise their understandings of authenticity through interaction with AI and cultural heritage?
 
-A explores how material actions and AI image responses affect a person’s understanding of authenticity. A named textile object supplies the source. The cuff or bag is one everyday way to encounter its patterns.
+A explores how people maintain or change their understanding of authenticity while making with AI and a named textile source. People express an interpretation by assembling ordinary materials. A cuff or bag provides an everyday setting for the digital result.
 
 ## Intended probe interaction
 
-1. **Choose a source and item.** Read the textile object’s information and select a detail. Choose a cuff or bag area, with a study item available.
+1. **Look at the textile source.** Read the named object’s image and checked background. Choose a detail you want to work with.
 
-2. **Approve a small photograph.** Place the chosen area in the fixed tabletop window. Check and approve the local photograph.
+2. **Make your own arrangement.** Place, overlap, join or fold ordinary fabric, paper strips and shapes on a small tabletop mat. Use the arrangement to express something you see or understand in the textile.
 
-3. **See AI’s first preview.** AI combines the source detail and approved photograph to propose a digital pattern preview.
+3. **Photograph the arrangement.** Check the camera preview and approve a photograph of your composition. This photograph is the input that carries your material choices to AI.
 
-4. **Make a physical response.** Fold, flatten or reposition the material after seeing the preview. Approve another local photograph, or keep the current result.
+4. **See AI combine both inputs.** AI uses the named textile reference and your approved arrangement photograph to propose an adaptation. View it on a cuff or bag image. Keep the source, arrangement photo and AI result visible together.
 
-5. **Compare and explain.** Compare the two actual previews. Point to a change and explain what it carries from the source or your own experience.
+5. **Rearrange and get another response.** Move, separate, overlap or fold the materials after seeing the result. Approve a new photograph. AI uses the same source and this new input to produce the next version. Compare the two results, or keep the first.
 
-6. **Reflect and keep the result.** Discuss the clearly labelled future museum arrangement and keep a source-credited visual record.
+6. **Explain and keep a result.** Point to what connects the result to the textile and what carries your own interpretation. Discuss the proposed future museum label and keep a source-credited visual record.
 
 ## AI’s role
 
-In the working concept, AI adapts a named source pattern to an approved local cuff or bag photograph. The person’s next fold or position change becomes the next input. The source, photograph and AI preview remain visible together.
+AI is a visual partner responding to a person’s material composition. It combines two inputs: the named textile reference and an approved photograph of the person’s arrangement. Rearranging and photographing again guides the next response. The digital cuff or bag is a presentation setting for that response.
 
 ## Participation choices
 
-The concept includes a route using the source and local item without generation. The person can keep a plain source-labelled record. Round 1 separately permits skipping or discarding drafts under its submitted protocol.
+People can explore the source and make a material composition without generation, then keep a source-labelled record. Round 1 separately allows skipping activities and discarding drafts under its submitted protocol.
 
 ## Smallest working set-up
 
-One permitted source detail and fact card, a fixed camera, a small tabletop window, one screen and one image-conditioned generation service. Visitors choose a cuff or bag corner. A plain study cuff or bag panel provides an alternative. Begin with two deliberate captures.
+A permitted textile reference and fact card, ordinary fabric and paper pieces, a small tabletop mat, a fixed camera and one screen with an image-generation service. A prepared cuff or bag image can provide the output setting. Photograph the arrangement itself. A personal-item photograph is an optional later input choice.
 
 ## Broad participation
 
-Offer seated access, a plain study item and a helper who follows the visitor’s directions. People can point, speak or select a prepared outline. Explain and record the chosen capture route. AI use remains a choice.
+Offer seated access, large easy-to-handle pieces, prepared outlines and a helper who follows the participant’s directions. People can arrange, point or describe a placement. A prepared everyday-item image supports participation without using a personal item.
 
 ## Theory and HCI
 
@@ -46,11 +46,11 @@ Offer seated access, a plain study item and a helper who follows the visitor’s
 
 **Looking alike and having a real link.** A similar shape is one possible reason. A known maker, source or history gives another kind of link. The personal item and original work each retain their own materials and histories. [2]
 
-**Action and response.** We examine whether a visitor can see how their material action affects AI, guide the next image and decide when the result no longer fits the source. Embodied generation already has published precedents. [22] [29] [30]
+**Action and response.** Follow how a person expresses an interpretation with materials, sees how AI handles it and changes the next input. Ask how they judge the resulting connection to the textile. Art Morph and embodied-generation studies provide close interaction precedents. [22] [29] [30]
 
 ## Speculation in the probe concept
 
-Imagine a museum that shares a textile work as changing digital patterns for visitors’ own cuffs and bags. Its label says “Each version continues the original work”. Looking at your two previews, what would you keep, change or rename in that museum?
+Imagine a museum that lets visitors assemble materials and use AI to carry a textile work into everyday patterns. Its label says “Each version continues the original work”. Looking at your arrangement and the two previews, what would you keep, change or rename in that museum?
 
 ## Where speculation enters
 
@@ -58,11 +58,11 @@ The two actual previews and the clearly fictional label make this future museum 
 
 ## Participant input and data
 
-For a later working-prototype study, a proposed record could link the source, approved photographs, AI previews, physical adjustments and participant explanations. The collection method would be specified in that study’s protocol. Round 1 uses the smaller, separate data set described below.
+For a later study of the full interaction, a proposed record could link the source, approved arrangement photographs, actual AI outputs, material changes and participant explanations. That later protocol would specify collection and storage. Round 1 retains the separate anonymous data listed below.
 
 ## Analysis
 
-The working-prototype research would follow how people connect their actions, AI responses, the source work and their own experience. Round 1 first gathers written authenticity reflections, optional captions and source/image choices.
+Follow how a person’s arrangement, AI’s interpretation and the next material change affect what they see as connected to the source. Round 1 gathers questionnaire reflections, optional captions and source/image choices to refine this activity.
 
 ## Candidate contribution
 
@@ -74,28 +74,32 @@ Use Round 1 feedback to refine the task, examples and research prompts. Later it
 
 ## Working concept guide
 
-### The working A concept
+### Full A concept · Make, photograph and respond
 
-A person’s material action guides AI’s next visual response. Place one cuff or bag area in a small fixed camera window. Keep the named source, approved local photograph and AI preview visible together. A study item or prepared input offers another way to join.
+Your arrangement is an input to AI. Assemble ordinary fabric and paper in response to the textile. Photograph the composition, then let AI combine that photo with the named source. A cuff or bag image gives the result an everyday setting.
 
-![Three intended A concept scenes show a plain physical cuff, a digital textile-pattern preview, a fold and comparison of the next AI preview](../assets/design/a-concept-mockup.png)AI-generated illustrative mockup. Working A concept: a physical fold guides the next digital preview. The real cuff remains plain. Round 1 uses prepared examples. The textile patterns and messages are invented. Click to enlarge.
-- See: compare the source with the first digital preview.
-- Act: fold or reposition the plain material.
-- Explain: compare the response and say what keeps a connection to the source.
+![Full A in four scenes: arrange loose materials, approve a photograph, combine the textile source and arrangement photo with AI, then rearrange and compare the next response](../assets/design/a-concept-mockup.png)AI-generated illustration of the full concept. The arrangement photo and textile reference are both inputs. The bag is the digital output setting. Invented motifs illustrate the process. Round 1 uses prepared examples to explore this idea. Click to enlarge.
+- Make and capture: express an interpretation with materials and approve its photograph.
+- See a response: compare the source, your arrangement and AI’s adaptation.
+- Act again: rearrange, photograph again and compare what changes.
 
-### The intended sequence, with plain labels
+### What enters AI and what comes back
 
-Open A’s step-by-step diagram![Source object and first photo lead to a first AI preview, a physical adjustment, a second photo and next AI preview, then a participant explanation](../assets/design/a-data-flow.svg)The earlier letter codes have been replaced by names. Photographs and model responses belong to the working concept. This round’s collection limits are specified in Round 1.
+The source image supplies a particular textile and its visual details. Your arrangement photo supplies the composition you made. AI proposes how the two can become a new visual adaptation. Changing the arrangement gives AI a new input. The interface keeps these steps visible so you can recognise, question and guide its response.
+
+Open A’s step-by-step diagram![Named textile and approved material arrangement photograph enter AI, followed by rearrangement, another photograph, a new result and comparison](../assets/design/a-data-flow.svg)Full concept. The capture and live response are developed in later iterations. The first-round version is described below.
 
 ### How authenticity enters A
 
-Ask what the person keeps or changes in their understanding of authenticity as the source pattern enters a new material and personal setting. They may draw on resemblance, a maker’s history, a material relationship or something from their own life. Treat liking, control and authenticity as separate judgments. [1] [2]
+Ask how the person understands their connection to the textile as they make, see AI’s response and change the materials. A recognisable motif, the maker’s history, the act of making or a personal memory may matter. Follow the participant’s reasons for keeping or revising that understanding. [1] [2]
+
+For example, a person keeps two parallel lines in their arrangement because the spacing feels important. AI changes that spacing. The person can explain what this does to their connection with the textile and move the pieces before the next response. This is an illustrative prompt for the full concept.
 
 ### The connection to Art Morph
 
-Art Morph already links physical materials, a camera and generated images. A builds its research focus around a named heritage source and people’s reasons for maintaining or revising what feels authentic. The potential contribution is an account of that process, developed through iterative research. Body Prompting and A(I)Cam provide further embodied-generation precedents. [22] [29] [30] [31]
+Art Morph already connects physical materials, a camera and generated art. A uses a named textile source to examine how people maintain or revise their understanding of authenticity through that kind of interaction. The research follows the arrangement, AI response, next action and the person’s reasons. Body Prompting and A(I)Cam provide further embodied-generation precedents. [22] [29] [30] [31]
 
-First prototype round: see how prepared examples and material arrangement explore A in Round 1 →
+First prototype round: see how actual arrangement and prepared examples simulate this sequence →
 
 
 [Detailed Huayao evidence and reasoning for A](EVIDENCE_FOR_A.md)

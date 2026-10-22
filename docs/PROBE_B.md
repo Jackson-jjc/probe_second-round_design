@@ -8,25 +8,25 @@ Exchange interpretations of the same object across languages, clarify the meanin
 
 How do people express and negotiate their understanding of a shared heritage object through AI-mediated cross-cultural exchange?
 
-B explores expression and negotiation across cultural perspectives. The shared object anchors the conversation. AI offers language and image assistance, while original messages, real replies and clarifications remain visible. A related postcard develops from the exchange.
+B explores expression, understanding and negotiation around one shared heritage object. People contribute interpretations, receive real replies and clarify meaning with AI language and image assistance. A related postcard develops from the conversation. The exchange can use a digital interface or paper notes with a small AI screen.
 
 ## Intended probe interaction
 
-1. **Share one named object.** Use the same object image, selected detail and checked information. An approved cuff or bag photograph can provide a personal visual setting.
+1. **Share one named object.** Use the same named object image, selected detail and checked information. Display them on a screen or on a physical board.
 
-2. **Express an interpretation.** Write or say what the object means to you in your own language. Check the original words.
+2. **Express an interpretation.** Write or say what the object means to you in your own language. Use a message field or a paper note. Check the original words before any AI assistance.
 
-3. **Develop and share a draft.** AI assists with translation and a source-related image preview. Original words, labelled translation and source remain visible.
+3. **Develop and share a draft.** AI assists with a translation and a source-related image preview. Check the wording and image. Keep original words and labelled assistance together on screen or on adjacent paper notes.
 
-4. **Receive a real response.** Another person reads the source and interpretation, then replies, asks a question or offers a different reading.
+4. **Receive a real response.** Another person reads the source and your interpretation, then replies or asks a question. They may use the interface or add a connected paper note. Different cultural perspectives can meet in one place.
 
-5. **Clarify and update.** Keep the conversation visible. Clarify the words and, when useful, revise the associated image and postcard. Different interpretations can remain.
+5. **Clarify and update.** Keep the conversation visible. Clarify your meaning after the reply and, when useful, revise the associated image. Select your own message to connect the exchange to a postcard. Different interpretations can remain.
 
-6. **Keep a connected postcard.** Choose the postcard linked to the exchange. The concept includes download or optional email delivery, with the delivery method to be specified for a later study.
+6. **Keep a connected postcard.** Keep a visual postcard linked to the source and your selected message. Later implementation options include a digital copy and a printed postcard. A printer is a possible future addition. Delivery arrangements will be specified for that stage.
 
 ## AI’s role
 
-In the working concept, AI bridges languages and helps visualise an interpretation. It can assist a translation or image revision after a real response. People check their own expression and retain the original messages and conversation.
+AI bridges languages and helps visualise an interpretation. People check suggested translations and images, receive a real human reply and clarify their meaning. This role can work through a digital interface or a small screen beside a physical conversation board.
 
 ## Participation choices
 
@@ -34,11 +34,11 @@ Use direct language skills or study-team translation and a plain postcard showin
 
 ## Smallest working set-up
 
-A shared digital source, a conversation interface, language and image assistance, a real reply channel and a linked postcard view. A local cuff/bag image can use the same small capture station as A. The implementation and delivery method will develop through later iterations.
+Two implementation options share the same interaction: a digital conversation interface, or a physical board with paper messages and a small AI-assistance screen. In the hybrid option, the participant or facilitator enters the chosen words for AI, the participant checks the result, and the original note stays visible. A cuff/bag image can be an optional visual setting. A printer may be added in a later version.
 
 ## Broad participation
 
-The concept supports different languages, individual participation, help with input and a plain-card route. Round 1 starts with adult ECS staff and students, using prepared content and a local whiteboard.
+Offer paper or digital expression, different languages, help with input and participation without a personal device. People can respond to an earlier contribution or a person present. A later digital version can retain a paper entry route.
 
 ## Theory and HCI
 
@@ -74,7 +74,7 @@ Use Round 1 to improve the conversation and postcard relationship. Later iterati
 
 ## Working concept guide
 
-### The working B concept
+### Full B concept · Exchange, clarify and keep a result
 
 AI helps people express and negotiate interpretations of the same object across languages and cultural perspectives. Original messages, real responses and clarifications remain visible. A related visual postcard carries a selected interpretation from the exchange.
 
@@ -90,13 +90,27 @@ Use one selected message as the link between conversation and postcard. AI can a
 
 Open the conversation-to-postcard layout sketch![Full conversation alongside a related postcard with an Image column and a Text column](../assets/design/b-postcard-preview.svg)Illustrative layout with invented messages and patterns. The card links to a message. The full conversation remains visible alongside it.
 
+### Two ways to host the same exchange
+
+### Digital version
+
+A screen holds the source, original messages, labelled AI assistance, replies and related postcards. People can follow and clarify the conversation in one place.
+
+### Paper board with AI assistance
+
+Place the source and original paper notes on a physical board. A small screen provides translation and image assistance. The participant or facilitator enters chosen words, then the participant checks the result. Keep the original note beside the labelled translation and connect paper replies visibly.
+
+Both forms follow expression, AI assistance, a real reply and clarification. A digital version can develop over later iterations while retaining a paper route for people who prefer it.
+
+![Future B option with physical paper messages and replies beside an AI assistance screen, plus a separately labelled later printed-postcard option](../assets/design/b-hybrid-mockup.png)AI-generated illustration of a future B option. Paper notes carry the conversation and a small screen supplies AI assistance. The printer inset shows a possible later addition. Patterns and messages are invented. Round 1 follows the submitted local-whiteboard procedure. Click to enlarge.
+
 ### What B investigates
 
 B focuses on cross-cultural expression, understanding and negotiation. A person may recognise their own voice, encounter a different interpretation or clarify a detail. Relational authenticity and work on personal voice help distinguish these experiences from historical accuracy and translation fluency. [1] [3] [8] [9] [17]
 
 ### Keeping the outcome
 
-The working concept includes a personal postcard people can retain after the exchange. Download or optional email delivery can be developed with an appropriate later procedure. Round 1 offers paper copies of participants’ own cards and collects no contacts. [15] [26]
+A personal postcard can carry a selected interpretation after the exchange. A later version could provide a digital copy or a printed postcard. An on-site printer is one future option. Round 1 permits optional paper copies of participants’ own cards. Its protocol describes manual card assembly and leaves the printing arrangements to preparation. Instant printing is not a promised Round 1 feature. [15] [26]
 
 First prototype round: see the local conversation and prepared-image postcard used in Round 1 →
 

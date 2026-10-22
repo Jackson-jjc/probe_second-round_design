@@ -28,6 +28,10 @@ Prepare low-fidelity prototypes of A and B for ERGO 117392. Use prepared AI exam
 
 Present the five-to-two selection, the two concepts and their first prototype round separately. Use Round 1 feedback to improve the directions, develop further iterations and later choose which direction to pursue.
 
+## Full concepts and first prototypes · 23 Oct 2026
+
+Clarify A’s arrangement, photograph and AI response. B can use digital exchange or a physical board with AI assistance, with printing as a later option. Map each activity to Round 1 while retaining the submitted protocol.
+
 ## Selection criterion
 
 Reduce barriers of knowledge, language, manual skill, arriving alone and willingness to use AI. Prototype feedback helps identify useful participation improvements.

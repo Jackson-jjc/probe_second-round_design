@@ -39,3 +39,7 @@ main>section:not(.hero){padding:70px 0;border-top:1px solid var(--line)}.section
 @media print{.ai-mockup img{max-height:390px;object-fit:contain}.mockup-steps li{font-size:9pt}.study-record-summary{padding:12px}}
 
 .round1-mockups>[id]{scroll-margin-top:var(--offset)}
+
+.concept-round-map{margin:32px 0;padding:24px 0;border-top:1px solid var(--line)}.concept-round-map article{padding:0 15px}.concept-round-map li{margin-bottom:16px}.concept-round-map h4{font-size:22px}
+
+#concept-round-map{scroll-margin-top:var(--offset)}
