@@ -78,11 +78,14 @@ Use Round 1 feedback to refine the task, examples and research prompts. Later it
 
 A person’s material action guides AI’s next visual response. Place one cuff or bag area in a small fixed camera window. Keep the named source, approved local photograph and AI preview visible together. A study item or prepared input offers another way to join.
 
-![Working A concept: approve a local photograph, see an AI preview, fold or reposition and compare the next response](../assets/design/a-concept-storyboard.svg)Working concept diagram with illustrative patterns. It explains the intended action-and-response loop. Round 1 uses the prepared examples described below.
+![Three intended A concept scenes show a plain physical cuff, a digital textile-pattern preview, a fold and comparison of the next AI preview](../assets/design/a-concept-mockup.png)AI-generated illustrative mockup. Working A concept: a physical fold guides the next digital preview. The real cuff remains plain. Round 1 uses prepared examples. The textile patterns and messages are invented. Click to enlarge.
+- See: compare the source with the first digital preview.
+- Act: fold or reposition the plain material.
+- Explain: compare the response and say what keeps a connection to the source.
 
-### Plain steps in the intended interaction
+### The intended sequence, with plain labels
 
-![Source object and first photo lead to a first AI preview, a physical adjustment, a second photo and next AI preview, then a participant explanation](../assets/design/a-data-flow.svg)The earlier letter codes have been replaced by names. Photographs and model responses belong to the working concept. This round’s collection limits are specified in Round 1.
+Open A’s step-by-step diagram![Source object and first photo lead to a first AI preview, a physical adjustment, a second photo and next AI preview, then a participant explanation](../assets/design/a-data-flow.svg)The earlier letter codes have been replaced by names. Photographs and model responses belong to the working concept. This round’s collection limits are specified in Round 1.
 
 ### How authenticity enters A
 

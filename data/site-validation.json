@@ -1,13 +1,14 @@
 {
-  "version": "2026-10-22-concepts-and-round1",
-  "checked": "2026-10-22",
+  "version": "2026-10-23-visual-clarity",
+  "checked": "2026-10-23",
   "language": "en",
   "protocol": "ERGO 117392 V1.0, 22 October 2026",
   "five_probe_rows": 5,
   "original_passages": 13,
   "book_figures": 6,
   "paper_figures": 4,
-  "design_figures": 5,
+  "design_figures": 8,
+  "ai_mockups": 4,
   "questions": 4,
   "forms": 0,
   "diagramChecks": [
@@ -77,6 +78,6 @@
     "13 original passage controls",
     "all internal anchors",
     "responsive desktop and mobile layout",
-    "legacy storyboard URL now shows the corrected working-concept diagram"
+    "legacy storyboard URL now shows the corrected AI concept mockup"
   ]
 }

@@ -32,3 +32,10 @@ main>section:not(.hero){padding:70px 0;border-top:1px solid var(--line)}.section
 
 .development-path{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:22px 26px;border:1px solid var(--line);background:#edf3ec;border-radius:8px;margin-bottom:25px}.development-path span{font-weight:650}.scope-note{max-width:970px;color:var(--muted);margin:18px 0 32px}.round-link{padding:18px;background:#edf3ec;border-radius:6px}.round-bridge{margin:32px 0}.round-bridge article{padding:25px;background:#fff;border:1px solid var(--line);border-radius:8px}.round-bridge h3{font-size:26px}.round-bridge p{font-size:16px}.round-bridge [id]{scroll-margin-top:var(--offset)}
 @media(max-width:760px){.development-path{padding:18px;font-size:14px}.round-bridge article{padding:19px}.round-bridge h3{font-size:23px}}
+
+/* Concrete scenario mockups alongside optional sequence diagrams. */
+.ai-mockup img{background:#e8e5dc}.ai-mockup a{display:block}.mockup-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 28px;padding-left:24px;margin:16px 0 28px}.mockup-steps li{font-size:15px;padding-left:3px}.diagram-detail{margin:20px 0 28px}.diagram-detail .design-figure{margin:20px 0 10px}.study-record-summary{padding:22px 25px;background:#fff;border-left:4px solid #58766d;margin:24px 0 30px}.study-record-summary p:last-child{margin-bottom:0}.round1-mockups>h3{font-size:28px;margin:38px 0 18px}.round1-mockups .ai-mockup{max-width:1100px;margin:20px auto}.round1-mockups figcaption{font-size:13px}
+@media(max-width:760px){.mockup-steps{grid-template-columns:1fr;gap:10px}.study-record-summary{padding:18px}.round1-mockups>h3{font-size:24px}.ai-mockup figcaption{font-size:12px}}
+@media print{.ai-mockup img{max-height:390px;object-fit:contain}.mockup-steps li{font-size:9pt}.study-record-summary{padding:12px}}
+
+.round1-mockups>[id]{scroll-margin-top:var(--offset)}

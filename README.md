@@ -2,7 +2,7 @@
 
 [Read the research design website](https://jackson-jjc.github.io/probe_second-round_design/)
 
-Version **2026-10-22-concepts-and-round1**. Five starting ideas led to two working probe concepts. Round 1 is their first low-fidelity exploration. Feedback will refine the directions, support further iterations and inform eventual selection.
+Version **2026-10-23-visual-clarity**. Five starting ideas led to two working probe concepts. Round 1 is their first low-fidelity exploration. Feedback will refine the directions, support further iterations and inform eventual selection.
 
 ## The two working concepts
 
@@ -36,3 +36,9 @@ Retain consent and questionnaire answers, A optional captions and source/image c
 Use permitted digital object images and checked information from the target venues. The textile shortlist includes Ian Giles’s Everyone Involved, shown at GHT in 2024. Verify the exact image and permission. The work’s source and collection context stay visible. Raw ethics forms, private records, full books and participant data are outside the public repository.
 
 Build with `python build_site.py`. Preview with `python -m http.server 8767 --bind 127.0.0.1`. The built page also opens directly from disk. Literature search cut-off and existing source credits are preserved. This update clarifies design levels and the latest protocol.
+
+## Visual mockups · 23 October 2026
+
+Four built-in image_gen illustrations show the working A and B concepts and their distinct Round 1 setups. Textile motifs, messages and interface details in these images are invented for explanation. Existing research and book figures remain unchanged. The corrected A picture keeps the physical cuff plain and adds the pattern only in screen previews.
+
+Current assets: `assets/design/a-concept-mockup.png`, `assets/design/b-concept-mockup.png`, `assets/design/round1-a-mockup.png` and `assets/design/round1-b-mockup.png`. The existing storyboard URL also shows the corrected A mockup. Plain-language flow diagrams remain available in expandable sections. [Prompts and correction instructions](data/design-image-prompts.json).

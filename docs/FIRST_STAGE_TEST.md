@@ -10,6 +10,10 @@ Prepared AI contentThe researcher checks examples before sessions and manually s
 
 One local whiteboardFull anonymous messages and replies remain in a conversation area, with related A/B postcards in a card area.
 
+What people evaluate in Round 1: the low-fidelity materials and local whiteboard. This website brings the probe concepts, project history and study plan together.
+
+Evidence for this round: anonymous questionnaire responses, A’s optional caption and source/image choices, and B’s original messages, replies and postcard links. Read the collection limits and analysis plan →
+
 A · CONCEPT TO ROUND 1
 
 ### Explore authenticity through material arrangement
@@ -38,7 +42,18 @@ What this helps us refine: how earlier messages, replies and images support expr
 
 For later iterations: develop and examine live language and image assistance.
 
-![Round 1: A material arrangement and optional caption, B full conversation and a related postcard, anonymous feedback and optional own-card paper copies](../assets/design/round1-overview.svg)Round 1 only. Prepared content and manual simulation explore the two probe concepts. Participants’ original words remain outside AI services.
+### Round 1 A · What the table could look like
+
+![A Round 1 desk contains an invented textile print, simple fabric arrangement, a laptop of prepared AI cuff and bag examples, an optional-caption postcard and a blank private feedback form](../assets/design/round1-a-mockup.png)AI-generated illustrative mockup. Round 1 A: the researcher switches prepared examples after the participant arranges materials. The sample paper shows blank response lines. The four protocol questions are listed below. The textile patterns and messages are invented. Click to enlarge.- Arrange materials in response to the provided textile image.
+- Compare prepared effects and choose a postcard.
+- Add an optional caption and complete the private feedback questions.
+
+### Round 1 B · What the local whiteboard could look like
+
+![A Round 1 local whiteboard keeps full original-language messages and replies next to postcards derived from selected messages and prepared AI images](../assets/design/round1-b-mockup.png)AI-generated illustrative mockup. Round 1 B: the researcher combines a selected original message and prepared image. The full thread remains in its own area. Own-card paper copies exclude other people’s replies. The textile patterns and messages are invented. Click to enlarge.- Read earlier original-language messages and add a comment or reply.
+- Choose one message and a prepared image for a related postcard.
+- Keep both areas visible and give private questionnaire feedback.
+Open the Round 1 process overview![Round 1: A material arrangement and optional caption, B full conversation and a related postcard, anonymous feedback and optional own-card paper copies](../assets/design/round1-overview.svg)Round 1 only. Prepared content and manual simulation explore the two probe concepts. Participants’ original words remain outside AI services.
 
 ### The session
 

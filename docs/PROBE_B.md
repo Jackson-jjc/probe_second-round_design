@@ -78,13 +78,17 @@ Use Round 1 to improve the conversation and postcard relationship. Later iterati
 
 AI helps people express and negotiate interpretations of the same object across languages and cultural perspectives. Original messages, real responses and clarifications remain visible. A related visual postcard carries a selected interpretation from the exchange.
 
-![Working B concept: interpret the source, use AI language and image assistance, receive a real reply, clarify and keep a related postcard](../assets/design/b-postcard-flow.svg)The exchange and postcard are connected. The conversation remains available alongside its related visual outcome.
+![A proposed touchscreen shows a shared textile, original Chinese words with AI translation, a real reply, a clarification and a related Image/Text postcard](../assets/design/b-concept-mockup.png)AI-generated illustrative mockup. Working B concept: AI language assistance supports an exchange, and a selected message links the conversation to its postcard. The textile patterns and messages are invented. Click to enlarge.
+- Express: keep the original message beside the AI-assisted translation.
+- Reply: another person asks or offers a different interpretation.
+- Carry forward: clarify the meaning and update its related postcard.
+Open B’s step-by-step diagram![Working B concept: interpret the source, use AI language and image assistance, receive a real reply, clarify and keep a related postcard](../assets/design/b-postcard-flow.svg)The exchange and postcard are connected. The conversation remains available alongside its related visual outcome.
 
 ### A postcard grows from the exchange
 
 Use one selected message as the link between conversation and postcard. AI can assist a translation or image preview. After another person responds, the author can clarify the meaning and revise the associated card. Original words, translations and source information remain identified.
 
-![Full conversation alongside a related postcard with an Image column and a Text column](../assets/design/b-postcard-preview.svg)Illustrative layout with invented messages and patterns. The card links to a message. The full conversation remains visible alongside it.
+Open the conversation-to-postcard layout sketch![Full conversation alongside a related postcard with an Image column and a Text column](../assets/design/b-postcard-preview.svg)Illustrative layout with invented messages and patterns. The card links to a message. The full conversation remains visible alongside it.
 
 ### What B investigates
 
