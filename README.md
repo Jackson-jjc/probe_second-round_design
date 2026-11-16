@@ -1,5 +1,8 @@
 # AI & Heritage · Two Probe Concepts and Round 1
 
+[Open the November prototype gallery](https://jackson-jjc.github.io/probe_second-round_design/gallery/). Try A and B with three object sources, fictional visitor words, prepared images and downloadable postcards. The gallery follows the protocol dated 11 November 2026. The October plan below is retained as design history.
+
+
 [Read the research design website](https://jackson-jjc.github.io/probe_second-round_design/)
 
 Version **2026-10-23-full-concepts**. Five starting ideas led to two working probe concepts. Round 1 is their first low-fidelity exploration. Feedback will refine the directions, support further iterations and inform eventual selection.

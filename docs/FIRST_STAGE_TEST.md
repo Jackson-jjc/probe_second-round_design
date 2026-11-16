@@ -1,6 +1,6 @@
 # Round 1 · Low-fidelity prototypes
 
-02 / ROUND 1 · LOW-FIDELITY PROTOTYPESThe first prototype round explores both conceptsA and B are the working probe directions above. Round 1 uses simple materials and prepared examples to gather feedback, refine both directions and support later selection. A retains making, comparing and explaining. B retains expression, real replies and a connected postcard. Prepared AI content and manual facilitation make these activities possible in the first round. Its procedure follows ERGO 117392, V1.0, 22 October 2026.
+OCTOBER DESIGN RECORD · EARLIER ROUND 1 PLANHow the first round was originally proposedA and B are the working probe directions above. Round 1 uses simple materials and prepared examples to gather feedback, refine both directions and support later selection. A retains making, comparing and explaining. B retains expression, real replies and a connected postcard. Prepared AI content and manual facilitation make these activities possible in the first round. This section records the 22 October plan. The current prototype gallery follows the 11 November revision, with three object choices, about five minutes per activity and a joint check of private field notes.
 
 10–15 adultsECS staff or students aged 18 or over. Recruitment begins after ethics approval.
 
