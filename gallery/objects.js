@@ -26,6 +26,9 @@ const objects = {
     ],
     "labels": [
       "The figural wine flagon"
+    ],
+    "cardPhoto": [
+      "images/source-1.jpg"
     ]
   },
   "knit": {
@@ -55,6 +58,9 @@ const objects = {
     ],
     "labels": [
       "Installation view, 2022"
+    ],
+    "cardPhoto": [
+      "images/source-2.jpg"
     ]
   },
   "gown": {
@@ -87,6 +93,10 @@ const objects = {
     "labels": [
       "Back view · 2006AM7791",
       "Painted silk · 2006AM7789"
+    ],
+    "cardPhoto": [
+      "images/va-3.jpg",
+      "images/va-4.jpg"
     ]
   }
 };
