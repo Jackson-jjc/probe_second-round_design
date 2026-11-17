@@ -36,14 +36,15 @@ window.addEventListener('afterprint', () => {
   updateQuoteButton();
 });
 document.getElementById('print').addEventListener('click', () => window.print());
-const links = [...document.querySelectorAll('nav a')];
+const links = [...document.querySelectorAll('.site-header nav a')];
 const sections = [...document.querySelectorAll('main>section')];
 let scrollFrame = false;
 function markSection() {
   const edge = document.querySelector('.site-header').getBoundingClientRect().height + 32;
   const active = sections.filter(s => s.getBoundingClientRect().top <= edge).pop();
+  const sectionId = active?.id === 'comparison' ? 'iteration' : active?.id;
   links.forEach(a => {
-    if (active && a.hash === '#' + active.id) a.setAttribute('aria-current','location');
+    if (a.hash === '#' + sectionId) a.setAttribute('aria-current','location');
     else a.removeAttribute('aria-current');
   });
   scrollFrame = false;

@@ -45,3 +45,14 @@ main>section:not(.hero){padding:70px 0;border-top:1px solid var(--line)}.section
 #concept-round-map{scroll-margin-top:var(--offset)}
 
 .gallery-entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px;margin:1.4rem 0}.gallery-entries a{display:grid;gap:.6rem}.gallery-entries img{width:100%;height:auto;display:block;border:1px solid #b4b8a9}
+
+/* Reading order: overview, development, directions, first round, try. */
+.reading-guide>a:not(.archive-link){padding:15px 0}
+.reading-guide>a:last-child{border-bottom:0}
+.reading-next{display:flex;justify-content:flex-end;padding:18px 0;border-top:1px solid var(--line)}
+.reading-next a{font-size:15px;font-weight:600;text-decoration:none}
+.further-reading{display:flex;flex-wrap:wrap;gap:12px 26px;padding:24px 0;border-top:1px solid var(--line)}
+.further-reading a{font-size:14px}
+@media(max-width:1100px){.site-header nav{width:auto;order:0;margin-left:auto;gap:18px;overflow:visible}}
+@media(max-width:760px){.site-header{gap:5px;padding:10px 16px}.site-header nav{width:100%;margin-left:0;flex-wrap:wrap;gap:0 18px}.site-header nav a{font-size:12px;padding:6px 0;min-height:34px}.reading-next{justify-content:flex-start}.further-reading{gap:12px 20px}}
+@media print{.reading-next,.further-reading{display:none}}
