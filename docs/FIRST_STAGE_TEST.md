@@ -4,7 +4,7 @@ OCTOBER DESIGN RECORD · EARLIER ROUND 1 PLANHow the first round was originally 
 
 10–15 adultsECS staff or students aged 18 or over. Recruitment begins after ethics approval.
 
-10–15 minutesTry A then B, about three minutes each, followed by four optional questions.
+20–25 minutes in the current protocolThe 11 November ethics protocol allows about five minutes each for A and B, plus consent, optional feedback and a joint final check. The earlier 22 October plan allowed 10–15 minutes in total.
 
 Prepared AI contentThe researcher checks examples before sessions and manually simulates responses and card assembly.
 
@@ -71,12 +71,12 @@ What this round helps us decide: whether the activities are understandable and w
 ![A Round 1 local whiteboard keeps full original-language messages and replies next to postcards derived from selected messages and prepared AI images](../assets/design/round1-b-mockup.png)AI-generated illustrative mockup. Round 1 B: the researcher combines a selected original message and prepared image. The full thread remains in its own area. The paper card illustrates a possible own-card copy. Instant printing is a later implementation option. Own-card copies exclude other people’s replies. The textile patterns and messages are invented. Click to enlarge.- Read earlier original-language messages and add a comment or reply.
 - Choose one message and a prepared image for a related postcard.
 - Keep both areas visible and give private questionnaire feedback.
-Open the Round 1 process overview![Round 1: A material arrangement and optional caption, B full conversation and a related postcard, anonymous feedback and optional own-card paper copies](../assets/design/round1-overview.svg)Round 1 only. Prepared content and manual simulation explore the two probe concepts. Participants’ original words remain outside AI services.
+Open the October process overview (earlier timing)![Round 1: A material arrangement and optional caption, B full conversation and a related postcard, anonymous feedback and optional own-card paper copies](../assets/design/round1-overview.svg)Round 1 only. Prepared content and manual simulation explore the two probe concepts. Participants’ original words remain outside AI services.
 
 ### The session
 
 - Read the information sheet, ask questions and tick consent.
-- Try Round 1 A, then Round 1 B, about three minutes each.
+- The October plan allowed about three minutes each for A and B. The November protocol allows about five minutes each.
 - Complete the four optional questionnaire questions.
 - Check drafts for identifying details and confirm submission. Anonymous messages, replies and cards remain for later participants.
 - Choose whether to keep printed copies of your own cards, excluding other people’s replies.
