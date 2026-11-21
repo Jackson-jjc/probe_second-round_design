@@ -98,10 +98,10 @@ function styleKey(card) {
 
 function editionFinish(style,card){
  const descriptions={
-  classic:card.image?"Tinted view with an oval inset":"One tinted view",
+  classic:card.image?"Two-ink print with an oval inset":"One two-ink print",
   collage:card.detail?"A torn print of your marked detail":"Torn black-and-white print",
-  line:"Ink contours with a wash of colour",
-  technical:"Chrome type and inverted colour"
+  line:"Pale outlines in brushed colour",
+  technical:"Wide lettering and a silver-toned print"
  };
  return descriptions[style];
 }
@@ -128,10 +128,10 @@ function cardSourceLinks(o,indices){
 
 const cardSans = '"Segoe UI", Arial, "Microsoft YaHei", sans-serif';
 const cardLayouts = {
-  classic:   {paper:"#f5efdf", ink:"#323a35", accent:"#793e37", rule:"#b7ae91", x:83, y:777, width:1030, font:"italic 41px "+serif, leading:55},
-  collage:   {paper:"#f6f0e4", ink:"#282827", accent:"#a32626", rule:"#aba390", x:850, y:397, width:575, font:"38px "+cardSans, leading:54},
-  line:      {paper:"#faf9f3", ink:"#243f42", accent:"#43675d", rule:"#b4c2b8", x:850, y:433, width:570, font:"italic 42px "+serif, leading:59},
-  technical: {paper:"#111019", ink:"#f4f0ff", accent:"#d4ff32", rule:"#585264", x:835, y:576, width:605, font:"39px "+cardSans, leading:55}
+  classic:   {paper:"#f5efdf", ink:"#323a35", accent:"#793e37", rule:"#b7ae91", x:936, y:332, width:498, font:"italic 39px "+serif, leading:55},
+  collage:   {paper:"#f6f0e4", ink:"#282827", accent:"#a32626", rule:"#aba390", x:858, y:456, width:555, font:"36px "+mono, leading:50},
+  line:      {paper:"#faf9f3", ink:"#243f42", accent:"#43675d", rule:"#b4c2b8", x:831, y:518, width:585, font:"36px "+cardSans, leading:50},
+  technical: {paper:"#111019", ink:"#f4f0ff", accent:"#d4ff32", rule:"#585264", x:835, y:500, width:605, font:"italic 41px "+serif, leading:56}
 };
 
 function cardType(ctx, value, x, y, font, color, width) {
@@ -246,53 +246,47 @@ function contourStudy(img, keepShade) {
 
 const studyPrints = new WeakMap();
 
-// Reveal a little colour at the point the visitor noticed. The ink and photograph
-// share one set of coordinates, so the colour stays inside the same folds and marks.
+// Simulate resist printing: ink colours the paper while the raised contour stays pale.
 function lineStudyPrint(image, point, leather) {
   const centre = point || {x: 45, y: 66};
   const cached = studyPrints.get(image);
   if (cached && cached.x === centre.x && cached.y === centre.y) return cached.print;
-  const ink = contourStudy(image, leather);
+  const contour = contourStudy(image, leather);
   const print = document.createElement("canvas");
-  print.width = ink.width;
-  print.height = ink.height;
-  const ctx = print.getContext("2d", {willReadFrequently: true});
-  const {width, height} = print;
-  const cx = width * centre.x / 100, cy = height * centre.y / 100;
-  const reach = Math.min(width, height) * .53;
-  const wash = ctx.createRadialGradient(cx, cy, 0, cx, cy, reach);
-  wash.addColorStop(0, "rgba(0,0,0,.88)");
-  wash.addColorStop(.39, "rgba(0,0,0,.61)");
-  wash.addColorStop(1, "transparent");
+  const width = print.width = contour.width, height = print.height = contour.height;
+  const ctx = print.getContext("2d", {willReadFrequently:true});
   ctx.drawImage(image, 0, 0, width, height);
-  // Neutral studio backdrops carry little pigment. Leave the paper showing through
-  // there while retaining the fabric, leather or thread colours around the mark.
   const photo = ctx.getImageData(0, 0, width, height);
   const pixels = photo.data;
-  for (let i = 0; i < pixels.length; i += 4) {
-    const chroma = Math.max(pixels[i], pixels[i + 1], pixels[i + 2]) -
-      Math.min(pixels[i], pixels[i + 1], pixels[i + 2]);
-    pixels[i + 3] = Math.round(38 + 217 * Math.min(1, chroma / 43));
+  const edge = contour.getContext("2d").getImageData(0, 0, width, height).data;
+  const cx = centre.x / 100, cy = centre.y / 100;
+  for (let y = 0; y < height; y++) {
+    const v = y / height;
+    for (let x = 0; x < width; x++) {
+      const u = x / width, i = 4 * (y * width + x);
+      const rose = Math.exp(-7 * ((u-cx)**2 + (v-cy)**2));
+      const sage = Math.exp(-2.8 * ((u-.30)**2 + (v-.81)**2));
+      const speckle = (((x*157 + y*193) ^ (x*y*23)) & 31) / 31;
+      const density = Math.min(.91, sage*.79 + rose*.43) * (.90 + .10*speckle);
+      const blend = rose / (rose + sage*.8);
+      const luma = .299*pixels[i] + .587*pixels[i+1] + .114*pixels[i+2];
+      const chroma = Math.max(pixels[i],pixels[i+1],pixels[i+2]) - Math.min(pixels[i],pixels[i+1],pixels[i+2]);
+      const original = rose * (.10 + .67*Math.min(1,chroma/46));
+      const line = edge[i+3] / 255;
+      const tones = [97+blend*103,150-blend*49,87+blend*60];
+      for (let c = 0; c < 3; c++) {
+        const printed = tones[c] * (.77 + luma/910);
+        const coloured = printed + original*(pixels[i+c]-printed);
+        pixels[i+c] = coloured + line*(249-coloured);
+      }
+      const cropU = leather ? (u - .319) / .375 : u;
+      const rim = Math.max(0, Math.min(1,cropU/.10,(1-cropU)/.15,v/.10,(1-v)/(leather ? .018 : .08)));
+      const feather = rim*rim*(3-2*rim);
+      pixels[i+3] = Math.round(255*density*feather);
+    }
   }
-  ctx.putImageData(photo, 0, 0);
-  ctx.globalCompositeOperation = "destination-in";
-  ctx.fillStyle = wash;
-  ctx.fillRect(0, 0, width, height);
-  ctx.globalCompositeOperation = "source-over";
-  ctx.drawImage(ink, 0, 0);
-  // Let the perimeter dissolve into the sheet, including on installation photographs.
-  ctx.globalCompositeOperation = "destination-in";
-  const across = ctx.createLinearGradient(0, 0, width, 0);
-  const down = ctx.createLinearGradient(0, 0, 0, height);
-  for (const fade of [across, down]) {
-    fade.addColorStop(0, "transparent");
-    fade.addColorStop(.045, "black");
-    fade.addColorStop(fade === down && !leather ? .91 : .955, "black");
-    fade.addColorStop(fade === down && !leather ? .973 : 1, "transparent");
-    ctx.fillStyle = fade;
-    ctx.fillRect(0, 0, width, height);
-  }
-  studyPrints.set(image, {x: centre.x, y: centre.y, print});
+  ctx.putImageData(photo,0,0);
+  studyPrints.set(image,{x:centre.x,y:centre.y,print});
   return print;
 }
 
@@ -306,10 +300,10 @@ function lineLayout(ctx, c, o, views, design, theme) {
   // so the mark remains in the coordinates of the photograph the visitor saw.
   const sx = leather ? print.width * .319 : 0;
   const sw = leather ? print.width * .375 : print.width;
-  const scale = Math.min(825 / sw, 804 / print.height);
+  const scale = Math.min(837 / sw, 834 / print.height);
   const w = sw * scale, h = print.height * scale;
-  ctx.drawImage(print, sx, 0, sw, print.height, 28 + (800 - w) / 2, 855 - h, w, h);
-  cardType(ctx, "Line study", 72, 884, "italic 36px " + serif, theme.ink);
+  ctx.drawImage(print, sx, 0, sw, print.height, 13 + (816 - w) / 2, 881 - h, w, h);
+
 
   // The selected design takes the place of a small picture stamp at the head of the letter.
   if (design) {
@@ -330,56 +324,121 @@ function lineLayout(ctx, c, o, views, design, theme) {
     smallType(ctx, imageRef(o, c), x - margin, 181, theme.accent, sw + 2 * margin);
   }
 
-  smallType(ctx, "POSTCARD   /   " + o.id + "." + c.type.toUpperCase(), theme.x, 104, theme.accent);
-  const nextLine = wrappedHeading(ctx, o.name, theme.x, 239, theme.width, "46px " + serif, 49, theme.ink);
-  cardType(ctx, o.place, theme.x, nextLine - 7, "23px " + serif, theme.accent, theme.width);
-}
-function drawWriting(ctx,card,theme,words,label,footer,key){
-  const {x,y,width,font,leading,ink,accent,rule}=theme;
-  smallType(ctx,card.type==="a"?"MY CAPTION":"MY MESSAGE",x,y-51,accent);
-  const lineCount=label.length?words.length:Math.max(words.length,Math.floor((footer-y-45)/leading)+1);
-  if(key==="classic" || !words.length){
-    for(let i=0;i<lineCount;i++)cardLine(ctx,x,y+i*leading+12,x+width,y+i*leading+12,rule,1.2);
-  }
-  function paragraph(line,baseline,fontSpec,color){
-    const rtl=/^[\p{P}\p{N}\s]*[\p{Script=Arabic}\p{Script=Hebrew}]/u.test(line);
-    ctx.direction=rtl?"rtl":"ltr";ctx.textAlign=rtl?"right":"left";
-    cardType(ctx,line,rtl?x+width:x,baseline,fontSpec,color);
-  }
-  words.forEach((line,i)=>paragraph(line,y+i*leading,font,ink));
-  ctx.textAlign="left";ctx.direction="ltr";
-  if(label.length){
-    const ly=y+words.length*leading+30;
-    smallType(ctx,"PROPOSED MUSEUM LABEL",x,ly,accent);
-    label.forEach((line,i)=>paragraph(line,ly+41+i*36,"27px "+serif,ink));
-  }
-  ctx.textAlign="left";ctx.direction="ltr";
+  cardType(ctx, "P O S T   C A R D", theme.x, 109, "20px " + cardSans, theme.accent);
+  const pen = '94px "Allura", Georgia, serif';
+  ctx.font = pen;
+  const lines = wrapCardText(ctx, o.name, theme.width+12);
+  const first = lines.length > 1 ? 250 : 295;
+  lines.forEach((part, i) => cardType(ctx, part, theme.x-8, first+i*80, pen, "#23332e"));
+  cardType(ctx, o.place.toUpperCase(), theme.x+3, first+(lines.length-1)*80+54, "22px " + cardSans, theme.accent, theme.width);
 }
 
-async function renderPostcard(card, {maxWidth=1500}={}) {
-  const o=objects[card.key],key=styleKey(card),theme=cardLayouts[key];
+const postcardWidth = 1500, postcardHeight = 1000, imprintY = 918;
+
+// The first card shares its face with the picture. More writing flows into
+// two columns on a continuation card of the same physical proportions.
+function writingPages(words, labels, theme) {
+  let wi = 0, li = 0;
+  const pages = [];
+  function fill(x, y) {
+    const block = {x, y, words: [], labels: [], labelHeading: y-51};
+    while (wi < words.length && y <= imprintY-53) {
+      block.words.push(words[wi++]);
+      y += theme.leading;
+    }
+    if (wi === words.length && li < labels.length) {
+      block.labelHeading = block.words.length ? y+11 : block.y-51;
+      let baseline = block.labelHeading+43;
+      while (li < labels.length && baseline <= imprintY-53) {
+        block.labels.push(labels[li++]);
+        baseline += 36;
+      }
+    }
+    return block;
+  }
+  pages.push([fill(theme.x, theme.y)]);
+  while (wi < words.length || li < labels.length) {
+    const columns = [fill(80, 258)];
+    if (wi < words.length || li < labels.length) columns.push(fill(794, 258));
+    pages.push(columns);
+  }
+  return pages;
+}
+
+function drawWriting(ctx, card, theme, block, key) {
+  const {x,y,words,labels,labelHeading} = block;
+  const {width,font,leading,ink,accent,rule} = theme;
+  // Match each printed legend to its card. All visitor-supplied lettering stays legible.
+  const legend = {
+    classic:"small-caps 25px "+serif,
+    collage:"bold 22px "+mono,
+    line:"22px "+cardSans,
+    technical:"bold 21px "+mono
+  }[key];
+  if (words.length || !labels.length) {
+    const role = card.type==="a" ? "My caption" : "My message";
+    cardType(ctx,key==="classic"?role:role.toUpperCase(),x,y-51,legend,accent);
+  }
+  if (!words.length && !labels.length) {
+    for (let line = y; line <= imprintY-53; line += leading)
+      cardLine(ctx,x,line+12,x+width,line+12,rule,1.2);
+  }
+  function paragraph(line, baseline, spec) {
+    const rtl = /^[\p{P}\p{N}\s]*[\p{Script=Arabic}\p{Script=Hebrew}]/u.test(line);
+    ctx.direction = rtl ? "rtl" : "ltr";
+    ctx.textAlign = rtl ? "right" : "left";
+    cardType(ctx,line,rtl?x+width:x,baseline,spec,ink);
+  }
+  words.forEach((line,i)=>paragraph(line,y+i*leading,font));
+  ctx.textAlign="left"; ctx.direction="ltr";
+  if (labels.length) {
+    cardType(ctx,key==="classic"?"Proposed museum label":"PROPOSED MUSEUM LABEL",x,labelHeading,legend,accent);
+    labels.forEach((line,i)=>paragraph(line,labelHeading+43+i*36,"27px "+serif));
+  }
+  ctx.textAlign="left"; ctx.direction="ltr";
+}
+
+async function renderPostcard(card, {maxWidth=1500, firstOnly=false}={}) {
+  const o=objects[card.key], key=styleKey(card), theme=cardLayouts[key];
   const [design,...views]=await Promise.all([
-    card.image?cardBitmap(designURL(card.key,card.type,card.image)):null,...o.cardPhoto.map(cardBitmap)
+    card.image?cardBitmap(designURL(card.key,card.type,card.image)):null, ...o.cardPhoto.map(cardBitmap)
   ]);
+  if (key === "line") await document.fonts.load('94px "Allura"');
   const canvas=document.createElement("canvas"), ctx=canvas.getContext("2d");
   ctx.font=theme.font;
   const words=card.words?wrapCardText(ctx,card.words,theme.width):[];
   ctx.font="27px "+serif;
-  const label=card.label?wrapCardText(ctx,card.label,theme.width):[];
-  const footer=Math.max(936,theme.y+words.length*theme.leading+(label.length?78+label.length*36:0)+52);
-  const height=footer+94, scale=Math.min(1,maxWidth/1500,16384/height);
-  canvas.width=Math.max(1,Math.round(1500*scale));canvas.height=Math.max(1,Math.round(height*scale));
+  const labels=card.label?wrapCardText(ctx,card.label,theme.width):[];
+  const pages=writingPages(words,labels,theme);
+  const count=firstOnly ? 1 : pages.length;
+  const height=count*postcardHeight, scale=Math.min(1,maxWidth/postcardWidth,16384/height);
+  canvas.width=Math.max(1,Math.round(postcardWidth*scale));
+  canvas.height=Math.max(1,Math.round(height*scale));
   ctx.scale(scale,scale);
-  fillArea(ctx,theme.paper,0,0,1500,height);
   const paint={classic:britishEdition,collage:materialCollageEdition,line:lineLayout,technical:acidEdition}[key];
-  paint(ctx,card,o,views,design,theme,footer);
-  drawWriting(ctx,card,theme,words,label,footer,key);
-  cardLine(ctx,51,footer,1448,footer,theme.rule,1);
-  cardType(ctx,editionCredit(o,editionSourceIndices(card,o)),53,footer+33,"22px "+serif,theme.ink,1395);
-  cardType(ctx,o.url,53,footer+65,"18px "+mono,theme.ink,1395);
+  for (let index=0; index<count; index++) {
+    ctx.save();
+    ctx.translate(0,index*postcardHeight);
+    fillArea(ctx,theme.paper,0,0,postcardWidth,postcardHeight);
+    if (!index) {
+      paint(ctx,card,o,views,design,theme,imprintY);
+    } else {
+      cardLine(ctx,0,1,postcardWidth,1,theme.rule,2);
+      cardType(ctx,"Post card",77,101,"italic 69px "+serif,theme.ink,380);
+      cardType(ctx,o.name,470,91,"35px "+serif,theme.ink,772);
+      cardType(ctx,o.place,471,131,"21px "+cardSans,theme.accent,765);
+      drawStamp(ctx,1344,31,theme.accent,theme.paper,.70);
+      cardLine(ctx,78,155,1420,155,theme.rule,1);
+    }
+    for (const block of pages[index]) drawWriting(ctx,card,theme,block,key);
+    cardLine(ctx,51,imprintY,1448,imprintY,theme.rule,1);
+    cardType(ctx,editionCredit(o,editionSourceIndices(card,o)),53,imprintY+30,"22px "+serif,theme.ink,1350);
+    cardType(ctx,o.url,53,imprintY+58,"18px "+mono,theme.ink,1250);
+    if(pages.length>1) cardType(ctx,(index+1)+" / "+pages.length,1320,imprintY+60,"21px "+mono,theme.accent,120);
+    ctx.restore();
+  }
   return canvas;
 }
-
 
 customElements.define("heritage-postcard", class extends HTMLElement {
   async connectedCallback() {

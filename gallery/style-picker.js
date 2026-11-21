@@ -48,7 +48,7 @@ customElements.define("postcard-style-options", class extends HTMLElement {
       if (!this.isConnected || this.version !== version) return;
       const style = view.dataset.stylePreview;
       try {
-        const canvas = await renderPostcard({...content, style}, {maxWidth: 360});
+        const canvas = await renderPostcard({...content, style}, {maxWidth: 360, firstOnly: true});
         if (!this.isConnected || this.version !== version) return;
         view.replaceChildren(canvas);
       } catch {
