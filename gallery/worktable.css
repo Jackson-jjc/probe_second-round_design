@@ -22,3 +22,47 @@
 #compose-card>a{display:block;width:fit-content;margin-top:15px;font-size:.87rem}
 #review .dialog-top{align-items:flex-start}
 @media(max-width:610px){.make-path{display:grid;gap:5px}.make-path>span{display:none}.chosen-preview{gap:12px}.chosen-preview figure{width:115px}.generated-result{padding:10px}}
+
+/* Keep both views in the same proportions, including the cloth and cord sizes. */
+#make-input .mat,.comparison-pair .mat-replica{aspect-ratio:2.8;height:auto;container-type:inline-size}
+.mat .piece.flower{width:9%;height:auto;aspect-ratio:1;font-size:6.5cqw;line-height:1}
+.mat .piece.loop{border-width:1.1cqw}
+.mat .piece.flower.folded{width:6%}
+.material-next{border-top:1px solid var(--line);margin-top:17px;padding-top:9px}
+.material-next p{max-width:58ch}
+.desk button[data-do=compare-arrangement]{background:var(--green);color:var(--white);margin-top:6px}
+.comparison-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.comparison-pair>section{display:flex;flex-direction:column;align-items:stretch;background:#f5f2e8;border:1px solid var(--line);padding:12px;min-width:0}
+.comparison-pair h3{font:normal 1.2rem var(--serif);margin-bottom:10px}
+.comparison-pair figure img{width:100%;aspect-ratio:2.8;object-fit:contain;background:#e8e4d8;display:block}
+.comparison-pair figcaption{font-size:.8rem;line-height:1.35;margin-top:8px;color:var(--mute)}
+.comparison-pair button{align-self:flex-start;margin-top:7px;background:transparent;border:0;padding:4px 0;text-decoration:underline;text-underline-offset:3px}
+.mat-replica{pointer-events:none}
+.comparison-panel [data-do=generate]:not(:first-child),.comparison-panel [data-do=source-only]{background:transparent;color:var(--green)}
+@media(max-width:520px){.comparison-pair{gap:6px}.comparison-pair>section{padding:7px}.comparison-pair h3{font-size:1.02rem}.comparison-pair .mat-replica,.comparison-pair figure img{margin-block:6px}.comparison-pair button{font-size:.78rem}.comparison-pair figcaption{font-size:.75rem}}
+
+.comparison-panel button[data-do=generate]:not(:first-child):is(:hover,:focus-visible),
+.comparison-panel button[data-do=source-only]:is(:hover,:focus-visible){background:#e3e9d9;color:var(--green)}
+.desk button[data-do=compare-message]{color:var(--white);background:var(--green)}
+.reply-context,#comparison-words{margin:.7rem 0;padding:.55rem .85rem;border-left:2px solid #9caa99}
+#comparison-words{font:normal 1.1rem/1.5 var(--serif);flex:1;max-height:16rem;overflow:auto}
+#draft-card{margin:16px 0}
+#generate-preview:focus{outline:none}
+@media(max-width:520px){
+ .comparison-pair{grid-template-columns:1fr;gap:10px}
+ .comparison-pair>section{padding:12px}
+ .comparison-pair h3{font-size:1.18rem}
+ .comparison-pair figure img{aspect-ratio:2.2}
+ .comparison-pair figcaption,.comparison-pair button{font-size:.85rem}
+}
+
+.photos .detail-photo{width:fit-content;max-width:100%;margin:auto}
+.photos .detail-photo img{width:auto;max-width:100%;height:auto;max-height:clamp(170px,18vw,250px)}
+.marked-reference{display:flex;align-items:center;gap:10px;margin-top:12px}
+.reference-thumb{position:relative;flex:none}
+.reference-thumb img{display:block;max-height:72px;max-width:95px}
+.reference-thumb .pin{width:12px;height:12px;border-width:2px}
+.marked-reference figcaption{font-size:.82rem;color:var(--mute)}
+.beside-card{border-left:2px solid var(--line);margin:12px 0;padding-left:12px}
+.beside-card h3{font:normal 1.2rem var(--serif)}
+.current-draft[hidden],.empty-thread[hidden]{display:none}

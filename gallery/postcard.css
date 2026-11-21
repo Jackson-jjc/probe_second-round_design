@@ -1,0 +1,11 @@
+.wallcard.postal-card{padding:0;background:transparent;border:0;min-width:0}
+heritage-postcard{display:block;line-height:1;background:#fcf6e8;border:1px solid #d0c5aa;box-shadow:1px 3px 7px #52492b21}
+heritage-postcard:empty{aspect-ratio:1500 / 1030}
+heritage-postcard canvas{display:block;width:100%;height:auto}
+.postal-transcript{margin:.6rem 0 .3rem;padding-inline:.15rem;color:var(--ink)}
+.postal-transcript summary{font-size:.86rem;font-weight:600;cursor:pointer}
+.postal-transcript[open]{padding:.7rem;background:var(--white);border:1px solid var(--line)}
+.postal-transcript[open] summary{margin-bottom:.6rem}
+.postal-transcript p{margin:.4rem 0}
+.postal-transcript .card-label{white-space:pre-wrap;overflow-wrap:anywhere}
+#proof .postal-card{border:0}
