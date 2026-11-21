@@ -8,6 +8,7 @@ function stylePickerHTML(card) {
       (key === style ? ' checked' : '') + '>' +
       '<span class="postcard-choice-visual" data-style-preview="' + key + '" aria-hidden="true"></span>' +
       '<span class="postcard-choice-name">' + esc(name) + '</span>' +
+      '<span class="postcard-choice-finish">' + esc(editionFinish(key,card)) + '</span>' +
     '</label>'
   ).join("");
   return '<fieldset class="postcard-styles"><legend>Choose a postcard layout</legend>' +

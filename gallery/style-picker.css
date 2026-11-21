@@ -21,7 +21,7 @@ postcard-style-options {
   display: grid;
   min-width: 0;
   grid-template-columns: 1rem minmax(0,1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   align-items: center;
   gap: 0 .3rem;
   padding: 0 .35rem .45rem;
@@ -82,4 +82,12 @@ postcard-style-options {
 }
 @media (forced-colors: active) {
   .postcard-choice:has(input:checked) { border: 2px solid Highlight; }
+}
+
+.postcard-choice-finish {
+  grid-column: 1 / -1;
+  align-self: start;
+  padding: .15rem .05rem 0;
+  color: var(--mute);
+  font: normal .77rem/1.35 var(--sans);
 }

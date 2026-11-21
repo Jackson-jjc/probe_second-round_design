@@ -76,6 +76,10 @@ const objects = {
       "Close view of the hand-painted floral silk."
     ],
     "fact": "The silk was woven and painted in Guangdong, China. The painting dates to 1735–1760. The garment was sewn in London in 1760–1765. Two double box pleats fall from the shoulders. Eva Garrick wore the gown.",
+    "viewCredits": [
+      "Back view, 2006AM7791. © Victoria and Albert Museum, London. T.593:1 to 5-1999.",
+      "Silk detail, 2006AM7789. © Victoria and Albert Museum, London. T.593:1 to 5-1999."
+    ],
     "credit": "Back and detail, 2006AM7791 and 2006AM7789. © Victoria and Albert Museum, London. T.593:1 to 5-1999.",
     "url": "https://collections.vam.ac.uk/item/O13438/",
     "make": "Place a paper flower on cloth. Fold the cloth and open it again. Which parts of the pattern would you show on a cuff or bag?",

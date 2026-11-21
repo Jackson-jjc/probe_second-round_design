@@ -15,14 +15,15 @@ function photographs(key) {
 
 function cardHTML(c) {
   const o = objects[c.key];
+  const sources=editionSourceIndices(c,o);
   const design = c.image ? '<p>Prepared AI design · ' + esc(o[c.type][c.image-1]) +
     ' (' + o.id + '–' + c.type.toUpperCase() + c.image + ')</p>' : "";
   const label = c.label ? '<p class="card-label"><strong>Proposed museum label</strong><br>' + esc(c.label) + '</p>' : "";
   return '<article class="wallcard postal-card" aria-label="Postcard from ' + esc(o.name) + '">' +
     '<heritage-postcard data-card="' + esc(JSON.stringify(c)) + '" aria-hidden="true"></heritage-postcard>' +
     '<details class="postal-transcript"><summary>Read postcard text and credits</summary><h3>' + esc(o.name) +
-    '</h3><p>' + esc(o.place) + ' · ' + postcardStyleNames[styleKey(c)] + '</p><p class="words" dir="auto">' + esc(c.words) + '</p>' + label + design +
-    '<p>' + o.alt.map(esc).join(" ") + '</p><p>' + esc(o.credit) + '</p>' +
+    '</h3><p>' + esc(o.place) + ' · ' + postcardStyleNames[styleKey(c)] + ' · ' + editionFinish(styleKey(c),c) + '</p><p class="words" dir="auto">' + esc(c.words) + '</p>' + label + design +
+    '<p>' + cardSourceLinks(o,sources) + '</p><p>' + esc(editionCredit(o,sources)) + '</p>' +
     '<a class="source-url" href="' + esc(o.url) + '" target="_blank" rel="noopener">Source record ↗</a></details></article>';
 }
 
@@ -39,7 +40,6 @@ function cardBitmap(url) {
   return postcardImages.get(url);
 }
 
-const paper = "#fcf6e8", ink = "#263b35", rule = "#bab5a0";
 const serif = 'Georgia, "Times New Roman", serif';
 
 const mono = 'Consolas, "Courier New", monospace';
@@ -77,7 +77,7 @@ function wrapCardText(ctx, value, maxWidth) {
   return lines;
 }
 
-function cardLine(ctx, x1, y1, x2, y2, color = rule, width = 2) {
+function cardLine(ctx, x1, y1, x2, y2, color = "#bab5a0", width = 2) {
   ctx.strokeStyle = color;
   ctx.lineWidth = width;
   ctx.beginPath();
@@ -88,19 +88,50 @@ function cardLine(ctx, x1, y1, x2, y2, color = rule, width = 2) {
 
 
 const postcardStyleNames = Object.freeze({
-  collage: "Paper collage", classic: "Vintage post", line: "Line study", technical: "Digital archive"
+  classic: "British picture postcard", collage: "Paper collage", line: "Line study", technical: "Acid chrome"
 });
 
 function styleKey(card) {
   return Object.hasOwn(postcardStyleNames,card.style) ? card.style : "classic";
 }
 
+
+function editionFinish(style,card){
+ const descriptions={
+  classic:card.image?"Tinted view with an oval inset":"One tinted view",
+  collage:card.detail?"A torn print of your marked detail":"Torn black-and-white print",
+  line:"Photograph fading into linework",
+  technical:"Chrome type and inverted colour"
+ };
+ return descriptions[style];
+}
+
+function editionSourceIndices(c,o){
+ const last=o.cardPhoto.length-1;
+ const marked=c.type==="a" && Number.isInteger(c.detail?.i) && c.detail.i>=0 && c.detail.i<=last
+  && Number.isFinite(c.detail.x) && Number.isFinite(c.detail.y);
+ const style=styleKey(c);
+ if(style==="classic")return [0];
+ const primary=marked?c.detail.i:(style==="collage"?last:0);
+ if(style==="collage" && c.image && last===1)return [primary,1-primary];
+ return [primary];
+}
+
+function editionCredit(o,indices){
+ if(o.viewCredits && indices.length===1)return o.viewCredits[indices[0]];
+ return o.credit;
+}
+
+function cardSourceLinks(o,indices){
+ return indices.map(i=>'<a href="'+esc(o.photo[i])+'" target="_blank" rel="noopener noreferrer">'+esc(o.alt[i])+' ↗</a>').join(" ");
+}
+
 const cardSans = '"Segoe UI", Arial, "Microsoft YaHei", sans-serif';
 const cardLayouts = {
-  classic:   {paper:"#f7efdd", ink:"#322f27", accent:"#854938", rule:"#b4a27f", x:851, y:448, width:552, font:"italic 42px "+serif, leading:60},
-  collage:   {paper:"#f5ede0", ink:"#322c25", accent:"#9b412c", rule:"#ae8972", x:854, y:448, width:548, font:"37px "+cardSans, leading:56},
+  classic:   {paper:"#f5efdf", ink:"#323a35", accent:"#793e37", rule:"#b7ae91", x:83, y:777, width:1030, font:"italic 41px "+serif, leading:55},
+  collage:   {paper:"#f6f0e4", ink:"#282827", accent:"#a32626", rule:"#aba390", x:835, y:493, width:585, font:"38px "+cardSans, leading:54},
   line:      {paper:"#f6f7f1", ink:"#283c44", accent:"#365966", rule:"#a5b3b3", x:820, y:285, width:589, font:"italic 42px "+serif, leading:60},
-  technical: {paper:"#162d2c", ink:"#f0f6e9", accent:"#c4f195", rule:"#5c7770", x:410, y:735, width:1000, font:"40px "+cardSans, leading:58}
+  technical: {paper:"#111019", ink:"#f4f0ff", accent:"#d4ff32", rule:"#585264", x:835, y:576, width:605, font:"39px "+cardSans, leading:55}
 };
 
 function cardType(ctx, value, x, y, font, color, width) {
@@ -151,11 +182,6 @@ function coverPhoto(ctx,img,x,y,w,h,point){
   ctx.drawImage(img,left,top,sw,sh,x,y,w,h);
 }
 
-function sourceStrip(ctx,views,x,y,w,h,color,gap=6){
-  const single=(w-(views.length-1)*gap)/views.length;
-  views.forEach((im,i)=>framePhoto(ctx,im,x+i*(single+gap),y,single,h,color));
-}
-
 function imageRef(object,card) {
   return "PREPARED AI  /  "+object.id+"-"+card.type.toUpperCase()+card.image;
 }
@@ -188,75 +214,6 @@ function wrappedHeading(ctx,text,x,y,width,font,leading,color) {
   return y+lines.length*leading;
 }
 
-function vintageLayout(ctx, c, o, views, design, theme, footer) {
-  const {paper,ink,accent,rule}=theme;
-  grain(ctx,"#86644226",footer);
-  ctx.strokeStyle=rule;ctx.lineWidth=2;
-  ctx.strokeRect(29,27,1442,footer-48);
-  ctx.strokeRect(36,34,1428,footer-62);
-  // Photo corners and a double rule frame the source without cropping it.
-  const x=69,y=69,w=678,h=design?416:675;
-  fillArea(ctx,"#e5dcc4",x-6,y-6,w+12,h+12);
-  sourceStrip(ctx,views,x,y,w,h,"#e4d9c1",5);
-  for(const [cx,cy,dx,dy] of [[x,y,1,1],[x+w,y,-1,1],[x,y+h,1,-1],[x+w,y+h,-1,-1]]){
-    paperPath(ctx,[[cx-3*dx,cy-3*dy],[cx+29*dx,cy-3*dy],[cx-3*dx,cy+29*dy]],"#9b835c");
-  }
-  smallType(ctx,views.length===2?"SOURCE PHOTOGRAPHS   /   BACK & DETAIL":"SOURCE PHOTOGRAPH",x,y+h+33,ink);
-  if(design){
-    framePhoto(ctx,design,x,y+h+58,w,202,"#eae0ca");
-    smallType(ctx,imageRef(o,c),x,y+h+288,ink);
-  }
-  const objectBottom=wrappedHeading(ctx,o.name,x,844,683,"italic 45px "+serif,46,ink);
-  cardType(ctx,o.place,x,objectBottom-9,"22px "+serif,ink,680);
-  cardLine(ctx,792,67,792,footer-59,rule,2);
-  cardType(ctx,"Post Card",845,193,"italic 91px "+serif,ink,420);
-  cardType(ctx,"A I   &   H E R I T A G E",851,245,"20px "+serif,accent);
-  drawStamp(ctx,1293,74,accent,paper);
-  ctx.save();ctx.strokeStyle="#ad9678";ctx.lineWidth=2.1;
-  for(let i=0;i<3;i++){
-    ctx.beginPath();ctx.moveTo(1200,187+i*13);
-    ctx.bezierCurveTo(1242,162+i*13,1271,213+i*13,1323,184+i*13);ctx.stroke();
-  }
-  ctx.restore();
-  cardLine(ctx,851,293,1408,293,rule,2);
-  cardLine(ctx,851,299,1408,299,rule,1);
-}
-
-function collageLayout(ctx,c,o,views,design,theme,footer) {
-  const {paper,ink,accent}=theme;
-  fillArea(ctx,"#d7a681",0,0,798,footer);
-  grain(ctx,"#79533827",footer);
-  const mark=c.type==="a" && views[c.detail?.i] && Number.isFinite(c.detail.x) && Number.isFinite(c.detail.y) ? c.detail : null;
-  const detail=mark?views[mark.i]:views[views.length-1];
-  // A torn detail is a crop. The complete, credited source stays visible on the print below.
-  const edge=[[0,0],[773,0],[748,66],[758,119],[729,151],[747,220],[709,262],
-    [717,315],[672,365],[687,408],[626,464],[600,535],[551,579],[0,535]];
-  ctx.save();paperPath(ctx,edge);ctx.clip();coverPhoto(ctx,detail,0,0,780,593,mark);ctx.restore();
-  paperPath(ctx,[[52,54],[263,45],[267,84],[58,91]],paper);
-  smallType(ctx,mark?"MARKED DETAIL":"SOURCE DETAIL",66,77,ink,183);
-  // Two photo-paper mounts overlap the crop along a diagonal; captions stay with their prints.
-  function mount(imgs,x,y,w,h,angle,label){
-    ctx.save();ctx.translate(x,y);ctx.rotate(angle);
-    ctx.shadowColor="#55372148";ctx.shadowBlur=11;ctx.shadowOffsetX=3;ctx.shadowOffsetY=7;
-    fillArea(ctx,"#fcf9ef",0,0,w,h);ctx.shadowColor="transparent";
-    sourceStrip(ctx,imgs,13,13,w-26,h-65,"#dfd8c8",3);
-    smallType(ctx,label,16,h-18,ink,w-32);
-    ctx.restore();
-  }
-  const sourceY=design?294:315;
-  mount(views,38,sourceY,design?510:680,design?290:456,-.055,views.length===2?"SOURCE / BACK & DETAIL":"SOURCE PHOTOGRAPH");
-  if(design)mount([design],168,574,566,248,.038,imageRef(o,c));
-  // A deckled letter-paper edge separates layered material and the written note.
-  const left=[[794,0],[785,74],[801,128],[783,198],[795,250],[781,300],[793,346],[778,420],
-    [797,465],[783,536],[790,615],[778,695],[797,731],[784,849],[791,footer]];
-  paperPath(ctx,[...left,[1500,footer],[1500,0]],paper);
-  cardType(ctx,"POSTCARD",851,87,"bold 27px "+cardSans,accent);
-  const titleBottom=wrappedHeading(ctx,o.name,849,174,550,"bold 60px "+serif,60,ink);
-  cardType(ctx,o.place,853,titleBottom+3,"22px "+serif,ink,550);
-  cardLine(ctx,850,343,1405,343,"#bf8d71",2);
-  cardType(ctx,"AI & HERITAGE",44,footer-36,"bold 20px "+mono,ink);
-}
-
 const edgeStudies = new WeakMap();
 function contourStudy(img) {
   if(edgeStudies.has(img))return edgeStudies.get(img);
@@ -284,58 +241,50 @@ function contourStudy(img) {
   ctx.putImageData(rgba,0,0);edgeStudies.set(img,surface);return surface;
 }
 
+
+const studyPrints=new WeakMap();
+// The photographic strip and its contour share the same crop and registration.
+function lineStudyPrint(image){
+ if(studyPrints.has(image))return studyPrints.get(image);
+ const contour=contourStudy(image);
+ const result=document.createElement("canvas");
+ result.width=contour.width;result.height=contour.height;
+ const ctx=result.getContext("2d");
+ ctx.drawImage(image,0,0,result.width,result.height);
+ const fade=ctx.createLinearGradient(0,result.height*.56,result.width*.18,result.height);
+ fade.addColorStop(0,"rgba(255,255,255,0)");
+ fade.addColorStop(.86,"white");
+ ctx.globalCompositeOperation="destination-in";
+ ctx.fillStyle=fade;ctx.fillRect(0,0,result.width,result.height);
+ ctx.globalCompositeOperation="destination-over";
+ ctx.drawImage(contour,0,0);
+ studyPrints.set(image,result);
+ return result;
+}
+
 function lineLayout(ctx,c,o,views,design,theme,footer){
-  const {ink,accent,rule}=theme;
-  cardType(ctx,"Line study",59,98,"italic 73px "+serif,ink);
-  smallType(ctx,"POSTCARD  /  "+o.id+"."+c.type.toUpperCase(),820,76,ink);
-  cardLine(ctx,59,124,1435,124,rule);
-  const study=contourStudy(views[0]);
-  framePhoto(ctx,study,83,157,631,475,"#f0f3ed");
-  // Registration crosses on the contour plate establish a drawing-sheet margin.
-  for(const [x,y] of [[75,149],[722,149],[75,641],[722,641]]){
-    cardLine(ctx,x-8,y,x+8,y,accent,1.5);
-    cardLine(ctx,x,y-8,x,y+8,accent,1.5);
+ const {ink,accent,rule}=theme;
+ cardType(ctx,"Line study",59,98,"italic 73px "+serif,ink);
+ smallType(ctx,"POSTCARD  /  "+o.id+"."+c.type.toUpperCase(),820,76,ink);
+ cardLine(ctx,59,124,1435,124,rule);
+ const source=views[editionSourceIndices(c,o)[0]];
+ const x=83,y=157,width=631,height=design?452:665;
+ framePhoto(ctx,lineStudyPrint(source),x,y,width,height,"#f0f3ed");
+ for(const cx of [x-7,x+width+7]){
+  for(const cy of [y-7,y+height+7]){
+   cardLine(ctx,cx-8,cy,cx+8,cy,accent,1.5);
+   cardLine(ctx,cx,cy-8,cx,cy+8,accent,1.5);
   }
-  smallType(ctx,"CONTOUR FROM SOURCE PHOTOGRAPH",82,670,accent);
-  const y=706,h=142;
-  const sourceW=design?310:634;
-  sourceStrip(ctx,views,83,y,sourceW,h,"#e0e5dd");
-  smallType(ctx,views.length===2?"SOURCE / BACK & DETAIL":"SOURCE PHOTOGRAPH",83,y+h+27,ink,sourceW);
-  if(design){
-    framePhoto(ctx,design,414,y,300,h,"#e0e5dd");
-    smallType(ctx,imageRef(o,c),414,y+h+27,ink,300);
-  }
-  cardLine(ctx,767,152,767,footer-53,rule,1);
-  const bottom=wrappedHeading(ctx,o.name,818,168,595,"italic 37px "+serif,38,ink);
-  cardType(ctx,o.place,820,bottom-7,"19px "+serif,accent,589);
+ }
+ smallType(ctx,"SOURCE PHOTOGRAPH  /  CONTOUR STUDY",x,y+height+38,accent,width);
+ if(design){
+  framePhoto(ctx,design,x,686,405,161,"#ebece5");
+  smallType(ctx,imageRef(o,c),x,877,ink,width);
+ }
+ cardLine(ctx,767,152,767,footer-53,rule,1);
+ const bottom=wrappedHeading(ctx,o.name,818,168,595,"italic 37px "+serif,38,ink);
+ cardType(ctx,o.place,820,bottom-7,"19px "+serif,accent,589);
 }
-
-function technicalLayout(ctx,c,o,views,design,theme,footer){
-  const {paper,ink,accent,rule}=theme;
-  fillArea(ctx,"#b8dc94",0,0,1500,44);
-  smallType(ctx,"AI & HERITAGE   /   OBJECT ARCHIVE",48,30,paper);
-  smallType(ctx,"POSTCARD  "+o.id+"."+c.type.toUpperCase(),1190,30,paper);
-  cardType(ctx,o.name,47,132,"600 68px "+cardSans,ink,1390);
-  cardType(ctx,o.place,52,174,"23px "+mono,"#d0e0cb",1390);
-  cardLine(ctx,52,206,1448,206,rule,2);
-  const x=52,y=234,h=331,sourceW=850;
-  sourceStrip(ctx,views,x,y,sourceW,h,"#283e3a",8);
-  smallType(ctx,views.length===2?"01  SOURCE PHOTOGRAPHS   /   BACK & DETAIL":"01  SOURCE PHOTOGRAPH",x,603,ink);
-  if(design){
-    framePhoto(ctx,design,928,y,520,h,"#283e3a");
-    smallType(ctx,"02  "+imageRef(o,c),928,603,accent);
-  }else{
-    coverPhoto(ctx,views[views.length-1],928,y,520,h);
-    smallType(ctx,"02  DETAIL OF SOURCE PHOTOGRAPH",928,603,accent);
-  }
-  // Registration ticks refer to the image row; there is no invented scale or reading.
-  for(let i=0;i<43;i++)cardLine(ctx,52+i*33,211,52+i*33,211+(i%7?5:12),rule,1.5);
-  cardLine(ctx,52,631,1448,631,rule,2);
-  cardLine(ctx,368,665,368,footer-38,rule,1);
-  cardType(ctx,c.type.toUpperCase(),50,811,"bold 160px "+cardSans,accent);
-  smallType(ctx,c.type==="a"?"MAKING":"EXCHANGE",59,862,ink);
-}
-
 function drawWriting(ctx,card,theme,words,label,footer,key){
   const {x,y,width,font,leading,ink,accent,rule}=theme;
   smallType(ctx,card.type==="a"?"MY CAPTION":"MY MESSAGE",x,y-51,accent);
@@ -373,11 +322,11 @@ async function renderPostcard(card, {maxWidth=1500}={}) {
   canvas.width=Math.max(1,Math.round(1500*scale));canvas.height=Math.max(1,Math.round(height*scale));
   ctx.scale(scale,scale);
   fillArea(ctx,theme.paper,0,0,1500,height);
-  const paint={classic:vintageLayout,collage:collageLayout,line:lineLayout,technical:technicalLayout}[key];
+  const paint={classic:britishEdition,collage:materialCollageEdition,line:lineLayout,technical:acidEdition}[key];
   paint(ctx,card,o,views,design,theme,footer);
   drawWriting(ctx,card,theme,words,label,footer,key);
   cardLine(ctx,51,footer,1448,footer,theme.rule,1);
-  cardType(ctx,o.credit,53,footer+33,"22px "+serif,theme.ink,1395);
+  cardType(ctx,editionCredit(o,editionSourceIndices(card,o)),53,footer+33,"22px "+serif,theme.ink,1395);
   cardType(ctx,o.url,53,footer+65,"18px "+mono,theme.ink,1395);
   return canvas;
 }
