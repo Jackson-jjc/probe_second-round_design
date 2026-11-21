@@ -1,101 +1,116 @@
 "use strict";
 
-// The softly printed view and caption band recall British photographic picture postcards.
-// They are an original setting for the visitor's own message and the credited object.
+// British picture postcards often let the photograph meet the paper below it.
+// The source remains recognisable after this two-ink photographic treatment.
 const souvenirPrints = new WeakMap();
 
-function souvenirPrint(photo) {
+function souvenirPrint(photo, key) {
   if (souvenirPrints.has(photo)) return souvenirPrints.get(photo);
   const print = document.createElement("canvas");
-  const factor = Math.min(1, 1000 / Math.max(photo.width, photo.height));
-  print.width = Math.max(1, Math.round(photo.width * factor));
-  print.height = Math.max(1, Math.round(photo.height * factor));
-  const g = print.getContext("2d");
-  g.filter = "sepia(.58) saturate(.75) contrast(.9) brightness(1.04)";
-  g.drawImage(photo, 0, 0, print.width, print.height);
-  g.filter = "none";
-  g.globalCompositeOperation = "destination-in";
-  for (const [dx, dy] of [[print.width, 0], [0, print.height]]) {
-    const fade = g.createLinearGradient(0, 0, dx, dy);
-    fade.addColorStop(0, "transparent");
-    fade.addColorStop(.065, "#000");
-    fade.addColorStop(.94, "#000");
-    fade.addColorStop(1, "transparent");
-    g.fillStyle = fade;
-    g.fillRect(0, 0, print.width, print.height);
+  // The museum's flagon scan includes wide white margins on either side of the photograph.
+  const left = key === "jug" ? Math.round(photo.width * .325) : 0;
+  const width = key === "jug" ? Math.round(photo.width * .378) : photo.width;
+  print.width = width;
+  print.height = photo.height;
+  const g = print.getContext("2d", {willReadFrequently:true});
+  g.drawImage(photo, left, 0, width, photo.height, 0, 0, width, photo.height);
+  const pixels = g.getImageData(0, 0, width, print.height);
+  const data = pixels.data;
+  const ink = [45, 57, 52], stock = [235, 227, 205];
+  for (let i=0; i<data.length; i+=4) {
+    const light = (data[i]*.299 + data[i+1]*.587 + data[i+2]*.114) / 255;
+    for (let channel=0; channel<3; channel++) {
+      const tone = ink[channel] + (stock[channel]-ink[channel])*light;
+      data[i+channel] = tone*.90 + data[i+channel]*.10;
+    }
   }
-  souvenirPrints.set(photo, print);
-  return print;
-}
-
-function souvenirScroll(ctx, x, y, direction) {
-  ctx.save();
-  ctx.translate(x, y);
-  ctx.scale(direction, 1);
-  ctx.strokeStyle = "#927850";
-  ctx.lineWidth = 1.7;
-  ctx.beginPath();
-  ctx.moveTo(0, 1);
-  ctx.bezierCurveTo(27, 4, 48, -17, 71, -7);
-  ctx.bezierCurveTo(91, 3, 95, 7, 131, 0);
-  ctx.moveTo(21, 1);
-  ctx.bezierCurveTo(43, 6, 51, -10, 65, -4);
-  ctx.stroke();
-  ctx.restore();
+  g.putImageData(pixels, 0, 0);
+  // Blend an upright studio photograph into its own edge tone while keeping its full height.
+  const edge = g.getImageData(2, Math.floor(print.height*.24), 1, 1).data;
+  const matte = "rgb("+edge[0]+","+edge[1]+","+edge[2]+")";
+  if (key !== "knit") {
+    g.globalCompositeOperation = "destination-in";
+    const fade = g.createLinearGradient(0,0,width,0);
+    fade.addColorStop(0,"transparent");
+    fade.addColorStop(.10,"#000");
+    fade.addColorStop(.90,"#000");
+    fade.addColorStop(1,"transparent");
+    g.fillStyle = fade;
+    g.fillRect(0,0,width,print.height);
+  }
+  const result = {print,matte};
+  souvenirPrints.set(photo, result);
+  return result;
 }
 
 function britishEdition(ctx, c, o, views, design, theme, footer) {
   const {paper, ink, rule, accent} = theme;
-  const left = 83;
-  grain(ctx, "#856a3825", footer);
-  ctx.strokeStyle = "#b5a783";
-  ctx.lineWidth = 2;
-  ctx.strokeRect(25, 25, 1450, footer - 44);
-  cardLine(ctx, 35, 35, 1465, 35, "#d4c7a6", 1);
-  const print = souvenirPrint(views[0]);
-  const windowX = design ? 751 : 622;
-  const windowW = 1430 - windowX;
-  const fit = Math.min(windowW / print.width, 540 / print.height);
-  const pw = fit * print.width, ph = fit * print.height;
-  ctx.drawImage(print, windowX + (windowW - pw) / 2, 70 + (540 - ph) / 2, pw, ph);
-  const headingWidth = design ? 657 : 527;
-  const titleTop = design ? 144 : 219;
-  cardType(ctx, "A   M U S E U M   P I C T U R E   P O S T C A R D", left, titleTop - 68,
-    "bold 19px " + serif, accent, headingWidth);
-  const below = wrappedHeading(ctx, o.name, left, titleTop, headingWidth, "italic 65px " + serif, 64, ink);
-  cardType(ctx, o.place, left + 2, below - 10, "23px " + serif, accent, headingWidth);
-  if (design) {
-    const x = left + 18, y = Math.max(326, below + 17), w = 572, h = 211;
-    ctx.save();
-    ctx.beginPath();
-    ctx.roundRect(x, y, w, h, h / 2);
-    ctx.clip();
-    // Exact colours are retained on the chosen design, with a mount around the print.
-    framePhoto(ctx, design, x, y, w, h, "#e7dbc1");
-    ctx.restore();
-    ctx.strokeStyle = "#9e8863";
-    ctx.lineWidth = 2;
-    for (const padding of [0, 6]) {
-      ctx.beginPath();
-      ctx.roundRect(x-padding,y-padding,w+2*padding,h+2*padding,h/2+padding);
-      ctx.stroke();
-    }
-    cardType(ctx, imageRef(o,c), left + 22, y+h+38, "bold 18px " + mono, ink);
+  const {print,matte} = souvenirPrint(views[editionSourceIndices(c,o)[0]], c.key);
+  const h = 550;
+  grain(ctx, "#856a382a", footer);
+  if (c.key === "knit") {
+    coverPhoto(ctx,print,0,0,1500,h);
   } else {
-    souvenirScroll(ctx,left+6,below+37,1);
+    // Loose mounts are given room at the right, clear of the original object.
+    fillArea(ctx,matte,0,0,1500,h);
+    const ratio = (h-20) / print.height;
+    const w = print.width*ratio;
+    ctx.drawImage(print,(design ? 594 : 750)-w/2,6,w,print.height*ratio);
+    const shade=ctx.createLinearGradient(0,0,1500,0);
+    shade.addColorStop(0,"#5e61492c");
+    shade.addColorStop(.32,"transparent");
+    shade.addColorStop(.73,"transparent");
+    shade.addColorStop(1,"#5e614931");
+    ctx.fillStyle=shade;
+    ctx.fillRect(0,0,1500,h);
   }
-  cardType(ctx, "Tinted source photograph", windowX + 14, 633, "italic 23px " + serif, ink);
-  cardLine(ctx, left, 655, 1415, 655, rule, 1.6);
-  cardLine(ctx, left, 661, 1415, 661, rule, 1);
-  cardLine(ctx, 1167, 701, 1167, footer-35, rule, 1.4);
-  cardType(ctx, "Post Card", 1194, 749, "italic 45px " + serif, accent, 224);
-  drawStamp(ctx,1248,774, "#667e6d",paper,.72);
+  const fade = ctx.createLinearGradient(0,h-47,0,h);
+  fade.addColorStop(0,"transparent");
+  fade.addColorStop(1,paper);
+  ctx.fillStyle=fade;
+  ctx.fillRect(0,h-47,1500,47);
+
+  if (design) {
+    const x=1009, y=251, w=385, height=208;
+    ctx.save();
+    ctx.translate(x+w/2,y+height/2);
+    ctx.rotate(-.036);
+    ctx.fillStyle=paper;
+    ctx.shadowColor="#30292154";ctx.shadowBlur=7;ctx.shadowOffsetY=5;
+    ctx.beginPath();ctx.ellipse(0,0,w/2+9,height/2+9,0,0,2*Math.PI);ctx.fill();
+    ctx.shadowColor="transparent";
+    ctx.save();
+    ctx.beginPath();ctx.ellipse(0,0,w/2,height/2,0,0,2*Math.PI);ctx.clip();
+    framePhoto(ctx,design,-w/2,-height/2,w,height,"#e8dec7");
+    ctx.restore();
+    ctx.strokeStyle="#877656";ctx.lineWidth=1.8;
+    ctx.beginPath();ctx.ellipse(0,0,w/2+3,height/2+3,0,0,2*Math.PI);ctx.stroke();
+    ctx.restore();
+    const ref=imageRef(o,c).replace("  /  "," · ");
+    ctx.save();ctx.textAlign="center";
+    ctx.font="bold 19px "+mono;
+    const labelWidth=ctx.measureText(ref).width+24;
+    fillArea(ctx,paper,x+w/2-labelWidth/2,y+height+23,labelWidth,33);
+    cardType(ctx,ref,x+w/2,y+height+46,"bold 19px "+mono,ink);
+    ctx.restore();
+  }
+
+  // Printers set the scene name in muted red directly under the photographic plate.
+  cardType(ctx,o.name,81,611,"49px "+serif,accent,982);
+  cardType(ctx,o.place,84,650,"italic 28px "+serif,ink,1043);
+  ctx.save();ctx.textAlign="right";
+  cardType(ctx,"Tinted source photograph · "+o.id,1419,643,"21px "+serif,accent,360);
+  ctx.restore();
+  cardLine(ctx,82,681,1418,681,rule,1.4);
+  cardLine(ctx,1167,703,1167,footer-36,rule,1.3);
+  cardType(ctx,"Post Card",1195,750,"italic 43px "+serif,accent,224);
+  drawStamp(ctx,1240,776,"#697d69",paper,.72);
   ctx.save();
-  ctx.strokeStyle="#907d65";ctx.lineWidth=1.3;
+  ctx.strokeStyle="#907d65";ctx.lineWidth=1.4;
   for(let j=0;j<3;j++){
-    const y=828+j*8;
-    ctx.beginPath();ctx.moveTo(1316,y);
-    ctx.bezierCurveTo(1346,y-15,1358,y+10,1397,y);ctx.stroke();
+    const y=829+j*8;
+    ctx.beginPath();ctx.moveTo(1309,y);
+    ctx.bezierCurveTo(1344,y-14,1357,y+10,1400,y);ctx.stroke();
   }
   ctx.restore();
 }
@@ -164,74 +179,104 @@ function peelPaperObject(image) {
   return result;
 }
 
-function materialCollageEdition(ctx,c,o,views,design,theme,footer){
-  const {ink,paper,accent}=theme;
-  const mark=c.type==="a" && views[c.detail?.i] && Number.isFinite(c.detail.x) && Number.isFinite(c.detail.y)
-    ? c.detail : null;
-  const index=mark?.i ?? views.length-1;
-  const source=views[index];
-  const designCutout=design && c.type==="a" ? peelPaperObject(design) : null;
-  grain(ctx,"#776f592a",footer);
+// The printed type strip and small stamp-like clipping borrow the hierarchy of
+// the rooster mailpiece in Art Makes People's "12 Mail Art Ideas" Pinterest pin.
+function materialCollageEdition(ctx, c, o, views, design, theme, footer) {
+  const {ink, paper, accent} = theme;
+  const indices = editionSourceIndices(c, o);
+  const mark = c.type === "a" && c.detail?.i === indices[0] &&
+    Number.isFinite(c.detail.x) && Number.isFinite(c.detail.y) ? c.detail : null;
+  const source = views[indices[0]];
+  const cutout = design && c.type === "a" ? peelPaperObject(design) : null;
+  const red = "#bd3526", deepBlue = "#303e60";
+  grain(ctx, "#776f592a", footer);
 
-  const bottom=design?578:802;
-  // Source crop printed in soot ink, clipped to the outer edge of the paper tear.
-  const tear=[[0,0],[655,0],[648,72],[695,100],[672,157],[741,204],[716,248],[756,269],
-    [722,334],[731,386],[710,410],[746,471],[689,531],[718,bottom-18],[629,bottom+31],
-    [579,bottom],[482,bottom+30],[448,bottom+14],[379,bottom+63],[317,bottom+43],
-    [237,bottom+80],[169,bottom+52],[81,bottom+82],[0,bottom+57]];
+  // Keep the object name across the top, like the first line on a real piece of mail.
+  cardType(ctx, o.name, 60, 108, "bold 73px " + serif, ink, 1115);
+  cardType(ctx, o.place, 64, 153, "italic 29px " + serif, ink, 1110);
   ctx.save();
-  ctx.translate(0,9);paperPath(ctx,tear,"#ada89a");
-  ctx.restore();
-  ctx.save();
-  paperPath(ctx,tear);ctx.clip();
-  ctx.filter="grayscale(1) contrast(1.22)";
-  coverPhoto(ctx,source,0,0,760,bottom+90,mark);
-  ctx.restore();
-  // Coarse dot screen belongs to the reproduction, only inside its cut edge.
-  ctx.save();paperPath(ctx,tear);ctx.clip();ctx.fillStyle="#18181338";
-  for(let y=2;y<bottom+90;y+=9)for(let x=2+(y%2)*4;x<760;x+=9)ctx.fillRect(x,y,1.5,1.5);
+  ctx.translate(1208, 48);
+  ctx.rotate(.035);
+  fillArea(ctx, red, 0, 0, 106, 58);
+  fillArea(ctx, deepBlue, 106, 0, 114, 58);
+  cardType(ctx, "POST", 11, 41, "bold 34px " + mono, "#fff5dd", 85);
+  cardType(ctx, "CARD", 119, 41, "bold 34px " + mono, "#fff5dd", 87);
   ctx.restore();
 
-  if(design && views.length>1){
-    // This narrow second print is the other documented view of the gown.
-    const extra=views[index===0?1:0];
-    ctx.save();ctx.translate(525,170);ctx.rotate(.084);
-    fillArea(ctx,"#eee7d5",-9,-9,222,300);
-    coverPhoto(ctx,extra,0,0,203,281);
+  // The largest clipping uses exactly the photograph and point chosen in Probe A.
+  // Its ragged leading edge exposes a second sheet of unprinted paper beneath it.
+  const height = design ? 465 : 625;
+  const torn = [[0,2],[470,0],[597,8],[638,2],[661,11],[652,81],[673,109],
+    [651,149],[662,211],[647,259],[669,293],[659,height-73],[669,height-37],
+    [640,height-12],[568,height+4],[513,height-4],[482,height+7],
+    [402,height-2],[331,height+13],[245,height-3],[191,height+12],
+    [129,height+2],[81,height+11],[-2,height-5]];
+  ctx.save();
+  ctx.translate(68, 229);
+  ctx.rotate(-.04);
+  ctx.save();ctx.translate(6,10);paperPath(ctx,torn,"#c8baa1");ctx.restore();
+  ctx.save();ctx.translate(2,5);paperPath(ctx,torn,"#fff8e8");ctx.restore();
+  ctx.save();
+  paperPath(ctx, torn);
+  ctx.clip();
+  ctx.filter = "grayscale(1) contrast(1.2)";
+  coverPhoto(ctx, source, -2, 0, 679, height + 14, mark);
+  ctx.filter = "none";
+  ctx.fillStyle = "#28251c32";
+  for (let y=2; y<height+14; y+=9) {
+    for (let x=2+(y%2)*4; x<679; x+=9) ctx.fillRect(x,y,1.6,1.6);
+  }
+  ctx.restore();
+  ctx.restore();
+
+  // The vertical source strip sits on the seam so it labels a specific photograph.
+  ctx.save();
+  ctx.translate(74, 553);
+  ctx.rotate(-Math.PI/2 - .04);
+  fillArea(ctx, red, -10, -23, 312, 37);
+  cardType(ctx, (mark ? "MARKED DETAIL" : "SOURCE DETAIL") + "  /  " + o.id,
+    0, 3, "bold 22px " + mono, "#fff8e7", 282);
+  ctx.restore();
+
+  if (indices.length > 1) {
+    const extra = views[indices[1]];
+    // An actual second collection photograph becomes the small reference print.
+    ctx.save();
+    ctx.translate(608, 214);
+    ctx.rotate(.055);
+    fillArea(ctx, "#c6b9a4", 4, 6, 164, 201);
+    fillArea(ctx, "#e7dfc4", 0, 0, 164, 201);
+    ctx.strokeStyle = deepBlue;ctx.lineWidth=1.8;
+    ctx.strokeRect(5,5,154,191);
+    coverPhoto(ctx, extra, 12, 12, 140, 148);
+    smallType(ctx, "V&A  /  " + o.id, 13, 187, deepBlue, 138);
     ctx.restore();
   }
-  if(design){
-    const red="#cc4734";
-    paperPath(ctx,[[0,660],[204,590],[405,623],[713,540],[769,866],[552,892],[331,868],[122,921],[0,898]],red);
-    // A neutral-background product becomes a loose paper object. Other prepared
-    // images keep their original colours and full scene on a torn-edged clipping.
-    ctx.save();ctx.translate(374,706);ctx.rotate(-.072);
-    if(designCutout){
-      const scale=Math.min(576/designCutout.width,332/designCutout.height);
-      const w=designCutout.width*scale,h=designCutout.height*scale;
-      ctx.shadowColor="#341b1b77";ctx.shadowOffsetX=7;ctx.shadowOffsetY=10;ctx.shadowBlur=9;
-      ctx.drawImage(designCutout,-w/2,-h/2,w,h);
-    }else{
-      const w=682,h=240;
-      const cut=[[-w/2-9,-h/2-8],[-221,-h/2-13],[-68,-h/2-3],[166,-h/2-10],
-        [w/2+7,-h/2-2],[w/2+11,h/2+6],[181,h/2+9],[-19,h/2+3],[-w/2-10,h/2+13]];
-      paperPath(ctx,cut,paper);
-      framePhoto(ctx,design,-w/2,-h/2,w,h,"#e9dfca");
+  if (design) {
+    // The colour reproduction crosses the photograph's lower edge like a pasted slip.
+    const w = cutout ? 482 : 548;
+    const h = cutout ? 280 : 230;
+    ctx.save();
+    ctx.translate(cutout ? 434 : 400, 729);
+    ctx.rotate(-.056);
+    paperPath(ctx, [[-w/2-49,-h/2+28],[-96,-h/2-25],[96,-h/2-10],[w/2+40,-h/2-26],
+      [w/2+35,h/2-8],[111,h/2+19],[-82,h/2+4],[-w/2-37,h/2+20]], red);
+    if (cutout) {
+      const scale = Math.min(w/cutout.width,h/cutout.height);
+      const dw=cutout.width*scale, dh=cutout.height*scale;
+      ctx.shadowColor="#30231672";ctx.shadowOffsetY=5;ctx.shadowOffsetX=3;ctx.shadowBlur=5;
+      ctx.drawImage(cutout,-dw/2,-dh/2,dw,dh);
+    } else {
+      fillArea(ctx, "#fff6df", -w/2-8,-h/2-8,w+16,h+16);
+      framePhoto(ctx,design,-w/2,-h/2,w,h,"#ece2cd");
     }
     ctx.restore();
-    fillArea(ctx,paper,432,870,306,39);
-    smallType(ctx,imageRef(o,c),445,897,ink,281);
+    ctx.save();ctx.translate(407,895);ctx.rotate(-.022);
+    fillArea(ctx,"#fdf7e8",-8,-24,332,34);
+    smallType(ctx,imageRef(o,c),0,0,deepBlue,312);
+    ctx.restore();
   }
-  ctx.save();ctx.translate(49,54);ctx.rotate(-.026);
-  const label=mark?"MARKED DETAIL  /  "+o.id:"SOURCE DETAIL  /  "+o.id;
-  fillArea(ctx,paper,-10,-26,253,40);
-  smallType(ctx,label,0,0,ink,233);ctx.restore();
-
-  cardType(ctx,"MATERIAL STUDY",832,77,"bold 22px "+mono,accent,356);
-  ctx.save();ctx.strokeStyle=accent;ctx.lineWidth=2;ctx.strokeRect(1260,45,155,45);
-  smallType(ctx,"POST CARD",1277,75,accent,123);ctx.restore();
-  const bottomOfTitle=wrappedHeading(ctx,o.name,829,181,585,"bold 64px "+serif,66,ink);
-  cardType(ctx,o.place,835,bottomOfTitle, "23px "+serif, ink,579);
-  cardLine(ctx,835,373,1418,373,accent,2.4);
-  cardType(ctx,"AI & HERITAGE",835,footer-31,"bold 17px "+mono,accent);
+  // Discrete dividers leave the visitor's continuous writing area clear.
+  cardLine(ctx, 850, 289, 1430, 289, "#c4b7a0", 1.6);
+  cardType(ctx,"AI & HERITAGE",851,footer-31,"bold 18px "+mono,accent);
 }

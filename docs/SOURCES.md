@@ -127,3 +127,14 @@ Main search cut-off 14 October 2026. Targeted material-interaction and practice 
    Reading scope: University publication record and abstract checked 16 October 2026. Describes a tangible generative camera, instant prints and reflection with 15 creative practitioners. Used for the research form. Used for the described research form.
 
 Paper image licences and original figure numbers are in [the figure credits](../data/figure-credits.json). Figure crops do not change their content. Related Huayao studies are not independent replications. ZOMA and the empathy paper are used at abstract level.
+
+## Postcard layout references
+
+The four editions use the study photographs and the visitor’s chosen materials. These examples informed how each card places the picture and the visitor’s writing.
+
+| Edition | What we took from the reference |
+| --- | --- |
+| Acid chrome | The *SAVAGE / METALLIK* poster puts one metallic form between narrow scales and gives its heading the full width. On our card the heading spans the top, an inverted strip picks out part of the picture, and the visitor writes beside it. [Pinterest poster](https://www.pinterest.com/pin/826480969154297814/) |
+| Paper collage | In the rooster example from *12 Mail Art Ideas*, one large clipping, a narrow strip of type and small stamps have distinct sizes. On our card a torn source print holds the marked detail, and a chosen colour image overlaps its edge. [Pinterest example sheet](https://www.pinterest.com/pin/178877416445542093/) · [Art Makes People](https://artmakespeople.com/mail-art-ideas/) |
+| Line study | The tulip envelope in *Envelope Art for Handmade Cards* leaves the address on open paper beside two outlines with local colour. Our drawing sits to the left of the visitor’s words. A mark on the source moves the wash of colour, and a chosen design takes the place of a picture stamp. [Pinterest envelope](https://www.pinterest.com/pin/7810999349015431/) |
+| British picture postcard | On the *Bangor Cathedral, N. Wales* card, a wide photographic view fades into the paper above a small red caption. Our card places the collection view above its title and leaves ruled space below for correspondence. [Pinterest postcard](https://www.pinterest.com/pin/499688521155437471/) |

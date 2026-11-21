@@ -36,116 +36,108 @@ function acidSpecular(ctx,top,bottom) {
   return chrome;
 }
 
-function acidOrbit(ctx,x,y,rx,ry,angle,front) {
-  ctx.save();ctx.translate(x,y);ctx.rotate(angle);
-  const metal=acidSpecular(ctx,-ry,ry);
-  // The return arc narrows to a point as the strip twists away from the viewer.
-  ctx.beginPath();
-  const start=front?.13:Math.PI*.95, end=front?Math.PI*.92:Math.PI*2.05;
-  const count=90;
-  for(let i=0;i<=count;i++){
-    const t=start+(end-start)*i/count;
-    const w=1+10*Math.pow(Math.sin(i*Math.PI/count),1.65);
-    const px=(rx+w)*Math.cos(t),py=(ry+w*.4)*Math.sin(t);
-    if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py);
+// Marginal ticks sit outside the image, like the rails on a specimen sheet.
+function acidRail(ctx,x,y,bottom,direction) {
+  const edge="#726b80";
+  cardLine(ctx,x,y,x,bottom,edge,1.4);
+  for(let at=y,index=0;at<=bottom;at+=17,index++){
+    const length=index%4===0?17:7;
+    cardLine(ctx,x,at,x+direction*length,at,edge,1.4);
   }
-  for(let i=count;i>=0;i--){
-    const t=start+(end-start)*i/count;
-    ctx.lineTo((rx-1)*Math.cos(t),(ry-1)*Math.sin(t));
-  }
-  ctx.closePath();ctx.fillStyle=metal;ctx.fill();
-  ctx.restore();
-}
-
-function acidSpark(ctx,x,y,size){
-  ctx.save();ctx.translate(x,y);ctx.rotate(.23);
-  const s=size;
-  ctx.beginPath();ctx.moveTo(0,-s);
-  ctx.quadraticCurveTo(.08*s,-.09*s,.78*s,0);
-  ctx.quadraticCurveTo(.08*s,.09*s,0,s);
-  ctx.quadraticCurveTo(-.08*s,.09*s,-.78*s,0);
-  ctx.quadraticCurveTo(-.08*s,-.09*s,0,-s);
-  ctx.closePath();ctx.fillStyle="#eaffaa";ctx.fill();ctx.restore();
 }
 
 function acidHero(ctx,img,card,sourceOnly) {
-  // The cuff/bag mock-ups have a neutral studio margin. Trim that margin while
-  // retaining their full height. Visitor-message illustrations retain full width.
-  const inputW=img.naturalWidth||img.width,inputH=img.naturalHeight||img.height;
-  // The supplied jug scan includes broad white margins outside the photograph.
+  const imageWidth=img.naturalWidth||img.width;
+  const imageHeight=img.naturalHeight||img.height;
   let trim=1;
   if(sourceOnly&&card.key==="jug")trim=.41;
   else if(!sourceOnly&&card.type==="a")trim=.78;
-  const sw=inputW*trim, sh=inputH;
-  const fit=Math.min(714/sw,610/sh);
-  const w=sw*fit,h=sh*fit;
-  const x=401-w/2,y=526-h/2;
-  ctx.save();
-  const path=new Path2D();
-  path.moveTo(x+28,y);path.lineTo(x+w-52,y);path.lineTo(x+w,y+52);
-  path.lineTo(x+w,y+h-23);path.lineTo(x+w-23,y+h);path.lineTo(x+47,y+h);
-  path.lineTo(x,y+h-47);path.lineTo(x,y+28);path.closePath();
-  ctx.clip(path);
-  const draw=image=>{
-    const imageWidth=image.naturalWidth||image.width,imageHeight=image.naturalHeight||image.height;
-    ctx.drawImage(image,imageWidth*(1-trim)/2,0,imageWidth*trim,imageHeight,x,y,w,h);
-  };
+  const croppedWidth=imageWidth*trim;
+  const scale=Math.min(651/croppedWidth,554/imageHeight);
+  const w=croppedWidth*scale, h=imageHeight*scale;
+  const x=421-w/2, y=514-h/2;
+
+  // Both impressions use exactly the same source rectangle. The coloured strip
+  // crosses the selected point on a marked source view, or the left third by default.
+  function draw(image){
+    const sw=image.naturalWidth||image.width,sh=image.naturalHeight||image.height;
+    ctx.drawImage(image,sw*(1-trim)/2,0,sw*trim,sh,x,y,w,h);
+  }
   draw(img);
-  // A diagonal sliver crosses the plate. Most of the selected image stays in its original colours.
-  ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+w*.40,y);ctx.lineTo(x+w*.17,y+h);ctx.lineTo(x,y+h);ctx.closePath();
-  ctx.clip();draw(polarisedPlate(img));
+  const point=sourceOnly&&card.type==="a"?card.detail:null;
+  let centre=.32;
+  if(point&&Number.isFinite(point.x)&&Number.isFinite(point.y)){
+    const inCrop=(point.x/100-(1-trim)/2)/trim;
+    centre=Math.max(.10,Math.min(.90,inCrop+.17*(point.y/100-.5)));
+  }
+  const cx=x+w*centre;
+  const halfWidth=.094*w, slant=.085*w;
+  ctx.save();
+  ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();
+  ctx.beginPath();
+  ctx.moveTo(cx-halfWidth+slant,y);
+  ctx.lineTo(cx+halfWidth+slant,y);
+  ctx.lineTo(cx+halfWidth-slant,y+h);
+  ctx.lineTo(cx-halfWidth-slant,y+h);
+  ctx.closePath();ctx.clip();draw(polarisedPlate(img));
   ctx.restore();
-  ctx.save();ctx.strokeStyle="#aca5cd";ctx.lineWidth=1.4;ctx.stroke(path);ctx.restore();
 }
 
 function acidEdition(ctx,c,o,views,design,theme,footer) {
-  const source=views[c.type==="a"&&views[c.detail?.i]?c.detail.i:0];
-  const hero=design||source;
+  const source=views[editionSourceIndices(c,o)[0]];
   const {ink,accent}=theme;
+  const edge="#81798c";
   ctx.save();
-  const glow=ctx.createRadialGradient(316,465,22,315,465,570);
-  glow.addColorStop(0,"#6243ce");glow.addColorStop(.59,"#36216b");glow.addColorStop(1,theme.paper);
-  fillArea(ctx,glow,0,0,878,936);
 
-  // Masthead uses its own metallic letterforms to leave the visitor's words plain.
-  cardType(ctx,"AI & HERITAGE",55,44,"bold 22px "+mono,ink);
-  cardType(ctx,"OBJECT "+o.id+"   /   PROBE "+c.type.toUpperCase(),1026,44,"bold 20px "+mono,ink,345);
-  cardLine(ctx,52,65,1448,65,"#6b6180",1.5);
-  ctx.save();ctx.translate(58,199);ctx.transform(1,-.027,-.16,1,0,0);ctx.scale(1.52,1);
-  ctx.font="900 137px Arial Black, Arial, sans-serif";
-  ctx.strokeStyle="#080713";ctx.lineWidth=6;ctx.strokeText("POSTCARD",4,5);
-  ctx.fillStyle=acidSpecular(ctx,-104,7);ctx.fillText("POSTCARD",0,0);
-  ctx.strokeStyle="#c4c6f1";ctx.lineWidth=.9;ctx.strokeText("POSTCARD",0,0);ctx.restore();
-  // A die-cut postage mark. Its perforations and rosette are original to this worktable.
-  ctx.save();ctx.translate(1374,80);ctx.rotate(.08);
-  drawStamp(ctx,0,0,accent,theme.paper,.61);ctx.restore();
+  // Give the metallic letters one broad register. The dark correspondence field
+  // and the untouched parts of each photograph carry the finer information.
+  ctx.save();
+  ctx.translate(49,141);
+  ctx.font="900 151px Arial Black, Arial, sans-serif";
+  const word="POSTCARD";
+  ctx.scale(1247/ctx.measureText(word).width,1);
+  ctx.transform(1,0,-.105,1,0,0);
+  ctx.fillStyle=acidSpecular(ctx,-110,2);
+  ctx.fillText(word,0,0);
+  ctx.lineWidth=.65;ctx.strokeStyle="#dad9ef";ctx.strokeText(word,0,0);
+  ctx.restore();
+  ctx.save();ctx.translate(1352,39);ctx.rotate(.045);
+  drawStamp(ctx,0,0,accent,theme.paper,.75);ctx.restore();
 
-  acidOrbit(ctx,397,520,439,114,-.46,false);
-  acidHero(ctx,hero,c,!design);
-  acidOrbit(ctx,397,520,439,114,-.46,true);
-  acidSpark(ctx,88,715,34);acidSpark(ctx,704,311,17);
+  cardLine(ctx,51,167,1448,167,edge,1.5);
+  cardType(ctx,"AI & HERITAGE",52,197,"bold 20px "+mono,ink);
+  const action=c.type==="a"?"MAKING":"EXCHANGE";
+  cardType(ctx,"PROBE "+c.type.toUpperCase()+"  /  "+action+"     ·     OBJECT "+o.id,834,197,"bold 20px "+mono,accent);
+  cardLine(ctx,51,211,1448,211,edge,1.5);
 
-  const key=c.type==="a"?"MAKING":"EXCHANGE";
-  cardType(ctx,key,54,885,"bold 21px "+mono,accent);
-  const desc=design?imageRef(o,c):"SOURCE PHOTOGRAPH";
-  cardType(ctx,desc+"   /   POLARISED BAND",54,915,"20px "+mono,ink,700);
+  const field=ctx.createLinearGradient(51,234,789,805);
+  field.addColorStop(0,"#090911");field.addColorStop(.72,"#171424");field.addColorStop(1,"#191524");
+  fillArea(ctx,field,51,223,740,589);
+  acidRail(ctx,60,239,795,1);
+  acidRail(ctx,782,239,795,-1);
+  acidHero(ctx,design||source,c,!design);
 
-  const titleWidth=design?404:606;
-  const bottom=wrappedHeading(ctx,o.name,834,278,titleWidth,"italic bold 52px "+serif,54,ink);
-  cardType(ctx,o.place,835,bottom+8,"23px "+cardSans,"#c5bdd5",titleWidth);
+  // The rail continues below the print as a real source caption.
+  cardLine(ctx,51,824,791,824,edge,1.5);
+  cardType(ctx,design?imageRef(o,c):"SOURCE PHOTOGRAPH",54,869,"bold 27px "+mono,accent,705);
+  cardType(ctx,"Polarised colour print",54,903,"22px "+cardSans,ink);
+  cardLine(ctx,809,222,809,footer-23,"#514a5b",1.3);
+
+  const titleWidth=design?408:603;
+  const bottom=wrappedHeading(ctx,o.name,834,298,titleWidth,"bold 49px "+cardSans,53,ink);
+  cardType(ctx,o.place,835,bottom+1,"23px "+cardSans,"#d1cbd6",titleWidth);
   if(design){
-    const x=1263,y=211,w=179,h=173;
-    fillArea(ctx,accent,x-4,y-4,w+8,h+8);
+    const x=1269,y=247,w=171,h=152;
+    fillArea(ctx,"#84808d",x-1,y-1,w+2,h+2);
     if(c.key==="jug"){
       fillArea(ctx,"#242230",x,y,w,h);
-      const sh=source.height,sw=.41*source.width;
-      const dw=h*sw/sh;
+      const sw=.41*source.width,sh=source.height,dw=h*sw/sh;
       ctx.drawImage(source,(source.width-sw)/2,0,sw,sh,x+(w-dw)/2,y,dw,h);
     }else{
       framePhoto(ctx,source,x,y,w,h,"#242230");
     }
-    smallType(ctx,"SOURCE PHOTO",x,y+h+29,ink,w);
+    smallType(ctx,"SOURCE PHOTO",x,y+h+27,ink,w);
   }
-  cardLine(ctx,835,488,1442,488,"#787184",2);
+  cardLine(ctx,835,472,1442,472,edge,1.5);
   ctx.restore();
 }

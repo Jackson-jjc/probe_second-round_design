@@ -100,7 +100,7 @@ function editionFinish(style,card){
  const descriptions={
   classic:card.image?"Tinted view with an oval inset":"One tinted view",
   collage:card.detail?"A torn print of your marked detail":"Torn black-and-white print",
-  line:"Photograph fading into linework",
+  line:"Ink contours with a wash of colour",
   technical:"Chrome type and inverted colour"
  };
  return descriptions[style];
@@ -129,8 +129,8 @@ function cardSourceLinks(o,indices){
 const cardSans = '"Segoe UI", Arial, "Microsoft YaHei", sans-serif';
 const cardLayouts = {
   classic:   {paper:"#f5efdf", ink:"#323a35", accent:"#793e37", rule:"#b7ae91", x:83, y:777, width:1030, font:"italic 41px "+serif, leading:55},
-  collage:   {paper:"#f6f0e4", ink:"#282827", accent:"#a32626", rule:"#aba390", x:835, y:493, width:585, font:"38px "+cardSans, leading:54},
-  line:      {paper:"#f6f7f1", ink:"#283c44", accent:"#365966", rule:"#a5b3b3", x:820, y:285, width:589, font:"italic 42px "+serif, leading:60},
+  collage:   {paper:"#f6f0e4", ink:"#282827", accent:"#a32626", rule:"#aba390", x:850, y:397, width:575, font:"38px "+cardSans, leading:54},
+  line:      {paper:"#faf9f3", ink:"#243f42", accent:"#43675d", rule:"#b4c2b8", x:850, y:433, width:570, font:"italic 42px "+serif, leading:59},
   technical: {paper:"#111019", ink:"#f4f0ff", accent:"#d4ff32", rule:"#585264", x:835, y:576, width:605, font:"39px "+cardSans, leading:55}
 };
 
@@ -215,7 +215,7 @@ function wrappedHeading(ctx,text,x,y,width,font,leading,color) {
 }
 
 const edgeStudies = new WeakMap();
-function contourStudy(img) {
+function contourStudy(img, keepShade) {
   if(edgeStudies.has(img))return edgeStudies.get(img);
   const surface=document.createElement("canvas");
   const scale=760/Math.max(img.width,img.height);
@@ -234,56 +234,105 @@ function contourStudy(img) {
         const dy=gray[i+w-1]+2*gray[i+w]+gray[i+w+1]-gray[i-w-1]-2*gray[i-w]-gray[i-w+1];
         density=Math.min(.98,Math.max(0,(Math.abs(dx)+Math.abs(dy)-32)/225));
       }
-      pixels[4*i]=240-199*density;pixels[4*i+1]=243-180*density;pixels[4*i+2]=237-163*density;
-      pixels[4*i+3]=255;
+      pixels[4*i]=36;pixels[4*i+1]=64;pixels[4*i+2]=66;
+      // A light ink tone keeps the jug's dark leather folds visible between edges.
+      if (keepShade) density = Math.max(density, .32 * Math.max(0, 1 - gray[i] / 105));
+      pixels[4*i+3]=Math.round(244*density);
     }
   }
   ctx.putImageData(rgba,0,0);edgeStudies.set(img,surface);return surface;
 }
 
 
-const studyPrints=new WeakMap();
-// The photographic strip and its contour share the same crop and registration.
-function lineStudyPrint(image){
- if(studyPrints.has(image))return studyPrints.get(image);
- const contour=contourStudy(image);
- const result=document.createElement("canvas");
- result.width=contour.width;result.height=contour.height;
- const ctx=result.getContext("2d");
- ctx.drawImage(image,0,0,result.width,result.height);
- const fade=ctx.createLinearGradient(0,result.height*.56,result.width*.18,result.height);
- fade.addColorStop(0,"rgba(255,255,255,0)");
- fade.addColorStop(.86,"white");
- ctx.globalCompositeOperation="destination-in";
- ctx.fillStyle=fade;ctx.fillRect(0,0,result.width,result.height);
- ctx.globalCompositeOperation="destination-over";
- ctx.drawImage(contour,0,0);
- studyPrints.set(image,result);
- return result;
+const studyPrints = new WeakMap();
+
+// Reveal a little colour at the point the visitor noticed. The ink and photograph
+// share one set of coordinates, so the colour stays inside the same folds and marks.
+function lineStudyPrint(image, point, leather) {
+  const centre = point || {x: 45, y: 66};
+  const cached = studyPrints.get(image);
+  if (cached && cached.x === centre.x && cached.y === centre.y) return cached.print;
+  const ink = contourStudy(image, leather);
+  const print = document.createElement("canvas");
+  print.width = ink.width;
+  print.height = ink.height;
+  const ctx = print.getContext("2d", {willReadFrequently: true});
+  const {width, height} = print;
+  const cx = width * centre.x / 100, cy = height * centre.y / 100;
+  const reach = Math.min(width, height) * .53;
+  const wash = ctx.createRadialGradient(cx, cy, 0, cx, cy, reach);
+  wash.addColorStop(0, "rgba(0,0,0,.88)");
+  wash.addColorStop(.39, "rgba(0,0,0,.61)");
+  wash.addColorStop(1, "transparent");
+  ctx.drawImage(image, 0, 0, width, height);
+  // Neutral studio backdrops carry little pigment. Leave the paper showing through
+  // there while retaining the fabric, leather or thread colours around the mark.
+  const photo = ctx.getImageData(0, 0, width, height);
+  const pixels = photo.data;
+  for (let i = 0; i < pixels.length; i += 4) {
+    const chroma = Math.max(pixels[i], pixels[i + 1], pixels[i + 2]) -
+      Math.min(pixels[i], pixels[i + 1], pixels[i + 2]);
+    pixels[i + 3] = Math.round(38 + 217 * Math.min(1, chroma / 43));
+  }
+  ctx.putImageData(photo, 0, 0);
+  ctx.globalCompositeOperation = "destination-in";
+  ctx.fillStyle = wash;
+  ctx.fillRect(0, 0, width, height);
+  ctx.globalCompositeOperation = "source-over";
+  ctx.drawImage(ink, 0, 0);
+  // Let the perimeter dissolve into the sheet, including on installation photographs.
+  ctx.globalCompositeOperation = "destination-in";
+  const across = ctx.createLinearGradient(0, 0, width, 0);
+  const down = ctx.createLinearGradient(0, 0, 0, height);
+  for (const fade of [across, down]) {
+    fade.addColorStop(0, "transparent");
+    fade.addColorStop(.045, "black");
+    fade.addColorStop(fade === down && !leather ? .91 : .955, "black");
+    fade.addColorStop(fade === down && !leather ? .973 : 1, "transparent");
+    ctx.fillStyle = fade;
+    ctx.fillRect(0, 0, width, height);
+  }
+  studyPrints.set(image, {x: centre.x, y: centre.y, print});
+  return print;
 }
 
-function lineLayout(ctx,c,o,views,design,theme,footer){
- const {ink,accent,rule}=theme;
- cardType(ctx,"Line study",59,98,"italic 73px "+serif,ink);
- smallType(ctx,"POSTCARD  /  "+o.id+"."+c.type.toUpperCase(),820,76,ink);
- cardLine(ctx,59,124,1435,124,rule);
- const source=views[editionSourceIndices(c,o)[0]];
- const x=83,y=157,width=631,height=design?452:665;
- framePhoto(ctx,lineStudyPrint(source),x,y,width,height,"#f0f3ed");
- for(const cx of [x-7,x+width+7]){
-  for(const cy of [y-7,y+height+7]){
-   cardLine(ctx,cx-8,cy,cx+8,cy,accent,1.5);
-   cardLine(ctx,cx,cy-8,cx,cy+8,accent,1.5);
+function lineLayout(ctx, c, o, views, design, theme) {
+  const sourceIndex = editionSourceIndices(c, o)[0];
+  const point = c.type === "a" && c.detail?.i === sourceIndex &&
+    Number.isFinite(c.detail.x) && Number.isFinite(c.detail.y) ? c.detail : null;
+  const leather = c.key === "jug";
+  const print = lineStudyPrint(views[sourceIndex], point, leather);
+  // The jug occupies the middle strip of a wide white scan. Crop after tinting
+  // so the mark remains in the coordinates of the photograph the visitor saw.
+  const sx = leather ? print.width * .319 : 0;
+  const sw = leather ? print.width * .375 : print.width;
+  const scale = Math.min(825 / sw, 804 / print.height);
+  const w = sw * scale, h = print.height * scale;
+  ctx.drawImage(print, sx, 0, sw, print.height, 28 + (800 - w) / 2, 855 - h, w, h);
+  cardType(ctx, "Line study", 72, 884, "italic 36px " + serif, theme.ink);
+
+  // The selected design takes the place of a small picture stamp at the head of the letter.
+  if (design) {
+    const x = 1240, y = 41, sw = 181, sh = 103, margin = 9;
+    fillArea(ctx, "#d2dccd", x - margin, y - margin, sw + margin * 2, sh + margin * 2);
+    ctx.fillStyle = theme.paper;
+    for (let px = x; px < x + sw; px += 13) {
+      for (const py of [y - margin, y + sh + margin]) {
+        ctx.beginPath(); ctx.arc(px, py, 3, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+    for (let py = y; py < y + sh; py += 13) {
+      for (const px of [x - margin, x + sw + margin]) {
+        ctx.beginPath(); ctx.arc(px, py, 3, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+    framePhoto(ctx, design, x, y, sw, sh, "#f5f1e6");
+    smallType(ctx, imageRef(o, c), x - margin, 181, theme.accent, sw + 2 * margin);
   }
- }
- smallType(ctx,"SOURCE PHOTOGRAPH  /  CONTOUR STUDY",x,y+height+38,accent,width);
- if(design){
-  framePhoto(ctx,design,x,686,405,161,"#ebece5");
-  smallType(ctx,imageRef(o,c),x,877,ink,width);
- }
- cardLine(ctx,767,152,767,footer-53,rule,1);
- const bottom=wrappedHeading(ctx,o.name,818,168,595,"italic 37px "+serif,38,ink);
- cardType(ctx,o.place,820,bottom-7,"19px "+serif,accent,589);
+
+  smallType(ctx, "POSTCARD   /   " + o.id + "." + c.type.toUpperCase(), theme.x, 104, theme.accent);
+  const nextLine = wrappedHeading(ctx, o.name, theme.x, 239, theme.width, "46px " + serif, 49, theme.ink);
+  cardType(ctx, o.place, theme.x, nextLine - 7, "23px " + serif, theme.accent, theme.width);
 }
 function drawWriting(ctx,card,theme,words,label,footer,key){
   const {x,y,width,font,leading,ink,accent,rule}=theme;
