@@ -1,0 +1,85 @@
+/* Like a collection index, every image and its title share a single selection target. */
+.postcard-styles {
+  container-type: inline-size;
+  border: 0;
+  min-inline-size: 0;
+  padding: 0;
+  margin: 1.5rem 0 1rem;
+}
+.postcard-styles legend {
+  padding: 0;
+  margin-bottom: .6rem;
+  font: normal 1.3rem/1.25 var(--serif);
+}
+postcard-style-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .6rem;
+}
+.postcard-choice {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 1rem minmax(0,1fr);
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  gap: 0 .3rem;
+  padding: 0 .35rem .45rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+  cursor: pointer;
+  color: var(--ink);
+}
+.postcard-choice:hover { border-color: var(--green); }
+.postcard-choice:has(input:checked) {
+  border-color: var(--green);
+  box-shadow: inset 0 -3px var(--green);
+  background: #eef1e6;
+}
+.postcard-choice:has(input:focus-visible) {
+  outline: 3px solid #a65329;
+  outline-offset: 2px;
+}
+.postcard-choice input[type="radio"] {
+  grid-column: 1;
+  grid-row: 2;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--green);
+}
+.postcard-choice-visual {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1.45;
+  width: calc(100% + .7rem);
+  margin: 0 -.35rem .45rem;
+  padding: .38rem;
+  background: #e9e6dc;
+  color: var(--mute);
+  font-size: .75rem;
+  text-align: center;
+  overflow: hidden;
+}
+.postcard-choice-visual canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+.postcard-choice-name {
+  grid-column: 2;
+  grid-row: 2;
+  font: 600 .82rem/1.25 var(--sans);
+}
+@container (max-width: 33rem) {
+  postcard-style-options { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (forced-colors: active) {
+  .postcard-choice:has(input:checked) { border: 2px solid Highlight; }
+}

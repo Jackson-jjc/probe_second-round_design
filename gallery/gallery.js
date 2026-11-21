@@ -14,7 +14,7 @@ const ownMessages=k=>messages.filter(m=>m.key===k&&own.has(m.id));
 const thread=k=>messages.filter(m=>m.key===k);
 function nOf(k,id){return thread(k).findIndex(m=>m.id===id)+1;}
 function sourcePhotos(k){
- if(route!=="a")return photographs(k);
+ if(route!=="a" || state("a",k).step==="compose-card")return photographs(k);
  const o=objects[k],current=state("a",k).detail;
  return '<p class="key">Touch a detail to mark it for making. The link under each view opens the full photograph.</p><div class="photos">'+o.photo.map((url,i)=>{
   const marked=current?.i===i;
@@ -43,7 +43,7 @@ function markedDetail(k,point){
  const o=objects[k];
  return '<figure class="marked-reference"><div class="reference-thumb"><img src="'+o.cardPhoto[point.i]+'" alt="'+esc(o.alt[point.i])+'">'
   +'<i class="pin" aria-hidden="true" style="left:'+point.x+'%;top:'+point.y+'%"></i></div>'
-  +'<figcaption>The detail you marked<br>'+esc(o.labels[point.i])+'</figcaption></figure>';
+  +'<figcaption>The detail you marked<br>'+esc(o.labels[point.i])+'<br>The Paper collage layout uses this detail.</figcaption></figure>';
 }
 function designComparison(k,s){
  const o=objects[k];
@@ -70,11 +70,46 @@ function postcardWords(k,s){
  return ownMessages(k).find(m=>m.id===s.from)?.text || "";
 }
 
-function draftCard(t,k,s){
+
+function cardData(type,key,s){
  const label=s.label==="keep"?"Each version continues the original work.":s.label==="change"?s.custom:"";
- return cardHTML({type:t,key:k,image:s.image,words:t==="a"?s.words:postcardWords(k,s),label});
+ const card={type,key,image:s.image,style:s.style||"classic",words:type==="a"?s.words:postcardWords(key,s),label};
+ if(type==="a"&&s.detail)card.detail={...s.detail};
+ return card;
 }
 
+function composeCard(type,k,s){
+ const c=cardData(type,k,s);
+ const isMaking=type==="a";
+ const context=isMaking
+  ? '<label class="form">Caption (optional)<textarea bind="words" dir="auto" placeholder="Which detail did you keep? What changed?">'+esc(s.words)+'</textarea></label>'
+  : '<blockquote class="reply-context"><small>Your message on this card</small><p class="words" dir="auto">'+esc(c.words)+'</p></blockquote>';
+ const chosen=s.image?"Object photo + "+objects[k][type][s.image-1]:"Object photo only";
+ return '<section class="benchpanel compose" id="compose-card" tabindex="-1">'
+  +'<p class="kicker">3 · Make your postcard</p><h2>Your postcard</h2>'
+  +'<div class="card-ingredients"><span>'+esc(objects[k].name)+' · '+esc(chosen)+'</span>'+btn("back-compare",isMaking?"Revisit the designs":"Revisit the pictures")+'</div>'
+  +context+stylePickerHTML(c)+'<div id="draft-card">'+cardHTML(c)+'</div>'
+  +(isMaking?museumLabel(s):museumDisplay(k,s))
+  +btn("review","Check my postcard")+'</section>';
+}
+
+function museumLabel(s){
+ const options=[["","Leave undecided"],["keep","Keep those words"],["change","Write my own label"],["omit","Leave the label off"]];
+ return '<div class="proposal"><strong>Imagine this label beside your card</strong>'
+  +'<p>“Each version continues the original work.” Would you keep these words, change them or leave them off? Which detail led you to that choice?</p>'
+  +'<label class="form">My label choice<select bind="label">'+options.map(([v,text])=>opt(v,text,s.label)).join("")+'</select></label>'
+  +(s.label==="change"?'<label class="form">My museum label<input type="text" bind="custom" dir="auto" value="'+esc(s.custom)+'"></label>':"")+'</div>';
+}
+
+function museumDisplay(k,s){
+ const beside=s.display==="thread";
+ const earlier=thread(k);
+ return '<div class="proposal"><strong>Imagine this card on display in a museum</strong>'
+  +'<p>Would someone reading your card on its own understand the exchange? If yours is the first message, what would you like them to reply to?</p>'
+  +row(btn("display:alone","Card alone",!beside)+btn("display:thread","Card with conversation",beside))+'</div>'
+  +(beside?'<aside class="beside-card"><h3>Conversation beside the card</h3>'+earlier.map(m=>bubble(m)).join("")
+    +(s.text.trim()?'<div class="message current-draft"><small>Your draft</small><p class="words" dir="auto">'+esc(s.text)+'</p></div>':'')+'</aside>':'');
+}
 function messageComparison(k,s){
  const mine=ownMessages(k);
  const authorChoice=mine.length?'<label class="form">Words to use on my card<select bind="from">'
@@ -91,36 +126,23 @@ function messageComparison(k,s){
   +row((s.generated?btn("use-generated","Put this picture on my card"):"")+btn("generate",s.generated?"Try the other picture":"Show a prepared picture"))
   +btn("source-only","Make my card with the object photo and my words")+'</section>';
 }
-function a(k,s){
+function makingInput(k,s){
  const o=objects[k];
- const imageOptions=[[0,"Source only · leave the AI image off"],...o.a.map((name,i)=>[i+1,name])];
- const labelOptions=[["","Leave undecided"],["keep","Keep those words"],["change","Write a different label"],["omit","Leave the label off"]];
- const custom=s.label==="change"?'<label class="form">My museum label<input type="text" bind="custom" dir="auto" value="'+esc(s.custom)+'"></label>':"";
  return '<section class="benchpanel" id="make-input"><p class="kicker">1 · Look and arrange</p>'
   +'<h2>Arrange a detail from the photograph</h2><p>'+esc(o.make)+'</p>'
   +'<div class="mat" aria-label="Material arrangement">'+s.pieces.map((p,i)=>pieceHTML(p,i,s)).join("")+'</div>'
   +'<p class="key">Drag a piece or focus it and use the arrow keys. Rotate or fold the selected piece. At the table, use the real materials.</p>'
   +row(btn("rotate","Rotate ↻")+btn("fold","Fold / open")+btn("resetmat","Reset mat")+'<a class="linkbar" target="_blank" href="making-mat.pdf">Print the A4 mat ↗</a>')
-  +'<div class="material-next"><p>Keep your arrangement on the mat. Next, compare it with a prepared cuff or bag and decide which details you would carry over.</p>'
-  +btn("compare-arrangement","Compare my arrangement with a design →")+'</div></section>'+designComparison(k,s)
-  +'<section class="benchpanel" id="compose-card"><p class="kicker">3 · Make your postcard</p>'
-  +'<h2>Write your postcard</h2>'
-  +'<label class="form">Image on my postcard<select bind="image">'+imageOptions.map(([n,l])=>opt(n,l,s.image)).join("")+'</select></label>'
-  +'<label class="form">My caption (optional)<textarea bind="words" dir="auto" placeholder="What did you keep, change or miss?">'+esc(s.words)+'</textarea></label>'
-  +'<div id="draft-card">'+draftCard("a",k,s)+'</div>'
-  +'<div class="proposal"><strong>Proposed museum label</strong>'
-  +'<p>“Each version continues the original work.” Would you keep these words, change them or leave them off? Which detail led you there?</p>'
-  +'<label class="form">My display choice<select bind="label">'+labelOptions.map(([n,l])=>opt(n,l,s.label)).join("")+'</select></label>'+custom+'</div>'
-  +btn("review","Create my postcard →")
-  +'<p class="key">See the assembled card, then download it or add it to the postcard wall.</p>'
-  +'<a href="#probe-b">Continue to Probe B →</a></section>';
+  +'<div class="material-next"><p>Keep your arrangement on the mat. Look at a prepared cuff or bag beside it. Which details would you keep?</p>'
+  +btn("compare-arrangement","Compare my arrangement with a design →")+'</div></section>';
 }
-
 function relation(m){if(!m.parent)return "New interpretation";if(m.parent==="starter")return "Reply to AI starter";return "Reply to message "+nOf(m.key,m.parent);}
-function bubble(m,allowReply=false){return '<article class="message"'+(allowReply?' id="msg-'+m.id+'"':'')+'><small>Message '+nOf(m.key,m.id)+' · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p>'+(allowReply?btn("reply:"+m.id,"Reply to this message"):"")+'</article>';}
+function bubble(m,allowReply=false){
+ const useOwn=allowReply&&own.has(m.id)?btn("card-from:"+m.id,"Make a card from my message"):"";
+ return '<article class="message"'+(allowReply?' id="msg-'+m.id+'"':'')+'><small>Message '+nOf(m.key,m.id)+' · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p>'+(allowReply?btn("reply:"+m.id,"Reply to this message"):"")+useOwn+'</article>';}
 function threadHTML(k,replies){return thread(k).length?thread(k).map(m=>bubble(m,replies)).join(""):'<p class="blank">No visitor messages yet. Start with something you noticed, or respond to the labelled starter.</p>';}
 
-function b(k,s){
+function conversationInput(k,s){
  const o=objects[k],list=thread(k);
  const addresses=list.find(m=>m.id===s.parent);
  const parentWords=s.parent==="starter"?o.starter:addresses?.text;
@@ -135,21 +157,10 @@ function b(k,s){
   +'<label class="form">My words, in any language<textarea bind="text" dir="auto" placeholder="What would you like the next visitor to notice or answer?">'+esc(s.text)+'</textarea></label>'
   +'<div class="material-next"><p>You can leave this message on the board or use it to make a postcard.</p>'
   +row(btn("compare-message","Choose a picture for my message")+btn("message-only","Review just my message"))+'</div></section>'
-  +messageComparison(k,s)
-  +'<section class="benchpanel" id="compose-card"><p class="kicker">3 · Make your postcard</p><h2>Read your card as the next visitor</h2>'
-  +'<label><input type="checkbox" bind="make" '+(s.make?"checked":"")+'> Make a postcard from my message</label>'
-  +(s.make?'<div id="draft-card">'+draftCard("b",k,s)+'</div>'
-    +'<label class="form">Picture on my card<select bind="image">'+opt(0,"Use the object photo only",s.image)+[1,2].map(n=>opt(n,o.b[n-1],s.image)).join("")+'</select></label>'
-    +'<div class="proposal"><strong>Imagine this card on display in a museum</strong><p>If someone saw your card on its own, what would they miss from the conversation? If you wrote the first message, what would you like them to reply to?</p>'
-    +row(btn("display:alone","See the card alone",s.display==="alone")+btn("display:thread","See it with the conversation",s.display==="thread"))+'</div>'
-    +(s.display==="thread"?'<aside class="beside-card"><h3>Conversation beside the card</h3>'
-      +list.map(m=>bubble(m)).join("")
-      +(s.text.trim()?'<p class="message current-draft"><small>Your draft</small><br><span class="words" dir="auto">'+esc(s.text)+'</span></p>':'')
-      +(!list.length&&!s.text.trim()?'<p class="empty-thread">The first message will appear here.</p>':'')+'</aside>':''):'')
-  +btn("review",s.make?"Review my postcard":"Review my message")+'</section>'+related(k);
+  +related(k);
 }
 function cardActions(c){return row(btn("download:"+c.id,"Download postcard PNG ↓")+(c.type==="b"?btn("locate:"+c.message,"Read linked message"):""));}
-function related(k){const items=wall.filter(c=>c.key===k);return items.length?'<section class="benchpanel"><h2>Cards beside this thread</h2><div class="wallgrid">'+items.map(c=>'<div>'+cardHTML(c)+cardActions(c)+'</div>').join("")+'</div></section>':'';}
+function related(k){const items=wall.filter(c=>c.type==="b"&&c.key===k);return items.length?'<section class="benchpanel"><h2>Cards beside this thread</h2><div class="wallgrid">'+items.map(c=>'<div>'+cardHTML(c)+cardActions(c)+'</div>').join("")+'</div></section>':'';}
 function replyInvitation(){
  const first=wall.find(card=>card.type==="b");
  if(!first || !own.has(first.message))return "";
@@ -157,61 +168,99 @@ function replyInvitation(){
   +'<p>Stay in this tab and take the next visitor’s turn. Read the first card’s message, then reply in your own words.</p>'
   +btn("handoff:"+first.message,"Start next visitor and reply →")+'</section>';
 }
-function postcards(){return replyInvitation()+'<section class="benchpanel"><h2>Checked cards from this rehearsal</h2>'+(wall.length?'<div class="wallgrid">'+wall.map(c=>'<div>'+cardHTML(c)+cardActions(c)+'</div>').join("")+'</div>':'<p class="blank">Your wall starts empty. Make a card in <a href="#probe-a">A</a> or <a href="#probe-b">B</a>, review it, then add it here.</p>')+'</section><details class="benchpanel samplelinks"><summary>Two prepared postcard examples</summary><p>Fictional rehearsal captions. Your cards use your own words.</p><div class="wallgrid"><a href="postcards/gown-a.png"><img src="postcards/gown-a.png" alt="Gown making postcard with the two original V&A views">Open A sample ↗</a><a href="postcards/knit-b.png"><img src="postcards/knit-b.png" alt="Gardez L’Eau response postcard with the source photograph">Open B sample ↗</a></div></details>';}
-function render(){route=location.hash==="#probe-b"?"b":location.hash==="#postcards"?"wall":"a";document.querySelector("#title").textContent={a:"Make with the object",b:"Read the object together",wall:"Postcard wall"}[route];document.querySelector("#lead").textContent={a:"Arrange materials around a detail you notice. Compare your arrangement with a cuff or bag design, then choose what to put on your postcard.",b:"Write about an object or reply to someone who has seen it. Choose whether to put your words on a postcard for the next visitor.",wall:"Cards and original messages are shared with the next visitor in this rehearsal."}[route];
- document.querySelectorAll("nav a").forEach(a=>{const current=a.hash===({a:"#probe-a",b:"#probe-b",wall:"#postcards"}[route]);if(current)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+function postcards(){
+ const next=wall.at(-1)?.type==="a"?'<p class="wall-next"><a href="#probe-b">Continue to Probe B · Write to another visitor →</a></p>':"";
+ return next+replyInvitation()+'<section class="benchpanel"><h2>Checked cards from this rehearsal</h2>'+(wall.length?'<div class="wallgrid">'+wall.map(c=>'<div>'+cardHTML(c)+cardActions(c)+'</div>').join("")+'</div>':'<p class="blank">Your wall starts empty. Make a card in <a href="#probe-a">A</a> or <a href="#probe-b">B</a>, review it, then add it here.</p>')+'</section><details class="benchpanel samplelinks"><summary>Two prepared postcard examples</summary><p>Fictional rehearsal captions. Your cards use your own words.</p><div class="wallgrid"><a href="postcards/gown-a.png"><img src="postcards/gown-a.png" alt="Gown making postcard with the two original V&A views">Open A sample ↗</a><a href="postcards/knit-b.png"><img src="postcards/knit-b.png" alt="Gardez L’Eau response postcard with the source photograph">Open B sample ↗</a></div></details>';}
+
+const workSteps=["make-input","generate-preview","compose-card"];
+
+function chooseExample(s){
+ const alternatives=[1,2].filter(n=>n!==s.generated);
+ s.generated=alternatives[Math.floor(Math.random()*alternatives.length)];
+}
+
+function openStep(next,focusSelector){
+ const s=state(route,selected[route]);
+ if(!workSteps.includes(next))return;
+ if(route==="b" && next!=="make-input" && !postcardWords(selected.b,s).trim() && !(next==="generate-preview"&&ownMessages(selected.b).length)){
+  say("Write a message first so you can see how it reads beside a picture.");
+  next="make-input";focusSelector='[bind="text"]';
+ }
+ if(next==="generate-preview"&&!s.generated)chooseExample(s);
+ s.step=next;
+ if(next==="compose-card")s.make=true;
+ render();
+ const section=document.getElementById(next);
+ const focus=focusSelector?work.querySelector(focusSelector):section;
+ if(focus){
+  if(!focusSelector)focus.tabIndex=-1;
+  focus.focus({preventScroll:true});
+  focus.scrollIntoView({block:"start"});
+ }
+}
+
+function render(){
+ route=location.hash==="#probe-b"?"b":location.hash==="#postcards"?"wall":"a";
+ const info={
+  a:["Make with the object","Choose an object and arrange a detail from its photograph. You’ll compare your arrangement with a prepared design before making your card."],
+  b:["Read the object together","Read what another visitor noticed, or start the conversation. You can leave your message on the board or make it into a postcard."],
+  wall:["Postcard wall","These cards stay in this tab for the next visitor. Download a copy to keep it."]
+ };
+ document.querySelector("#title").textContent=info[route][0];
+ document.querySelector("#lead").textContent=info[route][1];
+ document.querySelectorAll(".mast nav a").forEach(link=>{
+  const current=link.hash===({a:"#probe-a",b:"#probe-b",wall:"#postcards"}[route]);
+  if(current)link.setAttribute("aria-current","page");else link.removeAttribute("aria-current");
+ });
  const path=document.querySelector("#make-path");
  path.hidden=route==="wall";
- path.innerHTML=route==="wall"?"":'<a href="#make-input" data-step="make-input">1 · '+(route==="a"?"Look & arrange":"Write a message")+'</a><span>→</span><a href="#generate-preview" data-step="generate-preview">2 · '+(route==="a"?"Compare your arrangement":"Choose a picture")+'</a><span>→</span><a href="#compose-card" data-step="compose-card">3 · Make & download</a>';
- if(route==="wall"){work.innerHTML=postcards();return;}const k=selected[route],s=state(route,k);work.innerHTML='<div class="picker"><span class="micro">Choose your source</span>'+keys.map(key=>btn("source:"+key,objects[key].name,k===key)).join("")+'</div><div class="desk">'+source(k)+'<div>'+(route==="a"?a(k,s):b(k,s))+'</div></div>';}
+ if(route==="wall"){path.innerHTML="";work.innerHTML=postcards();return;}
+ const k=selected[route],s=state(route,k);
+ const step=s.step||workSteps[0];
+ const labels=route==="a"?["Arrange a detail","Compare designs","Make a postcard"]:["Write or reply","Choose a picture","Make a postcard"];
+ path.innerHTML=workSteps.map((id,i)=>'<a href="#'+id+'" data-step="'+id+'"'+(step===id?' aria-current="step"':'')+'>'+ (i+1)+' · '+labels[i]+'</a>').join('<span aria-hidden="true">→</span>');
+ const first=step===workSteps[0],compare=step===workSteps[1];
+ const picker=first?'<div class="picker"><span class="micro">Choose your object</span>'+keys.map(key=>btn("source:"+key,objects[key].name,k===key)).join("")+'</div>':"";
+ const content=first?(route==="a"?makingInput(k,s):conversationInput(k,s))
+   :compare?(route==="a"?designComparison(k,s):messageComparison(k,s)):composeCard(route,k,s);
+ const reference=first?source(k):'<details class="source-context"'+(matchMedia("(min-width:771px)").matches?" open":"")+'><summary>Object reference · '+esc(objects[k].name)+'</summary>'+source(k)+'</details>';
+ work.innerHTML=picker+'<div class="desk">'+reference+'<div>'+content+'</div></div>';
+}
 function review(){const t=route,k=selected[t],s=state(t,k);let m=null,c=null;
- if(t==="a"){c={id:unique(),type:t,key:k,image:s.image,words:s.words,label:s.label==="keep"?"Each version continues the original work.":s.label==="change"?s.custom:""};}
+ if(t==="a"){c={...cardData(t,k,s),id:unique()};}
  else{if(s.text.trim())m={id:unique(),key:k,parent:s.parent,text:s.text};const chosen=s.from?ownMessages(k).find(x=>x.id===s.from):m;
- if(s.make&&!chosen){say("Write a message or choose an earlier message of your own.");return;}if(!s.make&&!m){say("Write a message to review, or skip this activity.");return;}if(s.make)c={id:unique(),type:t,key:k,image:s.image,words:chosen.text,message:chosen.id};}
+ if(s.make&&!chosen){say("Write a message or choose an earlier message of your own.");return;}if(!s.make&&!m){say("Write a message to review, or skip this activity.");return;}if(s.make)c={...cardData(t,k,s),id:unique(),message:chosen.id};}
  pending={t,k,c,m};let html=(m&&(!c||c.message!==m.id)?'<div class="message"><small>New draft · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p></div>':'')+(c?cardHTML(c):'');
  if(t==="a"&&s.label==="omit"){html+='<p class="proposal">'+({keep:"Museum label: Each version continues the original work.",change:"Your proposed label: "+esc(s.custom),omit:"Display without the proposed museum label."}[s.label])+'</p>';}
  if(t==="b"&&c&&s.display==="thread"){html+='<h3>On the board beside this card</h3>'+thread(k).map(m=>bubble(m)).join("")+(m?'<div class="message"><small>Draft · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p></div>':'');}
- document.querySelector("#review-title").textContent=c?"Your postcard is ready":"Check your message";
+ document.querySelector("#review-title").textContent=c?"Check your postcard":"Check your message";
  document.querySelector("#download-draft").hidden=!c;
- document.querySelector("#proof").innerHTML=html+'<p>Check the words and source before adding them to this tab. You can go back to edit.</p>';dialog.showModal();}
+ document.querySelector("#proof").innerHTML=html+'<p>Check your words before sharing them with the next visitor in this tab.</p>';dialog.showModal();}
 dialog.querySelector("#back").onclick=()=>dialog.close();
-dialog.querySelector("#accept").onclick=()=>{if(!pending)return;const {m,c,t,k}=pending;if(m){messages.push(m);own.add(m.id);}if(c)wall.push(c);if(t==="b")Object.assign(state(t,k),{text:"",parent:"",from:""});else Object.assign(state(t,k),{words:"",label:"",custom:""});pending=null;dialog.close();if(c)history.pushState(null,"","#postcards");render();window.scrollTo(0,0);say(c?"Your postcard is on the wall. You can download it here.":"Your message is ready for the next visitor.");};
-dialog.querySelector("#discard").onclick=()=>{if(!pending)return;const {t,k}=pending;if(t==="b")Object.assign(state(t,k),{text:"",parent:"",from:""});else Object.assign(state(t,k),{words:"",label:"",custom:"",image:0});pending=null;dialog.close();render();say("Draft discarded.");};
+dialog.querySelector("#accept").onclick=()=>{if(!pending)return;const {m,c,t,k}=pending;if(m){messages.push(m);own.add(m.id);}if(c)wall.push(c);if(t==="b")Object.assign(state(t,k),{step:"make-input",text:"",parent:"",from:""});else Object.assign(state(t,k),{step:"make-input",words:"",label:"",custom:""});pending=null;dialog.close();if(c)history.pushState(null,"","#postcards");render();window.scrollTo(0,0);say(c?"Your postcard is on the wall. You can download it here.":"Your message is ready for the next visitor.");};
+dialog.querySelector("#discard").onclick=()=>{if(!pending)return;const {t,k}=pending;if(t==="b")Object.assign(state(t,k),{step:"make-input",text:"",parent:"",from:"",image:0});else Object.assign(state(t,k),{step:"make-input",words:"",label:"",custom:"",image:0});pending=null;dialog.close();render();say("Draft discarded.");};
 dialog.addEventListener("close",()=>pending=null);
 let previewFrame;
 function refreshDraft(){
  const preview=document.querySelector("#draft-card");
  if(!preview)return;
  const k=selected[route];
- preview.innerHTML=draftCard(route,k,state(route,k));
+ const card=cardData(route,k,state(route,k));
+ preview.innerHTML=cardHTML(card);
+ refreshStylePicker(card);
 }
 work.addEventListener("input",e=>{
  const field=e.target.getAttribute("bind");
  if(!field)return;
  const s=state(route,selected[route]);
  s[field]=field==="image"?Number(e.target.value):field==="make"?e.target.checked:e.target.value;
- if(field==="text"){
-  const words=document.querySelector("#comparison-words");
-  const beside=document.querySelector(".beside-card");
-  if(beside){
-   let draft=beside.querySelector(".current-draft");
-   if(!draft){
-    draft=document.createElement("div");draft.className="message current-draft";
-    draft.innerHTML='<small>Your draft</small><p class="words" dir="auto"></p>';beside.append(draft);
-   }
-   draft.hidden=!s.text.trim();
-   draft.querySelector(".words").textContent=s.text;
-   const hint=beside.querySelector(".empty-thread");if(hint)hint.hidden=Boolean(s.text.trim());
-  }
-  words.textContent=postcardWords(selected.b,s)||"Write a message in step 1 to see it here.";
- }
- if(["text","words","custom","image"].includes(field)){
+ if(["words","custom","style"].includes(field)){
   cancelAnimationFrame(previewFrame);previewFrame=requestAnimationFrame(refreshDraft);
  }
 });
 work.addEventListener("change",e=>{
  const field=e.target.getAttribute("bind");
- if(["make","label","parent","from"].includes(field)){
+ if(["label","parent","from"].includes(field)){
   render();work.querySelector('[bind="'+field+'"]')?.focus({preventScroll:true});
  }
 });
@@ -221,41 +270,37 @@ work.addEventListener("click",async e=>{const button=e.target.closest("[data-do]
   return;
  }
  if(act==="download"){try{await downloadCard(wall.find(c=>c.id===val));}catch{say("Could not download the card. Try again.");}return;}
- if(act==="locate"){const m=messages.find(m=>m.id===val);if(!m)return;selected.b=m.key;if(location.hash!=="#probe-b")history.pushState(null,"","#probe-b");render();document.querySelector("#msg-"+val)?.scrollIntoView({block:"center"});return;}
- if(act==="source"){selected[route]=val;render();return;}const k=selected[route],s=state(route,k);
+ if(act==="locate"){const m=messages.find(m=>m.id===val);if(!m)return;selected.b=m.key;state("b",m.key).step="make-input";if(location.hash!=="#probe-b")history.pushState(null,"","#probe-b");render();document.querySelector("#msg-"+val)?.scrollIntoView({block:"center"});return;}
+ if(act==="source"){selected[route]=val;state(route,val).step="make-input";render();return;}const k=selected[route],s=state(route,k);
+ if(act==="card-from"){
+  if(!ownMessages(k).some(m=>m.id===val))return;
+  s.from=val;s.make=true;openStep("generate-preview");return;
+ }
+ if(act==="back-compare"){openStep("generate-preview");return;}
  if(act==="adjust-arrangement"){
-  work.querySelector('[data-piece="'+s.piece+'"]').focus();
+  openStep("make-input",'[data-piece="'+s.piece+'"]');
   return;
  }
- if(act==="adjust-message"){work.querySelector('[bind="text"]').focus();return;}
+ if(act==="adjust-message"){openStep("make-input",'[bind="text"]');return;}
  if(act==="message-only"){
-  if(!s.text.trim()){say("Write your message first.");work.querySelector('[bind="text"]').focus();return;}
+  if(!s.text.trim()){say("Write your message first.");openStep("make-input",'[bind="text"]');return;}
   s.make=false;render();review();return;
  }
  if(act==="compare-message"){s.from="";s.make=true;}
  if(route==="b" && ["compare-message","use-generated","source-only"].includes(act) && !postcardWords(k,s).trim()){
   say("Write a message first, or choose an earlier message of your own.");
-  work.querySelector('[bind="text"]').focus();return;
+  openStep("make-input",'[bind="text"]');return;
  }
  if(["compare-arrangement","compare-message","generate"].includes(act)){
-  if(act==="generate" || !s.generated){
-   const pool=[1,2].filter(n=>n!==s.generated);
-   s.generated=pool[Math.floor(Math.random()*pool.length)];
-  }
-  render();
-  const comparison=document.querySelector("#generate-preview");
-  comparison.focus({preventScroll:true});
-  comparison.scrollIntoView({block:"start"});
+  if(act==="generate")chooseExample(s);
+  openStep("generate-preview");
   return;
  }
  if(act==="use-generated" || act==="source-only"){
   if(act==="use-generated"&&!s.generated)return;
   s.image=act==="source-only"?0:s.generated;
   if(route==="b")s.make=true;
-  render();
-  document.querySelector("#compose-card").scrollIntoView({block:"start"});
-  document.querySelector("#compose-card h2").setAttribute("tabindex","-1");
-  document.querySelector("#compose-card h2").focus({preventScroll:true});
+  openStep("compose-card");
   return;
  }
  if(act==="review"){review();return;}if(act==="reply"){s.parent=val;render();work.querySelector('[bind="text"]').focus();return;}
@@ -267,7 +312,7 @@ function markDetail(button,x,y){
  state("a",selected.a).detail=point;
  work.querySelectorAll(".detail-photo .pin").forEach(pin=>pin.remove());
  const pin=document.createElement("i");pin.className="pin";pin.setAttribute("aria-hidden","true");pin.style.left=point.x+"%";pin.style.top=point.y+"%";button.append(pin);
- document.querySelector("#marked-reference").innerHTML=markedDetail(selected.a,point);
+ const marker=document.querySelector("#marked-reference");if(marker)marker.innerHTML=markedDetail(selected.a,point);
 }
 work.addEventListener("click",e=>{const el=e.target.closest("[data-photo]");if(!el)return;const rect=el.getBoundingClientRect();markDetail(el,e.detail?(e.clientX-rect.left)*100/rect.width:50,e.detail?(e.clientY-rect.top)*100/rect.height:50);});
 work.addEventListener("keydown",e=>{const el=e.target.closest("[data-photo]");if(!el)return;const delta={ArrowLeft:[-2,0],ArrowRight:[2,0],ArrowUp:[0,-2],ArrowDown:[0,2]}[e.key];if(delta){e.preventDefault();const last=state("a",selected.a).detail;const point=last?.i===Number(el.dataset.photo)?last:{x:50,y:50};markDetail(el,point.x+delta[0],point.y+delta[1]);}});
@@ -289,10 +334,9 @@ function startVisitor(replyTo){
 document.querySelector("#next").onclick=()=>startVisitor();
 
 let drag=null;
-function pick(el){const s=state("a",selected.a);s.piece=Number(el.dataset.piece);work.querySelectorAll("[data-piece]").forEach((p,i)=>{const on=i===s.piece;p.classList.toggle("selected",on);p.style.zIndex=on?10:i+1;p.setAttribute("aria-pressed",on);});work.querySelector(".mat-replica").innerHTML=matReplica(s);return s.pieces[s.piece];}
+function pick(el){const s=state("a",selected.a);s.piece=Number(el.dataset.piece);work.querySelectorAll("[data-piece]").forEach((p,i)=>{const on=i===s.piece;p.classList.toggle("selected",on);p.style.zIndex=on?10:i+1;p.setAttribute("aria-pressed",on);});return s.pieces[s.piece];}
 function position(el,p,x,y){p.x=Math.min(84,Math.max(16,x));p.y=Math.min(76,Math.max(24,y));el.style.left=p.x+"%";el.style.top=p.y+"%";
- const copy=work.querySelector('[data-preview-piece="'+el.dataset.piece+'"]');
- if(copy){copy.style.left=el.style.left;copy.style.top=el.style.top;}
+
 }
 work.addEventListener("pointerdown",e=>{const el=e.target.closest("[data-piece]");if(!el)return;const p=pick(el),rect=el.parentElement.getBoundingClientRect();drag={el,p,rect,id:e.pointerId,x:e.clientX,y:e.clientY,ox:p.x,oy:p.y};el.setPointerCapture(e.pointerId);});
 work.addEventListener("pointermove",e=>{if(!drag||drag.id!==e.pointerId)return;const d=drag;position(d.el,d.p,d.ox+(e.clientX-d.x)*100/d.rect.width,d.oy+(e.clientY-d.y)*100/d.rect.height);});
@@ -311,7 +355,7 @@ document.querySelector("#make-path").addEventListener("click",e=>{
  const link=e.target.closest("[data-step]");
  if(!link)return;
  e.preventDefault();
- document.getElementById(link.dataset.step)?.scrollIntoView({block:"start"});
+ openStep(link.dataset.step);
 });
 document.querySelector("#download-draft").addEventListener("click",async e=>{
  const card=pending?.c;
