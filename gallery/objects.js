@@ -14,8 +14,20 @@ const objects = {
     "url": "https://tudorhouseandgarden.com/explore/highlights/",
     "make": "Follow one line on the skirt. Try making that line with strips or shapes. What happens if you interrupt its path?",
     "talk": "Which detail would you point out to someone looking at the jug for the first time?",
-    "starter": "My eye follows the leaves around the skirt. Where does yours stop?",
-    "zh": "我的目光沿着裙子上的叶纹移动。你的目光停在哪里？",
+    "examples": [
+      {
+        "id": "spider",
+        "name": "Spider-Man",
+        "text": "I followed the leaves around her skirt and lost my place. Where would you start?",
+        "zh": "我顺着她裙子上的叶纹看了一圈，看到哪儿都忘了。你会从哪里开始？"
+      },
+      {
+        "id": "prince",
+        "name": "Prince Rowan",
+        "text": "At the hem! I thought she was dressed for a ball until I read that she’s a jug.",
+        "zh": "从裙摆开始！我还以为她要去参加舞会，读了说明才发现她竟然是一把壶。"
+      }
+    ],
     "a": [
       "Leaf band · cuff",
       "Corner cluster · bag"
@@ -46,8 +58,20 @@ const objects = {
     "url": "https://www.artsandheritage.org.uk/projects/enam-gbewonyo-at-gods-house-tower/",
     "make": "Choose a loop, a colour boundary or the way the knit hangs. Try tightening, loosening or moving a strip.",
     "talk": "What catches your attention in the hanging piece or in its connection to this place?",
-    "starter": "I noticed how the knitting hangs in this room. Which part would you want to see up close?",
-    "zh": "我注意到针织物在这个房间里垂挂的样子。你想凑近看哪一部分？",
+    "examples": [
+      {
+        "id": "spider",
+        "name": "Spider-Man",
+        "text": "My webs stretch across gaps. This knitting hangs straight down. Where would you stand to see it best?",
+        "zh": "我的蛛网横跨空隙，这件针织作品却从高处垂下来。你觉得站在哪里看最好？"
+      },
+      {
+        "id": "prince",
+        "name": "Prince Rowan",
+        "text": "I’d stand in the doorway. I want to see the blue knitting between those two windows, then go closer and count the loops.",
+        "zh": "我想先站在门口，看看垂在两扇窗之间的蓝色针织物，再走近数数那些线圈。"
+      }
+    ],
     "a": [
       "Repeated stitches · cuff",
       "Draped blue cords · bag"
@@ -84,8 +108,20 @@ const objects = {
     "url": "https://collections.vam.ac.uk/item/O13438/",
     "make": "Place a paper flower on cloth. Fold the cloth and open it again. Which parts of the pattern would you show on a cuff or bag?",
     "talk": "The back view and the detail show the same silk. What did one view help you see in the other?",
-    "starter": "A flower can disappear inside a fold. Which detail would you like another visitor to look for?",
-    "zh": "一朵花可能会藏进褶子里。你希望下一位参观者去找哪个细节？",
+    "examples": [
+      {
+        "id": "spider",
+        "name": "Spider-Man",
+        "text": "One flower vanishes into a fold. Even my spider-sense lost track of it. Can you find it?",
+        "zh": "一朵花藏进了衣褶里，连我的蜘蛛感应都跟丢了。你找得到吗？"
+      },
+      {
+        "id": "prince",
+        "name": "Prince Rowan",
+        "text": "I’d ask for one slow turn at the ball. I bet that missing flower would peek out of the fold.",
+        "zh": "我想请她在舞会上慢慢转一圈。我猜那朵藏起来的花会从衣褶里探出头来。"
+      }
+    ],
     "a": [
       "Open floral sprigs · cuff",
       "Flowers in pleats · bag"

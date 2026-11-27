@@ -21,7 +21,7 @@
 .chosen-preview span{font-size:.86rem;font-weight:600}
 #compose-card>a{display:block;width:fit-content;margin-top:15px;font-size:.87rem}
 #review .dialog-top{align-items:flex-start}
-@media(max-width:610px){.make-path{display:grid;gap:5px}.make-path>span{display:none}.chosen-preview{gap:12px}.chosen-preview figure{width:115px}.generated-result{padding:10px}}
+@media(max-width:610px){.make-path{display:grid;gap:5px}.make-path>.step-arrow{display:none}.chosen-preview{gap:12px}.chosen-preview figure{width:115px}.generated-result{padding:10px}}
 
 /* Keep both views in the same proportions, including the cloth and cord sizes. */
 #make-input .mat,.comparison-pair .mat-replica{aspect-ratio:2.8;height:auto;container-type:inline-size}
@@ -78,3 +78,44 @@
 .wall-next{margin:0 0 14px}
 @media(min-width:771px){.source-context{position:sticky;top:10px}}
 @media(max-width:610px){.make-path{display:flex;gap:6px 14px}.make-path a{min-height:36px;display:inline-flex;align-items:center}}
+
+.tools[hidden], .task-jump { display:none }
+.make-path { align-items:center }
+.make-path .future-step { padding:3px 0; color:var(--mute); font-size:.86rem }
+.source-facts { margin-top:12px; border-top:1px solid var(--line); padding-top:8px }
+.source-facts summary { font-size:.9rem; cursor:pointer }
+#make-input:focus-visible { outline:2px solid var(--green); outline-offset:2px }
+.comparison-pair button[data-do=generate] {
+  color:var(--green); background:transparent; padding:4px 0;
+}
+.comparison-pair button[data-do=generate]:is(:hover,:focus-visible) {
+  color:var(--green); background:#e3e9d9;
+}
+@media(max-width:770px) {
+  .task-jump {
+    display:inline-block; margin:0 0 14px; border-color:var(--green);
+    background:var(--green); color:var(--white);
+  }
+  .task-jump:is(:hover,:focus-visible) { background:#365746; color:var(--white) }
+}
+@media(max-width:610px) {
+  .make-path { gap:3px 12px; padding-block:4px; margin-bottom:12px }
+  .make-path .future-step { display:inline-flex; align-items:center; min-height:36px }
+}
+
+.example-exchange{margin:1rem 0;padding:.7rem 1rem;background:#f2efe5;border-left:3px solid #a16e53}
+.example-exchange>summary{font:600 .97rem/1.5 var(--sans)}
+.example-exchange>summary small{display:inline-block;margin-left:.5rem;color:#56594e;font:normal .8rem var(--sans)}
+.example-line{position:relative;padding:.7rem 0 .3rem}
+.example-line+.example-line{margin-top:.25rem;border-top:1px solid var(--line)}
+.example-line strong,.example-translation strong{font:600 .87rem var(--sans);color:var(--green)}
+.example-line p{margin:.2rem 0;font:normal 1.06rem/1.43 var(--serif)}
+.example-line button,.message-editor [data-do=reply-object]{border:none;background:transparent;color:var(--green);padding:.25rem 0;text-decoration:underline;text-underline-offset:.18em;font-weight:600}
+.example-translation{margin:.5rem 0 0}
+.example-translation summary{font-size:.84rem}
+.visitor-thread{margin-block:1rem}
+.message-editor .form{margin-top:1.2rem}
+.handoff [data-do^="handoff"]{background:var(--green);color:white}
+.message-editor textarea:focus-visible,.example-exchange summary:focus-visible{outline:3px solid #a65329;outline-offset:3px}
+.example-line small{margin-left:.5rem;color:var(--mute);font:normal .79rem var(--sans)}
+@media(max-width:520px){.example-line small{display:block;margin:.1rem 0 .25rem}}

@@ -14,14 +14,19 @@ const ownMessages=k=>messages.filter(m=>m.key===k&&own.has(m.id));
 const thread=k=>messages.filter(m=>m.key===k);
 function nOf(k,id){return thread(k).findIndex(m=>m.id===id)+1;}
 function sourcePhotos(k){
- if(route!=="a" || state("a",k).step==="compose-card")return photographs(k);
+ if(route!=="a" || (state("a",k).step || "make-input")!=="make-input")return photographs(k);
  const o=objects[k],current=state("a",k).detail;
- return '<p class="key">Touch a detail to mark it for making. The link under each view opens the full photograph.</p><div class="photos">'+o.photo.map((url,i)=>{
+ return '<p class="key">Choose a detail to try on the mat. You can tap the photo to mark where you looked.</p><div class="photos">'+o.photo.map((url,i)=>{
   const marked=current?.i===i;
   return '<figure><button type="button" class="detail-photo" data-photo="'+i+'" aria-label="Mark a detail in '+esc(o.labels[i])+'" title="Click to mark. Use arrow keys to adjust."><img referrerpolicy="no-referrer" src="'+o.cardPhoto[i]+'" alt="'+esc(o.alt[i])+'">'+(marked?'<i class="pin" aria-hidden="true" style="left:'+current.x+'%;top:'+current.y+'%"></i>':'')+'</button><figcaption><a href="'+url+'" target="_blank" rel="noopener noreferrer">'+esc(o.labels[i])+' ↗</a></figcaption></figure>';
  }).join("")+'</div>';
 }
-function source(k){const o=objects[k];return '<aside class="srcbox"><p class="kicker">Source '+o.id+' · '+esc(o.place)+'</p><h2>'+esc(o.name)+'</h2>'+sourcePhotos(k)+'<p class="creditline">'+esc(o.credit)+'</p><p>'+esc(o.fact)+'</p><a class="source-url" target="_blank" rel="noopener" href="'+o.url+'">Open collection or exhibition record ↗</a></aside>';}
+function source(k){
+ const o=objects[k], desktop=matchMedia("(min-width:771px)").matches;
+ return '<aside class="srcbox"><p class="kicker">'+esc(o.place)+'</p><h2>'+esc(o.name)+'</h2>'+sourcePhotos(k)
+  +'<details class="source-facts"'+(desktop?' open':'')+'><summary>About this object and its photograph</summary>'
+  +'<p>'+esc(o.fact)+'</p><p class="creditline">'+esc(o.credit)+'</p><a class="source-url" target="_blank" rel="noopener" href="'+esc(o.url)+'">Open collection or exhibition record ↗</a></details></aside>';
+}
 function design(k,t,n){const o=objects[k];return '<figure><img src="'+designURL(k,t,n)+'" alt="'+esc(o[t][n-1])+'"><figcaption>Prepared AI image · '+o.id+'–'+t.toUpperCase()+n+'<br>'+esc(o[t][n-1])+'</figcaption></figure>';}
 
 function pieceHTML(piece,index,s,preview=false){
@@ -43,25 +48,24 @@ function markedDetail(k,point){
  const o=objects[k];
  return '<figure class="marked-reference"><div class="reference-thumb"><img src="'+o.cardPhoto[point.i]+'" alt="'+esc(o.alt[point.i])+'">'
   +'<i class="pin" aria-hidden="true" style="left:'+point.x+'%;top:'+point.y+'%"></i></div>'
-  +'<figcaption>The detail you marked<br>'+esc(o.labels[point.i])+'<br>The Paper collage layout uses this detail.</figcaption></figure>';
+  +'<figcaption>The detail you marked<br>'+esc(o.labels[point.i])+'</figcaption></figure>';
 }
 function designComparison(k,s){
- const o=objects[k];
  const questions={
-  gown:'Where did you place the flower on the cloth? Look at which flowers the cuff or bag leaves in view.',
+  gown:'Look for the flower you placed on the cloth. Would this design show the same part of the pattern?',
   jug:'Follow the line you made with your pieces. Where does that line continue or break in the design?',
   knit:'Look at the space between your loops. How does the spacing or direction of the knit change in the design?'
  };
  const example=s.generated?design(k,'a',s.generated):'<p class="blank">Choose a prepared design to put beside your arrangement.</p>';
- const choices=s.generated?row(btn('use-generated','Use this design on my postcard')+btn('generate','Compare the other design')):row(btn('generate','Show a prepared design'));
+ const choices=s.generated?row(btn('use-generated','Make a postcard with this design')+btn('source-only','Use only the object photo')):btn('source-only','Use only the object photo');
  return '<section class="benchpanel comparison-panel" id="generate-preview" tabindex="-1">'
-  +'<p class="kicker">2 · Compare with your arrangement</p><h2>What carried over into the design?</h2>'
+  +'<p class="kicker">2 · Compare</p><h2>Compare your arrangement with a saved design</h2>'
+  +'<p>The website picks a saved design for this object at random. At the study table, the researcher chooses one based on how you arranged the materials.</p>'
   +'<p>'+questions[k]+'</p><div id="marked-reference">'+markedDetail(k,s.detail)+'</div><div class="comparison-pair">'
   +'<section><h3>Your arrangement</h3><div class="mat mat-replica" role="img" aria-label="Your arrangement of '+kit[k].map(kind=>names[kind]).join(', ')+'">'+matReplica(s)+'</div>'
   +btn('adjust-arrangement','Adjust my arrangement')+'</section>'
-  +'<section><h3>Prepared design</h3>'+example+'</section></div>'
-  +'<p class="key">The website draws a saved example at random for '+esc(o.name)+'. At the study table, the researcher chooses an example based on your arrangement.</p>'
-  +choices+btn('source-only','Continue with the source photo only')+'</section>';
+  +'<section><h3>Saved design</h3>'+example+btn('generate',s.generated?'See the other design':'Show a saved design')+'</section></div>'
+  +choices+'</section>';
 }
 
 
@@ -103,11 +107,10 @@ function museumLabel(s){
 
 function museumDisplay(k,s){
  const beside=s.display==="thread";
- const earlier=thread(k);
  return '<div class="proposal"><strong>Imagine this card on display in a museum</strong>'
-  +'<p>Would someone reading your card on its own understand the exchange? If yours is the first message, what would you like them to reply to?</p>'
+  +'<p>Would you show just the card, or the conversation that led to it?</p>'
   +row(btn("display:alone","Card alone",!beside)+btn("display:thread","Card with conversation",beside))+'</div>'
-  +(beside?'<aside class="beside-card"><h3>Conversation beside the card</h3>'+earlier.map(m=>bubble(m)).join("")
+  +(beside?'<aside class="beside-card"><h3>Conversation beside the card</h3>'+threadContext(k,s)
     +(s.text.trim()?'<div class="message current-draft"><small>Your draft</small><p class="words" dir="auto">'+esc(s.text)+'</p></div>':'')+'</aside>':'');
 }
 function messageComparison(k,s){
@@ -117,56 +120,82 @@ function messageComparison(k,s){
   +mine.map(m=>opt(m.id,"My message "+nOf(k,m.id)+" · "+m.text.slice(0,36),s.from)).join("")+'</select></label>':"";
  const words=postcardWords(k,s);
  return '<section class="benchpanel comparison-panel" id="generate-preview" tabindex="-1">'
-  +'<p class="kicker">2 · Choose an optional picture</p><h2>Does this picture say what you mean?</h2>'
-  +'<p>Read your message beside a picture prepared for this object. Choose it if it helps someone understand your words.</p>'
+  +'<p class="kicker">Step 2 of 3 · Choose a picture</p><h2>Which picture goes with your words?</h2>'
+  +'<p>Your words from step 1 will go on the card with the object photo. You can add this prepared picture if it helps the next reader see what you mean.</p>'
   +authorChoice+'<div class="comparison-pair"><section><h3>Your words</h3>'
   +'<p id="comparison-words" class="words" dir="auto">'+esc(words||"Write a message in step 1 to see it here.")+'</p>'
   +(s.from?'':btn("adjust-message","Edit my message"))+'</section><section><h3>Prepared picture</h3>'
-  +(s.generated?design(k,"b",s.generated):'<p>Show a picture to compare it with your message.</p>')+'</section></div>'
-  +row((s.generated?btn("use-generated","Put this picture on my card"):"")+btn("generate",s.generated?"Try the other picture":"Show a prepared picture"))
-  +btn("source-only","Make my card with the object photo and my words")+'</section>';
+  +(s.generated?design(k,"b",s.generated):'<p>Show a picture to compare it with your message.</p>')
+  +btn("generate",s.generated?"See the other picture":"Show a prepared picture")+'</section></div>'
+  +row((s.generated?btn("use-generated","Add this picture to my card"):"")
+   +btn("source-only","Use the object photo only"))+'</section>';
 }
 function makingInput(k,s){
  const o=objects[k];
- return '<section class="benchpanel" id="make-input"><p class="kicker">1 · Look and arrange</p>'
-  +'<h2>Arrange a detail from the photograph</h2><p>'+esc(o.make)+'</p>'
+ return '<section class="benchpanel" id="make-input" tabindex="-1"><p class="kicker">1 · Arrange</p>'
+  +'<h2>Try the detail on the mat</h2><p>'+esc(o.make)+'</p>'
   +'<div class="mat" aria-label="Material arrangement">'+s.pieces.map((p,i)=>pieceHTML(p,i,s)).join("")+'</div>'
-  +'<p class="key">Drag a piece or focus it and use the arrow keys. Rotate or fold the selected piece. At the table, use the real materials.</p>'
+  +'<p class="key">Drag a piece, or focus it and use the arrow keys. The buttons below rotate or fold that piece.</p>'
   +row(btn("rotate","Rotate ↻")+btn("fold","Fold / open")+btn("resetmat","Reset mat")+'<a class="linkbar" target="_blank" href="making-mat.pdf">Print the A4 mat ↗</a>')
-  +'<div class="material-next"><p>Keep your arrangement on the mat. Look at a prepared cuff or bag beside it. Which details would you keep?</p>'
-  +btn("compare-arrangement","Compare my arrangement with a design →")+'</div></section>';
+  +'<div class="material-next"><p>Next, you’ll see this same arrangement beside a cuff or bag design for the object you chose.</p>'
+  +btn("compare-arrangement","Compare my arrangement")+'</div></section>';
 }
-function relation(m){if(!m.parent)return "New interpretation";if(m.parent==="starter")return "Reply to AI starter";return "Reply to message "+nOf(m.key,m.parent);}
+function exampleFor(k,id){
+ return objects[k].examples.find(example=>example.id===id);
+}
+function relation(m){
+ if(!m.parent)return "About the object";
+ const example=exampleFor(m.key,m.parent);
+ return example?"Reply to "+example.name+"’s fictional example":"Reply to message "+nOf(m.key,m.parent);
+}
+
 function bubble(m,allowReply=false){
  const useOwn=allowReply&&own.has(m.id)?btn("card-from:"+m.id,"Make a card from my message"):"";
- return '<article class="message"'+(allowReply?' id="msg-'+m.id+'"':'')+'><small>Message '+nOf(m.key,m.id)+' · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p>'+(allowReply?btn("reply:"+m.id,"Reply to this message"):"")+useOwn+'</article>';}
-function threadHTML(k,replies){return thread(k).length?thread(k).map(m=>bubble(m,replies)).join(""):'<p class="blank">No visitor messages yet. Start with something you noticed, or respond to the labelled starter.</p>';}
+ return '<article class="message"'+(allowReply?' id="msg-'+m.id+'"':'')+'><small>Message '+nOf(m.key,m.id)+' · '+esc(relation(m))+'</small><p dir="auto">'+esc(m.text)+'</p>'+(allowReply?btn("reply:"+m.id,"Reply to message "+nOf(m.key,m.id)):"")+useOwn+'</article>';
+}
+
+function exampleExchange(k,interactive,open=true){
+ const examples=objects[k].examples;
+ const lines=examples.map(example=>
+  '<div class="example-line"><strong>'+esc(example.name)+'</strong>'+
+  (example.id==="prince"?' <small>A British prince, replying to Spider-Man</small>':"")+'<p>'+esc(example.text)+'</p>'+
+  (interactive?btn("reply:"+example.id,"Reply to "+example.name):"")+'</div>'
+ ).join("");
+ const translation=examples.map(example=>'<p><strong>'+esc(example.name)+'</strong>　'+esc(example.zh)+'</p>').join("");
+ return '<details class="example-exchange"'+(open?' open':'')+'><summary>Example conversation <small>Prepared AI examples · fictional visitors</small></summary>'+
+  lines+'<details class="example-translation"><summary>中文译文</summary><div lang="zh">'+translation+'</div></details></details>';
+}
+
+function threadContext(k,s){
+ const earlier=thread(k);
+ const usesExample=exampleFor(k,s.parent)||earlier.some(m=>exampleFor(k,m.parent));
+ return (usesExample?exampleExchange(k,false):"")+earlier.map(m=>bubble(m)).join("");
+}
 
 function conversationInput(k,s){
  const o=objects[k],list=thread(k);
- const addresses=list.find(m=>m.id===s.parent);
- const parentWords=s.parent==="starter"?o.starter:addresses?.text;
- return '<section class="benchpanel"><p class="kicker">Conversation board</p><h2>What do you notice about '+esc(o.name)+'?</h2>'
-  +'<p>'+esc(o.talk)+'</p><div class="thread">'+threadHTML(k,true)+'</div>'
-  +'<details><summary>Read a prepared AI starter</summary><p>'+esc(o.starter)+'</p><p lang="zh">'+esc(o.zh)+'</p>'
-  +'<small>Fictional example with a prepared Chinese translation.</small></details></section>'
-  +'<section class="benchpanel" id="make-input"><p class="kicker">1 · Write to another visitor</p><h2>Leave a message or reply</h2>'
-  +'<label class="form">What are you responding to?<select bind="parent">'+opt("","The object",s.parent)+opt("starter","The prepared AI starter",s.parent)
-  +list.map(m=>opt(m.id,"Message "+nOf(k,m.id)+" · "+m.text.slice(0,36),s.parent)).join("")+'</select></label>'
-  +(parentWords?'<blockquote class="reply-context"><small>'+(addresses?'Earlier visitor’s message':'Prepared AI starter')+'</small><p class="words" dir="auto">'+esc(parentWords)+'</p></blockquote>':'')
-  +'<label class="form">My words, in any language<textarea bind="text" dir="auto" placeholder="What would you like the next visitor to notice or answer?">'+esc(s.text)+'</textarea></label>'
-  +'<div class="material-next"><p>You can leave this message on the board or use it to make a postcard.</p>'
-  +row(btn("compare-message","Choose a picture for my message")+btn("message-only","Review just my message"))+'</div></section>'
+ const example=exampleFor(k,s.parent);
+ const message=list.find(m=>m.id===s.parent);
+ const addressee=example?.name || (message?"message "+nOf(k,message.id):"");
+ const quote=example?.text || message?.text;
+ const live=list.length?'<section class="visitor-thread"><h3>Visitor messages</h3><div class="thread">'+list.map(m=>bubble(m,true)).join("")+'</div></section>':"";
+ const invite=!s.parent && !s.text && list.length ? replyInvitation(list.at(-1)) : "";
+ return '<section class="benchpanel" id="make-input" tabindex="-1"><p class="kicker">Step 1 of 3 · Write or reply</p><h2>What caught your eye?</h2><p>'+esc(o.talk)+'</p>'
+  +exampleExchange(k,true,!list.length)+live+invite
+  +'<div class="message-editor">'+(quote?'<blockquote class="reply-context"><small>'+esc(example?"Fictional example · "+example.name:"Visitor message "+nOf(k,message.id))+'</small><p class="words" dir="auto">'+esc(quote)+'</p></blockquote>':"")
+  +'<label class="form">'+esc(addressee?"Your reply to "+addressee:"Your message about the object")+'<textarea bind="text" data-reply-to="'+esc(s.parent)+'" dir="auto" placeholder="Write in any language. What would you point out to the next visitor?">'+esc(s.text)+'</textarea></label>'
+  +(addressee?btn("reply-object","Write about the object instead"):"")
+  +'<div class="material-next"><p>Put your words on a postcard, or leave just your message. You’ll review it before the next visitor sees it.</p>'
+  +row(btn("compare-message","Make a postcard with my words")+btn("message-only","Review my message only"))+'</div></div></section>'
   +related(k);
 }
 function cardActions(c){return row(btn("download:"+c.id,"Download postcard PNG ↓")+(c.type==="b"?btn("locate:"+c.message,"Read linked message"):""));}
 function related(k){const items=wall.filter(c=>c.type==="b"&&c.key===k);return items.length?'<section class="benchpanel"><h2>Cards beside this thread</h2><div class="wallgrid">'+items.map(c=>'<div>'+cardHTML(c)+cardActions(c)+'</div>').join("")+'</div></section>':'';}
-function replyInvitation(){
- const first=wall.find(card=>card.type==="b");
- if(!first || !own.has(first.message))return "";
- return '<section class="benchpanel"><h2>Try the next visitor’s reply</h2>'
-  +'<p>Stay in this tab and take the next visitor’s turn. Read the first card’s message, then reply in your own words.</p>'
-  +btn("handoff:"+first.message,"Start next visitor and reply →")+'</section>';
+function replyInvitation(message=messages.at(-1)){
+ if(!message || !own.has(message.id))return "";
+ return '<section class="benchpanel handoff" tabindex="-1"><h2>Take the next visitor’s turn</h2>'
+  +'<p>Reply to the message you just shared. You can play both visitors in this tab.</p>'
+  +btn("handoff:"+message.id,"Start the next visitor’s reply")+'</section>';
 }
 function postcards(){
  const next=wall.at(-1)?.type==="a"?'<p class="wall-next"><a href="#probe-b">Continue to Probe B · Write to another visitor →</a></p>':"";
@@ -202,8 +231,8 @@ function openStep(next,focusSelector){
 function render(){
  route=location.hash==="#probe-b"?"b":location.hash==="#postcards"?"wall":"a";
  const info={
-  a:["Make with the object","Choose an object and arrange a detail from its photograph. You’ll compare your arrangement with a prepared design before making your card."],
-  b:["Read the object together","Read what another visitor noticed, or start the conversation. You can leave your message on the board or make it into a postcard."],
+  a:["Make with the object","Look at a detail, try it with pieces on the mat, then choose what goes on your postcard."],
+  b:["Write to the next visitor","Choose an object. Reply to an example or write about a detail you spotted. You can leave just your words or put them on a postcard."],
   wall:["Postcard wall","These cards stay in this tab for the next visitor. Download a copy to keep it."]
  };
  document.querySelector("#title").textContent=info[route][0];
@@ -213,14 +242,22 @@ function render(){
   if(current)link.setAttribute("aria-current","page");else link.removeAttribute("aria-current");
  });
  const path=document.querySelector("#make-path");
+ const handoff=document.querySelector(".tools");
+ handoff.hidden=route!=="wall" || !(wall.length || messages.length) || Boolean(replyInvitation());
  path.hidden=route==="wall";
  if(route==="wall"){path.innerHTML="";work.innerHTML=postcards();return;}
  const k=selected[route],s=state(route,k);
  const step=s.step||workSteps[0];
- const labels=route==="a"?["Arrange a detail","Compare designs","Make a postcard"]:["Write or reply","Choose a picture","Make a postcard"];
- path.innerHTML=workSteps.map((id,i)=>'<a href="#'+id+'" data-step="'+id+'"'+(step===id?' aria-current="step"':'')+'>'+ (i+1)+' · '+labels[i]+'</a>').join('<span aria-hidden="true">→</span>');
+ const labels=route==="a"?["Arrange","Compare","Make a card"]:["Write or reply","Choose a picture","Make a card"];
+ const current=workSteps.indexOf(step);
+ path.innerHTML=workSteps.map((id,i)=>{
+  const title=(i+1)+' · '+labels[i];
+  if(i>current)return '<span class="future-step">'+title+'</span>';
+  return '<a href="#'+id+'" data-step="'+id+'"'+(step===id?' aria-current="step"':'')+'>'+title+'</a>';
+ }).join('<span class="step-arrow" aria-hidden="true">→</span>');
  const first=step===workSteps[0],compare=step===workSteps[1];
- const picker=first?'<div class="picker"><span class="micro">Choose your object</span>'+keys.map(key=>btn("source:"+key,objects[key].name,k===key)).join("")+'</div>':"";
+ const picker=first?'<div class="picker"><span class="micro">Choose an object</span>'+keys.map(key=>btn("source:"+key,objects[key].name,k===key)).join("")+'</div>'
+  +'<button type="button" class="task-jump" data-do="jump-to-work">'+(route==="a"?'Go to the arranging mat':'Read and reply')+'</button>':"";
  const content=first?(route==="a"?makingInput(k,s):conversationInput(k,s))
    :compare?(route==="a"?designComparison(k,s):messageComparison(k,s)):composeCard(route,k,s);
  const reference=first?source(k):'<details class="source-context"'+(matchMedia("(min-width:771px)").matches?" open":"")+'><summary>Object reference · '+esc(objects[k].name)+'</summary>'+source(k)+'</details>';
@@ -232,12 +269,19 @@ function review(){const t=route,k=selected[t],s=state(t,k);let m=null,c=null;
  if(s.make&&!chosen){say("Write a message or choose an earlier message of your own.");return;}if(!s.make&&!m){say("Write a message to review, or skip this activity.");return;}if(s.make)c={...cardData(t,k,s),id:unique(),message:chosen.id};}
  pending={t,k,c,m};let html=(m&&(!c||c.message!==m.id)?'<div class="message"><small>New draft · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p></div>':'')+(c?cardHTML(c):'');
  if(t==="a"&&s.label==="omit"){html+='<p class="proposal">'+({keep:"Museum label: Each version continues the original work.",change:"Your proposed label: "+esc(s.custom),omit:"Display without the proposed museum label."}[s.label])+'</p>';}
- if(t==="b"&&c&&s.display==="thread"){html+='<h3>On the board beside this card</h3>'+thread(k).map(m=>bubble(m)).join("")+(m?'<div class="message"><small>Draft · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p></div>':'');}
+ if(t==="b"&&c&&s.display==="thread"){html+='<h3>On the board beside this card</h3>'+threadContext(k,s)+(m?'<div class="message"><small>Draft · '+relation(m)+'</small><p dir="auto">'+esc(m.text)+'</p></div>':'');}
  document.querySelector("#review-title").textContent=c?"Check your postcard":"Check your message";
  document.querySelector("#download-draft").hidden=!c;
+ document.querySelector("#accept").textContent=c?"Share this postcard":"Share this message";
  document.querySelector("#proof").innerHTML=html+'<p>Check your words before sharing them with the next visitor in this tab.</p>';dialog.showModal();}
 dialog.querySelector("#back").onclick=()=>dialog.close();
-dialog.querySelector("#accept").onclick=()=>{if(!pending)return;const {m,c,t,k}=pending;if(m){messages.push(m);own.add(m.id);}if(c)wall.push(c);if(t==="b")Object.assign(state(t,k),{step:"make-input",text:"",parent:"",from:""});else Object.assign(state(t,k),{step:"make-input",words:"",label:"",custom:""});pending=null;dialog.close();if(c)history.pushState(null,"","#postcards");render();window.scrollTo(0,0);say(c?"Your postcard is on the wall. You can download it here.":"Your message is ready for the next visitor.");};
+dialog.querySelector("#accept").onclick=()=>{if(!pending)return;const {m,c,t,k}=pending;if(m){messages.push(m);own.add(m.id);}if(c)wall.push(c);if(t==="b")Object.assign(state(t,k),{step:"make-input",text:"",parent:"",from:""});else Object.assign(state(t,k),{step:"make-input",words:"",label:"",custom:""});pending=null;dialog.close();if(c)history.pushState(null,"","#postcards");render();
+ if(!c && m){
+  const invitation=work.querySelector(".handoff");
+  invitation?.focus({preventScroll:true});
+  invitation?.scrollIntoView({block:"center"});
+ }else window.scrollTo(0,0);
+ say(c?"Your postcard is on the wall. You can download it here.":"Your message is ready for the next visitor.");};
 dialog.querySelector("#discard").onclick=()=>{if(!pending)return;const {t,k}=pending;if(t==="b")Object.assign(state(t,k),{step:"make-input",text:"",parent:"",from:"",image:0});else Object.assign(state(t,k),{step:"make-input",words:"",label:"",custom:"",image:0});pending=null;dialog.close();render();say("Draft discarded.");};
 dialog.addEventListener("close",()=>pending=null);
 let previewFrame;
@@ -260,11 +304,16 @@ work.addEventListener("input",e=>{
 });
 work.addEventListener("change",e=>{
  const field=e.target.getAttribute("bind");
- if(["label","parent","from"].includes(field)){
+ if(["label","from"].includes(field)){
   render();work.querySelector('[bind="'+field+'"]')?.focus({preventScroll:true});
  }
 });
 work.addEventListener("click",async e=>{const button=e.target.closest("[data-do]");if(!button)return;const [act,val]=button.dataset.do.split(":");
+ if(act==="jump-to-work"){
+  const start=document.getElementById("make-input");
+  if(start){start.tabIndex=-1;start.focus({preventScroll:true});start.scrollIntoView({block:"start"});}
+  return;
+ }
  if(act==="handoff"){
   startVisitor(messages.find(message=>message.id===val));
   return;
@@ -303,7 +352,14 @@ work.addEventListener("click",async e=>{const button=e.target.closest("[data-do]
   openStep("compose-card");
   return;
  }
- if(act==="review"){review();return;}if(act==="reply"){s.parent=val;render();work.querySelector('[bind="text"]').focus();return;}
+ if(act==="review"){review();return;}
+ if(act==="reply" || act==="reply-object"){
+  s.parent=act==="reply"?val:"";
+  s.from="";
+  render();
+  work.querySelector('[bind="text"]').focus();
+  return;
+ }
  if(act==="display")s.display=val;else if(act==="resetmat"){s.pieces=kit[k].map((kind,i)=>({kind,x:[25,50,73][i],y:[48,57,40][i],angle:0,fold:false}));s.piece=0;}
  else if(act==="rotate")s.pieces[s.piece].angle=(s.pieces[s.piece].angle+30)%360;else if(act==="fold")s.pieces[s.piece].fold=!s.pieces[s.piece].fold;render();work.querySelector('[data-do="'+button.dataset.do+'"]')?.focus({preventScroll:true});});
 function markDetail(button,x,y){
